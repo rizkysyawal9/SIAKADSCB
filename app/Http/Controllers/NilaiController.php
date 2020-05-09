@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Nilai;
+use App\Siswa;
 use Illuminate\Http\Request;
 
 class NilaiController extends Controller
@@ -45,7 +47,13 @@ class NilaiController extends Controller
      */
     public function show($id)
     {
-        return view('nilaisiswa');
+        $siswa = Siswa::where('id', $id)->first();
+        $nis = $siswa->nis;
+        $semester1 = Nilai::where(['nis' => $nis,
+            'semester' => 1])->get();
+        // $semester1 = App\Siswa::find($id)->nilais;
+        // dd($semester1);
+        return view('nilaisiswa')->with('semester1', $semester1);
     }
 
     /**
