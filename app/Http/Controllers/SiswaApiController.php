@@ -6,7 +6,7 @@ use App\Nilai;
 use App\Siswa;
 use Illuminate\Http\Request;
 
-class SiswaController extends Controller
+class SiswaApiController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,22 +15,23 @@ class SiswaController extends Controller
      */
     public function index()
     {
-        //
+
     }
 
-    public function tambahView()
+    public function all()
     {
-        return view('tambahsiswa');
+        $siswas = Siswa::all();
+        return $siswas;
     }
+
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function all()
+    public function create()
     {
-        $siswas = Siswa::all();
-        return view('siswadashboard')->with(['siswas' => $siswas]);
+
     }
 
     /**
@@ -41,7 +42,6 @@ class SiswaController extends Controller
      */
     public function store(Request $request)
     {
-        //Mata Pelajaran
         $matpel = array('PAI', 'PKN', 'BIND', 'BING', 'MTK', 'IPA', 'IPS', 'SB',
             'PJOK', 'TAHSIN', 'TIK', 'BSUN', 'PLH', 'ARAB');
         $siswa = new Siswa([
@@ -64,7 +64,7 @@ class SiswaController extends Controller
                 $nilai->save();
             }
         }
-        return $siswa;
+        return "Success";
     }
 
     /**
@@ -75,12 +75,49 @@ class SiswaController extends Controller
      */
     public function show($id)
     {
+        $siswa = Siswa::where('id', $id)->first();
+        $nis = $siswa->nis;
+        $kelas = $siswa->kelas;
+        $semester1 = Nilai::where(['nis' => $nis,
+            'semester' => 1])->get();
+        $semester2 = Nilai::where(['nis' => $nis,
+            'semester' => 2])->get();
+        $semester3 = Nilai::where(['nis' => $nis,
+            'semester' => 3])->get();
+        $semester4 = Nilai::where(['nis' => $nis,
+            'semester' => 4])->get();
+        $semester5 = Nilai::where(['nis' => $nis,
+            'semester' => 5])->get();
+        $semester6 = Nilai::where(['nis' => $nis,
+            'semester' => 6])->get();
+        // return view('nilaisiswa')->with('semester1', $semester1);
+        if ($kelas == 7) {
+            return [
+                'siswa' => $siswa,
+                'semester1' => $semester1,
+                'semester2' => $semester2,
+            ];
+        } else if ($kelas == 8) {
+            return [
+                'siswa' => $siswa,
+                'semester1' => $semester3,
+                'semester2' => $semester4,
+            ];
+        } else if ($kelas == 9) {
+            return [
+                'siswa' => $siswa,
+                'semester1' => $semester5,
+                'semester2' => $semester6,
+            ];
+        } else {
+            return 'Data Tidak Tersedia';
+        }
 
     }
 
-    public function dump()
+    public function nilaiSemester($id, $semester)
     {
-        dd('Boo');
+
     }
 
     /**
@@ -91,8 +128,7 @@ class SiswaController extends Controller
      */
     public function edit($id)
     {
-        $siswa = Siswa::where('id', $id)->first();
-        return view('siswaedit')->with('siswa', $siswa);
+        //
     }
 
     /**
@@ -104,15 +140,7 @@ class SiswaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        Siswa::where('id', $id)->first()->update([
-            'nama' => $request->get('nama'),
-            'nis' => $request->get('nis'),
-            'orangTua' => $request->get('orangTua'),
-            'kelas' => $request->get('kelas'),
-            'alamat' => $request->get('alamat'),
-        ]);
-        return redirect('/siswa');
-
+        //
     }
 
     /**
@@ -123,7 +151,6 @@ class SiswaController extends Controller
      */
     public function destroy($id)
     {
-        Siswa::where('id', $id)->delete();
-        return redirect('/siswa');
+        //
     }
 }
