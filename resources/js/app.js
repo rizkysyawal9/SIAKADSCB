@@ -21,6 +21,8 @@ import Create from './components/Create.vue';
 import Read from './components/Read.vue';
 import Update from './components/Update.vue';
 import DetailSiswa from './components/DetailSiswa.vue';
+import NilaiSiswa from './components/NilaiSiswa.vue';
+import NilaiSatuSiswa from './components/NilaiSatuSiswa.vue'
 
 const routes = [
     {
@@ -43,6 +45,16 @@ const routes = [
         path: '/detail/:id',
         component: DetailSiswa
     },
+    {
+        name: 'nilaisiswa',
+        path: '/nilaisiswa',
+        component: NilaiSiswa
+    },
+    {
+        name: 'nilaisatusiswa',
+        path: '/nilaisiswa/:id',
+        component: NilaiSatuSiswa
+    }
 ]
 
 const router = new VueRouter({ mode: 'history', routes: routes });

@@ -14,13 +14,9 @@
               <router-link to="/">Siswa</router-link>
             </li>
             <li>
-              <i class="fas fa-users"></i>Biodata Siswa
-            </li>
-            <li>
-              <i class="fas fa-file"></i>Nilai Siswa
-            </li>
-            <li>
-              <i class="fas fa-home"></i>Asrama
+              <router-link to="/nilaisiswa">
+                <i class="fas fa-file"></i>Nilai Siswa
+              </router-link>
             </li>
             <li>Guru</li>
             <li>

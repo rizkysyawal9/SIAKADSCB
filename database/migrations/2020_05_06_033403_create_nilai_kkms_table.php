@@ -14,7 +14,7 @@ class CreateNilaiKkmsTable extends Migration
     public function up()
     {
         Schema::create('nilai_kkms', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->string('kode_matpel')->unique();
             $table->integer('kkm');
             $table->timestamps();
