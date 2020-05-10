@@ -20,7 +20,7 @@ import App from './components/App.vue';
 import Create from './components/Create.vue';
 import Read from './components/Read.vue';
 import Update from './components/Update.vue';
-import Dashboard from './components/Dashboard.vue';
+import DetailSiswa from './components/DetailSiswa.vue';
 
 const routes = [
     {
@@ -35,14 +35,14 @@ const routes = [
     },
     {
         name: 'update',
-        path: '/detail/:id',
+        path: '/edit/:id',
         component: Update
     },
     {
-        name: 'dashboard',
-        path: '/dashboard',
-        component: Dashboard
-    }
+        name: 'Details',
+        path: '/detail/:id',
+        component: DetailSiswa
+    },
 ]
 
 const router = new VueRouter({ mode: 'history', routes: routes });

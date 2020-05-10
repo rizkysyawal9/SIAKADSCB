@@ -29,8 +29,9 @@
               <td style="width:40%">{{siswa.nama}}</td>
               <td style="width:40%">{{siswa.nis}}</td>
               <td style="width:20%">
-                <router-link class="btn btn-warning" :to="'/detail/'+siswa.nis">Update</router-link>
-                <button class="btn btn-danger" v-on:click="deleteData(siswa.id)">Delete</button>
+                <router-link class="btn btn-primary" :to="'/detail/'+siswa.nis">Details</router-link>
+                <router-link class="btn btn-warning" :to="'/edit/'+siswa.nis">Edit</router-link>
+                <!-- <button class="btn btn-danger" v-on:click="deleteData(siswa.id)">Delete</button> -->
               </td>
             </tr>
           </tbody>
