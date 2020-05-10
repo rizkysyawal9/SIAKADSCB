@@ -73,10 +73,17 @@ class SiswaApiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+
+    public function show($nis)
     {
-        $siswa = Siswa::where('id', $id)->first();
-        $nis = $siswa->nis;
+        $siswa = Siswa::where('nis', $nis)->first();
+        return $siswa;
+    }
+
+    public function shownilai($nis)
+    {
+        $siswa = Siswa::where('nis', $nis)->first();
+        // $nis = $siswa->nis;
         $kelas = $siswa->kelas;
         $semester1 = Nilai::where(['nis' => $nis,
             'semester' => 1])->get();
@@ -115,9 +122,15 @@ class SiswaApiController extends Controller
 
     }
 
-    public function nilaiSemester($id, $semester)
+    public function nilaiSemester($nis, $semester)
     {
-
+        // $siswa = Siswa::where('id', $id)->first();
+        // $nis = $siswa->nis;
+        $semester = Nilai::where([
+            'nis' => $nis,
+            'semester' => $semester,
+        ])->get();
+        return $semester;
     }
 
     /**
@@ -140,7 +153,16 @@ class SiswaApiController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $siswa = Siswa::where('id', $id)->first()->update([
+            'nama' => $request->get('nama'),
+            'nis' => $request->get('nis'),
+            'orangTua' => $request->get('orangTua'),
+            'kelas' => $request->get('kelas'),
+            'alamat' => $request->get('alamat'),
+        ]);
+
+        $siswa->save();
+        return $siswa;
     }
 
     /**
@@ -151,6 +173,7 @@ class SiswaApiController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Siswa::where('id', $id)->delete();
+        return 'Destroyed';
     }
 }

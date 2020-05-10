@@ -13,17 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
  */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 //CRUD Data siswa
 
-Route::get('/siswa', 'SiswaController@all');
+// Route::get('/siswa', 'SiswaController@all');
 
-Route::get('/tambah_siswa', 'SiswaController@tambahView');
-Route::post('/tambah_siswa', 'SiswaController@store');
-Route::get('/editsiswa/{id}', 'SiswaController@edit');
-Route::post('/editsiswa/{id}', 'SiswaController@update');
-Route::get('/deletesiswa/{id}', 'SiswaController@destroy');
-Route::get('/shownilai/{id}', 'NilaiController@show');
+// Route::get('/tambah_siswa', 'SiswaController@tambahView');
+// Route::post('/tambah_siswa', 'SiswaController@store');
+// Route::get('/editsiswa/{id}', 'SiswaController@edit');
+// Route::post('/editsiswa/{id}', 'SiswaController@update');
+// Route::get('/deletesiswa/{id}', 'SiswaController@destroy');
+// Route::get('/shownilai/{id}', 'NilaiController@show');
+Route::get('/{any}', function () {
+    return view('welcome');
+})->where('any', '.*');
