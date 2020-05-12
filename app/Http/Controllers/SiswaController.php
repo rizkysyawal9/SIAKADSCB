@@ -64,8 +64,7 @@ class SiswaController extends Controller
                 $nilai->save();
             }
         }
-        dd($nilai);
-        return redirect('/siswa');
+        return $siswa;
     }
 
     /**

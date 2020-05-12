@@ -14,7 +14,7 @@ class CreateMatpelsTable extends Migration
     public function up()
     {
         Schema::create('matpels', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->string('kode_matpel')->unique();
             $table->string('matpel');
             $table->string('kelas');

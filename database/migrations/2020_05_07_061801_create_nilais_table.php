@@ -14,6 +14,7 @@ class CreateNilaisTable extends Migration
     public function up()
     {
         Schema::create('nilais', function (Blueprint $table) {
+            $table->bigIncrements('id');
             $table->string('kode_matpel');
             $table->string('nis');
             $table->string('semester');
