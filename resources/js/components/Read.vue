@@ -31,7 +31,7 @@
               <td style="width:20%">
                 <router-link class="btn btn-primary" :to="'/detail/'+siswa.nis">Details</router-link>
                 <router-link class="btn btn-warning" :to="'/edit/'+siswa.nis">Edit</router-link>
-                <!-- <button class="btn btn-danger" v-on:click="deleteData(siswa.id)">Delete</button> -->
+                <button class="btn btn-danger" v-on:click="deleteData(siswa.nis)">Delete</button>
               </td>
             </tr>
           </tbody>
@@ -67,10 +67,10 @@ export default {
         this.siswas = response.data;
       });
     },
-    deleteData(id) {
+    deleteData(nis) {
       // delete data;
       axios
-        .delete("http://localhost:8000/api/deletesiswa/" + id)
+        .delete("http://localhost:8000/api/deletesiswa/" + nis)
         .then(response => {
           this.loadData();
         });

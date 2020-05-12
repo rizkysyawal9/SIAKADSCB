@@ -14060,6 +14060,323 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/EditNilaiSiswa.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/EditNilaiSiswa.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      siswa: [],
+      semester1: [],
+      semester2: []
+    };
+  },
+  created: function created() {
+    this.loadData();
+  },
+  methods: {
+    loadData: function loadData() {
+      var _this = this;
+
+      console.log(this.$route.params.id);
+      axios.get("http://localhost:8000/api/nilai/" + this.$route.params.nis).then(function (response) {
+        _this.siswa = response.data.siswa, _this.semester1 = response.data.semester1, _this.semester2 = response.data.semester2, console.log(response.data);
+      });
+    },
+    getData: function getData(item) {
+      if (item.kode_matpel == this.$route.params.kode) {
+        return item;
+      }
+    },
+    updateData: function updateData() {
+      var _this2 = this;
+
+      var semester = 0;
+
+      if (this.$route.params.semester == 1) {
+        var kode = this.semester1.filter(this.getData);
+        console.log(kode[0]);
+        var semester1 = kode[0];
+
+        if (this.siswa.kelas == 7) {
+          semester = 1;
+        } else if (this.siswa.kelas == 8) {
+          semester = 3;
+        } else if (this.siswa.kelas == 9) {
+          semester = 5;
+        }
+
+        axios.put("http://localhost:8000/api/nilai/" + this.$route.params.nis + "/" + semester + "/" + this.$route.params.kode, {
+          h1: semester1.h1,
+          h2: semester1.h2,
+          h3: semester1.h3,
+          h4: semester1.h4,
+          h5: semester1.h5,
+          h6: semester1.h6,
+          h7: semester1.h7,
+          h8: semester1.h8,
+          hph: semester1.hph,
+          hpts: semester1.hpts,
+          hpas: semester1.hpas,
+          hpa: semester1.hpa,
+          predikat: semester1.predikat
+        }).then(function (response) {
+          // for (const i = 0; i <= this.semester1.lenght; i++) {}
+          _this2.$router.push("/nilaisiswa/" + _this2.siswa.nis);
+        });
+      } else if (this.$route.params.semester == 2) {
+        // let kode = this.semester2[kode_matpel==this.$route.params.kode_matpel]
+        // console.log(kode)
+        // let semester2 = this.semester2[0];
+        var _kode = this.semester2.filter(this.getData);
+
+        console.log(_kode[0]);
+        var semester2 = _kode[0];
+
+        if (this.siswa.kelas == 7) {
+          semester = 2;
+        } else if (this.siswa.kelas == 8) {
+          semseter = 4;
+        } else if (this.siswa.kelas == 9) {
+          semester = 6;
+        }
+
+        axios.put("http://localhost:8000/api/nilai/" + this.$route.params.nis + "/" + semester + "/" + this.$route.params.kode, {
+          h1: semester2.h1,
+          h2: semester2.h2,
+          h3: semester2.h3,
+          h4: semester2.h4,
+          h5: semester2.h5,
+          h6: semester2.h6,
+          h7: semester2.h7,
+          h8: semester2.h8,
+          hph: semester2.hph,
+          hpts: semester2.hpts,
+          hpas: semester2.hpas,
+          hpa: semester2.hpa,
+          predikat: semester2.predikat
+        }).then(function (response) {
+          // for (const i = 0; i <= this.semester1.lenght; i++) {}
+          _this2.$router.push("/nilaisiswa/" + _this2.siswa.nis);
+        });
+      }
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/NilaiSatuSiswa.vue?vue&type=script&lang=js&":
 /*!*************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/NilaiSatuSiswa.vue?vue&type=script&lang=js& ***!
@@ -14159,7 +14476,29 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
+  name: "NilaiSatuSiswa",
   data: function data() {
     return {
       siswa: [],
@@ -14348,11 +14687,11 @@ __webpack_require__.r(__webpack_exports__);
         _this.siswas = response.data;
       });
     },
-    deleteData: function deleteData(id) {
+    deleteData: function deleteData(nis) {
       var _this2 = this;
 
       // delete data;
-      axios["delete"]("http://localhost:8000/api/deletesiswa/" + id).then(function (response) {
+      axios["delete"]("http://localhost:8000/api/deletesiswa/" + nis).then(function (response) {
         _this2.loadData();
       });
     }
@@ -14442,6 +14781,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       // post data ke api menggunakan axios
+      console.log(this.form);
       axios.put("http://localhost:8000/api/editsiswa/" + this.$route.params.id, {
         nama: this.form.nama,
         nis: this.form.nis,
@@ -51092,9 +51432,9 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/NilaiSatuSiswa.vue?vue&type=template&id=2a24460a&":
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/EditNilaiSiswa.vue?vue&type=template&id=355b1ac3&":
 /*!*****************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/NilaiSatuSiswa.vue?vue&type=template&id=2a24460a& ***!
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/EditNilaiSiswa.vue?vue&type=template&id=355b1ac3& ***!
   \*****************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -51112,99 +51452,779 @@ var render = function() {
     _vm._v(" "),
     _c("br"),
     _vm._v(" "),
-    _c("h2", [_vm._v("Nilai " + _vm._s(_vm.siswa.nama))]),
-    _vm._v(" "),
-    _c("h5", [_vm._v("Kelas: " + _vm._s(_vm.siswa.kelas))]),
-    _vm._v(" "),
-    _c("br"),
-    _vm._v(" "),
-    _c("h4", [_vm._v("Semester 1")]),
-    _vm._v(" "),
-    _c("table", { staticClass: "table" }, [
-      _vm._m(0),
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-10" }, [
+        _c("h2", [_vm._v("Edit Nilai " + _vm._s(_vm.siswa.nama))]),
+        _vm._v(" "),
+        _c("h5", [_vm._v("Kelas: " + _vm._s(_vm.siswa.kelas))])
+      ]),
       _vm._v(" "),
       _c(
-        "tbody",
-        _vm._l(_vm.semester1, function(nilai) {
-          return _c("tr", { key: nilai.id }, [
-            _c("td", [_vm._v(_vm._s(nilai.kode_matpel))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(nilai.h1))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(nilai.h2))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(nilai.h3))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(nilai.h4))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(nilai.h5))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(nilai.h6))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(nilai.h7))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(nilai.h8))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(nilai.hph))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(nilai.hpts))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(nilai.hpas))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(nilai.hpa))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(nilai.predikat))])
-          ])
-        }),
-        0
+        "div",
+        { staticClass: "col-md-2" },
+        [
+          _c("br"),
+          _vm._v(" "),
+          _c(
+            "router-link",
+            { staticClass: "btn btn-primary w-100", attrs: { to: "/create" } },
+            [_vm._v("Save")]
+          )
+        ],
+        1
       )
     ]),
     _vm._v(" "),
     _c("br"),
     _vm._v(" "),
-    _c("br"),
+    _c("h4", [_vm._v("Semester 1")]),
     _vm._v(" "),
-    _c("h4", [_vm._v("Semester 2")]),
-    _vm._v(" "),
-    _c("table", { staticClass: "table" }, [
-      _vm._m(1),
-      _vm._v(" "),
-      _c(
-        "tbody",
-        _vm._l(_vm.semester2, function(nilai) {
-          return _c("tr", { key: nilai.id }, [
-            _c("td", [_vm._v(_vm._s(nilai.kode_matpel))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(nilai.h1))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(nilai.h2))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(nilai.h3))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(nilai.h4))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(nilai.h5))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(nilai.h6))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(nilai.h7))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(nilai.h8))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(nilai.hph))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(nilai.hpts))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(nilai.hpas))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(nilai.hpa))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(nilai.predikat))])
-          ])
-        }),
-        0
-      )
-    ])
+    _c(
+      "form",
+      {
+        on: {
+          submit: function($event) {
+            $event.preventDefault()
+            return _vm.updateData()
+          }
+        }
+      },
+      [
+        _c("table", { staticClass: "table" }, [
+          _vm._m(0),
+          _vm._v(" "),
+          _c(
+            "tbody",
+            _vm._l(_vm.semester1, function(nilai) {
+              return _c(
+                "tr",
+                { key: nilai.id },
+                [
+                  _c("td", [_vm._v(_vm._s(nilai.kode_matpel))]),
+                  _vm._v(" "),
+                  (_vm.$route.params.semester == 1) &
+                  (_vm.$route.params.kode == nilai.kode_matpel)
+                    ? [
+                        _c("td", [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: nilai.h1,
+                                expression: "nilai.h1"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            attrs: { type: "textfield" },
+                            domProps: { value: nilai.h1 },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(nilai, "h1", $event.target.value)
+                              }
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: nilai.h2,
+                                expression: "nilai.h2"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            attrs: { type: "textfield" },
+                            domProps: { value: nilai.h2 },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(nilai, "h2", $event.target.value)
+                              }
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: nilai.h3,
+                                expression: "nilai.h3"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            attrs: { type: "textfield" },
+                            domProps: { value: nilai.h3 },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(nilai, "h3", $event.target.value)
+                              }
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: nilai.h4,
+                                expression: "nilai.h4"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            attrs: { type: "textfield" },
+                            domProps: { value: nilai.h4 },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(nilai, "h4", $event.target.value)
+                              }
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: nilai.h5,
+                                expression: "nilai.h5"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            attrs: { type: "textfield" },
+                            domProps: { value: nilai.h5 },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(nilai, "h5", $event.target.value)
+                              }
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: nilai.h6,
+                                expression: "nilai.h6"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            attrs: { type: "textfield" },
+                            domProps: { value: nilai.h6 },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(nilai, "h6", $event.target.value)
+                              }
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: nilai.h7,
+                                expression: "nilai.h7"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            attrs: { type: "textfield" },
+                            domProps: { value: nilai.h7 },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(nilai, "h7", $event.target.value)
+                              }
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: nilai.h8,
+                                expression: "nilai.h8"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            attrs: { type: "textfield" },
+                            domProps: { value: nilai.h8 },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(nilai, "h8", $event.target.value)
+                              }
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: nilai.hph,
+                                expression: "nilai.hph"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            attrs: { type: "textfield" },
+                            domProps: { value: nilai.hph },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(nilai, "hph", $event.target.value)
+                              }
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: nilai.hpts,
+                                expression: "nilai.hpts"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            attrs: { type: "textfield" },
+                            domProps: { value: nilai.hpts },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(nilai, "hpts", $event.target.value)
+                              }
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: nilai.hpas,
+                                expression: "nilai.hpas"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            attrs: { type: "textfield" },
+                            domProps: { value: nilai.hpas },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(nilai, "hpas", $event.target.value)
+                              }
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: nilai.hpa,
+                                expression: "nilai.hpa"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            attrs: { type: "textfield" },
+                            domProps: { value: nilai.hpa },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(nilai, "hpa", $event.target.value)
+                              }
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: nilai.predikat,
+                                expression: "nilai.predikat"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            attrs: { type: "textfield" },
+                            domProps: { value: nilai.predikat },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(nilai, "predikat", $event.target.value)
+                              }
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _vm._m(1, true)
+                      ]
+                    : [
+                        _c("td", [_vm._v(_vm._s(nilai.h1))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(nilai.h2))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(nilai.h3))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(nilai.h4))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(nilai.h5))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(nilai.h6))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(nilai.h7))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(nilai.h8))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(nilai.hph))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(nilai.hpts))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(nilai.hpas))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(nilai.hpa))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(nilai.predikat))])
+                      ]
+                ],
+                2
+              )
+            }),
+            0
+          )
+        ]),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(" "),
+        _c("h4", [_vm._v("Semester 2")]),
+        _vm._v(" "),
+        _c("table", { staticClass: "table" }, [
+          _vm._m(2),
+          _vm._v(" "),
+          _c(
+            "tbody",
+            _vm._l(_vm.semester2, function(nilai) {
+              return _c(
+                "tr",
+                { key: nilai.id },
+                [
+                  _c("td", [_vm._v(_vm._s(nilai.kode_matpel))]),
+                  _vm._v(" "),
+                  (_vm.$route.params.semester == 2) &
+                  (_vm.$route.params.kode == nilai.kode_matpel)
+                    ? [
+                        _c("td", [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: nilai.h1,
+                                expression: "nilai.h1"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            attrs: { type: "textfield" },
+                            domProps: { value: nilai.h1 },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(nilai, "h1", $event.target.value)
+                              }
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: nilai.h2,
+                                expression: "nilai.h2"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            attrs: { type: "textfield" },
+                            domProps: { value: nilai.h2 },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(nilai, "h2", $event.target.value)
+                              }
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: nilai.h3,
+                                expression: "nilai.h3"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            attrs: { type: "textfield" },
+                            domProps: { value: nilai.h3 },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(nilai, "h3", $event.target.value)
+                              }
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: nilai.h4,
+                                expression: "nilai.h4"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            attrs: { type: "textfield" },
+                            domProps: { value: nilai.h4 },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(nilai, "h4", $event.target.value)
+                              }
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: nilai.h5,
+                                expression: "nilai.h5"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            attrs: { type: "textfield" },
+                            domProps: { value: nilai.h5 },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(nilai, "h5", $event.target.value)
+                              }
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: nilai.h6,
+                                expression: "nilai.h6"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            attrs: { type: "textfield" },
+                            domProps: { value: nilai.h6 },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(nilai, "h6", $event.target.value)
+                              }
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: nilai.h7,
+                                expression: "nilai.h7"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            attrs: { type: "textfield" },
+                            domProps: { value: nilai.h7 },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(nilai, "h7", $event.target.value)
+                              }
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: nilai.h8,
+                                expression: "nilai.h8"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            attrs: { type: "textfield" },
+                            domProps: { value: nilai.h8 },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(nilai, "h8", $event.target.value)
+                              }
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: nilai.hph,
+                                expression: "nilai.hph"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            attrs: { type: "textfield" },
+                            domProps: { value: nilai.hph },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(nilai, "hph", $event.target.value)
+                              }
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: nilai.hpts,
+                                expression: "nilai.hpts"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            attrs: { type: "textfield" },
+                            domProps: { value: nilai.hpts },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(nilai, "hpts", $event.target.value)
+                              }
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: nilai.hpas,
+                                expression: "nilai.hpas"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            attrs: { type: "textfield" },
+                            domProps: { value: nilai.hpas },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(nilai, "hpas", $event.target.value)
+                              }
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: nilai.hpa,
+                                expression: "nilai.hpa"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            attrs: { type: "textfield" },
+                            domProps: { value: nilai.hpa },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(nilai, "hpa", $event.target.value)
+                              }
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: nilai.predikat,
+                                expression: "nilai.predikat"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            attrs: { type: "textfield" },
+                            domProps: { value: nilai.predikat },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.$set(nilai, "predikat", $event.target.value)
+                              }
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _vm._m(3, true)
+                      ]
+                    : [
+                        _c("td", [_vm._v(_vm._s(nilai.h1))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(nilai.h2))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(nilai.h3))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(nilai.h4))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(nilai.h5))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(nilai.h6))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(nilai.h7))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(nilai.h8))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(nilai.hph))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(nilai.hpts))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(nilai.hpas))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(nilai.hpa))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(nilai.predikat))])
+                      ]
+                ],
+                2
+              )
+            }),
+            0
+          )
+        ])
+      ]
+    )
   ])
 }
 var staticRenderFns = [
@@ -51240,7 +52260,276 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("HPA")]),
         _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Predikat")])
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Predikat")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Action")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [
+      _c("button", { staticClass: "btn btn-primary" }, [_vm._v("Save")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Mata Pelajaran")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("H1")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("H2")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("H3")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("H4")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("H5")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("H6")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("H7")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("H8")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("HPH")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("HPTS")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("HPAS")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("HPA")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Predikat")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Action")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [
+      _c("button", { staticClass: "btn btn-primary" }, [_vm._v("Save")])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/NilaiSatuSiswa.vue?vue&type=template&id=2a24460a&":
+/*!*****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/NilaiSatuSiswa.vue?vue&type=template&id=2a24460a& ***!
+  \*****************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("br"),
+    _vm._v(" "),
+    _c("br"),
+    _vm._v(" "),
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-10" }, [
+        _c("h2", [_vm._v("Nilai " + _vm._s(_vm.siswa.nama))]),
+        _vm._v(" "),
+        _c("h5", [_vm._v("Kelas: " + _vm._s(_vm.siswa.kelas))])
+      ]),
+      _vm._v(" "),
+      _vm._m(0)
+    ]),
+    _vm._v(" "),
+    _c("br"),
+    _vm._v(" "),
+    _c("h4", [_vm._v("Semester 1")]),
+    _vm._v(" "),
+    _c("table", { staticClass: "table" }, [
+      _vm._m(1),
+      _vm._v(" "),
+      _c(
+        "tbody",
+        [
+          _vm._l(_vm.semester1, function(nilai) {
+            return _c(
+              "tr",
+              { key: nilai.id },
+              [
+                _c("td", [_vm._v(_vm._s(nilai.kode_matpel))]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(nilai.h1))]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(nilai.h2))]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(nilai.h3))]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(nilai.h4))]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(nilai.h5))]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(nilai.h6))]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(nilai.h7))]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(nilai.h8))]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(nilai.hph))]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(nilai.hpts))]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(nilai.hpas))]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(nilai.hpa))]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(nilai.predikat))]),
+                _vm._v(" "),
+                _c(
+                  "router-link",
+                  {
+                    staticClass: "btn btn-primary w-100",
+                    attrs: {
+                      to:
+                        "/editnilai/" +
+                        _vm.siswa.nis +
+                        "/1/" +
+                        nilai.kode_matpel
+                    }
+                  },
+                  [_vm._v("Edit")]
+                )
+              ],
+              1
+            )
+          }),
+          _vm._v("rr\n    ")
+        ],
+        2
+      )
+    ]),
+    _vm._v(" "),
+    _c("br"),
+    _vm._v(" "),
+    _c("br"),
+    _vm._v(" "),
+    _c("h4", [_vm._v("Semester 2")]),
+    _vm._v(" "),
+    _c("table", { staticClass: "table" }, [
+      _vm._m(2),
+      _vm._v(" "),
+      _c(
+        "tbody",
+        _vm._l(_vm.semester2, function(nilai) {
+          return _c(
+            "tr",
+            { key: nilai.id },
+            [
+              _c("td", [_vm._v(_vm._s(nilai.kode_matpel))]),
+              _vm._v(" "),
+              _c("td", [_vm._v(_vm._s(nilai.h1))]),
+              _vm._v(" "),
+              _c("td", [_vm._v(_vm._s(nilai.h2))]),
+              _vm._v(" "),
+              _c("td", [_vm._v(_vm._s(nilai.h3))]),
+              _vm._v(" "),
+              _c("td", [_vm._v(_vm._s(nilai.h4))]),
+              _vm._v(" "),
+              _c("td", [_vm._v(_vm._s(nilai.h5))]),
+              _vm._v(" "),
+              _c("td", [_vm._v(_vm._s(nilai.h6))]),
+              _vm._v(" "),
+              _c("td", [_vm._v(_vm._s(nilai.h7))]),
+              _vm._v(" "),
+              _c("td", [_vm._v(_vm._s(nilai.h8))]),
+              _vm._v(" "),
+              _c("td", [_vm._v(_vm._s(nilai.hph))]),
+              _vm._v(" "),
+              _c("td", [_vm._v(_vm._s(nilai.hpts))]),
+              _vm._v(" "),
+              _c("td", [_vm._v(_vm._s(nilai.hpas))]),
+              _vm._v(" "),
+              _c("td", [_vm._v(_vm._s(nilai.hpa))]),
+              _vm._v(" "),
+              _c("td", [_vm._v(_vm._s(nilai.predikat))]),
+              _vm._v(" "),
+              _c(
+                "router-link",
+                {
+                  staticClass: "btn btn-primary w-100",
+                  attrs: {
+                    to:
+                      "/editnilai/" + _vm.siswa.nis + "/2/" + nilai.kode_matpel
+                  }
+                },
+                [_vm._v("Edit")]
+              )
+            ],
+            1
+          )
+        }),
+        0
+      )
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-2" }, [_c("br")])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Mata Pelajaran")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("H1")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("H2")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("H3")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("H4")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("H5")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("H6")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("H7")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("H8")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("HPH")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("HPTS")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("HPAS")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("HPA")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Predikat")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scopr: "col" } }, [_vm._v("Action")])
       ])
     ])
   },
@@ -51276,7 +52565,9 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("HPA")]),
         _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Predikat")])
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Predikat")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scopr: "col" } }, [_vm._v("Action")])
       ])
     ])
   }
@@ -51465,6 +52756,19 @@ var render = function() {
                         attrs: { to: "/edit/" + siswa.nis }
                       },
                       [_vm._v("Edit")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-danger",
+                        on: {
+                          click: function($event) {
+                            return _vm.deleteData(siswa.nis)
+                          }
+                        }
+                      },
+                      [_vm._v("Delete")]
                     )
                   ],
                   1
@@ -51530,7 +52834,7 @@ var render = function() {
         _vm._v(" "),
         _c("br"),
         _vm._v(" "),
-        _c("h4", [_vm._v("Tambah Siswa Baru")]),
+        _c("h4", [_vm._v("Update Siswa")]),
         _vm._v(" "),
         _c("br"),
         _vm._v(" "),
@@ -54819,6 +56123,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_DetailSiswa_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/DetailSiswa.vue */ "./resources/js/components/DetailSiswa.vue");
 /* harmony import */ var _components_NilaiSiswa_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/NilaiSiswa.vue */ "./resources/js/components/NilaiSiswa.vue");
 /* harmony import */ var _components_NilaiSatuSiswa_vue__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/NilaiSatuSiswa.vue */ "./resources/js/components/NilaiSatuSiswa.vue");
+/* harmony import */ var _components_EditNilaiSiswa_vue__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/EditNilaiSiswa.vue */ "./resources/js/components/EditNilaiSiswa.vue");
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -54834,6 +56139,7 @@ window.Vue = __webpack_require__(/*! vue */ "../../../node_modules/vue/dist/vue.
 
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"], vue_axios__WEBPACK_IMPORTED_MODULE_2___default.a, axios__WEBPACK_IMPORTED_MODULE_3___default.a);
+
 
 
 
@@ -54865,6 +56171,10 @@ var routes = [{
   name: 'nilaisatusiswa',
   path: '/nilaisiswa/:id',
   component: _components_NilaiSatuSiswa_vue__WEBPACK_IMPORTED_MODULE_10__["default"]
+}, {
+  name: 'editnilai',
+  path: '/editnilai/:nis/:semester/:kode',
+  component: _components_EditNilaiSiswa_vue__WEBPACK_IMPORTED_MODULE_11__["default"]
 }];
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   mode: 'history',
@@ -55149,6 +56459,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DetailSiswa_vue_vue_type_template_id_fe5f6b0a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DetailSiswa_vue_vue_type_template_id_fe5f6b0a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/EditNilaiSiswa.vue":
+/*!****************************************************!*\
+  !*** ./resources/js/components/EditNilaiSiswa.vue ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _EditNilaiSiswa_vue_vue_type_template_id_355b1ac3___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EditNilaiSiswa.vue?vue&type=template&id=355b1ac3& */ "./resources/js/components/EditNilaiSiswa.vue?vue&type=template&id=355b1ac3&");
+/* harmony import */ var _EditNilaiSiswa_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EditNilaiSiswa.vue?vue&type=script&lang=js& */ "./resources/js/components/EditNilaiSiswa.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _EditNilaiSiswa_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _EditNilaiSiswa_vue_vue_type_template_id_355b1ac3___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _EditNilaiSiswa_vue_vue_type_template_id_355b1ac3___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/EditNilaiSiswa.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/EditNilaiSiswa.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/components/EditNilaiSiswa.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EditNilaiSiswa_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./EditNilaiSiswa.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/EditNilaiSiswa.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EditNilaiSiswa_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/EditNilaiSiswa.vue?vue&type=template&id=355b1ac3&":
+/*!***********************************************************************************!*\
+  !*** ./resources/js/components/EditNilaiSiswa.vue?vue&type=template&id=355b1ac3& ***!
+  \***********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EditNilaiSiswa_vue_vue_type_template_id_355b1ac3___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./EditNilaiSiswa.vue?vue&type=template&id=355b1ac3& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/EditNilaiSiswa.vue?vue&type=template&id=355b1ac3&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EditNilaiSiswa_vue_vue_type_template_id_355b1ac3___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EditNilaiSiswa_vue_vue_type_template_id_355b1ac3___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

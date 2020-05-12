@@ -23,6 +23,7 @@ import Update from './components/Update.vue';
 import DetailSiswa from './components/DetailSiswa.vue';
 import NilaiSiswa from './components/NilaiSiswa.vue';
 import NilaiSatuSiswa from './components/NilaiSatuSiswa.vue'
+import EditNilaiSiswa from './components/EditNilaiSiswa.vue'
 
 const routes = [
     {
@@ -54,6 +55,11 @@ const routes = [
         name: 'nilaisatusiswa',
         path: '/nilaisiswa/:id',
         component: NilaiSatuSiswa
+    },
+    {
+        name: 'editnilai',
+        path: '/editnilai/:nis/:semester/:kode',
+        component: EditNilaiSiswa
     }
 ]
 

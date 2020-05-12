@@ -4,7 +4,7 @@
       <div class="col-md-6">
         <br />
         <br />
-        <h4>Tambah Siswa Baru</h4>
+        <h4>Update Siswa</h4>
         <br />
         <!-- prevent form submit untuk reload halaman, kemudian memanggil function addData() -->
         <form @submit.prevent="updateData()">
@@ -69,6 +69,7 @@ export default {
     },
     updateData() {
       // post data ke api menggunakan axios
+      console.log(this.form);
       axios
         .put("http://localhost:8000/api/editsiswa/" + this.$route.params.id, {
           nama: this.form.nama,

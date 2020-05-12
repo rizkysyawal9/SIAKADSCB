@@ -2,8 +2,19 @@
   <div>
     <br />
     <br />
-    <h2>Nilai {{ siswa.nama }}</h2>
-    <h5>Kelas: {{ siswa.kelas }}</h5>
+
+    <div class="row">
+      <div class="col-md-10">
+        <h2>Nilai {{ siswa.nama }}</h2>
+        <h5>Kelas: {{ siswa.kelas }}</h5>
+      </div>
+      <div class="col-md-2">
+        <!-- push router ke form membuat data -->
+        <br />
+        <!-- <router-link class="btn btn-primary w-100" :to="'/editnilai/'+siswa.nis">Edit</router-link> -->
+      </div>
+    </div>
+
     <br />
     <h4>Semester 1</h4>
     <table class="table">
@@ -23,6 +34,7 @@
           <th scope="col">HPAS</th>
           <th scope="col">HPA</th>
           <th scope="col">Predikat</th>
+          <th scopr="col">Action</th>
         </tr>
       </thead>
       <tbody>
@@ -41,7 +53,11 @@
           <td>{{ nilai.hpas }}</td>
           <td>{{ nilai.hpa }}</td>
           <td>{{ nilai.predikat }}</td>
-        </tr>
+          <router-link
+            class="btn btn-primary w-100"
+            :to="'/editnilai/'+siswa.nis+'/1/'+nilai.kode_matpel"
+          >Edit</router-link>
+        </tr>rr
       </tbody>
     </table>
     <br />
@@ -64,6 +80,7 @@
           <th scope="col">HPAS</th>
           <th scope="col">HPA</th>
           <th scope="col">Predikat</th>
+          <th scopr="col">Action</th>
         </tr>
       </thead>
       <tbody>
@@ -82,6 +99,10 @@
           <td>{{ nilai.hpas }}</td>
           <td>{{ nilai.hpa }}</td>
           <td>{{ nilai.predikat }}</td>
+          <router-link
+            class="btn btn-primary w-100"
+            :to="'/editnilai/'+siswa.nis+'/2/'+nilai.kode_matpel"
+          >Edit</router-link>
         </tr>
       </tbody>
     </table>
@@ -90,6 +111,7 @@
 
 <script>
 export default {
+  name: "NilaiSatuSiswa",
   data() {
     return {
       siswa: [],

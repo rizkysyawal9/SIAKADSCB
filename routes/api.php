@@ -20,11 +20,14 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/siswa', 'SiswaApiController@all');
 Route::get('/siswa/{nis}', 'SiswaApiController@show');
-Route::get('/nilai/{nis}', 'SiswaApiController@shownilai');
-Route::get('/siswa/{nis}/{semester}', 'SiswaApiController@nilaiSemester');
 Route::post('/tambah_siswa', 'SiswaApiController@store');
-Route::put('/editsiswa/{id}', 'SiswaApiController@update');
-Route::delete('/deletesiswa/{id}', 'SiswaApiController@destroy');
+Route::put('/editsiswa/{nis}', 'SiswaApiController@update');
+Route::delete('/deletesiswa/{nis}', 'SiswaApiController@destroy');
+
+//Nilai Routes
+Route::get('/nilai/{nis}', 'NilaiApiController@shownilai');
+Route::get('/siswa/{nis}/{semester}', 'NilaiApiController@nilaiSemester');
+Route::put('/nilai/{nis}/{semester}/{kode}', 'NilaiApiController@updateNilai');
 
 // Route::get('/editsiswa/{id}', 'SiswaController@edit');
 // Route::post('/editsiswa/{id}', 'SiswaController@update');
