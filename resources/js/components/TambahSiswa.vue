@@ -82,6 +82,7 @@ export default {
   },
   methods: {
     addData() {
+      console.log(this.form);
       // post data ke api menggunakan axios
       axios
         .post("http://localhost:8000/api/tambah_siswa", {

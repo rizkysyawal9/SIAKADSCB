@@ -17,9 +17,9 @@ Vue.use(VueRouter,VueAxios,Axios);
 
 
 import App from './components/App.vue';
-import Create from './components/Create.vue';
-import Read from './components/Read.vue';
-import Update from './components/Update.vue';
+import TambahSiswa from './components/TambahSiswa.vue';
+import SiswaDashboard from './components/SiswaDashboard.vue';
+import UpdateSiswa from './components/UpdateSiswa.vue';
 import DetailSiswa from './components/DetailSiswa.vue';
 import NilaiSiswa from './components/NilaiSiswa.vue';
 import NilaiSatuSiswa from './components/NilaiSatuSiswa.vue'
@@ -29,17 +29,17 @@ const routes = [
     {
         name: 'read',
         path: '/',
-        component: Read
+        component: SiswaDashboard
     },
     {
-        name: 'create',
+        name: 'tambahsiswa',
         path: '/create',
-        component: Create
+        component: TambahSiswa
     },
     {
         name: 'update',
         path: '/edit/:id',
-        component: Update
+        component: UpdateSiswa
     },
     {
         name: 'Details',
