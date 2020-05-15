@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Matpel;
 use App\Nilai;
 use App\Siswa;
 use Illuminate\Http\Request;
@@ -24,8 +25,7 @@ class SiswaApiController extends Controller
 
     public function store(Request $request)
     {
-        $matpel = array('PAI', 'PKN', 'BIND', 'BING', 'MTK', 'IPA', 'IPS', 'SB',
-            'PJOK', 'TAHSIN', 'TIK', 'BSUN', 'PLH', 'ARAB');
+        $matpel = Matpel::all();
         $siswa = new Siswa([
             'nama' => $request->get('nama'),
             'nis' => $request->get('nis'),
@@ -38,7 +38,7 @@ class SiswaApiController extends Controller
         for ($i = 1; $i <= 6; $i++) {
             for ($j = 0; $j < count($matpel); $j++) {
                 $nilai = new Nilai([
-                    'kode_matpel' => $matpel[$j],
+                    'kode_matpel' => $matpel[$j]->kode_matpel,
                     'kelas' => $siswa->kelas,
                     'nis' => $siswa->nis,
                     'semester' => $i,

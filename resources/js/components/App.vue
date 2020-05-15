@@ -14,6 +14,11 @@
               <router-link to="/">Siswa</router-link>
             </li>
             <li>
+              <router-link to="/matpel">
+                <i class="fas fa-file"></i>Mata Pelajaran
+              </router-link>
+            </li>
+            <li>
               <router-link to="/nilaisiswa">
                 <i class="fas fa-file"></i>Nilai Siswa
               </router-link>

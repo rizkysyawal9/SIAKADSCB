@@ -29,6 +29,9 @@ Route::get('/nilai/{nis}', 'NilaiApiController@shownilai');
 Route::get('/siswa/{nis}/{semester}', 'NilaiApiController@nilaiSemester');
 Route::put('/nilai/{nis}/{semester}/{kode}', 'NilaiApiController@updateNilai');
 
+//Matpel Routes
+Route::get('/matpel', 'MatpelApiController@index');
+
 // Route::get('/editsiswa/{id}', 'SiswaController@edit');
 // Route::post('/editsiswa/{id}', 'SiswaController@update');
 // Route::get('/shownilai/{id}', 'NilaiController@show');

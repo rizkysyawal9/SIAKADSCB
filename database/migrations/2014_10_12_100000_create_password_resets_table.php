@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMatpelsTable extends Migration
+class CreatePasswordResetsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateMatpelsTable extends Migration
      */
     public function up()
     {
-        Schema::create('matpels', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('kode_matpel')->unique();
-            $table->string('matpel');
-            $table->timestamps();
+        Schema::create('password_resets', function (Blueprint $table) {
+            $table->string('email')->index();
+            $table->string('token');
+            $table->timestamp('created_at')->nullable();
         });
     }
 
@@ -28,6 +27,6 @@ class CreateMatpelsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('matpels');
+        Schema::dropIfExists('password_resets');
     }
 }

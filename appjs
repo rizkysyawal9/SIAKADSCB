@@ -22,9 +22,8 @@ import SiswaDashboard from './components/SiswaDashboard.vue';
 import UpdateSiswa from './components/UpdateSiswa.vue';
 import DetailSiswa from './components/DetailSiswa.vue';
 import NilaiSiswa from './components/NilaiSiswa.vue';
-import NilaiSatuSiswa from './components/NilaiSatuSiswa.vue';
-import EditNilaiSiswa from './components/EditNilaiSiswa.vue';
-import MataPelajaran from './components/MataPelajaran.vue';
+import NilaiSatuSiswa from './components/NilaiSatuSiswa.vue'
+import EditNilaiSiswa from './components/EditNilaiSiswa.vue'
 
 const routes = [
     {
@@ -61,11 +60,6 @@ const routes = [
         name: 'editnilai',
         path: '/editnilai/:nis/:semester/:kode',
         component: EditNilaiSiswa
-    },
-    {
-        name: 'matpel',
-        path: '/matpel',
-        component: MataPelajaran
     }
 ]
 
