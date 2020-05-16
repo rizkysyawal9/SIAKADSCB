@@ -94,7 +94,7 @@ export default {
         })
         .then(response => {
           // push router ke read data
-          this.$router.push("/");
+          this.$router.push("/dashboard");
         });
     }
   }

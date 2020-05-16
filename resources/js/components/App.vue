@@ -11,7 +11,7 @@
         <div class="sidebar">
           <ul>
             <li class="siswa">
-              <router-link to="/">Siswa</router-link>
+              <router-link to="/dashboard">Siswa</router-link>
             </li>
             <li>
               <router-link to="/matpel">

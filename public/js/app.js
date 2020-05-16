@@ -1899,6 +1899,148 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/matapelajaran/Creatematpel.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/matapelajaran/Creatematpel.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      form: {
+        // firstName: "",
+        // lastName: ""
+        kode_matpel: "",
+        matpel: ""
+      }
+    };
+  },
+  created: function created() {},
+  methods: {
+    addMatpel: function addMatpel() {
+      var _this = this;
+
+      // post data ke api menggunakan axios
+      console.log(this.form);
+      axios.post("http://localhost:8000/api/matpel/tambah", {
+        kode_matpel: this.form.kode_matpel,
+        matpel: this.form.matpel
+      }).then(function (response) {
+        // push router ke read data
+        _this.$router.push("/matpel");
+      });
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/matapelajaran/EditMatpel.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/matapelajaran/EditMatpel.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      form: {
+        // firstName: "",
+        // lastName: ""
+        kode_matpel: "",
+        matpel: ""
+      }
+    };
+  },
+  created: function created() {
+    this.loadData();
+  },
+  methods: {
+    loadData: function loadData() {
+      var _this = this;
+
+      console.log(this.$route.params.id);
+      axios.get("http://localhost:8000/api/matpel/" + this.$route.params.id).then(function (response) {
+        _this.form.kode_matpel = response.data.kode_matpel;
+        _this.form.matpel = response.data.matpel;
+        console.log(response.data);
+      });
+    },
+    updateMatpel: function updateMatpel() {
+      var _this2 = this;
+
+      // post data ke api menggunakan axios
+      console.log(this.form);
+      axios.put("http://localhost:8000/api/matpel/" + this.$route.params.id, {
+        kode_matpel: this.form.kode_matpel,
+        matpel: this.form.matpel
+      }).then(function (response) {
+        // push router ke read data
+        _this2.$router.push("/matpel");
+      });
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/matapelajaran/MataPelajaran.vue?vue&type=script&lang=js&":
 /*!**************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/matapelajaran/MataPelajaran.vue?vue&type=script&lang=js& ***!
@@ -1964,6 +2106,13 @@ __webpack_require__.r(__webpack_exports__);
         _this.matpels = result.data;
       })["catch"](function (err) {
         alert(err);
+      });
+    },
+    deleteMatpel: function deleteMatpel(id) {
+      var _this2 = this;
+
+      axios["delete"]("http://localhost:8000/api/matpel/" + id).then(function (response) {
+        _this2.getMatapel();
       });
     }
   }
@@ -2779,7 +2928,7 @@ __webpack_require__.r(__webpack_exports__);
         alamat: this.form.alamat
       }).then(function (response) {
         // push router ke read data
-        _this.$router.push("/");
+        _this.$router.push("/dashboard");
       });
     }
   }
@@ -39197,7 +39346,11 @@ var render = function() {
             _c(
               "li",
               { staticClass: "siswa" },
-              [_c("router-link", { attrs: { to: "/" } }, [_vm._v("Siswa")])],
+              [
+                _c("router-link", { attrs: { to: "/dashboard" } }, [
+                  _vm._v("Siswa")
+                ])
+              ],
               1
             ),
             _vm._v(" "),
@@ -39291,6 +39444,212 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/matapelajaran/Creatematpel.vue?vue&type=template&id=8f271220&":
+/*!*****************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/matapelajaran/Creatematpel.vue?vue&type=template&id=8f271220& ***!
+  \*****************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-6" }, [
+        _c("br"),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(" "),
+        _c("h4", [_vm._v("Tambah Mata Pelajaran")]),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(" "),
+        _c(
+          "form",
+          {
+            on: {
+              submit: function($event) {
+                $event.preventDefault()
+                return _vm.addMatpel()
+              }
+            }
+          },
+          [
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", [_vm._v("Kode Mata Pelajaran")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.form.kode_matpel,
+                    expression: "form.kode_matpel"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: { type: "textfield", required: "" },
+                domProps: { value: _vm.form.kode_matpel },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.form, "kode_matpel", $event.target.value)
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", [_vm._v("Nama Mata Pelajaran")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.form.matpel,
+                    expression: "form.matpel"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: { type: "textfield", required: "" },
+                domProps: { value: _vm.form.matpel },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.form, "matpel", $event.target.value)
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("button", { staticClass: "btn btn-primary" }, [_vm._v("Tambah")])
+          ]
+        )
+      ])
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/matapelajaran/EditMatpel.vue?vue&type=template&id=09f5ebde&":
+/*!***************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/matapelajaran/EditMatpel.vue?vue&type=template&id=09f5ebde& ***!
+  \***************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-6" }, [
+        _c("br"),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(" "),
+        _c("h4", [_vm._v("Update Mata Pelajaran")]),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(" "),
+        _c(
+          "form",
+          {
+            on: {
+              submit: function($event) {
+                $event.preventDefault()
+                return _vm.updateMatpel()
+              }
+            }
+          },
+          [
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", [_vm._v("Kode Mata Pelajaran")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.form.kode_matpel,
+                    expression: "form.kode_matpel"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: { type: "textfield", required: "" },
+                domProps: { value: _vm.form.kode_matpel },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.form, "kode_matpel", $event.target.value)
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", [_vm._v("Nama Mata Pelajaran")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.form.matpel,
+                    expression: "form.matpel"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: { type: "textfield", required: "" },
+                domProps: { value: _vm.form.matpel },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.form, "matpel", $event.target.value)
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("button", { staticClass: "btn btn-primary" }, [_vm._v("Update")])
+          ]
+        )
+      ])
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/matapelajaran/MataPelajaran.vue?vue&type=template&id=6511dc30&scoped=true&":
 /*!******************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/matapelajaran/MataPelajaran.vue?vue&type=template&id=6511dc30&scoped=true& ***!
@@ -39323,7 +39682,7 @@ var render = function() {
               "router-link",
               {
                 staticClass: "btn btn-primary w-100",
-                attrs: { to: "/create" }
+                attrs: { to: "/create/matpel" }
               },
               [_vm._v("+ Tambah")]
             )
@@ -39357,7 +39716,7 @@ var render = function() {
                     "router-link",
                     {
                       staticClass: "btn btn-warning",
-                      attrs: { to: "/edit/" + matpel.nis }
+                      attrs: { to: "/edit/matpel/" + matpel.id }
                     },
                     [_vm._v("Edit")]
                   ),
@@ -39368,7 +39727,7 @@ var render = function() {
                       staticClass: "btn btn-danger",
                       on: {
                         click: function($event) {
-                          return _vm.deleteData(matpel.nis)
+                          return _vm.deleteMatpel(matpel.id)
                         }
                       }
                     },
@@ -56333,6 +56692,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_nilai_NilaiSatuSiswa_vue__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/nilai/NilaiSatuSiswa.vue */ "./resources/js/components/nilai/NilaiSatuSiswa.vue");
 /* harmony import */ var _components_nilai_EditNilaiSiswa_vue__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/nilai/EditNilaiSiswa.vue */ "./resources/js/components/nilai/EditNilaiSiswa.vue");
 /* harmony import */ var _components_matapelajaran_MataPelajaran_vue__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/matapelajaran/MataPelajaran.vue */ "./resources/js/components/matapelajaran/MataPelajaran.vue");
+/* harmony import */ var _components_matapelajaran_EditMatpel__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/matapelajaran/EditMatpel */ "./resources/js/components/matapelajaran/EditMatpel.vue");
+/* harmony import */ var _components_matapelajaran_Creatematpel__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/matapelajaran/Creatematpel */ "./resources/js/components/matapelajaran/Creatematpel.vue");
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -56357,9 +56718,11 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
 
 
 
+
+
 var routes = [{
   name: 'read',
-  path: '/',
+  path: '/dashboard',
   component: _components_siswa_SiswaDashboard_vue__WEBPACK_IMPORTED_MODULE_6__["default"]
 }, {
   name: 'tambahsiswa',
@@ -56389,6 +56752,14 @@ var routes = [{
   name: 'matpel',
   path: '/matpel',
   component: _components_matapelajaran_MataPelajaran_vue__WEBPACK_IMPORTED_MODULE_12__["default"]
+}, {
+  name: 'editmatpel',
+  path: '/edit/matpel/:id',
+  component: _components_matapelajaran_EditMatpel__WEBPACK_IMPORTED_MODULE_13__["default"]
+}, {
+  name: 'creatematpel',
+  path: '/create/matpel',
+  component: _components_matapelajaran_Creatematpel__WEBPACK_IMPORTED_MODULE_14__["default"]
 }];
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   mode: 'history',
@@ -56535,6 +56906,144 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_template_id_332fccf4_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_template_id_332fccf4_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/matapelajaran/Creatematpel.vue":
+/*!****************************************************************!*\
+  !*** ./resources/js/components/matapelajaran/Creatematpel.vue ***!
+  \****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Creatematpel_vue_vue_type_template_id_8f271220___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Creatematpel.vue?vue&type=template&id=8f271220& */ "./resources/js/components/matapelajaran/Creatematpel.vue?vue&type=template&id=8f271220&");
+/* harmony import */ var _Creatematpel_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Creatematpel.vue?vue&type=script&lang=js& */ "./resources/js/components/matapelajaran/Creatematpel.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Creatematpel_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Creatematpel_vue_vue_type_template_id_8f271220___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Creatematpel_vue_vue_type_template_id_8f271220___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/matapelajaran/Creatematpel.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/matapelajaran/Creatematpel.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************!*\
+  !*** ./resources/js/components/matapelajaran/Creatematpel.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Creatematpel_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./Creatematpel.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/matapelajaran/Creatematpel.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Creatematpel_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/matapelajaran/Creatematpel.vue?vue&type=template&id=8f271220&":
+/*!***********************************************************************************************!*\
+  !*** ./resources/js/components/matapelajaran/Creatematpel.vue?vue&type=template&id=8f271220& ***!
+  \***********************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Creatematpel_vue_vue_type_template_id_8f271220___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./Creatematpel.vue?vue&type=template&id=8f271220& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/matapelajaran/Creatematpel.vue?vue&type=template&id=8f271220&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Creatematpel_vue_vue_type_template_id_8f271220___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Creatematpel_vue_vue_type_template_id_8f271220___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/matapelajaran/EditMatpel.vue":
+/*!**************************************************************!*\
+  !*** ./resources/js/components/matapelajaran/EditMatpel.vue ***!
+  \**************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _EditMatpel_vue_vue_type_template_id_09f5ebde___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EditMatpel.vue?vue&type=template&id=09f5ebde& */ "./resources/js/components/matapelajaran/EditMatpel.vue?vue&type=template&id=09f5ebde&");
+/* harmony import */ var _EditMatpel_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EditMatpel.vue?vue&type=script&lang=js& */ "./resources/js/components/matapelajaran/EditMatpel.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _EditMatpel_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _EditMatpel_vue_vue_type_template_id_09f5ebde___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _EditMatpel_vue_vue_type_template_id_09f5ebde___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/matapelajaran/EditMatpel.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/matapelajaran/EditMatpel.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************!*\
+  !*** ./resources/js/components/matapelajaran/EditMatpel.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EditMatpel_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./EditMatpel.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/matapelajaran/EditMatpel.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EditMatpel_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/matapelajaran/EditMatpel.vue?vue&type=template&id=09f5ebde&":
+/*!*********************************************************************************************!*\
+  !*** ./resources/js/components/matapelajaran/EditMatpel.vue?vue&type=template&id=09f5ebde& ***!
+  \*********************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EditMatpel_vue_vue_type_template_id_09f5ebde___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./EditMatpel.vue?vue&type=template&id=09f5ebde& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/matapelajaran/EditMatpel.vue?vue&type=template&id=09f5ebde&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EditMatpel_vue_vue_type_template_id_09f5ebde___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EditMatpel_vue_vue_type_template_id_09f5ebde___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

@@ -31,6 +31,10 @@ Route::put('/nilai/{nis}/{semester}/{kode}', 'NilaiApiController@updateNilai');
 
 //Matpel Routes
 Route::get('/matpel', 'MatpelApiController@index');
+Route::get('/matpel/{id}', 'MatpelApiController@show');
+Route::post('/matpel/tambah', 'MatpelApiController@store');
+Route::put('/matpel/{id}', 'MatpelApiController@update');
+Route::delete('/matpel/{id}', 'MatpelApiController@destroy');
 
 // Route::get('/editsiswa/{id}', 'SiswaController@edit');
 // Route::post('/editsiswa/{id}', 'SiswaController@update');

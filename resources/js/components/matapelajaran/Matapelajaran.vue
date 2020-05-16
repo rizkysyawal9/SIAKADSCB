@@ -9,7 +9,7 @@
         </div>
         <div class="col-md-2">
           <!-- push router ke form membuat data -->
-          <router-link class="btn btn-primary w-100" to="/create">+ Tambah</router-link>
+          <router-link class="btn btn-primary w-100" to="/create/matpel">+ Tambah</router-link>
         </div>
       </div>
       <br />
@@ -27,8 +27,8 @@
             <td style="width:40%">{{matpel.kode_matpel}}</td>
             <td style="width:40%">{{matpel.matpel}}</td>
             <td style="width:20%">
-              <router-link class="btn btn-warning" :to="'/edit/'+matpel.nis">Edit</router-link>
-              <button class="btn btn-danger" v-on:click="deleteData(matpel.nis)">Delete</button>
+              <router-link class="btn btn-warning" :to="'/edit/matpel/'+matpel.id">Edit</router-link>
+              <button class="btn btn-danger" v-on:click="deleteMatpel(matpel.id)">Delete</button>
             </td>
           </tr>
         </tbody>
@@ -57,6 +57,11 @@ export default {
         .catch(err => {
           alert(err);
         });
+    },
+    deleteMatpel(id) {
+      axios.delete("http://localhost:8000/api/matpel/" + id).then(response => {
+        this.getMatapel();
+      });
     }
   }
 };

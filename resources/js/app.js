@@ -25,11 +25,13 @@ import NilaiSiswa from './components/nilai/NilaiSiswa.vue';
 import NilaiSatuSiswa from './components/nilai/NilaiSatuSiswa.vue';
 import EditNilaiSiswa from './components/nilai/EditNilaiSiswa.vue';
 import MataPelajaran from './components/matapelajaran/MataPelajaran.vue';
+import EditMatpel from './components/matapelajaran/EditMatpel';
+import Creatematpel from './components/matapelajaran/Creatematpel';
 
 const routes = [
     {
         name: 'read',
-        path: '/',
+        path: '/dashboard',
         component: SiswaDashboard
     },
     {
@@ -66,7 +68,19 @@ const routes = [
         name: 'matpel',
         path: '/matpel',
         component: MataPelajaran
-    }
+    },
+    {
+        name: 'editmatpel',
+        path: '/edit/matpel/:id',
+        component: EditMatpel
+    },
+    {
+        name: 'creatematpel',
+        path: '/create/matpel',
+        component: Creatematpel
+    },
+    
+
 ]
 
 const router = new VueRouter({ mode: 'history', routes: routes });

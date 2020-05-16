@@ -36,7 +36,12 @@ class MatpelApiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $matpel = Matpel::create([
+            'kode_matpel' => $request->kode_matpel,
+            'matpel' => $request->matpel,
+        ]);
+        $matpel->save();
+        return $matpel;
     }
 
     /**
@@ -47,7 +52,8 @@ class MatpelApiController extends Controller
      */
     public function show($id)
     {
-        //
+        $matpel = Matpel::where('id', $id)->first();
+        return $matpel;
     }
 
     /**
@@ -70,7 +76,11 @@ class MatpelApiController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $matpel = Matpel::where('id', $id)->first();
+        $matpel->kode_matpel = $request->kode_matpel;
+        $matpel->matpel = $request->matpel;
+        $matpel->save();
+        return $matpel;
     }
 
     /**
@@ -81,6 +91,7 @@ class MatpelApiController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Matpel::where('id', $id)->delete();
+        return 'Destroyed';
     }
 }
