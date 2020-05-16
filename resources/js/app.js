@@ -17,14 +17,14 @@ Vue.use(VueRouter,VueAxios,Axios);
 
 
 import App from './components/App.vue';
-import TambahSiswa from './components/TambahSiswa.vue';
-import SiswaDashboard from './components/SiswaDashboard.vue';
-import UpdateSiswa from './components/UpdateSiswa.vue';
-import DetailSiswa from './components/DetailSiswa.vue';
-import NilaiSiswa from './components/NilaiSiswa.vue';
-import NilaiSatuSiswa from './components/NilaiSatuSiswa.vue';
-import EditNilaiSiswa from './components/EditNilaiSiswa.vue';
-import MataPelajaran from './components/MataPelajaran.vue';
+import TambahSiswa from './components/siswa/TambahSiswa.vue';
+import SiswaDashboard from './components/siswa/SiswaDashboard.vue';
+import UpdateSiswa from './components/siswa/UpdateSiswa.vue';
+import DetailSiswa from './components/siswa/DetailSiswa.vue';
+import NilaiSiswa from './components/nilai/NilaiSiswa.vue';
+import NilaiSatuSiswa from './components/nilai/NilaiSatuSiswa.vue';
+import EditNilaiSiswa from './components/nilai/EditNilaiSiswa.vue';
+import MataPelajaran from './components/matapelajaran/MataPelajaran.vue';
 
 const routes = [
     {
