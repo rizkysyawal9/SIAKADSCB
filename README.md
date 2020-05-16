@@ -30,4 +30,40 @@ npm run watch
 ```
 php artisan serve
 ```
+
+### API Docs
+
+1. Data Siswa
+
+- GET/api/siswa/{nis}
+
+example: 
+```
+fetch('https://localhost:8000/api/siswa/12345')
+  .then(response => response.json())
+  .then(json => console.log(json))
+```
+
+2. Nilai satu Siswa
+
+- GET/api/nilai/{nis}
+
+example: 
+```
+fetch('https://localhost:8000/api/nilai/12345')
+  .then(response => response.json())
+  .then(json => console.log(json))
+```
+
+3. Nilai Siswa per Semester
+
+- GET/api/siswa/{nis}/{semester}
+
+example: 
+```
+fetch('https://localhost:8000/api/siswa/12345/1')
+  .then(response => response.json())
+  .then(json => console.log(json))
+```
+
 ##### Happy Testing
