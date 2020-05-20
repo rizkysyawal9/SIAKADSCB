@@ -12,6 +12,27 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import VueAxios from 'vue-axios';
 import Axios from 'axios';
+import { Form, HasError, AlertError } from 'vform'
+Vue.component(HasError.name, HasError)
+Vue.component(AlertError.name, AlertError)
+import Swal from 'sweetalert2'
+
+const toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    onOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer)
+      toast.addEventListener('mouseleave', Swal.resumeTimer)
+    }
+  })
+
+
+window.toast = toast;
+window.Swal = Swal;
+window.Form = Form;
 
 Vue.use(VueRouter,VueAxios,Axios);
 
@@ -30,37 +51,30 @@ import Creatematpel from './components/matapelajaran/Creatematpel';
 
 const routes = [
     {
-        name: 'read',
         path: '/dashboard',
         component: SiswaDashboard
     },
     {
-        name: 'tambahsiswa',
         path: '/create',
         component: TambahSiswa
     },
     {
-        name: 'update',
         path: '/edit/:id',
         component: UpdateSiswa
     },
     {
-        name: 'Details',
         path: '/detail/:id',
         component: DetailSiswa
     },
     {
-        name: 'nilaisiswa',
         path: '/nilaisiswa',
         component: NilaiSiswa
     },
     {
-        name: 'nilaisatusiswa',
         path: '/nilaisiswa/:id',
         component: NilaiSatuSiswa
     },
     {
-        name: 'editnilai',
         path: '/editnilai/:nis/:semester/:kode',
         component: EditNilaiSiswa
     },

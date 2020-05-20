@@ -27,15 +27,16 @@ use Illuminate\Support\Facades\Route;
 // Route::post('/editsiswa/{id}', 'SiswaController@update');
 // Route::get('/deletesiswa/{id}', 'SiswaController@destroy');
 // Route::get('/shownilai/{id}', 'NilaiController@show');
-// Route::get('/{any}', function () {
-//     return view('landingpage');
-// })->where('any', '.*');
 
 Auth::routes();
 Route::get('/', function () {
     return view('landingpage');
 });
-// Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/dashboard', function () {
+
+Route::get('/{any}', function () {
     return view('welcome');
-});
+})->where('any', '.*');
+// // Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/dashboard', function () {
+//     return view('welcome');
+// });

@@ -36,9 +36,14 @@ class MatpelApiController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'kode_matpel' => 'required|string|max:10|unique:matpels',
+            'matpel' => 'required',
+        ]);
         $matpel = Matpel::create([
             'kode_matpel' => $request->kode_matpel,
             'matpel' => $request->matpel,
+            'kelas' => $request->kelas,
         ]);
         $matpel->save();
         return $matpel;
@@ -76,9 +81,12 @@ class MatpelApiController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $this->validate($request, [
+            'matpel' => 'required',
+        ]);
         $matpel = Matpel::where('id', $id)->first();
-        $matpel->kode_matpel = $request->kode_matpel;
         $matpel->matpel = $request->matpel;
+        $matpel->kelas = $request->kelas;
         $matpel->save();
         return $matpel;
     }

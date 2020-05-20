@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SIAKAD SCB </title>
     <link href="navbar-top.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="https://getbootstrap.com/docs/4.0/assets/js/vendor/popper.min.js.map">
@@ -148,13 +148,16 @@ footer {
 .textprofile a {
     color: #000000;
 }
+.image{
+    max-width: 150px;
+}
 
     </style>
 </head>
 <body>
 <header>
         <nav class="navbar navbar-expand-md bg-green">
-            <a class="navbar-brand geser" href="./"><img src="{{asset('sites/images/logo.png')}}" alt="Logo"></a>
+            <a class="navbar-brand geser" href="./"><img src="./LOGO.png" alt="Logo" class="image"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -194,7 +197,7 @@ footer {
         </div>
     </div>
 
-    <footer>
+    <footer class="footer mt-auto ">
         <div class="isifooter">
         <p>
 

@@ -17,6 +17,7 @@ class CreateMatpelsTable extends Migration
             $table->bigIncrements('id');
             $table->string('kode_matpel')->unique();
             $table->string('matpel');
+            $table->integer('kelas')->default(7);
             $table->timestamps();
         });
     }

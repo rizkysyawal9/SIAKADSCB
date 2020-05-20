@@ -2,9 +2,6 @@
   <div>
     <div>
       <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-light" style="background-color:  #16744A;">
-        <a class="navbar-brand" href="#"></a>
-      </nav>
 
       <!-- Sidebar -->
       <div class="wrapper">
@@ -47,6 +44,10 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {};
+</script>
 
 <style scoped>
 .siswa {

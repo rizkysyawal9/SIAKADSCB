@@ -1899,10 +1899,10 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/matapelajaran/Creatematpel.vue?vue&type=script&lang=js&":
-/*!*************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/matapelajaran/Creatematpel.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/App.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/App.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1933,9 +1933,93 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/matapelajaran/Creatematpel.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/matapelajaran/Creatematpel.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var bootstrap_dist_css_bootstrap_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.css */ "./node_modules/bootstrap/dist/css/bootstrap.css");
+/* harmony import */ var bootstrap_dist_css_bootstrap_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_css__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var bootstrap_vue_dist_bootstrap_vue_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue/dist/bootstrap-vue.css */ "./node_modules/bootstrap-vue/dist/bootstrap-vue.css");
+/* harmony import */ var bootstrap_vue_dist_bootstrap_vue_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(bootstrap_vue_dist_bootstrap_vue_css__WEBPACK_IMPORTED_MODULE_1__);
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
+      errors: [],
+      successmessage: "Berhasil ditambah",
       form: {
         // firstName: "",
         // lastName: ""
@@ -1946,6 +2030,22 @@ __webpack_require__.r(__webpack_exports__);
   },
   created: function created() {},
   methods: {
+    checkForm: function checkForm() {
+      console.log("pressed");
+      this.errors = [];
+
+      if (this.form.kode_matpel == "") {
+        [].concat(_toConsumableArray(errors), ["Name required"]);
+      }
+
+      if (this.form.matpel == "") {
+        [].concat(_toConsumableArray(errors), ["Age required"]);
+      }
+
+      if (this.form.kode_matpel && this.form.matpel) {
+        this.addMatpel();
+      }
+    },
     addMatpel: function addMatpel() {
       var _this = this;
 
@@ -2050,6 +2150,114 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2092,27 +2300,109 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      matpels: []
+      editmode: false,
+      matpels: [],
+      form: new Form({
+        id: "",
+        kode_matpel: "",
+        matpel: "",
+        kelas: ""
+      })
     };
   },
   created: function created() {
     this.getMatapel();
   },
   methods: {
-    getMatapel: function getMatapel() {
+    filterkelas: function filterkelas(kelas) {
       var _this = this;
 
+      console.log(this.matpels);
       axios.get("http://localhost:8000/api/matpel").then(function (result) {
         _this.matpels = result.data;
+        _this.matpels = _this.matpels.filter(function (matpel) {
+          return matpel.kelas === kelas;
+        });
+      })["catch"](function (err) {
+        alert(err);
+      });
+      console.log(this.matpels);
+    },
+    updateData: function updateData(id) {
+      var _this2 = this;
+
+      console.log("Pressed");
+      this.form.put("http://localhost:8000/api/matpel/" + this.form.id).then(function (res) {
+        console.log(res.data);
+        toast.fire({
+          icon: "success",
+          title: "Mata Pelajaran Berhasil Diubah"
+        });
+        $("#createModal").modal("hide");
+
+        _this2.getMatapel();
+      })["catch"](function (err) {
+        console.log(err);
+      });
+    },
+    editModal: function editModal(matpel) {
+      this.editmode = true;
+      this.form.reset();
+      $("#createModal").modal("show");
+      this.form.fill(matpel);
+    },
+    createModal: function createModal() {
+      this.editmode = false;
+      this.form.reset();
+      $("#createModal").modal("show");
+    },
+    addMatpel: function addMatpel() {
+      var _this3 = this;
+
+      // post data ke api menggunakan axios
+      console.log(this.form);
+      this.form.post("http://localhost:8000/api/matpel/tambah").then(function (response) {
+        _this3.matpels = [].concat(_toConsumableArray(_this3.matpels), [response.data]);
+        toast.fire({
+          icon: "success",
+          title: "Mata Pelajaran Berhasil Ditambahkan"
+        });
+        $("#createModal").modal("hide");
+      })["catch"](function (err) {
+        console.log(err);
+      });
+    },
+    getMatapel: function getMatapel() {
+      var _this4 = this;
+
+      axios.get("http://localhost:8000/api/matpel").then(function (result) {
+        _this4.matpels = result.data;
       })["catch"](function (err) {
         alert(err);
       });
     },
     deleteMatpel: function deleteMatpel(id) {
-      var _this2 = this;
+      var _this5 = this;
 
-      axios["delete"]("http://localhost:8000/api/matpel/" + id).then(function (response) {
-        _this2.getMatapel();
+      Swal.fire({
+        title: "Apakah anda yakin?",
+        text: "Anda tidak dapat mengubah ini",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Iya, hapuskan ini!"
+      }).then(function (result) {
+        if (result.value) {
+          axios["delete"]("http://localhost:8000/api/matpel/" + id).then(function (response) {
+            _this5.matpels = _this5.matpels.filter(function (matpel) {
+              return matpel.id !== id;
+            });
+            Swal.fire("Deleted!", "Mata pelajaran berhasil di delete", "success")["catch"](function () {
+              Swal.fire("Failed!", "Something went Wrong", "warning");
+            });
+          });
+        }
       });
     }
   }
@@ -3034,6 +3324,66 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/bootstrap-vue/dist/bootstrap-vue.css":
+/*!***********************************************************!*\
+  !*** ./node_modules/bootstrap-vue/dist/bootstrap-vue.css ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../css-loader??ref--6-1!../../postcss-loader/src??ref--6-2!./bootstrap-vue.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/bootstrap-vue/dist/bootstrap-vue.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/bootstrap/dist/css/bootstrap.css":
+/*!*******************************************************!*\
+  !*** ./node_modules/bootstrap/dist/css/bootstrap.css ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../css-loader??ref--6-1!../../../postcss-loader/src??ref--6-2!./bootstrap.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/bootstrap/dist/css/bootstrap.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/bootstrap/dist/js/bootstrap.js":
 /*!*****************************************************!*\
   !*** ./node_modules/bootstrap/dist/js/bootstrap.js ***!
@@ -3042,8 +3392,8 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 /*!
-  * Bootstrap v4.4.1 (https://getbootstrap.com/)
-  * Copyright 2011-2019 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+  * Bootstrap v4.5.0 (https://getbootstrap.com/)
+  * Copyright 2011-2020 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
 (function (global, factory) {
@@ -3051,8 +3401,8 @@ __webpack_require__.r(__webpack_exports__);
   undefined;
 }(this, (function (exports, $, Popper) { 'use strict';
 
-  $ = $ && $.hasOwnProperty('default') ? $['default'] : $;
-  Popper = Popper && Popper.hasOwnProperty('default') ? Popper['default'] : Popper;
+  $ = $ && Object.prototype.hasOwnProperty.call($, 'default') ? $['default'] : $;
+  Popper = Popper && Object.prototype.hasOwnProperty.call(Popper, 'default') ? Popper['default'] : Popper;
 
   function _defineProperties(target, props) {
     for (var i = 0; i < props.length; i++) {
@@ -3127,7 +3477,7 @@ __webpack_require__.r(__webpack_exports__);
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.4.1): util.js
+   * Bootstrap (v4.5.0): util.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -3142,6 +3492,10 @@ __webpack_require__.r(__webpack_exports__);
   var MILLISECONDS_MULTIPLIER = 1000; // Shoutout AngusCroll (https://goo.gl/pxwQGp)
 
   function toType(obj) {
+    if (obj === null || typeof obj === 'undefined') {
+      return "" + obj;
+    }
+
     return {}.toString.call(obj).match(/\s([a-z]+)/i)[1].toLowerCase();
   }
 
@@ -3154,7 +3508,7 @@ __webpack_require__.r(__webpack_exports__);
           return event.handleObj.handler.apply(this, arguments); // eslint-disable-line prefer-rest-params
         }
 
-        return undefined; // eslint-disable-line no-undefined
+        return undefined;
       }
     };
   }
@@ -3304,33 +3658,25 @@ __webpack_require__.r(__webpack_exports__);
    */
 
   var NAME = 'alert';
-  var VERSION = '4.4.1';
+  var VERSION = '4.5.0';
   var DATA_KEY = 'bs.alert';
   var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
-  var Selector = {
-    DISMISS: '[data-dismiss="alert"]'
-  };
-  var Event = {
-    CLOSE: "close" + EVENT_KEY,
-    CLOSED: "closed" + EVENT_KEY,
-    CLICK_DATA_API: "click" + EVENT_KEY + DATA_API_KEY
-  };
-  var ClassName = {
-    ALERT: 'alert',
-    FADE: 'fade',
-    SHOW: 'show'
-  };
+  var SELECTOR_DISMISS = '[data-dismiss="alert"]';
+  var EVENT_CLOSE = "close" + EVENT_KEY;
+  var EVENT_CLOSED = "closed" + EVENT_KEY;
+  var EVENT_CLICK_DATA_API = "click" + EVENT_KEY + DATA_API_KEY;
+  var CLASS_NAME_ALERT = 'alert';
+  var CLASS_NAME_FADE = 'fade';
+  var CLASS_NAME_SHOW = 'show';
   /**
    * ------------------------------------------------------------------------
    * Class Definition
    * ------------------------------------------------------------------------
    */
 
-  var Alert =
-  /*#__PURE__*/
-  function () {
+  var Alert = /*#__PURE__*/function () {
     function Alert(element) {
       this._element = element;
     } // Getters
@@ -3370,14 +3716,14 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       if (!parent) {
-        parent = $(element).closest("." + ClassName.ALERT)[0];
+        parent = $(element).closest("." + CLASS_NAME_ALERT)[0];
       }
 
       return parent;
     };
 
     _proto._triggerCloseEvent = function _triggerCloseEvent(element) {
-      var closeEvent = $.Event(Event.CLOSE);
+      var closeEvent = $.Event(EVENT_CLOSE);
       $(element).trigger(closeEvent);
       return closeEvent;
     };
@@ -3385,9 +3731,9 @@ __webpack_require__.r(__webpack_exports__);
     _proto._removeElement = function _removeElement(element) {
       var _this = this;
 
-      $(element).removeClass(ClassName.SHOW);
+      $(element).removeClass(CLASS_NAME_SHOW);
 
-      if (!$(element).hasClass(ClassName.FADE)) {
+      if (!$(element).hasClass(CLASS_NAME_FADE)) {
         this._destroyElement(element);
 
         return;
@@ -3400,7 +3746,7 @@ __webpack_require__.r(__webpack_exports__);
     };
 
     _proto._destroyElement = function _destroyElement(element) {
-      $(element).detach().trigger(Event.CLOSED).remove();
+      $(element).detach().trigger(EVENT_CLOSED).remove();
     } // Static
     ;
 
@@ -3446,7 +3792,7 @@ __webpack_require__.r(__webpack_exports__);
    */
 
 
-  $(document).on(Event.CLICK_DATA_API, Selector.DISMISS, Alert._handleDismiss(new Alert()));
+  $(document).on(EVENT_CLICK_DATA_API, SELECTOR_DISMISS, Alert._handleDismiss(new Alert()));
   /**
    * ------------------------------------------------------------------------
    * jQuery
@@ -3468,39 +3814,31 @@ __webpack_require__.r(__webpack_exports__);
    */
 
   var NAME$1 = 'button';
-  var VERSION$1 = '4.4.1';
+  var VERSION$1 = '4.5.0';
   var DATA_KEY$1 = 'bs.button';
   var EVENT_KEY$1 = "." + DATA_KEY$1;
   var DATA_API_KEY$1 = '.data-api';
   var JQUERY_NO_CONFLICT$1 = $.fn[NAME$1];
-  var ClassName$1 = {
-    ACTIVE: 'active',
-    BUTTON: 'btn',
-    FOCUS: 'focus'
-  };
-  var Selector$1 = {
-    DATA_TOGGLE_CARROT: '[data-toggle^="button"]',
-    DATA_TOGGLES: '[data-toggle="buttons"]',
-    DATA_TOGGLE: '[data-toggle="button"]',
-    DATA_TOGGLES_BUTTONS: '[data-toggle="buttons"] .btn',
-    INPUT: 'input:not([type="hidden"])',
-    ACTIVE: '.active',
-    BUTTON: '.btn'
-  };
-  var Event$1 = {
-    CLICK_DATA_API: "click" + EVENT_KEY$1 + DATA_API_KEY$1,
-    FOCUS_BLUR_DATA_API: "focus" + EVENT_KEY$1 + DATA_API_KEY$1 + " " + ("blur" + EVENT_KEY$1 + DATA_API_KEY$1),
-    LOAD_DATA_API: "load" + EVENT_KEY$1 + DATA_API_KEY$1
-  };
+  var CLASS_NAME_ACTIVE = 'active';
+  var CLASS_NAME_BUTTON = 'btn';
+  var CLASS_NAME_FOCUS = 'focus';
+  var SELECTOR_DATA_TOGGLE_CARROT = '[data-toggle^="button"]';
+  var SELECTOR_DATA_TOGGLES = '[data-toggle="buttons"]';
+  var SELECTOR_DATA_TOGGLE = '[data-toggle="button"]';
+  var SELECTOR_DATA_TOGGLES_BUTTONS = '[data-toggle="buttons"] .btn';
+  var SELECTOR_INPUT = 'input:not([type="hidden"])';
+  var SELECTOR_ACTIVE = '.active';
+  var SELECTOR_BUTTON = '.btn';
+  var EVENT_CLICK_DATA_API$1 = "click" + EVENT_KEY$1 + DATA_API_KEY$1;
+  var EVENT_FOCUS_BLUR_DATA_API = "focus" + EVENT_KEY$1 + DATA_API_KEY$1 + " " + ("blur" + EVENT_KEY$1 + DATA_API_KEY$1);
+  var EVENT_LOAD_DATA_API = "load" + EVENT_KEY$1 + DATA_API_KEY$1;
   /**
    * ------------------------------------------------------------------------
    * Class Definition
    * ------------------------------------------------------------------------
    */
 
-  var Button =
-  /*#__PURE__*/
-  function () {
+  var Button = /*#__PURE__*/function () {
     function Button(element) {
       this._element = element;
     } // Getters
@@ -3512,33 +3850,30 @@ __webpack_require__.r(__webpack_exports__);
     _proto.toggle = function toggle() {
       var triggerChangeEvent = true;
       var addAriaPressed = true;
-      var rootElement = $(this._element).closest(Selector$1.DATA_TOGGLES)[0];
+      var rootElement = $(this._element).closest(SELECTOR_DATA_TOGGLES)[0];
 
       if (rootElement) {
-        var input = this._element.querySelector(Selector$1.INPUT);
+        var input = this._element.querySelector(SELECTOR_INPUT);
 
         if (input) {
           if (input.type === 'radio') {
-            if (input.checked && this._element.classList.contains(ClassName$1.ACTIVE)) {
+            if (input.checked && this._element.classList.contains(CLASS_NAME_ACTIVE)) {
               triggerChangeEvent = false;
             } else {
-              var activeElement = rootElement.querySelector(Selector$1.ACTIVE);
+              var activeElement = rootElement.querySelector(SELECTOR_ACTIVE);
 
               if (activeElement) {
-                $(activeElement).removeClass(ClassName$1.ACTIVE);
+                $(activeElement).removeClass(CLASS_NAME_ACTIVE);
               }
             }
-          } else if (input.type === 'checkbox') {
-            if (this._element.tagName === 'LABEL' && input.checked === this._element.classList.contains(ClassName$1.ACTIVE)) {
-              triggerChangeEvent = false;
-            }
-          } else {
-            // if it's not a radio button or checkbox don't add a pointless/invalid checked property to the input
-            triggerChangeEvent = false;
           }
 
           if (triggerChangeEvent) {
-            input.checked = !this._element.classList.contains(ClassName$1.ACTIVE);
+            // if it's not a radio button or checkbox don't add a pointless/invalid checked property to the input
+            if (input.type === 'checkbox' || input.type === 'radio') {
+              input.checked = !this._element.classList.contains(CLASS_NAME_ACTIVE);
+            }
+
             $(input).trigger('change');
           }
 
@@ -3549,11 +3884,11 @@ __webpack_require__.r(__webpack_exports__);
 
       if (!(this._element.hasAttribute('disabled') || this._element.classList.contains('disabled'))) {
         if (addAriaPressed) {
-          this._element.setAttribute('aria-pressed', !this._element.classList.contains(ClassName$1.ACTIVE));
+          this._element.setAttribute('aria-pressed', !this._element.classList.contains(CLASS_NAME_ACTIVE));
         }
 
         if (triggerChangeEvent) {
-          $(this._element).toggleClass(ClassName$1.ACTIVE);
+          $(this._element).toggleClass(CLASS_NAME_ACTIVE);
         }
       }
     };
@@ -3595,17 +3930,18 @@ __webpack_require__.r(__webpack_exports__);
    */
 
 
-  $(document).on(Event$1.CLICK_DATA_API, Selector$1.DATA_TOGGLE_CARROT, function (event) {
+  $(document).on(EVENT_CLICK_DATA_API$1, SELECTOR_DATA_TOGGLE_CARROT, function (event) {
     var button = event.target;
+    var initialButton = button;
 
-    if (!$(button).hasClass(ClassName$1.BUTTON)) {
-      button = $(button).closest(Selector$1.BUTTON)[0];
+    if (!$(button).hasClass(CLASS_NAME_BUTTON)) {
+      button = $(button).closest(SELECTOR_BUTTON)[0];
     }
 
     if (!button || button.hasAttribute('disabled') || button.classList.contains('disabled')) {
       event.preventDefault(); // work around Firefox bug #1540995
     } else {
-      var inputBtn = button.querySelector(Selector$1.INPUT);
+      var inputBtn = button.querySelector(SELECTOR_INPUT);
 
       if (inputBtn && (inputBtn.hasAttribute('disabled') || inputBtn.classList.contains('disabled'))) {
         event.preventDefault(); // work around Firefox bug #1540995
@@ -3613,38 +3949,42 @@ __webpack_require__.r(__webpack_exports__);
         return;
       }
 
+      if (initialButton.tagName === 'LABEL' && inputBtn && inputBtn.type === 'checkbox') {
+        event.preventDefault(); // work around event sent to label and input
+      }
+
       Button._jQueryInterface.call($(button), 'toggle');
     }
-  }).on(Event$1.FOCUS_BLUR_DATA_API, Selector$1.DATA_TOGGLE_CARROT, function (event) {
-    var button = $(event.target).closest(Selector$1.BUTTON)[0];
-    $(button).toggleClass(ClassName$1.FOCUS, /^focus(in)?$/.test(event.type));
+  }).on(EVENT_FOCUS_BLUR_DATA_API, SELECTOR_DATA_TOGGLE_CARROT, function (event) {
+    var button = $(event.target).closest(SELECTOR_BUTTON)[0];
+    $(button).toggleClass(CLASS_NAME_FOCUS, /^focus(in)?$/.test(event.type));
   });
-  $(window).on(Event$1.LOAD_DATA_API, function () {
+  $(window).on(EVENT_LOAD_DATA_API, function () {
     // ensure correct active class is set to match the controls' actual values/states
     // find all checkboxes/readio buttons inside data-toggle groups
-    var buttons = [].slice.call(document.querySelectorAll(Selector$1.DATA_TOGGLES_BUTTONS));
+    var buttons = [].slice.call(document.querySelectorAll(SELECTOR_DATA_TOGGLES_BUTTONS));
 
     for (var i = 0, len = buttons.length; i < len; i++) {
       var button = buttons[i];
-      var input = button.querySelector(Selector$1.INPUT);
+      var input = button.querySelector(SELECTOR_INPUT);
 
       if (input.checked || input.hasAttribute('checked')) {
-        button.classList.add(ClassName$1.ACTIVE);
+        button.classList.add(CLASS_NAME_ACTIVE);
       } else {
-        button.classList.remove(ClassName$1.ACTIVE);
+        button.classList.remove(CLASS_NAME_ACTIVE);
       }
     } // find all button toggles
 
 
-    buttons = [].slice.call(document.querySelectorAll(Selector$1.DATA_TOGGLE));
+    buttons = [].slice.call(document.querySelectorAll(SELECTOR_DATA_TOGGLE));
 
     for (var _i = 0, _len = buttons.length; _i < _len; _i++) {
       var _button = buttons[_i];
 
       if (_button.getAttribute('aria-pressed') === 'true') {
-        _button.classList.add(ClassName$1.ACTIVE);
+        _button.classList.add(CLASS_NAME_ACTIVE);
       } else {
-        _button.classList.remove(ClassName$1.ACTIVE);
+        _button.classList.remove(CLASS_NAME_ACTIVE);
       }
     }
   });
@@ -3669,7 +4009,7 @@ __webpack_require__.r(__webpack_exports__);
    */
 
   var NAME$2 = 'carousel';
-  var VERSION$2 = '4.4.1';
+  var VERSION$2 = '4.5.0';
   var DATA_KEY$2 = 'bs.carousel';
   var EVENT_KEY$2 = "." + DATA_KEY$2;
   var DATA_API_KEY$2 = '.data-api';
@@ -3697,48 +4037,39 @@ __webpack_require__.r(__webpack_exports__);
     wrap: 'boolean',
     touch: 'boolean'
   };
-  var Direction = {
-    NEXT: 'next',
-    PREV: 'prev',
-    LEFT: 'left',
-    RIGHT: 'right'
-  };
-  var Event$2 = {
-    SLIDE: "slide" + EVENT_KEY$2,
-    SLID: "slid" + EVENT_KEY$2,
-    KEYDOWN: "keydown" + EVENT_KEY$2,
-    MOUSEENTER: "mouseenter" + EVENT_KEY$2,
-    MOUSELEAVE: "mouseleave" + EVENT_KEY$2,
-    TOUCHSTART: "touchstart" + EVENT_KEY$2,
-    TOUCHMOVE: "touchmove" + EVENT_KEY$2,
-    TOUCHEND: "touchend" + EVENT_KEY$2,
-    POINTERDOWN: "pointerdown" + EVENT_KEY$2,
-    POINTERUP: "pointerup" + EVENT_KEY$2,
-    DRAG_START: "dragstart" + EVENT_KEY$2,
-    LOAD_DATA_API: "load" + EVENT_KEY$2 + DATA_API_KEY$2,
-    CLICK_DATA_API: "click" + EVENT_KEY$2 + DATA_API_KEY$2
-  };
-  var ClassName$2 = {
-    CAROUSEL: 'carousel',
-    ACTIVE: 'active',
-    SLIDE: 'slide',
-    RIGHT: 'carousel-item-right',
-    LEFT: 'carousel-item-left',
-    NEXT: 'carousel-item-next',
-    PREV: 'carousel-item-prev',
-    ITEM: 'carousel-item',
-    POINTER_EVENT: 'pointer-event'
-  };
-  var Selector$2 = {
-    ACTIVE: '.active',
-    ACTIVE_ITEM: '.active.carousel-item',
-    ITEM: '.carousel-item',
-    ITEM_IMG: '.carousel-item img',
-    NEXT_PREV: '.carousel-item-next, .carousel-item-prev',
-    INDICATORS: '.carousel-indicators',
-    DATA_SLIDE: '[data-slide], [data-slide-to]',
-    DATA_RIDE: '[data-ride="carousel"]'
-  };
+  var DIRECTION_NEXT = 'next';
+  var DIRECTION_PREV = 'prev';
+  var DIRECTION_LEFT = 'left';
+  var DIRECTION_RIGHT = 'right';
+  var EVENT_SLIDE = "slide" + EVENT_KEY$2;
+  var EVENT_SLID = "slid" + EVENT_KEY$2;
+  var EVENT_KEYDOWN = "keydown" + EVENT_KEY$2;
+  var EVENT_MOUSEENTER = "mouseenter" + EVENT_KEY$2;
+  var EVENT_MOUSELEAVE = "mouseleave" + EVENT_KEY$2;
+  var EVENT_TOUCHSTART = "touchstart" + EVENT_KEY$2;
+  var EVENT_TOUCHMOVE = "touchmove" + EVENT_KEY$2;
+  var EVENT_TOUCHEND = "touchend" + EVENT_KEY$2;
+  var EVENT_POINTERDOWN = "pointerdown" + EVENT_KEY$2;
+  var EVENT_POINTERUP = "pointerup" + EVENT_KEY$2;
+  var EVENT_DRAG_START = "dragstart" + EVENT_KEY$2;
+  var EVENT_LOAD_DATA_API$1 = "load" + EVENT_KEY$2 + DATA_API_KEY$2;
+  var EVENT_CLICK_DATA_API$2 = "click" + EVENT_KEY$2 + DATA_API_KEY$2;
+  var CLASS_NAME_CAROUSEL = 'carousel';
+  var CLASS_NAME_ACTIVE$1 = 'active';
+  var CLASS_NAME_SLIDE = 'slide';
+  var CLASS_NAME_RIGHT = 'carousel-item-right';
+  var CLASS_NAME_LEFT = 'carousel-item-left';
+  var CLASS_NAME_NEXT = 'carousel-item-next';
+  var CLASS_NAME_PREV = 'carousel-item-prev';
+  var CLASS_NAME_POINTER_EVENT = 'pointer-event';
+  var SELECTOR_ACTIVE$1 = '.active';
+  var SELECTOR_ACTIVE_ITEM = '.active.carousel-item';
+  var SELECTOR_ITEM = '.carousel-item';
+  var SELECTOR_ITEM_IMG = '.carousel-item img';
+  var SELECTOR_NEXT_PREV = '.carousel-item-next, .carousel-item-prev';
+  var SELECTOR_INDICATORS = '.carousel-indicators';
+  var SELECTOR_DATA_SLIDE = '[data-slide], [data-slide-to]';
+  var SELECTOR_DATA_RIDE = '[data-ride="carousel"]';
   var PointerType = {
     TOUCH: 'touch',
     PEN: 'pen'
@@ -3749,9 +4080,7 @@ __webpack_require__.r(__webpack_exports__);
    * ------------------------------------------------------------------------
    */
 
-  var Carousel =
-  /*#__PURE__*/
-  function () {
+  var Carousel = /*#__PURE__*/function () {
     function Carousel(element, config) {
       this._items = null;
       this._interval = null;
@@ -3763,7 +4092,7 @@ __webpack_require__.r(__webpack_exports__);
       this.touchDeltaX = 0;
       this._config = this._getConfig(config);
       this._element = element;
-      this._indicatorsElement = this._element.querySelector(Selector$2.INDICATORS);
+      this._indicatorsElement = this._element.querySelector(SELECTOR_INDICATORS);
       this._touchSupported = 'ontouchstart' in document.documentElement || navigator.maxTouchPoints > 0;
       this._pointerEvent = Boolean(window.PointerEvent || window.MSPointerEvent);
 
@@ -3776,7 +4105,7 @@ __webpack_require__.r(__webpack_exports__);
     // Public
     _proto.next = function next() {
       if (!this._isSliding) {
-        this._slide(Direction.NEXT);
+        this._slide(DIRECTION_NEXT);
       }
     };
 
@@ -3790,7 +4119,7 @@ __webpack_require__.r(__webpack_exports__);
 
     _proto.prev = function prev() {
       if (!this._isSliding) {
-        this._slide(Direction.PREV);
+        this._slide(DIRECTION_PREV);
       }
     };
 
@@ -3799,7 +4128,7 @@ __webpack_require__.r(__webpack_exports__);
         this._isPaused = true;
       }
 
-      if (this._element.querySelector(Selector$2.NEXT_PREV)) {
+      if (this._element.querySelector(SELECTOR_NEXT_PREV)) {
         Util.triggerTransitionEnd(this._element);
         this.cycle(true);
       }
@@ -3826,7 +4155,7 @@ __webpack_require__.r(__webpack_exports__);
     _proto.to = function to(index) {
       var _this = this;
 
-      this._activeElement = this._element.querySelector(Selector$2.ACTIVE_ITEM);
+      this._activeElement = this._element.querySelector(SELECTOR_ACTIVE_ITEM);
 
       var activeIndex = this._getItemIndex(this._activeElement);
 
@@ -3835,7 +4164,7 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       if (this._isSliding) {
-        $(this._element).one(Event$2.SLID, function () {
+        $(this._element).one(EVENT_SLID, function () {
           return _this.to(index);
         });
         return;
@@ -3847,7 +4176,7 @@ __webpack_require__.r(__webpack_exports__);
         return;
       }
 
-      var direction = index > activeIndex ? Direction.NEXT : Direction.PREV;
+      var direction = index > activeIndex ? DIRECTION_NEXT : DIRECTION_PREV;
 
       this._slide(direction, this._items[index]);
     };
@@ -3867,7 +4196,7 @@ __webpack_require__.r(__webpack_exports__);
     ;
 
     _proto._getConfig = function _getConfig(config) {
-      config = _objectSpread2({}, Default, {}, config);
+      config = _objectSpread2(_objectSpread2({}, Default), config);
       Util.typeCheckConfig(NAME$2, config, DefaultType);
       return config;
     };
@@ -3896,15 +4225,15 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       if (this._config.keyboard) {
-        $(this._element).on(Event$2.KEYDOWN, function (event) {
+        $(this._element).on(EVENT_KEYDOWN, function (event) {
           return _this2._keydown(event);
         });
       }
 
       if (this._config.pause === 'hover') {
-        $(this._element).on(Event$2.MOUSEENTER, function (event) {
+        $(this._element).on(EVENT_MOUSEENTER, function (event) {
           return _this2.pause(event);
-        }).on(Event$2.MOUSELEAVE, function (event) {
+        }).on(EVENT_MOUSELEAVE, function (event) {
           return _this2.cycle(event);
         });
       }
@@ -3965,27 +4294,27 @@ __webpack_require__.r(__webpack_exports__);
         }
       };
 
-      $(this._element.querySelectorAll(Selector$2.ITEM_IMG)).on(Event$2.DRAG_START, function (e) {
+      $(this._element.querySelectorAll(SELECTOR_ITEM_IMG)).on(EVENT_DRAG_START, function (e) {
         return e.preventDefault();
       });
 
       if (this._pointerEvent) {
-        $(this._element).on(Event$2.POINTERDOWN, function (event) {
+        $(this._element).on(EVENT_POINTERDOWN, function (event) {
           return start(event);
         });
-        $(this._element).on(Event$2.POINTERUP, function (event) {
+        $(this._element).on(EVENT_POINTERUP, function (event) {
           return end(event);
         });
 
-        this._element.classList.add(ClassName$2.POINTER_EVENT);
+        this._element.classList.add(CLASS_NAME_POINTER_EVENT);
       } else {
-        $(this._element).on(Event$2.TOUCHSTART, function (event) {
+        $(this._element).on(EVENT_TOUCHSTART, function (event) {
           return start(event);
         });
-        $(this._element).on(Event$2.TOUCHMOVE, function (event) {
+        $(this._element).on(EVENT_TOUCHMOVE, function (event) {
           return move(event);
         });
-        $(this._element).on(Event$2.TOUCHEND, function (event) {
+        $(this._element).on(EVENT_TOUCHEND, function (event) {
           return end(event);
         });
       }
@@ -4010,13 +4339,13 @@ __webpack_require__.r(__webpack_exports__);
     };
 
     _proto._getItemIndex = function _getItemIndex(element) {
-      this._items = element && element.parentNode ? [].slice.call(element.parentNode.querySelectorAll(Selector$2.ITEM)) : [];
+      this._items = element && element.parentNode ? [].slice.call(element.parentNode.querySelectorAll(SELECTOR_ITEM)) : [];
       return this._items.indexOf(element);
     };
 
     _proto._getItemByDirection = function _getItemByDirection(direction, activeElement) {
-      var isNextDirection = direction === Direction.NEXT;
-      var isPrevDirection = direction === Direction.PREV;
+      var isNextDirection = direction === DIRECTION_NEXT;
+      var isPrevDirection = direction === DIRECTION_PREV;
 
       var activeIndex = this._getItemIndex(activeElement);
 
@@ -4027,7 +4356,7 @@ __webpack_require__.r(__webpack_exports__);
         return activeElement;
       }
 
-      var delta = direction === Direction.PREV ? -1 : 1;
+      var delta = direction === DIRECTION_PREV ? -1 : 1;
       var itemIndex = (activeIndex + delta) % this._items.length;
       return itemIndex === -1 ? this._items[this._items.length - 1] : this._items[itemIndex];
     };
@@ -4035,9 +4364,9 @@ __webpack_require__.r(__webpack_exports__);
     _proto._triggerSlideEvent = function _triggerSlideEvent(relatedTarget, eventDirectionName) {
       var targetIndex = this._getItemIndex(relatedTarget);
 
-      var fromIndex = this._getItemIndex(this._element.querySelector(Selector$2.ACTIVE_ITEM));
+      var fromIndex = this._getItemIndex(this._element.querySelector(SELECTOR_ACTIVE_ITEM));
 
-      var slideEvent = $.Event(Event$2.SLIDE, {
+      var slideEvent = $.Event(EVENT_SLIDE, {
         relatedTarget: relatedTarget,
         direction: eventDirectionName,
         from: fromIndex,
@@ -4049,13 +4378,13 @@ __webpack_require__.r(__webpack_exports__);
 
     _proto._setActiveIndicatorElement = function _setActiveIndicatorElement(element) {
       if (this._indicatorsElement) {
-        var indicators = [].slice.call(this._indicatorsElement.querySelectorAll(Selector$2.ACTIVE));
-        $(indicators).removeClass(ClassName$2.ACTIVE);
+        var indicators = [].slice.call(this._indicatorsElement.querySelectorAll(SELECTOR_ACTIVE$1));
+        $(indicators).removeClass(CLASS_NAME_ACTIVE$1);
 
         var nextIndicator = this._indicatorsElement.children[this._getItemIndex(element)];
 
         if (nextIndicator) {
-          $(nextIndicator).addClass(ClassName$2.ACTIVE);
+          $(nextIndicator).addClass(CLASS_NAME_ACTIVE$1);
         }
       }
     };
@@ -4063,7 +4392,7 @@ __webpack_require__.r(__webpack_exports__);
     _proto._slide = function _slide(direction, element) {
       var _this4 = this;
 
-      var activeElement = this._element.querySelector(Selector$2.ACTIVE_ITEM);
+      var activeElement = this._element.querySelector(SELECTOR_ACTIVE_ITEM);
 
       var activeElementIndex = this._getItemIndex(activeElement);
 
@@ -4076,17 +4405,17 @@ __webpack_require__.r(__webpack_exports__);
       var orderClassName;
       var eventDirectionName;
 
-      if (direction === Direction.NEXT) {
-        directionalClassName = ClassName$2.LEFT;
-        orderClassName = ClassName$2.NEXT;
-        eventDirectionName = Direction.LEFT;
+      if (direction === DIRECTION_NEXT) {
+        directionalClassName = CLASS_NAME_LEFT;
+        orderClassName = CLASS_NAME_NEXT;
+        eventDirectionName = DIRECTION_LEFT;
       } else {
-        directionalClassName = ClassName$2.RIGHT;
-        orderClassName = ClassName$2.PREV;
-        eventDirectionName = Direction.RIGHT;
+        directionalClassName = CLASS_NAME_RIGHT;
+        orderClassName = CLASS_NAME_PREV;
+        eventDirectionName = DIRECTION_RIGHT;
       }
 
-      if (nextElement && $(nextElement).hasClass(ClassName$2.ACTIVE)) {
+      if (nextElement && $(nextElement).hasClass(CLASS_NAME_ACTIVE$1)) {
         this._isSliding = false;
         return;
       }
@@ -4110,14 +4439,14 @@ __webpack_require__.r(__webpack_exports__);
 
       this._setActiveIndicatorElement(nextElement);
 
-      var slidEvent = $.Event(Event$2.SLID, {
+      var slidEvent = $.Event(EVENT_SLID, {
         relatedTarget: nextElement,
         direction: eventDirectionName,
         from: activeElementIndex,
         to: nextElementIndex
       });
 
-      if ($(this._element).hasClass(ClassName$2.SLIDE)) {
+      if ($(this._element).hasClass(CLASS_NAME_SLIDE)) {
         $(nextElement).addClass(orderClassName);
         Util.reflow(nextElement);
         $(activeElement).addClass(directionalClassName);
@@ -4133,16 +4462,16 @@ __webpack_require__.r(__webpack_exports__);
 
         var transitionDuration = Util.getTransitionDurationFromElement(activeElement);
         $(activeElement).one(Util.TRANSITION_END, function () {
-          $(nextElement).removeClass(directionalClassName + " " + orderClassName).addClass(ClassName$2.ACTIVE);
-          $(activeElement).removeClass(ClassName$2.ACTIVE + " " + orderClassName + " " + directionalClassName);
+          $(nextElement).removeClass(directionalClassName + " " + orderClassName).addClass(CLASS_NAME_ACTIVE$1);
+          $(activeElement).removeClass(CLASS_NAME_ACTIVE$1 + " " + orderClassName + " " + directionalClassName);
           _this4._isSliding = false;
           setTimeout(function () {
             return $(_this4._element).trigger(slidEvent);
           }, 0);
         }).emulateTransitionEnd(transitionDuration);
       } else {
-        $(activeElement).removeClass(ClassName$2.ACTIVE);
-        $(nextElement).addClass(ClassName$2.ACTIVE);
+        $(activeElement).removeClass(CLASS_NAME_ACTIVE$1);
+        $(nextElement).addClass(CLASS_NAME_ACTIVE$1);
         this._isSliding = false;
         $(this._element).trigger(slidEvent);
       }
@@ -4157,10 +4486,10 @@ __webpack_require__.r(__webpack_exports__);
       return this.each(function () {
         var data = $(this).data(DATA_KEY$2);
 
-        var _config = _objectSpread2({}, Default, {}, $(this).data());
+        var _config = _objectSpread2(_objectSpread2({}, Default), $(this).data());
 
         if (typeof config === 'object') {
-          _config = _objectSpread2({}, _config, {}, config);
+          _config = _objectSpread2(_objectSpread2({}, _config), config);
         }
 
         var action = typeof config === 'string' ? config : _config.slide;
@@ -4194,11 +4523,11 @@ __webpack_require__.r(__webpack_exports__);
 
       var target = $(selector)[0];
 
-      if (!target || !$(target).hasClass(ClassName$2.CAROUSEL)) {
+      if (!target || !$(target).hasClass(CLASS_NAME_CAROUSEL)) {
         return;
       }
 
-      var config = _objectSpread2({}, $(target).data(), {}, $(this).data());
+      var config = _objectSpread2(_objectSpread2({}, $(target).data()), $(this).data());
 
       var slideIndex = this.getAttribute('data-slide-to');
 
@@ -4236,9 +4565,9 @@ __webpack_require__.r(__webpack_exports__);
    */
 
 
-  $(document).on(Event$2.CLICK_DATA_API, Selector$2.DATA_SLIDE, Carousel._dataApiClickHandler);
-  $(window).on(Event$2.LOAD_DATA_API, function () {
-    var carousels = [].slice.call(document.querySelectorAll(Selector$2.DATA_RIDE));
+  $(document).on(EVENT_CLICK_DATA_API$2, SELECTOR_DATA_SLIDE, Carousel._dataApiClickHandler);
+  $(window).on(EVENT_LOAD_DATA_API$1, function () {
+    var carousels = [].slice.call(document.querySelectorAll(SELECTOR_DATA_RIDE));
 
     for (var i = 0, len = carousels.length; i < len; i++) {
       var $carousel = $(carousels[i]);
@@ -4267,7 +4596,7 @@ __webpack_require__.r(__webpack_exports__);
    */
 
   var NAME$3 = 'collapse';
-  var VERSION$3 = '4.4.1';
+  var VERSION$3 = '4.5.0';
   var DATA_KEY$3 = 'bs.collapse';
   var EVENT_KEY$3 = "." + DATA_KEY$3;
   var DATA_API_KEY$3 = '.data-api';
@@ -4280,42 +4609,32 @@ __webpack_require__.r(__webpack_exports__);
     toggle: 'boolean',
     parent: '(string|element)'
   };
-  var Event$3 = {
-    SHOW: "show" + EVENT_KEY$3,
-    SHOWN: "shown" + EVENT_KEY$3,
-    HIDE: "hide" + EVENT_KEY$3,
-    HIDDEN: "hidden" + EVENT_KEY$3,
-    CLICK_DATA_API: "click" + EVENT_KEY$3 + DATA_API_KEY$3
-  };
-  var ClassName$3 = {
-    SHOW: 'show',
-    COLLAPSE: 'collapse',
-    COLLAPSING: 'collapsing',
-    COLLAPSED: 'collapsed'
-  };
-  var Dimension = {
-    WIDTH: 'width',
-    HEIGHT: 'height'
-  };
-  var Selector$3 = {
-    ACTIVES: '.show, .collapsing',
-    DATA_TOGGLE: '[data-toggle="collapse"]'
-  };
+  var EVENT_SHOW = "show" + EVENT_KEY$3;
+  var EVENT_SHOWN = "shown" + EVENT_KEY$3;
+  var EVENT_HIDE = "hide" + EVENT_KEY$3;
+  var EVENT_HIDDEN = "hidden" + EVENT_KEY$3;
+  var EVENT_CLICK_DATA_API$3 = "click" + EVENT_KEY$3 + DATA_API_KEY$3;
+  var CLASS_NAME_SHOW$1 = 'show';
+  var CLASS_NAME_COLLAPSE = 'collapse';
+  var CLASS_NAME_COLLAPSING = 'collapsing';
+  var CLASS_NAME_COLLAPSED = 'collapsed';
+  var DIMENSION_WIDTH = 'width';
+  var DIMENSION_HEIGHT = 'height';
+  var SELECTOR_ACTIVES = '.show, .collapsing';
+  var SELECTOR_DATA_TOGGLE$1 = '[data-toggle="collapse"]';
   /**
    * ------------------------------------------------------------------------
    * Class Definition
    * ------------------------------------------------------------------------
    */
 
-  var Collapse =
-  /*#__PURE__*/
-  function () {
+  var Collapse = /*#__PURE__*/function () {
     function Collapse(element, config) {
       this._isTransitioning = false;
       this._element = element;
       this._config = this._getConfig(config);
       this._triggerArray = [].slice.call(document.querySelectorAll("[data-toggle=\"collapse\"][href=\"#" + element.id + "\"]," + ("[data-toggle=\"collapse\"][data-target=\"#" + element.id + "\"]")));
-      var toggleList = [].slice.call(document.querySelectorAll(Selector$3.DATA_TOGGLE));
+      var toggleList = [].slice.call(document.querySelectorAll(SELECTOR_DATA_TOGGLE$1));
 
       for (var i = 0, len = toggleList.length; i < len; i++) {
         var elem = toggleList[i];
@@ -4347,7 +4666,7 @@ __webpack_require__.r(__webpack_exports__);
 
     // Public
     _proto.toggle = function toggle() {
-      if ($(this._element).hasClass(ClassName$3.SHOW)) {
+      if ($(this._element).hasClass(CLASS_NAME_SHOW$1)) {
         this.hide();
       } else {
         this.show();
@@ -4357,7 +4676,7 @@ __webpack_require__.r(__webpack_exports__);
     _proto.show = function show() {
       var _this = this;
 
-      if (this._isTransitioning || $(this._element).hasClass(ClassName$3.SHOW)) {
+      if (this._isTransitioning || $(this._element).hasClass(CLASS_NAME_SHOW$1)) {
         return;
       }
 
@@ -4365,12 +4684,12 @@ __webpack_require__.r(__webpack_exports__);
       var activesData;
 
       if (this._parent) {
-        actives = [].slice.call(this._parent.querySelectorAll(Selector$3.ACTIVES)).filter(function (elem) {
+        actives = [].slice.call(this._parent.querySelectorAll(SELECTOR_ACTIVES)).filter(function (elem) {
           if (typeof _this._config.parent === 'string') {
             return elem.getAttribute('data-parent') === _this._config.parent;
           }
 
-          return elem.classList.contains(ClassName$3.COLLAPSE);
+          return elem.classList.contains(CLASS_NAME_COLLAPSE);
         });
 
         if (actives.length === 0) {
@@ -4386,7 +4705,7 @@ __webpack_require__.r(__webpack_exports__);
         }
       }
 
-      var startEvent = $.Event(Event$3.SHOW);
+      var startEvent = $.Event(EVENT_SHOW);
       $(this._element).trigger(startEvent);
 
       if (startEvent.isDefaultPrevented()) {
@@ -4403,22 +4722,22 @@ __webpack_require__.r(__webpack_exports__);
 
       var dimension = this._getDimension();
 
-      $(this._element).removeClass(ClassName$3.COLLAPSE).addClass(ClassName$3.COLLAPSING);
+      $(this._element).removeClass(CLASS_NAME_COLLAPSE).addClass(CLASS_NAME_COLLAPSING);
       this._element.style[dimension] = 0;
 
       if (this._triggerArray.length) {
-        $(this._triggerArray).removeClass(ClassName$3.COLLAPSED).attr('aria-expanded', true);
+        $(this._triggerArray).removeClass(CLASS_NAME_COLLAPSED).attr('aria-expanded', true);
       }
 
       this.setTransitioning(true);
 
       var complete = function complete() {
-        $(_this._element).removeClass(ClassName$3.COLLAPSING).addClass(ClassName$3.COLLAPSE).addClass(ClassName$3.SHOW);
+        $(_this._element).removeClass(CLASS_NAME_COLLAPSING).addClass(CLASS_NAME_COLLAPSE + " " + CLASS_NAME_SHOW$1);
         _this._element.style[dimension] = '';
 
         _this.setTransitioning(false);
 
-        $(_this._element).trigger(Event$3.SHOWN);
+        $(_this._element).trigger(EVENT_SHOWN);
       };
 
       var capitalizedDimension = dimension[0].toUpperCase() + dimension.slice(1);
@@ -4431,11 +4750,11 @@ __webpack_require__.r(__webpack_exports__);
     _proto.hide = function hide() {
       var _this2 = this;
 
-      if (this._isTransitioning || !$(this._element).hasClass(ClassName$3.SHOW)) {
+      if (this._isTransitioning || !$(this._element).hasClass(CLASS_NAME_SHOW$1)) {
         return;
       }
 
-      var startEvent = $.Event(Event$3.HIDE);
+      var startEvent = $.Event(EVENT_HIDE);
       $(this._element).trigger(startEvent);
 
       if (startEvent.isDefaultPrevented()) {
@@ -4446,7 +4765,7 @@ __webpack_require__.r(__webpack_exports__);
 
       this._element.style[dimension] = this._element.getBoundingClientRect()[dimension] + "px";
       Util.reflow(this._element);
-      $(this._element).addClass(ClassName$3.COLLAPSING).removeClass(ClassName$3.COLLAPSE).removeClass(ClassName$3.SHOW);
+      $(this._element).addClass(CLASS_NAME_COLLAPSING).removeClass(CLASS_NAME_COLLAPSE + " " + CLASS_NAME_SHOW$1);
       var triggerArrayLength = this._triggerArray.length;
 
       if (triggerArrayLength > 0) {
@@ -4457,8 +4776,8 @@ __webpack_require__.r(__webpack_exports__);
           if (selector !== null) {
             var $elem = $([].slice.call(document.querySelectorAll(selector)));
 
-            if (!$elem.hasClass(ClassName$3.SHOW)) {
-              $(trigger).addClass(ClassName$3.COLLAPSED).attr('aria-expanded', false);
+            if (!$elem.hasClass(CLASS_NAME_SHOW$1)) {
+              $(trigger).addClass(CLASS_NAME_COLLAPSED).attr('aria-expanded', false);
             }
           }
         }
@@ -4469,7 +4788,7 @@ __webpack_require__.r(__webpack_exports__);
       var complete = function complete() {
         _this2.setTransitioning(false);
 
-        $(_this2._element).removeClass(ClassName$3.COLLAPSING).addClass(ClassName$3.COLLAPSE).trigger(Event$3.HIDDEN);
+        $(_this2._element).removeClass(CLASS_NAME_COLLAPSING).addClass(CLASS_NAME_COLLAPSE).trigger(EVENT_HIDDEN);
       };
 
       this._element.style[dimension] = '';
@@ -4492,7 +4811,7 @@ __webpack_require__.r(__webpack_exports__);
     ;
 
     _proto._getConfig = function _getConfig(config) {
-      config = _objectSpread2({}, Default$1, {}, config);
+      config = _objectSpread2(_objectSpread2({}, Default$1), config);
       config.toggle = Boolean(config.toggle); // Coerce string values
 
       Util.typeCheckConfig(NAME$3, config, DefaultType$1);
@@ -4500,8 +4819,8 @@ __webpack_require__.r(__webpack_exports__);
     };
 
     _proto._getDimension = function _getDimension() {
-      var hasWidth = $(this._element).hasClass(Dimension.WIDTH);
-      return hasWidth ? Dimension.WIDTH : Dimension.HEIGHT;
+      var hasWidth = $(this._element).hasClass(DIMENSION_WIDTH);
+      return hasWidth ? DIMENSION_WIDTH : DIMENSION_HEIGHT;
     };
 
     _proto._getParent = function _getParent() {
@@ -4528,10 +4847,10 @@ __webpack_require__.r(__webpack_exports__);
     };
 
     _proto._addAriaAndCollapsedClass = function _addAriaAndCollapsedClass(element, triggerArray) {
-      var isOpen = $(element).hasClass(ClassName$3.SHOW);
+      var isOpen = $(element).hasClass(CLASS_NAME_SHOW$1);
 
       if (triggerArray.length) {
-        $(triggerArray).toggleClass(ClassName$3.COLLAPSED, !isOpen).attr('aria-expanded', isOpen);
+        $(triggerArray).toggleClass(CLASS_NAME_COLLAPSED, !isOpen).attr('aria-expanded', isOpen);
       }
     } // Static
     ;
@@ -4546,9 +4865,9 @@ __webpack_require__.r(__webpack_exports__);
         var $this = $(this);
         var data = $this.data(DATA_KEY$3);
 
-        var _config = _objectSpread2({}, Default$1, {}, $this.data(), {}, typeof config === 'object' && config ? config : {});
+        var _config = _objectSpread2(_objectSpread2(_objectSpread2({}, Default$1), $this.data()), typeof config === 'object' && config ? config : {});
 
-        if (!data && _config.toggle && /show|hide/.test(config)) {
+        if (!data && _config.toggle && typeof config === 'string' && /show|hide/.test(config)) {
           _config.toggle = false;
         }
 
@@ -4588,7 +4907,7 @@ __webpack_require__.r(__webpack_exports__);
    */
 
 
-  $(document).on(Event$3.CLICK_DATA_API, Selector$3.DATA_TOGGLE, function (event) {
+  $(document).on(EVENT_CLICK_DATA_API$3, SELECTOR_DATA_TOGGLE$1, function (event) {
     // preventDefault only for <a> elements (which change the URL) not inside the collapsible element
     if (event.currentTarget.tagName === 'A') {
       event.preventDefault();
@@ -4626,7 +4945,7 @@ __webpack_require__.r(__webpack_exports__);
    */
 
   var NAME$4 = 'dropdown';
-  var VERSION$4 = '4.4.1';
+  var VERSION$4 = '4.5.0';
   var DATA_KEY$4 = 'bs.dropdown';
   var EVENT_KEY$4 = "." + DATA_KEY$4;
   var DATA_API_KEY$4 = '.data-api';
@@ -4644,43 +4963,32 @@ __webpack_require__.r(__webpack_exports__);
   var RIGHT_MOUSE_BUTTON_WHICH = 3; // MouseEvent.which value for the right button (assuming a right-handed mouse)
 
   var REGEXP_KEYDOWN = new RegExp(ARROW_UP_KEYCODE + "|" + ARROW_DOWN_KEYCODE + "|" + ESCAPE_KEYCODE);
-  var Event$4 = {
-    HIDE: "hide" + EVENT_KEY$4,
-    HIDDEN: "hidden" + EVENT_KEY$4,
-    SHOW: "show" + EVENT_KEY$4,
-    SHOWN: "shown" + EVENT_KEY$4,
-    CLICK: "click" + EVENT_KEY$4,
-    CLICK_DATA_API: "click" + EVENT_KEY$4 + DATA_API_KEY$4,
-    KEYDOWN_DATA_API: "keydown" + EVENT_KEY$4 + DATA_API_KEY$4,
-    KEYUP_DATA_API: "keyup" + EVENT_KEY$4 + DATA_API_KEY$4
-  };
-  var ClassName$4 = {
-    DISABLED: 'disabled',
-    SHOW: 'show',
-    DROPUP: 'dropup',
-    DROPRIGHT: 'dropright',
-    DROPLEFT: 'dropleft',
-    MENURIGHT: 'dropdown-menu-right',
-    MENULEFT: 'dropdown-menu-left',
-    POSITION_STATIC: 'position-static'
-  };
-  var Selector$4 = {
-    DATA_TOGGLE: '[data-toggle="dropdown"]',
-    FORM_CHILD: '.dropdown form',
-    MENU: '.dropdown-menu',
-    NAVBAR_NAV: '.navbar-nav',
-    VISIBLE_ITEMS: '.dropdown-menu .dropdown-item:not(.disabled):not(:disabled)'
-  };
-  var AttachmentMap = {
-    TOP: 'top-start',
-    TOPEND: 'top-end',
-    BOTTOM: 'bottom-start',
-    BOTTOMEND: 'bottom-end',
-    RIGHT: 'right-start',
-    RIGHTEND: 'right-end',
-    LEFT: 'left-start',
-    LEFTEND: 'left-end'
-  };
+  var EVENT_HIDE$1 = "hide" + EVENT_KEY$4;
+  var EVENT_HIDDEN$1 = "hidden" + EVENT_KEY$4;
+  var EVENT_SHOW$1 = "show" + EVENT_KEY$4;
+  var EVENT_SHOWN$1 = "shown" + EVENT_KEY$4;
+  var EVENT_CLICK = "click" + EVENT_KEY$4;
+  var EVENT_CLICK_DATA_API$4 = "click" + EVENT_KEY$4 + DATA_API_KEY$4;
+  var EVENT_KEYDOWN_DATA_API = "keydown" + EVENT_KEY$4 + DATA_API_KEY$4;
+  var EVENT_KEYUP_DATA_API = "keyup" + EVENT_KEY$4 + DATA_API_KEY$4;
+  var CLASS_NAME_DISABLED = 'disabled';
+  var CLASS_NAME_SHOW$2 = 'show';
+  var CLASS_NAME_DROPUP = 'dropup';
+  var CLASS_NAME_DROPRIGHT = 'dropright';
+  var CLASS_NAME_DROPLEFT = 'dropleft';
+  var CLASS_NAME_MENURIGHT = 'dropdown-menu-right';
+  var CLASS_NAME_POSITION_STATIC = 'position-static';
+  var SELECTOR_DATA_TOGGLE$2 = '[data-toggle="dropdown"]';
+  var SELECTOR_FORM_CHILD = '.dropdown form';
+  var SELECTOR_MENU = '.dropdown-menu';
+  var SELECTOR_NAVBAR_NAV = '.navbar-nav';
+  var SELECTOR_VISIBLE_ITEMS = '.dropdown-menu .dropdown-item:not(.disabled):not(:disabled)';
+  var PLACEMENT_TOP = 'top-start';
+  var PLACEMENT_TOPEND = 'top-end';
+  var PLACEMENT_BOTTOM = 'bottom-start';
+  var PLACEMENT_BOTTOMEND = 'bottom-end';
+  var PLACEMENT_RIGHT = 'right-start';
+  var PLACEMENT_LEFT = 'left-start';
   var Default$2 = {
     offset: 0,
     flip: true,
@@ -4703,9 +5011,7 @@ __webpack_require__.r(__webpack_exports__);
    * ------------------------------------------------------------------------
    */
 
-  var Dropdown =
-  /*#__PURE__*/
-  function () {
+  var Dropdown = /*#__PURE__*/function () {
     function Dropdown(element, config) {
       this._element = element;
       this._popper = null;
@@ -4721,11 +5027,11 @@ __webpack_require__.r(__webpack_exports__);
 
     // Public
     _proto.toggle = function toggle() {
-      if (this._element.disabled || $(this._element).hasClass(ClassName$4.DISABLED)) {
+      if (this._element.disabled || $(this._element).hasClass(CLASS_NAME_DISABLED)) {
         return;
       }
 
-      var isActive = $(this._menu).hasClass(ClassName$4.SHOW);
+      var isActive = $(this._menu).hasClass(CLASS_NAME_SHOW$2);
 
       Dropdown._clearMenus();
 
@@ -4741,14 +5047,14 @@ __webpack_require__.r(__webpack_exports__);
         usePopper = false;
       }
 
-      if (this._element.disabled || $(this._element).hasClass(ClassName$4.DISABLED) || $(this._menu).hasClass(ClassName$4.SHOW)) {
+      if (this._element.disabled || $(this._element).hasClass(CLASS_NAME_DISABLED) || $(this._menu).hasClass(CLASS_NAME_SHOW$2)) {
         return;
       }
 
       var relatedTarget = {
         relatedTarget: this._element
       };
-      var showEvent = $.Event(Event$4.SHOW, relatedTarget);
+      var showEvent = $.Event(EVENT_SHOW$1, relatedTarget);
 
       var parent = Dropdown._getParentFromElement(this._element);
 
@@ -4784,7 +5090,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
         if (this._config.boundary !== 'scrollParent') {
-          $(parent).addClass(ClassName$4.POSITION_STATIC);
+          $(parent).addClass(CLASS_NAME_POSITION_STATIC);
         }
 
         this._popper = new Popper(referenceElement, this._menu, this._getPopperConfig());
@@ -4794,7 +5100,7 @@ __webpack_require__.r(__webpack_exports__);
       // https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html
 
 
-      if ('ontouchstart' in document.documentElement && $(parent).closest(Selector$4.NAVBAR_NAV).length === 0) {
+      if ('ontouchstart' in document.documentElement && $(parent).closest(SELECTOR_NAVBAR_NAV).length === 0) {
         $(document.body).children().on('mouseover', null, $.noop);
       }
 
@@ -4802,19 +5108,19 @@ __webpack_require__.r(__webpack_exports__);
 
       this._element.setAttribute('aria-expanded', true);
 
-      $(this._menu).toggleClass(ClassName$4.SHOW);
-      $(parent).toggleClass(ClassName$4.SHOW).trigger($.Event(Event$4.SHOWN, relatedTarget));
+      $(this._menu).toggleClass(CLASS_NAME_SHOW$2);
+      $(parent).toggleClass(CLASS_NAME_SHOW$2).trigger($.Event(EVENT_SHOWN$1, relatedTarget));
     };
 
     _proto.hide = function hide() {
-      if (this._element.disabled || $(this._element).hasClass(ClassName$4.DISABLED) || !$(this._menu).hasClass(ClassName$4.SHOW)) {
+      if (this._element.disabled || $(this._element).hasClass(CLASS_NAME_DISABLED) || !$(this._menu).hasClass(CLASS_NAME_SHOW$2)) {
         return;
       }
 
       var relatedTarget = {
         relatedTarget: this._element
       };
-      var hideEvent = $.Event(Event$4.HIDE, relatedTarget);
+      var hideEvent = $.Event(EVENT_HIDE$1, relatedTarget);
 
       var parent = Dropdown._getParentFromElement(this._element);
 
@@ -4828,8 +5134,8 @@ __webpack_require__.r(__webpack_exports__);
         this._popper.destroy();
       }
 
-      $(this._menu).toggleClass(ClassName$4.SHOW);
-      $(parent).toggleClass(ClassName$4.SHOW).trigger($.Event(Event$4.HIDDEN, relatedTarget));
+      $(this._menu).toggleClass(CLASS_NAME_SHOW$2);
+      $(parent).toggleClass(CLASS_NAME_SHOW$2).trigger($.Event(EVENT_HIDDEN$1, relatedTarget));
     };
 
     _proto.dispose = function dispose() {
@@ -4857,7 +5163,7 @@ __webpack_require__.r(__webpack_exports__);
     _proto._addEventListeners = function _addEventListeners() {
       var _this = this;
 
-      $(this._element).on(Event$4.CLICK, function (event) {
+      $(this._element).on(EVENT_CLICK, function (event) {
         event.preventDefault();
         event.stopPropagation();
 
@@ -4866,7 +5172,7 @@ __webpack_require__.r(__webpack_exports__);
     };
 
     _proto._getConfig = function _getConfig(config) {
-      config = _objectSpread2({}, this.constructor.Default, {}, $(this._element).data(), {}, config);
+      config = _objectSpread2(_objectSpread2(_objectSpread2({}, this.constructor.Default), $(this._element).data()), config);
       Util.typeCheckConfig(NAME$4, config, this.constructor.DefaultType);
       return config;
     };
@@ -4876,7 +5182,7 @@ __webpack_require__.r(__webpack_exports__);
         var parent = Dropdown._getParentFromElement(this._element);
 
         if (parent) {
-          this._menu = parent.querySelector(Selector$4.MENU);
+          this._menu = parent.querySelector(SELECTOR_MENU);
         }
       }
 
@@ -4885,20 +5191,16 @@ __webpack_require__.r(__webpack_exports__);
 
     _proto._getPlacement = function _getPlacement() {
       var $parentDropdown = $(this._element.parentNode);
-      var placement = AttachmentMap.BOTTOM; // Handle dropup
+      var placement = PLACEMENT_BOTTOM; // Handle dropup
 
-      if ($parentDropdown.hasClass(ClassName$4.DROPUP)) {
-        placement = AttachmentMap.TOP;
-
-        if ($(this._menu).hasClass(ClassName$4.MENURIGHT)) {
-          placement = AttachmentMap.TOPEND;
-        }
-      } else if ($parentDropdown.hasClass(ClassName$4.DROPRIGHT)) {
-        placement = AttachmentMap.RIGHT;
-      } else if ($parentDropdown.hasClass(ClassName$4.DROPLEFT)) {
-        placement = AttachmentMap.LEFT;
-      } else if ($(this._menu).hasClass(ClassName$4.MENURIGHT)) {
-        placement = AttachmentMap.BOTTOMEND;
+      if ($parentDropdown.hasClass(CLASS_NAME_DROPUP)) {
+        placement = $(this._menu).hasClass(CLASS_NAME_MENURIGHT) ? PLACEMENT_TOPEND : PLACEMENT_TOP;
+      } else if ($parentDropdown.hasClass(CLASS_NAME_DROPRIGHT)) {
+        placement = PLACEMENT_RIGHT;
+      } else if ($parentDropdown.hasClass(CLASS_NAME_DROPLEFT)) {
+        placement = PLACEMENT_LEFT;
+      } else if ($(this._menu).hasClass(CLASS_NAME_MENURIGHT)) {
+        placement = PLACEMENT_BOTTOMEND;
       }
 
       return placement;
@@ -4915,7 +5217,7 @@ __webpack_require__.r(__webpack_exports__);
 
       if (typeof this._config.offset === 'function') {
         offset.fn = function (data) {
-          data.offsets = _objectSpread2({}, data.offsets, {}, _this2._config.offset(data.offsets, _this2._element) || {});
+          data.offsets = _objectSpread2(_objectSpread2({}, data.offsets), _this2._config.offset(data.offsets, _this2._element) || {});
           return data;
         };
       } else {
@@ -4945,7 +5247,7 @@ __webpack_require__.r(__webpack_exports__);
         };
       }
 
-      return _objectSpread2({}, popperConfig, {}, this._config.popperConfig);
+      return _objectSpread2(_objectSpread2({}, popperConfig), this._config.popperConfig);
     } // Static
     ;
 
@@ -4975,7 +5277,7 @@ __webpack_require__.r(__webpack_exports__);
         return;
       }
 
-      var toggles = [].slice.call(document.querySelectorAll(Selector$4.DATA_TOGGLE));
+      var toggles = [].slice.call(document.querySelectorAll(SELECTOR_DATA_TOGGLE$2));
 
       for (var i = 0, len = toggles.length; i < len; i++) {
         var parent = Dropdown._getParentFromElement(toggles[i]);
@@ -4995,7 +5297,7 @@ __webpack_require__.r(__webpack_exports__);
 
         var dropdownMenu = context._menu;
 
-        if (!$(parent).hasClass(ClassName$4.SHOW)) {
+        if (!$(parent).hasClass(CLASS_NAME_SHOW$2)) {
           continue;
         }
 
@@ -5003,7 +5305,7 @@ __webpack_require__.r(__webpack_exports__);
           continue;
         }
 
-        var hideEvent = $.Event(Event$4.HIDE, relatedTarget);
+        var hideEvent = $.Event(EVENT_HIDE$1, relatedTarget);
         $(parent).trigger(hideEvent);
 
         if (hideEvent.isDefaultPrevented()) {
@@ -5022,8 +5324,8 @@ __webpack_require__.r(__webpack_exports__);
           context._popper.destroy();
         }
 
-        $(dropdownMenu).removeClass(ClassName$4.SHOW);
-        $(parent).removeClass(ClassName$4.SHOW).trigger($.Event(Event$4.HIDDEN, relatedTarget));
+        $(dropdownMenu).removeClass(CLASS_NAME_SHOW$2);
+        $(parent).removeClass(CLASS_NAME_SHOW$2).trigger($.Event(EVENT_HIDDEN$1, relatedTarget));
       }
     };
 
@@ -5047,36 +5349,35 @@ __webpack_require__.r(__webpack_exports__);
       //  - If key is other than escape
       //    - If key is not up or down => not a dropdown command
       //    - If trigger inside the menu => not a dropdown command
-      if (/input|textarea/i.test(event.target.tagName) ? event.which === SPACE_KEYCODE || event.which !== ESCAPE_KEYCODE && (event.which !== ARROW_DOWN_KEYCODE && event.which !== ARROW_UP_KEYCODE || $(event.target).closest(Selector$4.MENU).length) : !REGEXP_KEYDOWN.test(event.which)) {
+      if (/input|textarea/i.test(event.target.tagName) ? event.which === SPACE_KEYCODE || event.which !== ESCAPE_KEYCODE && (event.which !== ARROW_DOWN_KEYCODE && event.which !== ARROW_UP_KEYCODE || $(event.target).closest(SELECTOR_MENU).length) : !REGEXP_KEYDOWN.test(event.which)) {
+        return;
+      }
+
+      if (this.disabled || $(this).hasClass(CLASS_NAME_DISABLED)) {
+        return;
+      }
+
+      var parent = Dropdown._getParentFromElement(this);
+
+      var isActive = $(parent).hasClass(CLASS_NAME_SHOW$2);
+
+      if (!isActive && event.which === ESCAPE_KEYCODE) {
         return;
       }
 
       event.preventDefault();
       event.stopPropagation();
 
-      if (this.disabled || $(this).hasClass(ClassName$4.DISABLED)) {
-        return;
-      }
-
-      var parent = Dropdown._getParentFromElement(this);
-
-      var isActive = $(parent).hasClass(ClassName$4.SHOW);
-
-      if (!isActive && event.which === ESCAPE_KEYCODE) {
-        return;
-      }
-
       if (!isActive || isActive && (event.which === ESCAPE_KEYCODE || event.which === SPACE_KEYCODE)) {
         if (event.which === ESCAPE_KEYCODE) {
-          var toggle = parent.querySelector(Selector$4.DATA_TOGGLE);
-          $(toggle).trigger('focus');
+          $(parent.querySelector(SELECTOR_DATA_TOGGLE$2)).trigger('focus');
         }
 
         $(this).trigger('click');
         return;
       }
 
-      var items = [].slice.call(parent.querySelectorAll(Selector$4.VISIBLE_ITEMS)).filter(function (item) {
+      var items = [].slice.call(parent.querySelectorAll(SELECTOR_VISIBLE_ITEMS)).filter(function (item) {
         return $(item).is(':visible');
       });
 
@@ -5129,12 +5430,12 @@ __webpack_require__.r(__webpack_exports__);
    */
 
 
-  $(document).on(Event$4.KEYDOWN_DATA_API, Selector$4.DATA_TOGGLE, Dropdown._dataApiKeydownHandler).on(Event$4.KEYDOWN_DATA_API, Selector$4.MENU, Dropdown._dataApiKeydownHandler).on(Event$4.CLICK_DATA_API + " " + Event$4.KEYUP_DATA_API, Dropdown._clearMenus).on(Event$4.CLICK_DATA_API, Selector$4.DATA_TOGGLE, function (event) {
+  $(document).on(EVENT_KEYDOWN_DATA_API, SELECTOR_DATA_TOGGLE$2, Dropdown._dataApiKeydownHandler).on(EVENT_KEYDOWN_DATA_API, SELECTOR_MENU, Dropdown._dataApiKeydownHandler).on(EVENT_CLICK_DATA_API$4 + " " + EVENT_KEYUP_DATA_API, Dropdown._clearMenus).on(EVENT_CLICK_DATA_API$4, SELECTOR_DATA_TOGGLE$2, function (event) {
     event.preventDefault();
     event.stopPropagation();
 
     Dropdown._jQueryInterface.call($(this), 'toggle');
-  }).on(Event$4.CLICK_DATA_API, Selector$4.FORM_CHILD, function (e) {
+  }).on(EVENT_CLICK_DATA_API$4, SELECTOR_FORM_CHILD, function (e) {
     e.stopPropagation();
   });
   /**
@@ -5158,7 +5459,7 @@ __webpack_require__.r(__webpack_exports__);
    */
 
   var NAME$5 = 'modal';
-  var VERSION$5 = '4.4.1';
+  var VERSION$5 = '4.5.0';
   var DATA_KEY$5 = 'bs.modal';
   var EVENT_KEY$5 = "." + DATA_KEY$5;
   var DATA_API_KEY$5 = '.data-api';
@@ -5177,50 +5478,42 @@ __webpack_require__.r(__webpack_exports__);
     focus: 'boolean',
     show: 'boolean'
   };
-  var Event$5 = {
-    HIDE: "hide" + EVENT_KEY$5,
-    HIDE_PREVENTED: "hidePrevented" + EVENT_KEY$5,
-    HIDDEN: "hidden" + EVENT_KEY$5,
-    SHOW: "show" + EVENT_KEY$5,
-    SHOWN: "shown" + EVENT_KEY$5,
-    FOCUSIN: "focusin" + EVENT_KEY$5,
-    RESIZE: "resize" + EVENT_KEY$5,
-    CLICK_DISMISS: "click.dismiss" + EVENT_KEY$5,
-    KEYDOWN_DISMISS: "keydown.dismiss" + EVENT_KEY$5,
-    MOUSEUP_DISMISS: "mouseup.dismiss" + EVENT_KEY$5,
-    MOUSEDOWN_DISMISS: "mousedown.dismiss" + EVENT_KEY$5,
-    CLICK_DATA_API: "click" + EVENT_KEY$5 + DATA_API_KEY$5
-  };
-  var ClassName$5 = {
-    SCROLLABLE: 'modal-dialog-scrollable',
-    SCROLLBAR_MEASURER: 'modal-scrollbar-measure',
-    BACKDROP: 'modal-backdrop',
-    OPEN: 'modal-open',
-    FADE: 'fade',
-    SHOW: 'show',
-    STATIC: 'modal-static'
-  };
-  var Selector$5 = {
-    DIALOG: '.modal-dialog',
-    MODAL_BODY: '.modal-body',
-    DATA_TOGGLE: '[data-toggle="modal"]',
-    DATA_DISMISS: '[data-dismiss="modal"]',
-    FIXED_CONTENT: '.fixed-top, .fixed-bottom, .is-fixed, .sticky-top',
-    STICKY_CONTENT: '.sticky-top'
-  };
+  var EVENT_HIDE$2 = "hide" + EVENT_KEY$5;
+  var EVENT_HIDE_PREVENTED = "hidePrevented" + EVENT_KEY$5;
+  var EVENT_HIDDEN$2 = "hidden" + EVENT_KEY$5;
+  var EVENT_SHOW$2 = "show" + EVENT_KEY$5;
+  var EVENT_SHOWN$2 = "shown" + EVENT_KEY$5;
+  var EVENT_FOCUSIN = "focusin" + EVENT_KEY$5;
+  var EVENT_RESIZE = "resize" + EVENT_KEY$5;
+  var EVENT_CLICK_DISMISS = "click.dismiss" + EVENT_KEY$5;
+  var EVENT_KEYDOWN_DISMISS = "keydown.dismiss" + EVENT_KEY$5;
+  var EVENT_MOUSEUP_DISMISS = "mouseup.dismiss" + EVENT_KEY$5;
+  var EVENT_MOUSEDOWN_DISMISS = "mousedown.dismiss" + EVENT_KEY$5;
+  var EVENT_CLICK_DATA_API$5 = "click" + EVENT_KEY$5 + DATA_API_KEY$5;
+  var CLASS_NAME_SCROLLABLE = 'modal-dialog-scrollable';
+  var CLASS_NAME_SCROLLBAR_MEASURER = 'modal-scrollbar-measure';
+  var CLASS_NAME_BACKDROP = 'modal-backdrop';
+  var CLASS_NAME_OPEN = 'modal-open';
+  var CLASS_NAME_FADE$1 = 'fade';
+  var CLASS_NAME_SHOW$3 = 'show';
+  var CLASS_NAME_STATIC = 'modal-static';
+  var SELECTOR_DIALOG = '.modal-dialog';
+  var SELECTOR_MODAL_BODY = '.modal-body';
+  var SELECTOR_DATA_TOGGLE$3 = '[data-toggle="modal"]';
+  var SELECTOR_DATA_DISMISS = '[data-dismiss="modal"]';
+  var SELECTOR_FIXED_CONTENT = '.fixed-top, .fixed-bottom, .is-fixed, .sticky-top';
+  var SELECTOR_STICKY_CONTENT = '.sticky-top';
   /**
    * ------------------------------------------------------------------------
    * Class Definition
    * ------------------------------------------------------------------------
    */
 
-  var Modal =
-  /*#__PURE__*/
-  function () {
+  var Modal = /*#__PURE__*/function () {
     function Modal(element, config) {
       this._config = this._getConfig(config);
       this._element = element;
-      this._dialog = element.querySelector(Selector$5.DIALOG);
+      this._dialog = element.querySelector(SELECTOR_DIALOG);
       this._backdrop = null;
       this._isShown = false;
       this._isBodyOverflowing = false;
@@ -5244,11 +5537,11 @@ __webpack_require__.r(__webpack_exports__);
         return;
       }
 
-      if ($(this._element).hasClass(ClassName$5.FADE)) {
+      if ($(this._element).hasClass(CLASS_NAME_FADE$1)) {
         this._isTransitioning = true;
       }
 
-      var showEvent = $.Event(Event$5.SHOW, {
+      var showEvent = $.Event(EVENT_SHOW$2, {
         relatedTarget: relatedTarget
       });
       $(this._element).trigger(showEvent);
@@ -5269,11 +5562,11 @@ __webpack_require__.r(__webpack_exports__);
 
       this._setResizeEvent();
 
-      $(this._element).on(Event$5.CLICK_DISMISS, Selector$5.DATA_DISMISS, function (event) {
+      $(this._element).on(EVENT_CLICK_DISMISS, SELECTOR_DATA_DISMISS, function (event) {
         return _this.hide(event);
       });
-      $(this._dialog).on(Event$5.MOUSEDOWN_DISMISS, function () {
-        $(_this._element).one(Event$5.MOUSEUP_DISMISS, function (event) {
+      $(this._dialog).on(EVENT_MOUSEDOWN_DISMISS, function () {
+        $(_this._element).one(EVENT_MOUSEUP_DISMISS, function (event) {
           if ($(event.target).is(_this._element)) {
             _this._ignoreBackdropClick = true;
           }
@@ -5296,7 +5589,7 @@ __webpack_require__.r(__webpack_exports__);
         return;
       }
 
-      var hideEvent = $.Event(Event$5.HIDE);
+      var hideEvent = $.Event(EVENT_HIDE$2);
       $(this._element).trigger(hideEvent);
 
       if (!this._isShown || hideEvent.isDefaultPrevented()) {
@@ -5304,7 +5597,7 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       this._isShown = false;
-      var transition = $(this._element).hasClass(ClassName$5.FADE);
+      var transition = $(this._element).hasClass(CLASS_NAME_FADE$1);
 
       if (transition) {
         this._isTransitioning = true;
@@ -5314,10 +5607,10 @@ __webpack_require__.r(__webpack_exports__);
 
       this._setResizeEvent();
 
-      $(document).off(Event$5.FOCUSIN);
-      $(this._element).removeClass(ClassName$5.SHOW);
-      $(this._element).off(Event$5.CLICK_DISMISS);
-      $(this._dialog).off(Event$5.MOUSEDOWN_DISMISS);
+      $(document).off(EVENT_FOCUSIN);
+      $(this._element).removeClass(CLASS_NAME_SHOW$3);
+      $(this._element).off(EVENT_CLICK_DISMISS);
+      $(this._dialog).off(EVENT_MOUSEDOWN_DISMISS);
 
       if (transition) {
         var transitionDuration = Util.getTransitionDurationFromElement(this._element);
@@ -5334,12 +5627,12 @@ __webpack_require__.r(__webpack_exports__);
         return $(htmlElement).off(EVENT_KEY$5);
       });
       /**
-       * `document` has 2 events `Event.FOCUSIN` and `Event.CLICK_DATA_API`
+       * `document` has 2 events `EVENT_FOCUSIN` and `EVENT_CLICK_DATA_API`
        * Do not move `document` in `htmlElements` array
-       * It will remove `Event.CLICK_DATA_API` event that should remain
+       * It will remove `EVENT_CLICK_DATA_API` event that should remain
        */
 
-      $(document).off(Event$5.FOCUSIN);
+      $(document).off(EVENT_FOCUSIN);
       $.removeData(this._element, DATA_KEY$5);
       this._config = null;
       this._element = null;
@@ -5358,7 +5651,7 @@ __webpack_require__.r(__webpack_exports__);
     ;
 
     _proto._getConfig = function _getConfig(config) {
-      config = _objectSpread2({}, Default$3, {}, config);
+      config = _objectSpread2(_objectSpread2({}, Default$3), config);
       Util.typeCheckConfig(NAME$5, config, DefaultType$3);
       return config;
     };
@@ -5367,18 +5660,18 @@ __webpack_require__.r(__webpack_exports__);
       var _this3 = this;
 
       if (this._config.backdrop === 'static') {
-        var hideEventPrevented = $.Event(Event$5.HIDE_PREVENTED);
+        var hideEventPrevented = $.Event(EVENT_HIDE_PREVENTED);
         $(this._element).trigger(hideEventPrevented);
 
         if (hideEventPrevented.defaultPrevented) {
           return;
         }
 
-        this._element.classList.add(ClassName$5.STATIC);
+        this._element.classList.add(CLASS_NAME_STATIC);
 
         var modalTransitionDuration = Util.getTransitionDurationFromElement(this._element);
         $(this._element).one(Util.TRANSITION_END, function () {
-          _this3._element.classList.remove(ClassName$5.STATIC);
+          _this3._element.classList.remove(CLASS_NAME_STATIC);
         }).emulateTransitionEnd(modalTransitionDuration);
 
         this._element.focus();
@@ -5390,8 +5683,8 @@ __webpack_require__.r(__webpack_exports__);
     _proto._showElement = function _showElement(relatedTarget) {
       var _this4 = this;
 
-      var transition = $(this._element).hasClass(ClassName$5.FADE);
-      var modalBody = this._dialog ? this._dialog.querySelector(Selector$5.MODAL_BODY) : null;
+      var transition = $(this._element).hasClass(CLASS_NAME_FADE$1);
+      var modalBody = this._dialog ? this._dialog.querySelector(SELECTOR_MODAL_BODY) : null;
 
       if (!this._element.parentNode || this._element.parentNode.nodeType !== Node.ELEMENT_NODE) {
         // Don't move modal's DOM position
@@ -5404,7 +5697,7 @@ __webpack_require__.r(__webpack_exports__);
 
       this._element.setAttribute('aria-modal', true);
 
-      if ($(this._dialog).hasClass(ClassName$5.SCROLLABLE) && modalBody) {
+      if ($(this._dialog).hasClass(CLASS_NAME_SCROLLABLE) && modalBody) {
         modalBody.scrollTop = 0;
       } else {
         this._element.scrollTop = 0;
@@ -5414,13 +5707,13 @@ __webpack_require__.r(__webpack_exports__);
         Util.reflow(this._element);
       }
 
-      $(this._element).addClass(ClassName$5.SHOW);
+      $(this._element).addClass(CLASS_NAME_SHOW$3);
 
       if (this._config.focus) {
         this._enforceFocus();
       }
 
-      var shownEvent = $.Event(Event$5.SHOWN, {
+      var shownEvent = $.Event(EVENT_SHOWN$2, {
         relatedTarget: relatedTarget
       });
 
@@ -5444,8 +5737,8 @@ __webpack_require__.r(__webpack_exports__);
     _proto._enforceFocus = function _enforceFocus() {
       var _this5 = this;
 
-      $(document).off(Event$5.FOCUSIN) // Guard against infinite focus loop
-      .on(Event$5.FOCUSIN, function (event) {
+      $(document).off(EVENT_FOCUSIN) // Guard against infinite focus loop
+      .on(EVENT_FOCUSIN, function (event) {
         if (document !== event.target && _this5._element !== event.target && $(_this5._element).has(event.target).length === 0) {
           _this5._element.focus();
         }
@@ -5455,14 +5748,18 @@ __webpack_require__.r(__webpack_exports__);
     _proto._setEscapeEvent = function _setEscapeEvent() {
       var _this6 = this;
 
-      if (this._isShown && this._config.keyboard) {
-        $(this._element).on(Event$5.KEYDOWN_DISMISS, function (event) {
-          if (event.which === ESCAPE_KEYCODE$1) {
+      if (this._isShown) {
+        $(this._element).on(EVENT_KEYDOWN_DISMISS, function (event) {
+          if (_this6._config.keyboard && event.which === ESCAPE_KEYCODE$1) {
+            event.preventDefault();
+
+            _this6.hide();
+          } else if (!_this6._config.keyboard && event.which === ESCAPE_KEYCODE$1) {
             _this6._triggerBackdropTransition();
           }
         });
       } else if (!this._isShown) {
-        $(this._element).off(Event$5.KEYDOWN_DISMISS);
+        $(this._element).off(EVENT_KEYDOWN_DISMISS);
       }
     };
 
@@ -5470,11 +5767,11 @@ __webpack_require__.r(__webpack_exports__);
       var _this7 = this;
 
       if (this._isShown) {
-        $(window).on(Event$5.RESIZE, function (event) {
+        $(window).on(EVENT_RESIZE, function (event) {
           return _this7.handleUpdate(event);
         });
       } else {
-        $(window).off(Event$5.RESIZE);
+        $(window).off(EVENT_RESIZE);
       }
     };
 
@@ -5490,13 +5787,13 @@ __webpack_require__.r(__webpack_exports__);
       this._isTransitioning = false;
 
       this._showBackdrop(function () {
-        $(document.body).removeClass(ClassName$5.OPEN);
+        $(document.body).removeClass(CLASS_NAME_OPEN);
 
         _this8._resetAdjustments();
 
         _this8._resetScrollbar();
 
-        $(_this8._element).trigger(Event$5.HIDDEN);
+        $(_this8._element).trigger(EVENT_HIDDEN$2);
       });
     };
 
@@ -5510,18 +5807,18 @@ __webpack_require__.r(__webpack_exports__);
     _proto._showBackdrop = function _showBackdrop(callback) {
       var _this9 = this;
 
-      var animate = $(this._element).hasClass(ClassName$5.FADE) ? ClassName$5.FADE : '';
+      var animate = $(this._element).hasClass(CLASS_NAME_FADE$1) ? CLASS_NAME_FADE$1 : '';
 
       if (this._isShown && this._config.backdrop) {
         this._backdrop = document.createElement('div');
-        this._backdrop.className = ClassName$5.BACKDROP;
+        this._backdrop.className = CLASS_NAME_BACKDROP;
 
         if (animate) {
           this._backdrop.classList.add(animate);
         }
 
         $(this._backdrop).appendTo(document.body);
-        $(this._element).on(Event$5.CLICK_DISMISS, function (event) {
+        $(this._element).on(EVENT_CLICK_DISMISS, function (event) {
           if (_this9._ignoreBackdropClick) {
             _this9._ignoreBackdropClick = false;
             return;
@@ -5538,7 +5835,7 @@ __webpack_require__.r(__webpack_exports__);
           Util.reflow(this._backdrop);
         }
 
-        $(this._backdrop).addClass(ClassName$5.SHOW);
+        $(this._backdrop).addClass(CLASS_NAME_SHOW$3);
 
         if (!callback) {
           return;
@@ -5552,7 +5849,7 @@ __webpack_require__.r(__webpack_exports__);
         var backdropTransitionDuration = Util.getTransitionDurationFromElement(this._backdrop);
         $(this._backdrop).one(Util.TRANSITION_END, callback).emulateTransitionEnd(backdropTransitionDuration);
       } else if (!this._isShown && this._backdrop) {
-        $(this._backdrop).removeClass(ClassName$5.SHOW);
+        $(this._backdrop).removeClass(CLASS_NAME_SHOW$3);
 
         var callbackRemove = function callbackRemove() {
           _this9._removeBackdrop();
@@ -5562,7 +5859,7 @@ __webpack_require__.r(__webpack_exports__);
           }
         };
 
-        if ($(this._element).hasClass(ClassName$5.FADE)) {
+        if ($(this._element).hasClass(CLASS_NAME_FADE$1)) {
           var _backdropTransitionDuration = Util.getTransitionDurationFromElement(this._backdrop);
 
           $(this._backdrop).one(Util.TRANSITION_END, callbackRemove).emulateTransitionEnd(_backdropTransitionDuration);
@@ -5597,7 +5894,7 @@ __webpack_require__.r(__webpack_exports__);
 
     _proto._checkScrollbar = function _checkScrollbar() {
       var rect = document.body.getBoundingClientRect();
-      this._isBodyOverflowing = rect.left + rect.right < window.innerWidth;
+      this._isBodyOverflowing = Math.round(rect.left + rect.right) < window.innerWidth;
       this._scrollbarWidth = this._getScrollbarWidth();
     };
 
@@ -5607,8 +5904,8 @@ __webpack_require__.r(__webpack_exports__);
       if (this._isBodyOverflowing) {
         // Note: DOMNode.style.paddingRight returns the actual value or '' if not set
         //   while $(DOMNode).css('padding-right') returns the calculated value or 0 if not set
-        var fixedContent = [].slice.call(document.querySelectorAll(Selector$5.FIXED_CONTENT));
-        var stickyContent = [].slice.call(document.querySelectorAll(Selector$5.STICKY_CONTENT)); // Adjust fixed content padding
+        var fixedContent = [].slice.call(document.querySelectorAll(SELECTOR_FIXED_CONTENT));
+        var stickyContent = [].slice.call(document.querySelectorAll(SELECTOR_STICKY_CONTENT)); // Adjust fixed content padding
 
         $(fixedContent).each(function (index, element) {
           var actualPadding = element.style.paddingRight;
@@ -5627,19 +5924,19 @@ __webpack_require__.r(__webpack_exports__);
         $(document.body).data('padding-right', actualPadding).css('padding-right', parseFloat(calculatedPadding) + this._scrollbarWidth + "px");
       }
 
-      $(document.body).addClass(ClassName$5.OPEN);
+      $(document.body).addClass(CLASS_NAME_OPEN);
     };
 
     _proto._resetScrollbar = function _resetScrollbar() {
       // Restore fixed content padding
-      var fixedContent = [].slice.call(document.querySelectorAll(Selector$5.FIXED_CONTENT));
+      var fixedContent = [].slice.call(document.querySelectorAll(SELECTOR_FIXED_CONTENT));
       $(fixedContent).each(function (index, element) {
         var padding = $(element).data('padding-right');
         $(element).removeData('padding-right');
         element.style.paddingRight = padding ? padding : '';
       }); // Restore sticky content
 
-      var elements = [].slice.call(document.querySelectorAll("" + Selector$5.STICKY_CONTENT));
+      var elements = [].slice.call(document.querySelectorAll("" + SELECTOR_STICKY_CONTENT));
       $(elements).each(function (index, element) {
         var margin = $(element).data('margin-right');
 
@@ -5656,7 +5953,7 @@ __webpack_require__.r(__webpack_exports__);
     _proto._getScrollbarWidth = function _getScrollbarWidth() {
       // thx d.walsh
       var scrollDiv = document.createElement('div');
-      scrollDiv.className = ClassName$5.SCROLLBAR_MEASURER;
+      scrollDiv.className = CLASS_NAME_SCROLLBAR_MEASURER;
       document.body.appendChild(scrollDiv);
       var scrollbarWidth = scrollDiv.getBoundingClientRect().width - scrollDiv.clientWidth;
       document.body.removeChild(scrollDiv);
@@ -5668,7 +5965,7 @@ __webpack_require__.r(__webpack_exports__);
       return this.each(function () {
         var data = $(this).data(DATA_KEY$5);
 
-        var _config = _objectSpread2({}, Default$3, {}, $(this).data(), {}, typeof config === 'object' && config ? config : {});
+        var _config = _objectSpread2(_objectSpread2(_objectSpread2({}, Default$3), $(this).data()), typeof config === 'object' && config ? config : {});
 
         if (!data) {
           data = new Modal(this, _config);
@@ -5708,7 +6005,7 @@ __webpack_require__.r(__webpack_exports__);
    */
 
 
-  $(document).on(Event$5.CLICK_DATA_API, Selector$5.DATA_TOGGLE, function (event) {
+  $(document).on(EVENT_CLICK_DATA_API$5, SELECTOR_DATA_TOGGLE$3, function (event) {
     var _this11 = this;
 
     var target;
@@ -5718,19 +6015,19 @@ __webpack_require__.r(__webpack_exports__);
       target = document.querySelector(selector);
     }
 
-    var config = $(target).data(DATA_KEY$5) ? 'toggle' : _objectSpread2({}, $(target).data(), {}, $(this).data());
+    var config = $(target).data(DATA_KEY$5) ? 'toggle' : _objectSpread2(_objectSpread2({}, $(target).data()), $(this).data());
 
     if (this.tagName === 'A' || this.tagName === 'AREA') {
       event.preventDefault();
     }
 
-    var $target = $(target).one(Event$5.SHOW, function (showEvent) {
+    var $target = $(target).one(EVENT_SHOW$2, function (showEvent) {
       if (showEvent.isDefaultPrevented()) {
         // Only register focus restorer if modal will actually get shown
         return;
       }
 
-      $target.one(Event$5.HIDDEN, function () {
+      $target.one(EVENT_HIDDEN$2, function () {
         if ($(_this11).is(':visible')) {
           _this11.focus();
         }
@@ -5755,7 +6052,7 @@ __webpack_require__.r(__webpack_exports__);
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.4.1): tools/sanitizer.js
+   * Bootstrap (v4.5.0): tools/sanitizer.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -5780,7 +6077,7 @@ __webpack_require__.r(__webpack_exports__);
     h5: [],
     h6: [],
     i: [],
-    img: ['src', 'alt', 'title', 'width', 'height'],
+    img: ['src', 'srcset', 'alt', 'title', 'width', 'height'],
     li: [],
     ol: [],
     p: [],
@@ -5800,14 +6097,14 @@ __webpack_require__.r(__webpack_exports__);
    * Shoutout to Angular 7 https://github.com/angular/angular/blob/7.2.4/packages/core/src/sanitization/url_sanitizer.ts
    */
 
-  var SAFE_URL_PATTERN = /^(?:(?:https?|mailto|ftp|tel|file):|[^&:/?#]*(?:[/?#]|$))/gi;
+  var SAFE_URL_PATTERN = /^(?:(?:https?|mailto|ftp|tel|file):|[^#&/:?]*(?:[#/?]|$))/gi;
   /**
    * A pattern that matches safe data URLs. Only matches image, video and audio types.
    *
    * Shoutout to Angular 7 https://github.com/angular/angular/blob/7.2.4/packages/core/src/sanitization/url_sanitizer.ts
    */
 
-  var DATA_URL_PATTERN = /^data:(?:image\/(?:bmp|gif|jpeg|jpg|png|tiff|webp)|video\/(?:mpeg|mp4|ogg|webm)|audio\/(?:mp3|oga|ogg|opus));base64,[a-z0-9+/]+=*$/i;
+  var DATA_URL_PATTERN = /^data:(?:image\/(?:bmp|gif|jpeg|jpg|png|tiff|webp)|video\/(?:mpeg|mp4|ogg|webm)|audio\/(?:mp3|oga|ogg|opus));base64,[\d+/a-z]+=*$/i;
 
   function allowedAttribute(attr, allowedAttributeList) {
     var attrName = attr.nodeName.toLowerCase();
@@ -5824,7 +6121,7 @@ __webpack_require__.r(__webpack_exports__);
       return attrRegex instanceof RegExp;
     }); // Check if a regular expression validates the attribute.
 
-    for (var i = 0, l = regExp.length; i < l; i++) {
+    for (var i = 0, len = regExp.length; i < len; i++) {
       if (attrName.match(regExp[i])) {
         return true;
       }
@@ -5881,7 +6178,7 @@ __webpack_require__.r(__webpack_exports__);
    */
 
   var NAME$6 = 'tooltip';
-  var VERSION$6 = '4.4.1';
+  var VERSION$6 = '4.5.0';
   var DATA_KEY$6 = 'bs.tooltip';
   var EVENT_KEY$6 = "." + DATA_KEY$6;
   var JQUERY_NO_CONFLICT$6 = $.fn[NAME$6];
@@ -5906,7 +6203,7 @@ __webpack_require__.r(__webpack_exports__);
     whiteList: 'object',
     popperConfig: '(null|object)'
   };
-  var AttachmentMap$1 = {
+  var AttachmentMap = {
     AUTO: 'auto',
     TOP: 'top',
     RIGHT: 'right',
@@ -5931,11 +6228,9 @@ __webpack_require__.r(__webpack_exports__);
     whiteList: DefaultWhitelist,
     popperConfig: null
   };
-  var HoverState = {
-    SHOW: 'show',
-    OUT: 'out'
-  };
-  var Event$6 = {
+  var HOVER_STATE_SHOW = 'show';
+  var HOVER_STATE_OUT = 'out';
+  var Event = {
     HIDE: "hide" + EVENT_KEY$6,
     HIDDEN: "hidden" + EVENT_KEY$6,
     SHOW: "show" + EVENT_KEY$6,
@@ -5947,30 +6242,21 @@ __webpack_require__.r(__webpack_exports__);
     MOUSEENTER: "mouseenter" + EVENT_KEY$6,
     MOUSELEAVE: "mouseleave" + EVENT_KEY$6
   };
-  var ClassName$6 = {
-    FADE: 'fade',
-    SHOW: 'show'
-  };
-  var Selector$6 = {
-    TOOLTIP: '.tooltip',
-    TOOLTIP_INNER: '.tooltip-inner',
-    ARROW: '.arrow'
-  };
-  var Trigger = {
-    HOVER: 'hover',
-    FOCUS: 'focus',
-    CLICK: 'click',
-    MANUAL: 'manual'
-  };
+  var CLASS_NAME_FADE$2 = 'fade';
+  var CLASS_NAME_SHOW$4 = 'show';
+  var SELECTOR_TOOLTIP_INNER = '.tooltip-inner';
+  var SELECTOR_ARROW = '.arrow';
+  var TRIGGER_HOVER = 'hover';
+  var TRIGGER_FOCUS = 'focus';
+  var TRIGGER_CLICK = 'click';
+  var TRIGGER_MANUAL = 'manual';
   /**
    * ------------------------------------------------------------------------
    * Class Definition
    * ------------------------------------------------------------------------
    */
 
-  var Tooltip =
-  /*#__PURE__*/
-  function () {
+  var Tooltip = /*#__PURE__*/function () {
     function Tooltip(element, config) {
       if (typeof Popper === 'undefined') {
         throw new TypeError('Bootstrap\'s tooltips require Popper.js (https://popper.js.org/)');
@@ -6028,7 +6314,7 @@ __webpack_require__.r(__webpack_exports__);
           context._leave(null, context);
         }
       } else {
-        if ($(this.getTipElement()).hasClass(ClassName$6.SHOW)) {
+        if ($(this.getTipElement()).hasClass(CLASS_NAME_SHOW$4)) {
           this._leave(null, this);
 
           return;
@@ -6088,7 +6374,7 @@ __webpack_require__.r(__webpack_exports__);
         this.setContent();
 
         if (this.config.animation) {
-          $(tip).addClass(ClassName$6.FADE);
+          $(tip).addClass(CLASS_NAME_FADE$2);
         }
 
         var placement = typeof this.config.placement === 'function' ? this.config.placement.call(this, tip, this.element) : this.config.placement;
@@ -6107,7 +6393,7 @@ __webpack_require__.r(__webpack_exports__);
 
         $(this.element).trigger(this.constructor.Event.INSERTED);
         this._popper = new Popper(this.element, tip, this._getPopperConfig(attachment));
-        $(tip).addClass(ClassName$6.SHOW); // If this is a touch-enabled device we add extra
+        $(tip).addClass(CLASS_NAME_SHOW$4); // If this is a touch-enabled device we add extra
         // empty mouseover listeners to the body's immediate children;
         // only needed because of broken event delegation on iOS
         // https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html
@@ -6125,12 +6411,12 @@ __webpack_require__.r(__webpack_exports__);
           _this._hoverState = null;
           $(_this.element).trigger(_this.constructor.Event.SHOWN);
 
-          if (prevHoverState === HoverState.OUT) {
+          if (prevHoverState === HOVER_STATE_OUT) {
             _this._leave(null, _this);
           }
         };
 
-        if ($(this.tip).hasClass(ClassName$6.FADE)) {
+        if ($(this.tip).hasClass(CLASS_NAME_FADE$2)) {
           var transitionDuration = Util.getTransitionDurationFromElement(this.tip);
           $(this.tip).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
         } else {
@@ -6146,7 +6432,7 @@ __webpack_require__.r(__webpack_exports__);
       var hideEvent = $.Event(this.constructor.Event.HIDE);
 
       var complete = function complete() {
-        if (_this2._hoverState !== HoverState.SHOW && tip.parentNode) {
+        if (_this2._hoverState !== HOVER_STATE_SHOW && tip.parentNode) {
           tip.parentNode.removeChild(tip);
         }
 
@@ -6171,18 +6457,18 @@ __webpack_require__.r(__webpack_exports__);
         return;
       }
 
-      $(tip).removeClass(ClassName$6.SHOW); // If this is a touch-enabled device we remove the extra
+      $(tip).removeClass(CLASS_NAME_SHOW$4); // If this is a touch-enabled device we remove the extra
       // empty mouseover listeners we added for iOS support
 
       if ('ontouchstart' in document.documentElement) {
         $(document.body).children().off('mouseover', null, $.noop);
       }
 
-      this._activeTrigger[Trigger.CLICK] = false;
-      this._activeTrigger[Trigger.FOCUS] = false;
-      this._activeTrigger[Trigger.HOVER] = false;
+      this._activeTrigger[TRIGGER_CLICK] = false;
+      this._activeTrigger[TRIGGER_FOCUS] = false;
+      this._activeTrigger[TRIGGER_HOVER] = false;
 
-      if ($(this.tip).hasClass(ClassName$6.FADE)) {
+      if ($(this.tip).hasClass(CLASS_NAME_FADE$2)) {
         var transitionDuration = Util.getTransitionDurationFromElement(tip);
         $(tip).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
       } else {
@@ -6214,8 +6500,8 @@ __webpack_require__.r(__webpack_exports__);
 
     _proto.setContent = function setContent() {
       var tip = this.getTipElement();
-      this.setElementContent($(tip.querySelectorAll(Selector$6.TOOLTIP_INNER)), this.getTitle());
-      $(tip).removeClass(ClassName$6.FADE + " " + ClassName$6.SHOW);
+      this.setElementContent($(tip.querySelectorAll(SELECTOR_TOOLTIP_INNER)), this.getTitle());
+      $(tip).removeClass(CLASS_NAME_FADE$2 + " " + CLASS_NAME_SHOW$4);
     };
 
     _proto.setElementContent = function setElementContent($element, content) {
@@ -6265,7 +6551,7 @@ __webpack_require__.r(__webpack_exports__);
             behavior: this.config.fallbackPlacement
           },
           arrow: {
-            element: Selector$6.ARROW
+            element: SELECTOR_ARROW
           },
           preventOverflow: {
             boundariesElement: this.config.boundary
@@ -6280,7 +6566,7 @@ __webpack_require__.r(__webpack_exports__);
           return _this3._handlePopperPlacementChange(data);
         }
       };
-      return _objectSpread2({}, defaultBsConfig, {}, this.config.popperConfig);
+      return _objectSpread2(_objectSpread2({}, defaultBsConfig), this.config.popperConfig);
     };
 
     _proto._getOffset = function _getOffset() {
@@ -6290,7 +6576,7 @@ __webpack_require__.r(__webpack_exports__);
 
       if (typeof this.config.offset === 'function') {
         offset.fn = function (data) {
-          data.offsets = _objectSpread2({}, data.offsets, {}, _this4.config.offset(data.offsets, _this4.element) || {});
+          data.offsets = _objectSpread2(_objectSpread2({}, data.offsets), _this4.config.offset(data.offsets, _this4.element) || {});
           return data;
         };
       } else {
@@ -6313,7 +6599,7 @@ __webpack_require__.r(__webpack_exports__);
     };
 
     _proto._getAttachment = function _getAttachment(placement) {
-      return AttachmentMap$1[placement.toUpperCase()];
+      return AttachmentMap[placement.toUpperCase()];
     };
 
     _proto._setListeners = function _setListeners() {
@@ -6325,9 +6611,9 @@ __webpack_require__.r(__webpack_exports__);
           $(_this5.element).on(_this5.constructor.Event.CLICK, _this5.config.selector, function (event) {
             return _this5.toggle(event);
           });
-        } else if (trigger !== Trigger.MANUAL) {
-          var eventIn = trigger === Trigger.HOVER ? _this5.constructor.Event.MOUSEENTER : _this5.constructor.Event.FOCUSIN;
-          var eventOut = trigger === Trigger.HOVER ? _this5.constructor.Event.MOUSELEAVE : _this5.constructor.Event.FOCUSOUT;
+        } else if (trigger !== TRIGGER_MANUAL) {
+          var eventIn = trigger === TRIGGER_HOVER ? _this5.constructor.Event.MOUSEENTER : _this5.constructor.Event.FOCUSIN;
+          var eventOut = trigger === TRIGGER_HOVER ? _this5.constructor.Event.MOUSELEAVE : _this5.constructor.Event.FOCUSOUT;
           $(_this5.element).on(eventIn, _this5.config.selector, function (event) {
             return _this5._enter(event);
           }).on(eventOut, _this5.config.selector, function (event) {
@@ -6345,7 +6631,7 @@ __webpack_require__.r(__webpack_exports__);
       $(this.element).closest('.modal').on('hide.bs.modal', this._hideModalHandler);
 
       if (this.config.selector) {
-        this.config = _objectSpread2({}, this.config, {
+        this.config = _objectSpread2(_objectSpread2({}, this.config), {}, {
           trigger: 'manual',
           selector: ''
         });
@@ -6373,16 +6659,16 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       if (event) {
-        context._activeTrigger[event.type === 'focusin' ? Trigger.FOCUS : Trigger.HOVER] = true;
+        context._activeTrigger[event.type === 'focusin' ? TRIGGER_FOCUS : TRIGGER_HOVER] = true;
       }
 
-      if ($(context.getTipElement()).hasClass(ClassName$6.SHOW) || context._hoverState === HoverState.SHOW) {
-        context._hoverState = HoverState.SHOW;
+      if ($(context.getTipElement()).hasClass(CLASS_NAME_SHOW$4) || context._hoverState === HOVER_STATE_SHOW) {
+        context._hoverState = HOVER_STATE_SHOW;
         return;
       }
 
       clearTimeout(context._timeout);
-      context._hoverState = HoverState.SHOW;
+      context._hoverState = HOVER_STATE_SHOW;
 
       if (!context.config.delay || !context.config.delay.show) {
         context.show();
@@ -6390,7 +6676,7 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       context._timeout = setTimeout(function () {
-        if (context._hoverState === HoverState.SHOW) {
+        if (context._hoverState === HOVER_STATE_SHOW) {
           context.show();
         }
       }, context.config.delay.show);
@@ -6406,7 +6692,7 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       if (event) {
-        context._activeTrigger[event.type === 'focusout' ? Trigger.FOCUS : Trigger.HOVER] = false;
+        context._activeTrigger[event.type === 'focusout' ? TRIGGER_FOCUS : TRIGGER_HOVER] = false;
       }
 
       if (context._isWithActiveTrigger()) {
@@ -6414,7 +6700,7 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       clearTimeout(context._timeout);
-      context._hoverState = HoverState.OUT;
+      context._hoverState = HOVER_STATE_OUT;
 
       if (!context.config.delay || !context.config.delay.hide) {
         context.hide();
@@ -6422,7 +6708,7 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       context._timeout = setTimeout(function () {
-        if (context._hoverState === HoverState.OUT) {
+        if (context._hoverState === HOVER_STATE_OUT) {
           context.hide();
         }
       }, context.config.delay.hide);
@@ -6445,7 +6731,7 @@ __webpack_require__.r(__webpack_exports__);
           delete dataAttributes[dataAttr];
         }
       });
-      config = _objectSpread2({}, this.constructor.Default, {}, dataAttributes, {}, typeof config === 'object' && config ? config : {});
+      config = _objectSpread2(_objectSpread2(_objectSpread2({}, this.constructor.Default), dataAttributes), typeof config === 'object' && config ? config : {});
 
       if (typeof config.delay === 'number') {
         config.delay = {
@@ -6495,8 +6781,7 @@ __webpack_require__.r(__webpack_exports__);
     };
 
     _proto._handlePopperPlacementChange = function _handlePopperPlacementChange(popperData) {
-      var popperInstance = popperData.instance;
-      this.tip = popperInstance.popper;
+      this.tip = popperData.instance.popper;
 
       this._cleanTipClass();
 
@@ -6511,7 +6796,7 @@ __webpack_require__.r(__webpack_exports__);
         return;
       }
 
-      $(tip).removeClass(ClassName$6.FADE);
+      $(tip).removeClass(CLASS_NAME_FADE$2);
       this.config.animation = false;
       this.hide();
       this.show();
@@ -6567,7 +6852,7 @@ __webpack_require__.r(__webpack_exports__);
     }, {
       key: "Event",
       get: function get() {
-        return Event$6;
+        return Event;
       }
     }, {
       key: "EVENT_KEY",
@@ -6605,33 +6890,29 @@ __webpack_require__.r(__webpack_exports__);
    */
 
   var NAME$7 = 'popover';
-  var VERSION$7 = '4.4.1';
+  var VERSION$7 = '4.5.0';
   var DATA_KEY$7 = 'bs.popover';
   var EVENT_KEY$7 = "." + DATA_KEY$7;
   var JQUERY_NO_CONFLICT$7 = $.fn[NAME$7];
   var CLASS_PREFIX$1 = 'bs-popover';
   var BSCLS_PREFIX_REGEX$1 = new RegExp("(^|\\s)" + CLASS_PREFIX$1 + "\\S+", 'g');
 
-  var Default$5 = _objectSpread2({}, Tooltip.Default, {
+  var Default$5 = _objectSpread2(_objectSpread2({}, Tooltip.Default), {}, {
     placement: 'right',
     trigger: 'click',
     content: '',
     template: '<div class="popover" role="tooltip">' + '<div class="arrow"></div>' + '<h3 class="popover-header"></h3>' + '<div class="popover-body"></div></div>'
   });
 
-  var DefaultType$5 = _objectSpread2({}, Tooltip.DefaultType, {
+  var DefaultType$5 = _objectSpread2(_objectSpread2({}, Tooltip.DefaultType), {}, {
     content: '(string|element|function)'
   });
 
-  var ClassName$7 = {
-    FADE: 'fade',
-    SHOW: 'show'
-  };
-  var Selector$7 = {
-    TITLE: '.popover-header',
-    CONTENT: '.popover-body'
-  };
-  var Event$7 = {
+  var CLASS_NAME_FADE$3 = 'fade';
+  var CLASS_NAME_SHOW$5 = 'show';
+  var SELECTOR_TITLE = '.popover-header';
+  var SELECTOR_CONTENT = '.popover-body';
+  var Event$1 = {
     HIDE: "hide" + EVENT_KEY$7,
     HIDDEN: "hidden" + EVENT_KEY$7,
     SHOW: "show" + EVENT_KEY$7,
@@ -6649,9 +6930,7 @@ __webpack_require__.r(__webpack_exports__);
    * ------------------------------------------------------------------------
    */
 
-  var Popover =
-  /*#__PURE__*/
-  function (_Tooltip) {
+  var Popover = /*#__PURE__*/function (_Tooltip) {
     _inheritsLoose(Popover, _Tooltip);
 
     function Popover() {
@@ -6677,7 +6956,7 @@ __webpack_require__.r(__webpack_exports__);
     _proto.setContent = function setContent() {
       var $tip = $(this.getTipElement()); // We use append for html objects to maintain js events
 
-      this.setElementContent($tip.find(Selector$7.TITLE), this.getTitle());
+      this.setElementContent($tip.find(SELECTOR_TITLE), this.getTitle());
 
       var content = this._getContent();
 
@@ -6685,8 +6964,8 @@ __webpack_require__.r(__webpack_exports__);
         content = content.call(this.element);
       }
 
-      this.setElementContent($tip.find(Selector$7.CONTENT), content);
-      $tip.removeClass(ClassName$7.FADE + " " + ClassName$7.SHOW);
+      this.setElementContent($tip.find(SELECTOR_CONTENT), content);
+      $tip.removeClass(CLASS_NAME_FADE$3 + " " + CLASS_NAME_SHOW$5);
     } // Private
     ;
 
@@ -6753,7 +7032,7 @@ __webpack_require__.r(__webpack_exports__);
     }, {
       key: "Event",
       get: function get() {
-        return Event$7;
+        return Event$1;
       }
     }, {
       key: "EVENT_KEY",
@@ -6791,7 +7070,7 @@ __webpack_require__.r(__webpack_exports__);
    */
 
   var NAME$8 = 'scrollspy';
-  var VERSION$8 = '4.4.1';
+  var VERSION$8 = '4.5.0';
   var DATA_KEY$8 = 'bs.scrollspy';
   var EVENT_KEY$8 = "." + DATA_KEY$8;
   var DATA_API_KEY$6 = '.data-api';
@@ -6806,52 +7085,40 @@ __webpack_require__.r(__webpack_exports__);
     method: 'string',
     target: '(string|element)'
   };
-  var Event$8 = {
-    ACTIVATE: "activate" + EVENT_KEY$8,
-    SCROLL: "scroll" + EVENT_KEY$8,
-    LOAD_DATA_API: "load" + EVENT_KEY$8 + DATA_API_KEY$6
-  };
-  var ClassName$8 = {
-    DROPDOWN_ITEM: 'dropdown-item',
-    DROPDOWN_MENU: 'dropdown-menu',
-    ACTIVE: 'active'
-  };
-  var Selector$8 = {
-    DATA_SPY: '[data-spy="scroll"]',
-    ACTIVE: '.active',
-    NAV_LIST_GROUP: '.nav, .list-group',
-    NAV_LINKS: '.nav-link',
-    NAV_ITEMS: '.nav-item',
-    LIST_ITEMS: '.list-group-item',
-    DROPDOWN: '.dropdown',
-    DROPDOWN_ITEMS: '.dropdown-item',
-    DROPDOWN_TOGGLE: '.dropdown-toggle'
-  };
-  var OffsetMethod = {
-    OFFSET: 'offset',
-    POSITION: 'position'
-  };
+  var EVENT_ACTIVATE = "activate" + EVENT_KEY$8;
+  var EVENT_SCROLL = "scroll" + EVENT_KEY$8;
+  var EVENT_LOAD_DATA_API$2 = "load" + EVENT_KEY$8 + DATA_API_KEY$6;
+  var CLASS_NAME_DROPDOWN_ITEM = 'dropdown-item';
+  var CLASS_NAME_ACTIVE$2 = 'active';
+  var SELECTOR_DATA_SPY = '[data-spy="scroll"]';
+  var SELECTOR_NAV_LIST_GROUP = '.nav, .list-group';
+  var SELECTOR_NAV_LINKS = '.nav-link';
+  var SELECTOR_NAV_ITEMS = '.nav-item';
+  var SELECTOR_LIST_ITEMS = '.list-group-item';
+  var SELECTOR_DROPDOWN = '.dropdown';
+  var SELECTOR_DROPDOWN_ITEMS = '.dropdown-item';
+  var SELECTOR_DROPDOWN_TOGGLE = '.dropdown-toggle';
+  var METHOD_OFFSET = 'offset';
+  var METHOD_POSITION = 'position';
   /**
    * ------------------------------------------------------------------------
    * Class Definition
    * ------------------------------------------------------------------------
    */
 
-  var ScrollSpy =
-  /*#__PURE__*/
-  function () {
+  var ScrollSpy = /*#__PURE__*/function () {
     function ScrollSpy(element, config) {
       var _this = this;
 
       this._element = element;
       this._scrollElement = element.tagName === 'BODY' ? window : element;
       this._config = this._getConfig(config);
-      this._selector = this._config.target + " " + Selector$8.NAV_LINKS + "," + (this._config.target + " " + Selector$8.LIST_ITEMS + ",") + (this._config.target + " " + Selector$8.DROPDOWN_ITEMS);
+      this._selector = this._config.target + " " + SELECTOR_NAV_LINKS + "," + (this._config.target + " " + SELECTOR_LIST_ITEMS + ",") + (this._config.target + " " + SELECTOR_DROPDOWN_ITEMS);
       this._offsets = [];
       this._targets = [];
       this._activeTarget = null;
       this._scrollHeight = 0;
-      $(this._scrollElement).on(Event$8.SCROLL, function (event) {
+      $(this._scrollElement).on(EVENT_SCROLL, function (event) {
         return _this._process(event);
       });
       this.refresh();
@@ -6866,9 +7133,9 @@ __webpack_require__.r(__webpack_exports__);
     _proto.refresh = function refresh() {
       var _this2 = this;
 
-      var autoMethod = this._scrollElement === this._scrollElement.window ? OffsetMethod.OFFSET : OffsetMethod.POSITION;
+      var autoMethod = this._scrollElement === this._scrollElement.window ? METHOD_OFFSET : METHOD_POSITION;
       var offsetMethod = this._config.method === 'auto' ? autoMethod : this._config.method;
-      var offsetBase = offsetMethod === OffsetMethod.POSITION ? this._getScrollTop() : 0;
+      var offsetBase = offsetMethod === METHOD_POSITION ? this._getScrollTop() : 0;
       this._offsets = [];
       this._targets = [];
       this._scrollHeight = this._getScrollHeight();
@@ -6917,9 +7184,9 @@ __webpack_require__.r(__webpack_exports__);
     ;
 
     _proto._getConfig = function _getConfig(config) {
-      config = _objectSpread2({}, Default$6, {}, typeof config === 'object' && config ? config : {});
+      config = _objectSpread2(_objectSpread2({}, Default$6), typeof config === 'object' && config ? config : {});
 
-      if (typeof config.target !== 'string') {
+      if (typeof config.target !== 'string' && Util.isElement(config.target)) {
         var id = $(config.target).attr('id');
 
         if (!id) {
@@ -6975,9 +7242,7 @@ __webpack_require__.r(__webpack_exports__);
         return;
       }
 
-      var offsetLength = this._offsets.length;
-
-      for (var i = offsetLength; i--;) {
+      for (var i = this._offsets.length; i--;) {
         var isActiveTarget = this._activeTarget !== this._targets[i] && scrollTop >= this._offsets[i] && (typeof this._offsets[i + 1] === 'undefined' || scrollTop < this._offsets[i + 1]);
 
         if (isActiveTarget) {
@@ -6997,29 +7262,29 @@ __webpack_require__.r(__webpack_exports__);
 
       var $link = $([].slice.call(document.querySelectorAll(queries.join(','))));
 
-      if ($link.hasClass(ClassName$8.DROPDOWN_ITEM)) {
-        $link.closest(Selector$8.DROPDOWN).find(Selector$8.DROPDOWN_TOGGLE).addClass(ClassName$8.ACTIVE);
-        $link.addClass(ClassName$8.ACTIVE);
+      if ($link.hasClass(CLASS_NAME_DROPDOWN_ITEM)) {
+        $link.closest(SELECTOR_DROPDOWN).find(SELECTOR_DROPDOWN_TOGGLE).addClass(CLASS_NAME_ACTIVE$2);
+        $link.addClass(CLASS_NAME_ACTIVE$2);
       } else {
         // Set triggered link as active
-        $link.addClass(ClassName$8.ACTIVE); // Set triggered links parents as active
+        $link.addClass(CLASS_NAME_ACTIVE$2); // Set triggered links parents as active
         // With both <ul> and <nav> markup a parent is the previous sibling of any nav ancestor
 
-        $link.parents(Selector$8.NAV_LIST_GROUP).prev(Selector$8.NAV_LINKS + ", " + Selector$8.LIST_ITEMS).addClass(ClassName$8.ACTIVE); // Handle special case when .nav-link is inside .nav-item
+        $link.parents(SELECTOR_NAV_LIST_GROUP).prev(SELECTOR_NAV_LINKS + ", " + SELECTOR_LIST_ITEMS).addClass(CLASS_NAME_ACTIVE$2); // Handle special case when .nav-link is inside .nav-item
 
-        $link.parents(Selector$8.NAV_LIST_GROUP).prev(Selector$8.NAV_ITEMS).children(Selector$8.NAV_LINKS).addClass(ClassName$8.ACTIVE);
+        $link.parents(SELECTOR_NAV_LIST_GROUP).prev(SELECTOR_NAV_ITEMS).children(SELECTOR_NAV_LINKS).addClass(CLASS_NAME_ACTIVE$2);
       }
 
-      $(this._scrollElement).trigger(Event$8.ACTIVATE, {
+      $(this._scrollElement).trigger(EVENT_ACTIVATE, {
         relatedTarget: target
       });
     };
 
     _proto._clear = function _clear() {
       [].slice.call(document.querySelectorAll(this._selector)).filter(function (node) {
-        return node.classList.contains(ClassName$8.ACTIVE);
+        return node.classList.contains(CLASS_NAME_ACTIVE$2);
       }).forEach(function (node) {
-        return node.classList.remove(ClassName$8.ACTIVE);
+        return node.classList.remove(CLASS_NAME_ACTIVE$2);
       });
     } // Static
     ;
@@ -7066,8 +7331,8 @@ __webpack_require__.r(__webpack_exports__);
    */
 
 
-  $(window).on(Event$8.LOAD_DATA_API, function () {
-    var scrollSpys = [].slice.call(document.querySelectorAll(Selector$8.DATA_SPY));
+  $(window).on(EVENT_LOAD_DATA_API$2, function () {
+    var scrollSpys = [].slice.call(document.querySelectorAll(SELECTOR_DATA_SPY));
     var scrollSpysLength = scrollSpys.length;
 
     for (var i = scrollSpysLength; i--;) {
@@ -7097,43 +7362,35 @@ __webpack_require__.r(__webpack_exports__);
    */
 
   var NAME$9 = 'tab';
-  var VERSION$9 = '4.4.1';
+  var VERSION$9 = '4.5.0';
   var DATA_KEY$9 = 'bs.tab';
   var EVENT_KEY$9 = "." + DATA_KEY$9;
   var DATA_API_KEY$7 = '.data-api';
   var JQUERY_NO_CONFLICT$9 = $.fn[NAME$9];
-  var Event$9 = {
-    HIDE: "hide" + EVENT_KEY$9,
-    HIDDEN: "hidden" + EVENT_KEY$9,
-    SHOW: "show" + EVENT_KEY$9,
-    SHOWN: "shown" + EVENT_KEY$9,
-    CLICK_DATA_API: "click" + EVENT_KEY$9 + DATA_API_KEY$7
-  };
-  var ClassName$9 = {
-    DROPDOWN_MENU: 'dropdown-menu',
-    ACTIVE: 'active',
-    DISABLED: 'disabled',
-    FADE: 'fade',
-    SHOW: 'show'
-  };
-  var Selector$9 = {
-    DROPDOWN: '.dropdown',
-    NAV_LIST_GROUP: '.nav, .list-group',
-    ACTIVE: '.active',
-    ACTIVE_UL: '> li > .active',
-    DATA_TOGGLE: '[data-toggle="tab"], [data-toggle="pill"], [data-toggle="list"]',
-    DROPDOWN_TOGGLE: '.dropdown-toggle',
-    DROPDOWN_ACTIVE_CHILD: '> .dropdown-menu .active'
-  };
+  var EVENT_HIDE$3 = "hide" + EVENT_KEY$9;
+  var EVENT_HIDDEN$3 = "hidden" + EVENT_KEY$9;
+  var EVENT_SHOW$3 = "show" + EVENT_KEY$9;
+  var EVENT_SHOWN$3 = "shown" + EVENT_KEY$9;
+  var EVENT_CLICK_DATA_API$6 = "click" + EVENT_KEY$9 + DATA_API_KEY$7;
+  var CLASS_NAME_DROPDOWN_MENU = 'dropdown-menu';
+  var CLASS_NAME_ACTIVE$3 = 'active';
+  var CLASS_NAME_DISABLED$1 = 'disabled';
+  var CLASS_NAME_FADE$4 = 'fade';
+  var CLASS_NAME_SHOW$6 = 'show';
+  var SELECTOR_DROPDOWN$1 = '.dropdown';
+  var SELECTOR_NAV_LIST_GROUP$1 = '.nav, .list-group';
+  var SELECTOR_ACTIVE$2 = '.active';
+  var SELECTOR_ACTIVE_UL = '> li > .active';
+  var SELECTOR_DATA_TOGGLE$4 = '[data-toggle="tab"], [data-toggle="pill"], [data-toggle="list"]';
+  var SELECTOR_DROPDOWN_TOGGLE$1 = '.dropdown-toggle';
+  var SELECTOR_DROPDOWN_ACTIVE_CHILD = '> .dropdown-menu .active';
   /**
    * ------------------------------------------------------------------------
    * Class Definition
    * ------------------------------------------------------------------------
    */
 
-  var Tab =
-  /*#__PURE__*/
-  function () {
+  var Tab = /*#__PURE__*/function () {
     function Tab(element) {
       this._element = element;
     } // Getters
@@ -7145,25 +7402,25 @@ __webpack_require__.r(__webpack_exports__);
     _proto.show = function show() {
       var _this = this;
 
-      if (this._element.parentNode && this._element.parentNode.nodeType === Node.ELEMENT_NODE && $(this._element).hasClass(ClassName$9.ACTIVE) || $(this._element).hasClass(ClassName$9.DISABLED)) {
+      if (this._element.parentNode && this._element.parentNode.nodeType === Node.ELEMENT_NODE && $(this._element).hasClass(CLASS_NAME_ACTIVE$3) || $(this._element).hasClass(CLASS_NAME_DISABLED$1)) {
         return;
       }
 
       var target;
       var previous;
-      var listElement = $(this._element).closest(Selector$9.NAV_LIST_GROUP)[0];
+      var listElement = $(this._element).closest(SELECTOR_NAV_LIST_GROUP$1)[0];
       var selector = Util.getSelectorFromElement(this._element);
 
       if (listElement) {
-        var itemSelector = listElement.nodeName === 'UL' || listElement.nodeName === 'OL' ? Selector$9.ACTIVE_UL : Selector$9.ACTIVE;
+        var itemSelector = listElement.nodeName === 'UL' || listElement.nodeName === 'OL' ? SELECTOR_ACTIVE_UL : SELECTOR_ACTIVE$2;
         previous = $.makeArray($(listElement).find(itemSelector));
         previous = previous[previous.length - 1];
       }
 
-      var hideEvent = $.Event(Event$9.HIDE, {
+      var hideEvent = $.Event(EVENT_HIDE$3, {
         relatedTarget: this._element
       });
-      var showEvent = $.Event(Event$9.SHOW, {
+      var showEvent = $.Event(EVENT_SHOW$3, {
         relatedTarget: previous
       });
 
@@ -7184,10 +7441,10 @@ __webpack_require__.r(__webpack_exports__);
       this._activate(this._element, listElement);
 
       var complete = function complete() {
-        var hiddenEvent = $.Event(Event$9.HIDDEN, {
+        var hiddenEvent = $.Event(EVENT_HIDDEN$3, {
           relatedTarget: _this._element
         });
-        var shownEvent = $.Event(Event$9.SHOWN, {
+        var shownEvent = $.Event(EVENT_SHOWN$3, {
           relatedTarget: previous
         });
         $(previous).trigger(hiddenEvent);
@@ -7210,9 +7467,9 @@ __webpack_require__.r(__webpack_exports__);
     _proto._activate = function _activate(element, container, callback) {
       var _this2 = this;
 
-      var activeElements = container && (container.nodeName === 'UL' || container.nodeName === 'OL') ? $(container).find(Selector$9.ACTIVE_UL) : $(container).children(Selector$9.ACTIVE);
+      var activeElements = container && (container.nodeName === 'UL' || container.nodeName === 'OL') ? $(container).find(SELECTOR_ACTIVE_UL) : $(container).children(SELECTOR_ACTIVE$2);
       var active = activeElements[0];
-      var isTransitioning = callback && active && $(active).hasClass(ClassName$9.FADE);
+      var isTransitioning = callback && active && $(active).hasClass(CLASS_NAME_FADE$4);
 
       var complete = function complete() {
         return _this2._transitionComplete(element, active, callback);
@@ -7220,7 +7477,7 @@ __webpack_require__.r(__webpack_exports__);
 
       if (active && isTransitioning) {
         var transitionDuration = Util.getTransitionDurationFromElement(active);
-        $(active).removeClass(ClassName$9.SHOW).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
+        $(active).removeClass(CLASS_NAME_SHOW$6).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
       } else {
         complete();
       }
@@ -7228,11 +7485,11 @@ __webpack_require__.r(__webpack_exports__);
 
     _proto._transitionComplete = function _transitionComplete(element, active, callback) {
       if (active) {
-        $(active).removeClass(ClassName$9.ACTIVE);
-        var dropdownChild = $(active.parentNode).find(Selector$9.DROPDOWN_ACTIVE_CHILD)[0];
+        $(active).removeClass(CLASS_NAME_ACTIVE$3);
+        var dropdownChild = $(active.parentNode).find(SELECTOR_DROPDOWN_ACTIVE_CHILD)[0];
 
         if (dropdownChild) {
-          $(dropdownChild).removeClass(ClassName$9.ACTIVE);
+          $(dropdownChild).removeClass(CLASS_NAME_ACTIVE$3);
         }
 
         if (active.getAttribute('role') === 'tab') {
@@ -7240,7 +7497,7 @@ __webpack_require__.r(__webpack_exports__);
         }
       }
 
-      $(element).addClass(ClassName$9.ACTIVE);
+      $(element).addClass(CLASS_NAME_ACTIVE$3);
 
       if (element.getAttribute('role') === 'tab') {
         element.setAttribute('aria-selected', true);
@@ -7248,16 +7505,16 @@ __webpack_require__.r(__webpack_exports__);
 
       Util.reflow(element);
 
-      if (element.classList.contains(ClassName$9.FADE)) {
-        element.classList.add(ClassName$9.SHOW);
+      if (element.classList.contains(CLASS_NAME_FADE$4)) {
+        element.classList.add(CLASS_NAME_SHOW$6);
       }
 
-      if (element.parentNode && $(element.parentNode).hasClass(ClassName$9.DROPDOWN_MENU)) {
-        var dropdownElement = $(element).closest(Selector$9.DROPDOWN)[0];
+      if (element.parentNode && $(element.parentNode).hasClass(CLASS_NAME_DROPDOWN_MENU)) {
+        var dropdownElement = $(element).closest(SELECTOR_DROPDOWN$1)[0];
 
         if (dropdownElement) {
-          var dropdownToggleList = [].slice.call(dropdownElement.querySelectorAll(Selector$9.DROPDOWN_TOGGLE));
-          $(dropdownToggleList).addClass(ClassName$9.ACTIVE);
+          var dropdownToggleList = [].slice.call(dropdownElement.querySelectorAll(SELECTOR_DROPDOWN_TOGGLE$1));
+          $(dropdownToggleList).addClass(CLASS_NAME_ACTIVE$3);
         }
 
         element.setAttribute('aria-expanded', true);
@@ -7305,7 +7562,7 @@ __webpack_require__.r(__webpack_exports__);
    */
 
 
-  $(document).on(Event$9.CLICK_DATA_API, Selector$9.DATA_TOGGLE, function (event) {
+  $(document).on(EVENT_CLICK_DATA_API$6, SELECTOR_DATA_TOGGLE$4, function (event) {
     event.preventDefault();
 
     Tab._jQueryInterface.call($(this), 'show');
@@ -7331,23 +7588,19 @@ __webpack_require__.r(__webpack_exports__);
    */
 
   var NAME$a = 'toast';
-  var VERSION$a = '4.4.1';
+  var VERSION$a = '4.5.0';
   var DATA_KEY$a = 'bs.toast';
   var EVENT_KEY$a = "." + DATA_KEY$a;
   var JQUERY_NO_CONFLICT$a = $.fn[NAME$a];
-  var Event$a = {
-    CLICK_DISMISS: "click.dismiss" + EVENT_KEY$a,
-    HIDE: "hide" + EVENT_KEY$a,
-    HIDDEN: "hidden" + EVENT_KEY$a,
-    SHOW: "show" + EVENT_KEY$a,
-    SHOWN: "shown" + EVENT_KEY$a
-  };
-  var ClassName$a = {
-    FADE: 'fade',
-    HIDE: 'hide',
-    SHOW: 'show',
-    SHOWING: 'showing'
-  };
+  var EVENT_CLICK_DISMISS$1 = "click.dismiss" + EVENT_KEY$a;
+  var EVENT_HIDE$4 = "hide" + EVENT_KEY$a;
+  var EVENT_HIDDEN$4 = "hidden" + EVENT_KEY$a;
+  var EVENT_SHOW$4 = "show" + EVENT_KEY$a;
+  var EVENT_SHOWN$4 = "shown" + EVENT_KEY$a;
+  var CLASS_NAME_FADE$5 = 'fade';
+  var CLASS_NAME_HIDE = 'hide';
+  var CLASS_NAME_SHOW$7 = 'show';
+  var CLASS_NAME_SHOWING = 'showing';
   var DefaultType$7 = {
     animation: 'boolean',
     autohide: 'boolean',
@@ -7358,18 +7611,14 @@ __webpack_require__.r(__webpack_exports__);
     autohide: true,
     delay: 500
   };
-  var Selector$a = {
-    DATA_DISMISS: '[data-dismiss="toast"]'
-  };
+  var SELECTOR_DATA_DISMISS$1 = '[data-dismiss="toast"]';
   /**
    * ------------------------------------------------------------------------
    * Class Definition
    * ------------------------------------------------------------------------
    */
 
-  var Toast =
-  /*#__PURE__*/
-  function () {
+  var Toast = /*#__PURE__*/function () {
     function Toast(element, config) {
       this._element = element;
       this._config = this._getConfig(config);
@@ -7385,7 +7634,7 @@ __webpack_require__.r(__webpack_exports__);
     _proto.show = function show() {
       var _this = this;
 
-      var showEvent = $.Event(Event$a.SHOW);
+      var showEvent = $.Event(EVENT_SHOW$4);
       $(this._element).trigger(showEvent);
 
       if (showEvent.isDefaultPrevented()) {
@@ -7393,15 +7642,15 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       if (this._config.animation) {
-        this._element.classList.add(ClassName$a.FADE);
+        this._element.classList.add(CLASS_NAME_FADE$5);
       }
 
       var complete = function complete() {
-        _this._element.classList.remove(ClassName$a.SHOWING);
+        _this._element.classList.remove(CLASS_NAME_SHOWING);
 
-        _this._element.classList.add(ClassName$a.SHOW);
+        _this._element.classList.add(CLASS_NAME_SHOW$7);
 
-        $(_this._element).trigger(Event$a.SHOWN);
+        $(_this._element).trigger(EVENT_SHOWN$4);
 
         if (_this._config.autohide) {
           _this._timeout = setTimeout(function () {
@@ -7410,11 +7659,11 @@ __webpack_require__.r(__webpack_exports__);
         }
       };
 
-      this._element.classList.remove(ClassName$a.HIDE);
+      this._element.classList.remove(CLASS_NAME_HIDE);
 
       Util.reflow(this._element);
 
-      this._element.classList.add(ClassName$a.SHOWING);
+      this._element.classList.add(CLASS_NAME_SHOWING);
 
       if (this._config.animation) {
         var transitionDuration = Util.getTransitionDurationFromElement(this._element);
@@ -7425,11 +7674,11 @@ __webpack_require__.r(__webpack_exports__);
     };
 
     _proto.hide = function hide() {
-      if (!this._element.classList.contains(ClassName$a.SHOW)) {
+      if (!this._element.classList.contains(CLASS_NAME_SHOW$7)) {
         return;
       }
 
-      var hideEvent = $.Event(Event$a.HIDE);
+      var hideEvent = $.Event(EVENT_HIDE$4);
       $(this._element).trigger(hideEvent);
 
       if (hideEvent.isDefaultPrevented()) {
@@ -7443,11 +7692,11 @@ __webpack_require__.r(__webpack_exports__);
       clearTimeout(this._timeout);
       this._timeout = null;
 
-      if (this._element.classList.contains(ClassName$a.SHOW)) {
-        this._element.classList.remove(ClassName$a.SHOW);
+      if (this._element.classList.contains(CLASS_NAME_SHOW$7)) {
+        this._element.classList.remove(CLASS_NAME_SHOW$7);
       }
 
-      $(this._element).off(Event$a.CLICK_DISMISS);
+      $(this._element).off(EVENT_CLICK_DISMISS$1);
       $.removeData(this._element, DATA_KEY$a);
       this._element = null;
       this._config = null;
@@ -7455,7 +7704,7 @@ __webpack_require__.r(__webpack_exports__);
     ;
 
     _proto._getConfig = function _getConfig(config) {
-      config = _objectSpread2({}, Default$7, {}, $(this._element).data(), {}, typeof config === 'object' && config ? config : {});
+      config = _objectSpread2(_objectSpread2(_objectSpread2({}, Default$7), $(this._element).data()), typeof config === 'object' && config ? config : {});
       Util.typeCheckConfig(NAME$a, config, this.constructor.DefaultType);
       return config;
     };
@@ -7463,7 +7712,7 @@ __webpack_require__.r(__webpack_exports__);
     _proto._setListeners = function _setListeners() {
       var _this2 = this;
 
-      $(this._element).on(Event$a.CLICK_DISMISS, Selector$a.DATA_DISMISS, function () {
+      $(this._element).on(EVENT_CLICK_DISMISS$1, SELECTOR_DATA_DISMISS$1, function () {
         return _this2.hide();
       });
     };
@@ -7472,12 +7721,12 @@ __webpack_require__.r(__webpack_exports__);
       var _this3 = this;
 
       var complete = function complete() {
-        _this3._element.classList.add(ClassName$a.HIDE);
+        _this3._element.classList.add(CLASS_NAME_HIDE);
 
-        $(_this3._element).trigger(Event$a.HIDDEN);
+        $(_this3._element).trigger(EVENT_HIDDEN$4);
       };
 
-      this._element.classList.remove(ClassName$a.SHOW);
+      this._element.classList.remove(CLASS_NAME_SHOW$7);
 
       if (this._config.animation) {
         var transitionDuration = Util.getTransitionDurationFromElement(this._element);
@@ -7565,6 +7814,44 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/bootstrap-vue/dist/bootstrap-vue.css":
+/*!*******************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/bootstrap-vue/dist/bootstrap-vue.css ***!
+  \*******************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "/*!\n * BootstrapVue Custom CSS (https://bootstrap-vue.org)\n */\n.bv-no-focus-ring:focus {\n  outline: none;\n}\n\n@media (max-width: 575.98px) {\n  .bv-d-xs-down-none {\n    display: none !important;\n  }\n}\n\n@media (max-width: 767.98px) {\n  .bv-d-sm-down-none {\n    display: none !important;\n  }\n}\n\n@media (max-width: 991.98px) {\n  .bv-d-md-down-none {\n    display: none !important;\n  }\n}\n\n@media (max-width: 1199.98px) {\n  .bv-d-lg-down-none {\n    display: none !important;\n  }\n}\n\n.bv-d-xl-down-none {\n  display: none !important;\n}\n\n.form-control.focus {\n  color: #495057;\n  background-color: #fff;\n  border-color: #80bdff;\n  outline: 0;\n  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);\n}\n\n.form-control.focus.is-valid {\n  border-color: #28a745;\n  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);\n}\n\n.form-control.focus.is-invalid {\n  border-color: #dc3545;\n  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);\n}\n\n.b-form-btn-label-control.form-control {\n  background-image: none;\n  padding: 0;\n}\n\n.input-group .b-form-btn-label-control.form-control {\n  padding: 0;\n}\n\n[dir=\"rtl\"] .b-form-btn-label-control.form-control, .b-form-btn-label-control.form-control[dir=\"rtl\"] {\n  flex-direction: row-reverse;\n}\n\n[dir=\"rtl\"] .b-form-btn-label-control.form-control > label, .b-form-btn-label-control.form-control[dir=\"rtl\"] > label {\n  text-align: right;\n}\n\n.b-form-btn-label-control.form-control > .btn {\n  line-height: 1;\n  font-size: inherit;\n  box-shadow: none !important;\n  border: 0;\n}\n\n.b-form-btn-label-control.form-control > .btn:disabled {\n  pointer-events: none;\n}\n\n.b-form-btn-label-control.form-control.is-valid > .btn {\n  color: #28a745;\n}\n\n.b-form-btn-label-control.form-control.is-invalid > .btn {\n  color: #dc3545;\n}\n\n.b-form-btn-label-control.form-control > .dropdown-menu {\n  padding: 0.5rem;\n}\n\n.b-form-btn-label-control.form-control > label {\n  outline: 0;\n  padding-left: 0.25rem;\n  margin: 0;\n  border: 0;\n  font-size: inherit;\n  cursor: pointer;\n  min-height: calc(calc(1.5em + 0.75rem + 2px) - 2px);\n}\n\n.b-form-btn-label-control.form-control > label.form-control-sm {\n  min-height: calc(calc(1.5em + 0.5rem + 2px) - 2px);\n}\n\n.b-form-btn-label-control.form-control > label.form-control-lg {\n  min-height: calc(calc(1.5em + 1rem + 2px) - 2px);\n}\n\n.input-group.input-group-sm .b-form-btn-label-control.form-control > label {\n  min-height: calc(calc(1.5em + 0.5rem + 2px) - 2px);\n  padding-top: 0.25rem;\n  padding-bottom: 0.25rem;\n}\n\n.input-group.input-group-lg .b-form-btn-label-control.form-control > label {\n  min-height: calc(calc(1.5em + 1rem + 2px) - 2px);\n  padding-top: 0.5rem;\n  padding-bottom: 0.5rem;\n}\n\n.b-form-btn-label-control.form-control[aria-disabled=\"true\"], .b-form-btn-label-control.form-control[aria-readonly=\"true\"] {\n  background-color: #e9ecef;\n  opacity: 1;\n}\n\n.b-form-btn-label-control.form-control[aria-disabled=\"true\"] {\n  pointer-events: none;\n}\n\n.b-form-btn-label-control.form-control[aria-disabled=\"true\"] > label {\n  cursor: default;\n}\n\n.b-form-btn-label-control.btn-group > .dropdown-menu {\n  padding: 0.5rem;\n}\n\n.b-avatar {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  vertical-align: middle;\n  font-size: inherit;\n  font-weight: 400;\n  line-height: 1;\n  max-width: 100%;\n  max-height: auto;\n  text-align: center;\n  overflow: visible;\n  position: relative;\n  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,\r box-shadow 0.15s ease-in-out;\n}\n\n.b-avatar:focus {\n  outline: 0;\n}\n\n.b-avatar.btn, .b-avatar[href] {\n  padding: 0;\n  border: 0;\n}\n\n.b-avatar.btn .b-avatar-img img, .b-avatar[href] .b-avatar-img img {\n  transition: transform 0.15s ease-in-out;\n}\n\n.b-avatar.btn:not(:disabled):not(.disabled), .b-avatar[href]:not(:disabled):not(.disabled) {\n  cursor: pointer;\n}\n\n.b-avatar.btn:not(:disabled):not(.disabled):hover .b-avatar-img img, .b-avatar[href]:not(:disabled):not(.disabled):hover .b-avatar-img img {\n  transform: scale(1.15);\n}\n\n.b-avatar.disabled, .b-avatar:disabled, .b-avatar[disabled] {\n  opacity: 0.65;\n  pointer-events: none;\n}\n\n.b-avatar .b-avatar-custom,\n.b-avatar .b-avatar-text,\n.b-avatar .b-avatar-img {\n  border-radius: inherit;\n  width: 100%;\n  height: 100%;\n  overflow: hidden;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.b-avatar .b-avatar-text {\n  text-transform: uppercase;\n  white-space: nowrap;\n}\n\n.b-avatar[href] {\n  text-decoration: none;\n}\n\n.b-avatar > .b-icon {\n  width: 60%;\n  height: auto;\n  max-width: 100%;\n}\n\n.b-avatar .b-avatar-img img {\n  width: 100%;\n  height: 100%;\n  max-height: auto;\n  border-radius: inherit;\n}\n\n.b-avatar .b-avatar-badge {\n  position: absolute;\n  min-height: 1.5em;\n  min-width: 1.5em;\n  padding: 0.25em;\n  line-height: 1;\n  border-radius: 10em;\n  font-size: 70%;\n  font-weight: 700;\n  z-index: 5;\n}\n\n.b-avatar-group .b-avatar-group-inner {\n  display: flex;\n  flex-wrap: wrap;\n}\n\n.b-avatar-group .b-avatar {\n  border: 1px solid #dee2e6;\n}\n\n.b-avatar-group a.b-avatar:hover:not(.disabled):not(disabled),\n.b-avatar-group .btn.b-avatar:hover:not(.disabled):not(disabled) {\n  z-index: 3;\n}\n\n.b-calendar {\n  display: inline-flex;\n}\n\n.b-calendar .b-calendar-inner {\n  min-width: 250px;\n}\n\n.b-calendar .b-calendar-header,\n.b-calendar .b-calendar-nav {\n  margin-bottom: 0.25rem;\n}\n\n.b-calendar .b-calendar-nav .btn {\n  padding: 0.25rem;\n}\n\n.b-calendar output {\n  padding: 0.25rem;\n  font-size: 80%;\n}\n\n.b-calendar output.readonly {\n  background-color: #e9ecef;\n  opacity: 1;\n}\n\n.b-calendar .b-calendar-footer {\n  margin-top: 0.5rem;\n}\n\n.b-calendar .b-calendar-grid {\n  padding: 0;\n  margin: 0;\n  overflow: hidden;\n}\n\n.b-calendar .b-calendar-grid .row {\n  flex-wrap: nowrap;\n}\n\n.b-calendar .b-calendar-grid-caption {\n  padding: 0.25rem;\n}\n\n.b-calendar .b-calendar-grid-body .col[data-date] .btn {\n  width: 32px;\n  height: 32px;\n  font-size: 14px;\n  line-height: 1;\n  margin: 3px auto;\n  padding: 9px 0;\n}\n\n.b-calendar .btn:disabled, .b-calendar .btn.disabled, .b-calendar .btn[aria-disabled=\"true\"] {\n  cursor: default;\n  pointer-events: none;\n}\n\n.card-img-left {\n  border-top-left-radius: calc(0.25rem - 1px);\n  border-bottom-left-radius: calc(0.25rem - 1px);\n}\n\n.card-img-right {\n  border-top-right-radius: calc(0.25rem - 1px);\n  border-bottom-right-radius: calc(0.25rem - 1px);\n}\n\n.dropdown:not(.dropleft) .dropdown-toggle.dropdown-toggle-no-caret::after {\n  display: none !important;\n}\n\n.dropdown.dropleft .dropdown-toggle.dropdown-toggle-no-caret::before {\n  display: none !important;\n}\n\n.dropdown .dropdown-menu:focus {\n  outline: none;\n}\n\n.b-dropdown-form {\n  display: inline-block;\n  padding: 0.25rem 1.5rem;\n  width: 100%;\n  clear: both;\n  font-weight: 400;\n}\n\n.b-dropdown-form:focus {\n  outline: 1px dotted !important;\n  outline: 5px auto -webkit-focus-ring-color !important;\n}\n\n.b-dropdown-form.disabled, .b-dropdown-form:disabled {\n  outline: 0 !important;\n  color: #6c757d;\n  pointer-events: none;\n}\n\n.b-dropdown-text {\n  display: inline-block;\n  padding: 0.25rem 1.5rem;\n  margin-bottom: 0;\n  width: 100%;\n  clear: both;\n  font-weight: lighter;\n}\n\n.custom-checkbox.b-custom-control-lg,\n.input-group-lg .custom-checkbox {\n  font-size: 1.25rem;\n  line-height: 1.5;\n  padding-left: 1.875rem;\n}\n\n.custom-checkbox.b-custom-control-lg .custom-control-label::before,\n.input-group-lg .custom-checkbox .custom-control-label::before {\n  top: 0.3125rem;\n  left: -1.875rem;\n  width: 1.25rem;\n  height: 1.25rem;\n  border-radius: 0.3rem;\n}\n\n.custom-checkbox.b-custom-control-lg .custom-control-label::after,\n.input-group-lg .custom-checkbox .custom-control-label::after {\n  top: 0.3125rem;\n  left: -1.875rem;\n  width: 1.25rem;\n  height: 1.25rem;\n  background-size: 50% 50%;\n}\n\n.custom-checkbox.b-custom-control-sm,\n.input-group-sm .custom-checkbox {\n  font-size: 0.875rem;\n  line-height: 1.5;\n  padding-left: 1.3125rem;\n}\n\n.custom-checkbox.b-custom-control-sm .custom-control-label::before,\n.input-group-sm .custom-checkbox .custom-control-label::before {\n  top: 0.21875rem;\n  left: -1.3125rem;\n  width: 0.875rem;\n  height: 0.875rem;\n  border-radius: 0.2rem;\n}\n\n.custom-checkbox.b-custom-control-sm .custom-control-label::after,\n.input-group-sm .custom-checkbox .custom-control-label::after {\n  top: 0.21875rem;\n  left: -1.3125rem;\n  width: 0.875rem;\n  height: 0.875rem;\n  background-size: 50% 50%;\n}\n\n.custom-switch.b-custom-control-lg,\n.input-group-lg .custom-switch {\n  padding-left: 2.8125rem;\n}\n\n.custom-switch.b-custom-control-lg .custom-control-label,\n.input-group-lg .custom-switch .custom-control-label {\n  font-size: 1.25rem;\n  line-height: 1.5;\n}\n\n.custom-switch.b-custom-control-lg .custom-control-label::before,\n.input-group-lg .custom-switch .custom-control-label::before {\n  top: 0.3125rem;\n  height: 1.25rem;\n  left: -2.8125rem;\n  width: 2.1875rem;\n  border-radius: 0.625rem;\n}\n\n.custom-switch.b-custom-control-lg .custom-control-label::after,\n.input-group-lg .custom-switch .custom-control-label::after {\n  top: calc( 0.3125rem + 2px);\n  left: calc( -2.8125rem + 2px);\n  width: calc( 1.25rem - 4px);\n  height: calc( 1.25rem - 4px);\n  border-radius: 0.625rem;\n  background-size: 50% 50%;\n}\n\n.custom-switch.b-custom-control-lg .custom-control-input:checked ~ .custom-control-label::after,\n.input-group-lg .custom-switch .custom-control-input:checked ~ .custom-control-label::after {\n  transform: translateX(0.9375rem);\n}\n\n.custom-switch.b-custom-control-sm,\n.input-group-sm .custom-switch {\n  padding-left: 1.96875rem;\n}\n\n.custom-switch.b-custom-control-sm .custom-control-label,\n.input-group-sm .custom-switch .custom-control-label {\n  font-size: 0.875rem;\n  line-height: 1.5;\n}\n\n.custom-switch.b-custom-control-sm .custom-control-label::before,\n.input-group-sm .custom-switch .custom-control-label::before {\n  top: 0.21875rem;\n  left: -1.96875rem;\n  width: 1.53125rem;\n  height: 0.875rem;\n  border-radius: 0.4375rem;\n}\n\n.custom-switch.b-custom-control-sm .custom-control-label::after,\n.input-group-sm .custom-switch .custom-control-label::after {\n  top: calc( 0.21875rem + 2px);\n  left: calc( -1.96875rem + 2px);\n  width: calc( 0.875rem - 4px);\n  height: calc( 0.875rem - 4px);\n  border-radius: 0.4375rem;\n  background-size: 50% 50%;\n}\n\n.custom-switch.b-custom-control-sm .custom-control-input:checked ~ .custom-control-label::after,\n.input-group-sm .custom-switch .custom-control-input:checked ~ .custom-control-label::after {\n  transform: translateX(0.65625rem);\n}\n\n.input-group > .input-group-prepend > .btn-group > .btn,\n.input-group > .input-group-append:not(:last-child) > .btn-group > .btn,\n.input-group > .input-group-append:last-child > .btn-group:not(:last-child):not(.dropdown-toggle) > .btn {\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n}\n\n.input-group > .input-group-append > .btn-group > .btn,\n.input-group > .input-group-prepend:not(:first-child) > .btn-group > .btn,\n.input-group > .input-group-prepend:first-child > .btn-group:not(:first-child) > .btn {\n  border-top-left-radius: 0;\n  border-bottom-left-radius: 0;\n}\n\n.b-custom-control-lg.custom-file,\n.b-custom-control-lg .custom-file-input,\n.b-custom-control-lg .custom-file-label,\n.input-group-lg.custom-file,\n.input-group-lg .custom-file-input,\n.input-group-lg .custom-file-label {\n  font-size: 1.25rem;\n  height: calc(1.5em + 1rem + 2px);\n}\n\n.b-custom-control-lg .custom-file-label,\n.b-custom-control-lg .custom-file-label:after,\n.input-group-lg .custom-file-label,\n.input-group-lg .custom-file-label:after {\n  padding: 0.5rem 1rem;\n  line-height: 1.5;\n}\n\n.b-custom-control-lg .custom-file-label,\n.input-group-lg .custom-file-label {\n  border-radius: 0.3rem;\n}\n\n.b-custom-control-lg .custom-file-label::after,\n.input-group-lg .custom-file-label::after {\n  font-size: inherit;\n  height: calc( 1.5em + 1rem);\n  border-radius: 0 0.3rem 0.3rem 0;\n}\n\n.b-custom-control-sm.custom-file,\n.b-custom-control-sm .custom-file-input,\n.b-custom-control-sm .custom-file-label,\n.input-group-sm.custom-file,\n.input-group-sm .custom-file-input,\n.input-group-sm .custom-file-label {\n  font-size: 0.875rem;\n  height: calc(1.5em + 0.5rem + 2px);\n}\n\n.b-custom-control-sm .custom-file-label,\n.b-custom-control-sm .custom-file-label:after,\n.input-group-sm .custom-file-label,\n.input-group-sm .custom-file-label:after {\n  padding: 0.25rem 0.5rem;\n  line-height: 1.5;\n}\n\n.b-custom-control-sm .custom-file-label,\n.input-group-sm .custom-file-label {\n  border-radius: 0.2rem;\n}\n\n.b-custom-control-sm .custom-file-label::after,\n.input-group-sm .custom-file-label::after {\n  font-size: inherit;\n  height: calc( 1.5em + 0.5rem);\n  border-radius: 0 0.2rem 0.2rem 0;\n}\n\n.was-validated .form-control:invalid,\n.was-validated .form-control:valid, .form-control.is-invalid, .form-control.is-valid {\n  background-position: right calc(0.375em + 0.1875rem) center;\n}\n\ninput[type=\"color\"].form-control {\n  height: calc(1.5em + 0.75rem + 2px);\n  padding: 0.125rem 0.25rem;\n}\n\ninput[type=\"color\"].form-control.form-control-sm,\n.input-group-sm input[type=\"color\"].form-control {\n  height: calc(1.5em + 0.5rem + 2px);\n  padding: 0.125rem 0.25rem;\n}\n\ninput[type=\"color\"].form-control.form-control-lg,\n.input-group-lg input[type=\"color\"].form-control {\n  height: calc(1.5em + 1rem + 2px);\n  padding: 0.125rem 0.25rem;\n}\n\ninput[type=\"color\"].form-control:disabled {\n  background-color: #adb5bd;\n  opacity: 0.65;\n}\n\n.input-group > .custom-range {\n  position: relative;\n  flex: 1 1 auto;\n  width: 1%;\n  margin-bottom: 0;\n}\n\n.input-group > .custom-range + .form-control,\n.input-group > .custom-range + .form-control-plaintext,\n.input-group > .custom-range + .custom-select,\n.input-group > .custom-range + .custom-range,\n.input-group > .custom-range + .custom-file {\n  margin-left: -1px;\n}\n\n.input-group > .form-control + .custom-range,\n.input-group > .form-control-plaintext + .custom-range,\n.input-group > .custom-select + .custom-range,\n.input-group > .custom-range + .custom-range,\n.input-group > .custom-file + .custom-range {\n  margin-left: -1px;\n}\n\n.input-group > .custom-range:focus {\n  z-index: 3;\n}\n\n.input-group > .custom-range:not(:last-child) {\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n}\n\n.input-group > .custom-range:not(:first-child) {\n  border-top-left-radius: 0;\n  border-bottom-left-radius: 0;\n}\n\n.input-group > .custom-range {\n  height: calc(1.5em + 0.75rem + 2px);\n  padding: 0 0.75rem;\n  background-color: #fff;\n  background-clip: padding-box;\n  border: 1px solid #ced4da;\n  height: calc(1.5em + 0.75rem + 2px);\n  border-radius: 0.25rem;\n  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .input-group > .custom-range {\n    transition: none;\n  }\n}\n\n.input-group > .custom-range:focus {\n  color: #495057;\n  background-color: #fff;\n  border-color: #80bdff;\n  outline: 0;\n  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);\n}\n\n.input-group > .custom-range:disabled, .input-group > .custom-range[readonly] {\n  background-color: #e9ecef;\n}\n\n.input-group-lg > .custom-range {\n  height: calc(1.5em + 1rem + 2px);\n  padding: 0 1rem;\n  border-radius: 0.3rem;\n}\n\n.input-group-sm > .custom-range {\n  height: calc(1.5em + 0.5rem + 2px);\n  padding: 0 0.5rem;\n  border-radius: 0.2rem;\n}\n\n.was-validated .input-group .custom-range:valid, .input-group .custom-range.is-valid {\n  border-color: #28a745;\n}\n\n.was-validated .input-group .custom-range:valid:focus, .input-group .custom-range.is-valid:focus {\n  border-color: #28a745;\n  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);\n}\n\n.was-validated .custom-range:valid:focus::-webkit-slider-thumb, .custom-range.is-valid:focus::-webkit-slider-thumb {\n  box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem #9be7ac;\n}\n\n.was-validated .custom-range:valid:focus::-moz-range-thumb, .custom-range.is-valid:focus::-moz-range-thumb {\n  box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem #9be7ac;\n}\n\n.was-validated .custom-range:valid:focus::-ms-thumb, .custom-range.is-valid:focus::-ms-thumb {\n  box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem #9be7ac;\n}\n\n.was-validated .custom-range:valid::-webkit-slider-thumb, .custom-range.is-valid::-webkit-slider-thumb {\n  background-color: #28a745;\n  background-image: none;\n}\n\n.was-validated .custom-range:valid::-webkit-slider-thumb:active, .custom-range.is-valid::-webkit-slider-thumb:active {\n  background-color: #9be7ac;\n  background-image: none;\n}\n\n.was-validated .custom-range:valid::-webkit-slider-runnable-track, .custom-range.is-valid::-webkit-slider-runnable-track {\n  background-color: rgba(40, 167, 69, 0.35);\n}\n\n.was-validated .custom-range:valid::-moz-range-thumb, .custom-range.is-valid::-moz-range-thumb {\n  background-color: #28a745;\n  background-image: none;\n}\n\n.was-validated .custom-range:valid::-moz-range-thumb:active, .custom-range.is-valid::-moz-range-thumb:active {\n  background-color: #9be7ac;\n  background-image: none;\n}\n\n.was-validated .custom-range:valid::-moz-range-track, .custom-range.is-valid::-moz-range-track {\n  background: rgba(40, 167, 69, 0.35);\n}\n\n.was-validated .custom-range:valid ~ .valid-feedback,\n.was-validated .custom-range:valid ~ .valid-tooltip, .custom-range.is-valid ~ .valid-feedback,\n.custom-range.is-valid ~ .valid-tooltip {\n  display: block;\n}\n\n.was-validated .custom-range:valid::-ms-thumb, .custom-range.is-valid::-ms-thumb {\n  background-color: #28a745;\n  background-image: none;\n}\n\n.was-validated .custom-range:valid::-ms-thumb:active, .custom-range.is-valid::-ms-thumb:active {\n  background-color: #9be7ac;\n  background-image: none;\n}\n\n.was-validated .custom-range:valid::-ms-track-lower, .custom-range.is-valid::-ms-track-lower {\n  background: rgba(40, 167, 69, 0.35);\n}\n\n.was-validated .custom-range:valid::-ms-track-upper, .custom-range.is-valid::-ms-track-upper {\n  background: rgba(40, 167, 69, 0.35);\n}\n\n.was-validated .input-group .custom-range:invalid, .input-group .custom-range.is-invalid {\n  border-color: #dc3545;\n}\n\n.was-validated .input-group .custom-range:invalid:focus, .input-group .custom-range.is-invalid:focus {\n  border-color: #dc3545;\n  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);\n}\n\n.was-validated .custom-range:invalid:focus::-webkit-slider-thumb, .custom-range.is-invalid:focus::-webkit-slider-thumb {\n  box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem #f6cdd1;\n}\n\n.was-validated .custom-range:invalid:focus::-moz-range-thumb, .custom-range.is-invalid:focus::-moz-range-thumb {\n  box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem #f6cdd1;\n}\n\n.was-validated .custom-range:invalid:focus::-ms-thumb, .custom-range.is-invalid:focus::-ms-thumb {\n  box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem #f6cdd1;\n}\n\n.was-validated .custom-range:invalid::-webkit-slider-thumb, .custom-range.is-invalid::-webkit-slider-thumb {\n  background-color: #dc3545;\n  background-image: none;\n}\n\n.was-validated .custom-range:invalid::-webkit-slider-thumb:active, .custom-range.is-invalid::-webkit-slider-thumb:active {\n  background-color: #f6cdd1;\n  background-image: none;\n}\n\n.was-validated .custom-range:invalid::-webkit-slider-runnable-track, .custom-range.is-invalid::-webkit-slider-runnable-track {\n  background-color: rgba(220, 53, 69, 0.35);\n}\n\n.was-validated .custom-range:invalid::-moz-range-thumb, .custom-range.is-invalid::-moz-range-thumb {\n  background-color: #dc3545;\n  background-image: none;\n}\n\n.was-validated .custom-range:invalid::-moz-range-thumb:active, .custom-range.is-invalid::-moz-range-thumb:active {\n  background-color: #f6cdd1;\n  background-image: none;\n}\n\n.was-validated .custom-range:invalid::-moz-range-track, .custom-range.is-invalid::-moz-range-track {\n  background: rgba(220, 53, 69, 0.35);\n}\n\n.was-validated .custom-range:invalid ~ .invalid-feedback,\n.was-validated .custom-range:invalid ~ .invalid-tooltip, .custom-range.is-invalid ~ .invalid-feedback,\n.custom-range.is-invalid ~ .invalid-tooltip {\n  display: block;\n}\n\n.was-validated .custom-range:invalid::-ms-thumb, .custom-range.is-invalid::-ms-thumb {\n  background-color: #dc3545;\n  background-image: none;\n}\n\n.was-validated .custom-range:invalid::-ms-thumb:active, .custom-range.is-invalid::-ms-thumb:active {\n  background-color: #f6cdd1;\n  background-image: none;\n}\n\n.was-validated .custom-range:invalid::-ms-track-lower, .custom-range.is-invalid::-ms-track-lower {\n  background: rgba(220, 53, 69, 0.35);\n}\n\n.was-validated .custom-range:invalid::-ms-track-upper, .custom-range.is-invalid::-ms-track-upper {\n  background: rgba(220, 53, 69, 0.35);\n}\n\n.custom-radio.b-custom-control-lg,\n.input-group-lg .custom-radio {\n  font-size: 1.25rem;\n  line-height: 1.5;\n  padding-left: 1.875rem;\n}\n\n.custom-radio.b-custom-control-lg .custom-control-label::before,\n.input-group-lg .custom-radio .custom-control-label::before {\n  top: 0.3125rem;\n  left: -1.875rem;\n  width: 1.25rem;\n  height: 1.25rem;\n  border-radius: 50%;\n}\n\n.custom-radio.b-custom-control-lg .custom-control-label::after,\n.input-group-lg .custom-radio .custom-control-label::after {\n  top: 0.3125rem;\n  left: -1.875rem;\n  width: 1.25rem;\n  height: 1.25rem;\n  background: no-repeat 50% / 50% 50%;\n}\n\n.custom-radio.b-custom-control-sm,\n.input-group-sm .custom-radio {\n  font-size: 0.875rem;\n  line-height: 1.5;\n  padding-left: 1.3125rem;\n}\n\n.custom-radio.b-custom-control-sm .custom-control-label::before,\n.input-group-sm .custom-radio .custom-control-label::before {\n  top: 0.21875rem;\n  left: -1.3125rem;\n  width: 0.875rem;\n  height: 0.875rem;\n  border-radius: 50%;\n}\n\n.custom-radio.b-custom-control-sm .custom-control-label::after,\n.input-group-sm .custom-radio .custom-control-label::after {\n  top: 0.21875rem;\n  left: -1.3125rem;\n  width: 0.875rem;\n  height: 0.875rem;\n  background: no-repeat 50% / 50% 50%;\n}\n\n.b-rating {\n  text-align: center;\n}\n\n.b-rating.d-inline-flex {\n  width: auto;\n}\n\n.b-rating .b-rating-star,\n.b-rating .b-rating-value {\n  padding: 0 0.25em;\n}\n\n.b-rating .b-rating-value {\n  min-width: 2.5em;\n}\n\n.b-rating .b-rating-star {\n  display: inline-flex;\n  justify-content: center;\n  outline: 0;\n}\n\n.b-rating .b-rating-star .b-rating-icon {\n  display: inline-flex;\n  transition: all 0.15s ease-in-out;\n}\n\n.b-rating.disabled, .b-rating:disabled {\n  background-color: #e9ecef;\n  color: #6c757d;\n}\n\n.b-rating:not(.disabled):not(.readonly) .b-rating-star {\n  cursor: pointer;\n}\n\n.b-rating:not(.disabled):not(.readonly):focus:not(:hover) .b-rating-star.focused .b-rating-icon,\n.b-rating:not(.disabled):not(.readonly) .b-rating-star:hover .b-rating-icon {\n  transform: scale(1.5);\n}\n\n.b-rating[dir=\"rtl\"] .b-rating-star-half {\n  transform: scale(-1, 1);\n}\n\n.b-form-spinbutton {\n  text-align: center;\n  overflow: hidden;\n  background-image: none;\n  padding: 0;\n}\n\n[dir=\"rtl\"] .b-form-spinbutton:not(.flex-column), .b-form-spinbutton[dir=\"rtl\"]:not(.flex-column) {\n  flex-direction: row-reverse;\n}\n\n.b-form-spinbutton output {\n  font-size: inherit;\n  outline: 0;\n  border: 0;\n  background-color: transparent;\n  width: auto;\n  margin: 0;\n  padding: 0 0.25rem;\n}\n\n.b-form-spinbutton output > div,\n.b-form-spinbutton output > bdi {\n  display: block;\n  min-width: 2.25em;\n  height: 1.5em;\n}\n\n.b-form-spinbutton.flex-column {\n  height: auto;\n  width: auto;\n}\n\n.b-form-spinbutton.flex-column output {\n  margin: 0 0.25rem;\n  padding: 0.25rem 0;\n}\n\n.b-form-spinbutton:not(.d-inline-flex):not(.flex-column) {\n  output-width: 100%;\n}\n\n.b-form-spinbutton.d-inline-flex:not(.flex-column) {\n  width: auto;\n}\n\n.b-form-spinbutton .btn {\n  line-height: 1;\n  box-shadow: none !important;\n}\n\n.b-form-spinbutton .btn:disabled {\n  pointer-events: none;\n}\n\n.b-form-spinbutton .btn:hover:not(:disabled) > div > .b-icon {\n  transform: scale(1.25);\n}\n\n.b-form-spinbutton.disabled, .b-form-spinbutton.readonly {\n  background-color: #e9ecef;\n}\n\n.b-form-spinbutton.disabled {\n  pointer-events: none;\n}\n\n.b-form-tags.focus {\n  color: #495057;\n  background-color: #fff;\n  border-color: #80bdff;\n  outline: 0;\n  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);\n}\n\n.b-form-tags.focus.is-valid {\n  border-color: #28a745;\n  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);\n}\n\n.b-form-tags.focus.is-invalid {\n  border-color: #dc3545;\n  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);\n}\n\n.b-form-tags.disabled {\n  background-color: #e9ecef;\n}\n\n.b-form-tag {\n  font-size: 75%;\n  font-weight: normal;\n  line-height: 1.5;\n}\n\n.b-form-tag.disabled {\n  opacity: 0.75;\n}\n\n.b-form-tag > button.b-form-tag-remove {\n  color: inherit;\n  font-size: 125%;\n  line-height: 1;\n  float: none;\n}\n\n.form-control-sm .b-form-tag {\n  line-height: 1.5;\n}\n\n.form-control-lg .b-form-tag {\n  line-height: 1.5;\n}\n\n.modal-backdrop {\n  opacity: 0.5;\n}\n\n.b-pagination-pills .page-item .page-link {\n  border-radius: 50rem !important;\n  margin-left: 0.25rem;\n  line-height: 1;\n}\n\n.b-pagination-pills .page-item:first-child .page-link {\n  margin-left: 0;\n}\n\n.popover.b-popover {\n  display: block;\n  opacity: 1;\n  outline: 0;\n}\n\n.popover.b-popover.fade:not(.show) {\n  opacity: 0;\n}\n\n.popover.b-popover.show {\n  opacity: 1;\n}\n\n.b-popover-primary.popover {\n  background-color: #cce5ff;\n  border-color: #b8daff;\n}\n\n.b-popover-primary.bs-popover-top > .arrow::before, .b-popover-primary.bs-popover-auto[x-placement^=\"top\"] > .arrow::before {\n  border-top-color: #b8daff;\n}\n\n.b-popover-primary.bs-popover-top > .arrow::after, .b-popover-primary.bs-popover-auto[x-placement^=\"top\"] > .arrow::after {\n  border-top-color: #cce5ff;\n}\n\n.b-popover-primary.bs-popover-right > .arrow::before, .b-popover-primary.bs-popover-auto[x-placement^=\"right\"] > .arrow::before {\n  border-right-color: #b8daff;\n}\n\n.b-popover-primary.bs-popover-right > .arrow::after, .b-popover-primary.bs-popover-auto[x-placement^=\"right\"] > .arrow::after {\n  border-right-color: #cce5ff;\n}\n\n.b-popover-primary.bs-popover-bottom > .arrow::before, .b-popover-primary.bs-popover-auto[x-placement^=\"bottom\"] > .arrow::before {\n  border-bottom-color: #b8daff;\n}\n\n.b-popover-primary.bs-popover-bottom > .arrow::after, .b-popover-primary.bs-popover-auto[x-placement^=\"bottom\"] > .arrow::after {\n  border-bottom-color: #bdddff;\n}\n\n.b-popover-primary.bs-popover-bottom .popover-header::before, .b-popover-primary.bs-popover-auto[x-placement^=\"bottom\"] .popover-header::before {\n  border-bottom-color: #bdddff;\n}\n\n.b-popover-primary.bs-popover-left > .arrow::before, .b-popover-primary.bs-popover-auto[x-placement^=\"left\"] > .arrow::before {\n  border-left-color: #b8daff;\n}\n\n.b-popover-primary.bs-popover-left > .arrow::after, .b-popover-primary.bs-popover-auto[x-placement^=\"left\"] > .arrow::after {\n  border-left-color: #cce5ff;\n}\n\n.b-popover-primary .popover-header {\n  color: #212529;\n  background-color: #bdddff;\n  border-bottom-color: #a3d0ff;\n}\n\n.b-popover-primary .popover-body {\n  color: #004085;\n}\n\n.b-popover-secondary.popover {\n  background-color: #e2e3e5;\n  border-color: #d6d8db;\n}\n\n.b-popover-secondary.bs-popover-top > .arrow::before, .b-popover-secondary.bs-popover-auto[x-placement^=\"top\"] > .arrow::before {\n  border-top-color: #d6d8db;\n}\n\n.b-popover-secondary.bs-popover-top > .arrow::after, .b-popover-secondary.bs-popover-auto[x-placement^=\"top\"] > .arrow::after {\n  border-top-color: #e2e3e5;\n}\n\n.b-popover-secondary.bs-popover-right > .arrow::before, .b-popover-secondary.bs-popover-auto[x-placement^=\"right\"] > .arrow::before {\n  border-right-color: #d6d8db;\n}\n\n.b-popover-secondary.bs-popover-right > .arrow::after, .b-popover-secondary.bs-popover-auto[x-placement^=\"right\"] > .arrow::after {\n  border-right-color: #e2e3e5;\n}\n\n.b-popover-secondary.bs-popover-bottom > .arrow::before, .b-popover-secondary.bs-popover-auto[x-placement^=\"bottom\"] > .arrow::before {\n  border-bottom-color: #d6d8db;\n}\n\n.b-popover-secondary.bs-popover-bottom > .arrow::after, .b-popover-secondary.bs-popover-auto[x-placement^=\"bottom\"] > .arrow::after {\n  border-bottom-color: #dadbde;\n}\n\n.b-popover-secondary.bs-popover-bottom .popover-header::before, .b-popover-secondary.bs-popover-auto[x-placement^=\"bottom\"] .popover-header::before {\n  border-bottom-color: #dadbde;\n}\n\n.b-popover-secondary.bs-popover-left > .arrow::before, .b-popover-secondary.bs-popover-auto[x-placement^=\"left\"] > .arrow::before {\n  border-left-color: #d6d8db;\n}\n\n.b-popover-secondary.bs-popover-left > .arrow::after, .b-popover-secondary.bs-popover-auto[x-placement^=\"left\"] > .arrow::after {\n  border-left-color: #e2e3e5;\n}\n\n.b-popover-secondary .popover-header {\n  color: #212529;\n  background-color: #dadbde;\n  border-bottom-color: #ccced2;\n}\n\n.b-popover-secondary .popover-body {\n  color: #383d41;\n}\n\n.b-popover-success.popover {\n  background-color: #d4edda;\n  border-color: #c3e6cb;\n}\n\n.b-popover-success.bs-popover-top > .arrow::before, .b-popover-success.bs-popover-auto[x-placement^=\"top\"] > .arrow::before {\n  border-top-color: #c3e6cb;\n}\n\n.b-popover-success.bs-popover-top > .arrow::after, .b-popover-success.bs-popover-auto[x-placement^=\"top\"] > .arrow::after {\n  border-top-color: #d4edda;\n}\n\n.b-popover-success.bs-popover-right > .arrow::before, .b-popover-success.bs-popover-auto[x-placement^=\"right\"] > .arrow::before {\n  border-right-color: #c3e6cb;\n}\n\n.b-popover-success.bs-popover-right > .arrow::after, .b-popover-success.bs-popover-auto[x-placement^=\"right\"] > .arrow::after {\n  border-right-color: #d4edda;\n}\n\n.b-popover-success.bs-popover-bottom > .arrow::before, .b-popover-success.bs-popover-auto[x-placement^=\"bottom\"] > .arrow::before {\n  border-bottom-color: #c3e6cb;\n}\n\n.b-popover-success.bs-popover-bottom > .arrow::after, .b-popover-success.bs-popover-auto[x-placement^=\"bottom\"] > .arrow::after {\n  border-bottom-color: #c9e8d1;\n}\n\n.b-popover-success.bs-popover-bottom .popover-header::before, .b-popover-success.bs-popover-auto[x-placement^=\"bottom\"] .popover-header::before {\n  border-bottom-color: #c9e8d1;\n}\n\n.b-popover-success.bs-popover-left > .arrow::before, .b-popover-success.bs-popover-auto[x-placement^=\"left\"] > .arrow::before {\n  border-left-color: #c3e6cb;\n}\n\n.b-popover-success.bs-popover-left > .arrow::after, .b-popover-success.bs-popover-auto[x-placement^=\"left\"] > .arrow::after {\n  border-left-color: #d4edda;\n}\n\n.b-popover-success .popover-header {\n  color: #212529;\n  background-color: #c9e8d1;\n  border-bottom-color: #b7e1c1;\n}\n\n.b-popover-success .popover-body {\n  color: #155724;\n}\n\n.b-popover-info.popover {\n  background-color: #d1ecf1;\n  border-color: #bee5eb;\n}\n\n.b-popover-info.bs-popover-top > .arrow::before, .b-popover-info.bs-popover-auto[x-placement^=\"top\"] > .arrow::before {\n  border-top-color: #bee5eb;\n}\n\n.b-popover-info.bs-popover-top > .arrow::after, .b-popover-info.bs-popover-auto[x-placement^=\"top\"] > .arrow::after {\n  border-top-color: #d1ecf1;\n}\n\n.b-popover-info.bs-popover-right > .arrow::before, .b-popover-info.bs-popover-auto[x-placement^=\"right\"] > .arrow::before {\n  border-right-color: #bee5eb;\n}\n\n.b-popover-info.bs-popover-right > .arrow::after, .b-popover-info.bs-popover-auto[x-placement^=\"right\"] > .arrow::after {\n  border-right-color: #d1ecf1;\n}\n\n.b-popover-info.bs-popover-bottom > .arrow::before, .b-popover-info.bs-popover-auto[x-placement^=\"bottom\"] > .arrow::before {\n  border-bottom-color: #bee5eb;\n}\n\n.b-popover-info.bs-popover-bottom > .arrow::after, .b-popover-info.bs-popover-auto[x-placement^=\"bottom\"] > .arrow::after {\n  border-bottom-color: #c5e7ed;\n}\n\n.b-popover-info.bs-popover-bottom .popover-header::before, .b-popover-info.bs-popover-auto[x-placement^=\"bottom\"] .popover-header::before {\n  border-bottom-color: #c5e7ed;\n}\n\n.b-popover-info.bs-popover-left > .arrow::before, .b-popover-info.bs-popover-auto[x-placement^=\"left\"] > .arrow::before {\n  border-left-color: #bee5eb;\n}\n\n.b-popover-info.bs-popover-left > .arrow::after, .b-popover-info.bs-popover-auto[x-placement^=\"left\"] > .arrow::after {\n  border-left-color: #d1ecf1;\n}\n\n.b-popover-info .popover-header {\n  color: #212529;\n  background-color: #c5e7ed;\n  border-bottom-color: #b2dfe7;\n}\n\n.b-popover-info .popover-body {\n  color: #0c5460;\n}\n\n.b-popover-warning.popover {\n  background-color: #fff3cd;\n  border-color: #ffeeba;\n}\n\n.b-popover-warning.bs-popover-top > .arrow::before, .b-popover-warning.bs-popover-auto[x-placement^=\"top\"] > .arrow::before {\n  border-top-color: #ffeeba;\n}\n\n.b-popover-warning.bs-popover-top > .arrow::after, .b-popover-warning.bs-popover-auto[x-placement^=\"top\"] > .arrow::after {\n  border-top-color: #fff3cd;\n}\n\n.b-popover-warning.bs-popover-right > .arrow::before, .b-popover-warning.bs-popover-auto[x-placement^=\"right\"] > .arrow::before {\n  border-right-color: #ffeeba;\n}\n\n.b-popover-warning.bs-popover-right > .arrow::after, .b-popover-warning.bs-popover-auto[x-placement^=\"right\"] > .arrow::after {\n  border-right-color: #fff3cd;\n}\n\n.b-popover-warning.bs-popover-bottom > .arrow::before, .b-popover-warning.bs-popover-auto[x-placement^=\"bottom\"] > .arrow::before {\n  border-bottom-color: #ffeeba;\n}\n\n.b-popover-warning.bs-popover-bottom > .arrow::after, .b-popover-warning.bs-popover-auto[x-placement^=\"bottom\"] > .arrow::after {\n  border-bottom-color: #ffefbe;\n}\n\n.b-popover-warning.bs-popover-bottom .popover-header::before, .b-popover-warning.bs-popover-auto[x-placement^=\"bottom\"] .popover-header::before {\n  border-bottom-color: #ffefbe;\n}\n\n.b-popover-warning.bs-popover-left > .arrow::before, .b-popover-warning.bs-popover-auto[x-placement^=\"left\"] > .arrow::before {\n  border-left-color: #ffeeba;\n}\n\n.b-popover-warning.bs-popover-left > .arrow::after, .b-popover-warning.bs-popover-auto[x-placement^=\"left\"] > .arrow::after {\n  border-left-color: #fff3cd;\n}\n\n.b-popover-warning .popover-header {\n  color: #212529;\n  background-color: #ffefbe;\n  border-bottom-color: #ffe9a4;\n}\n\n.b-popover-warning .popover-body {\n  color: #856404;\n}\n\n.b-popover-danger.popover {\n  background-color: #f8d7da;\n  border-color: #f5c6cb;\n}\n\n.b-popover-danger.bs-popover-top > .arrow::before, .b-popover-danger.bs-popover-auto[x-placement^=\"top\"] > .arrow::before {\n  border-top-color: #f5c6cb;\n}\n\n.b-popover-danger.bs-popover-top > .arrow::after, .b-popover-danger.bs-popover-auto[x-placement^=\"top\"] > .arrow::after {\n  border-top-color: #f8d7da;\n}\n\n.b-popover-danger.bs-popover-right > .arrow::before, .b-popover-danger.bs-popover-auto[x-placement^=\"right\"] > .arrow::before {\n  border-right-color: #f5c6cb;\n}\n\n.b-popover-danger.bs-popover-right > .arrow::after, .b-popover-danger.bs-popover-auto[x-placement^=\"right\"] > .arrow::after {\n  border-right-color: #f8d7da;\n}\n\n.b-popover-danger.bs-popover-bottom > .arrow::before, .b-popover-danger.bs-popover-auto[x-placement^=\"bottom\"] > .arrow::before {\n  border-bottom-color: #f5c6cb;\n}\n\n.b-popover-danger.bs-popover-bottom > .arrow::after, .b-popover-danger.bs-popover-auto[x-placement^=\"bottom\"] > .arrow::after {\n  border-bottom-color: #f6cace;\n}\n\n.b-popover-danger.bs-popover-bottom .popover-header::before, .b-popover-danger.bs-popover-auto[x-placement^=\"bottom\"] .popover-header::before {\n  border-bottom-color: #f6cace;\n}\n\n.b-popover-danger.bs-popover-left > .arrow::before, .b-popover-danger.bs-popover-auto[x-placement^=\"left\"] > .arrow::before {\n  border-left-color: #f5c6cb;\n}\n\n.b-popover-danger.bs-popover-left > .arrow::after, .b-popover-danger.bs-popover-auto[x-placement^=\"left\"] > .arrow::after {\n  border-left-color: #f8d7da;\n}\n\n.b-popover-danger .popover-header {\n  color: #212529;\n  background-color: #f6cace;\n  border-bottom-color: #f2b4ba;\n}\n\n.b-popover-danger .popover-body {\n  color: #721c24;\n}\n\n.b-popover-light.popover {\n  background-color: #fefefe;\n  border-color: #fdfdfe;\n}\n\n.b-popover-light.bs-popover-top > .arrow::before, .b-popover-light.bs-popover-auto[x-placement^=\"top\"] > .arrow::before {\n  border-top-color: #fdfdfe;\n}\n\n.b-popover-light.bs-popover-top > .arrow::after, .b-popover-light.bs-popover-auto[x-placement^=\"top\"] > .arrow::after {\n  border-top-color: #fefefe;\n}\n\n.b-popover-light.bs-popover-right > .arrow::before, .b-popover-light.bs-popover-auto[x-placement^=\"right\"] > .arrow::before {\n  border-right-color: #fdfdfe;\n}\n\n.b-popover-light.bs-popover-right > .arrow::after, .b-popover-light.bs-popover-auto[x-placement^=\"right\"] > .arrow::after {\n  border-right-color: #fefefe;\n}\n\n.b-popover-light.bs-popover-bottom > .arrow::before, .b-popover-light.bs-popover-auto[x-placement^=\"bottom\"] > .arrow::before {\n  border-bottom-color: #fdfdfe;\n}\n\n.b-popover-light.bs-popover-bottom > .arrow::after, .b-popover-light.bs-popover-auto[x-placement^=\"bottom\"] > .arrow::after {\n  border-bottom-color: #f6f6f6;\n}\n\n.b-popover-light.bs-popover-bottom .popover-header::before, .b-popover-light.bs-popover-auto[x-placement^=\"bottom\"] .popover-header::before {\n  border-bottom-color: #f6f6f6;\n}\n\n.b-popover-light.bs-popover-left > .arrow::before, .b-popover-light.bs-popover-auto[x-placement^=\"left\"] > .arrow::before {\n  border-left-color: #fdfdfe;\n}\n\n.b-popover-light.bs-popover-left > .arrow::after, .b-popover-light.bs-popover-auto[x-placement^=\"left\"] > .arrow::after {\n  border-left-color: #fefefe;\n}\n\n.b-popover-light .popover-header {\n  color: #212529;\n  background-color: #f6f6f6;\n  border-bottom-color: #eaeaea;\n}\n\n.b-popover-light .popover-body {\n  color: #818182;\n}\n\n.b-popover-dark.popover {\n  background-color: #d6d8d9;\n  border-color: #c6c8ca;\n}\n\n.b-popover-dark.bs-popover-top > .arrow::before, .b-popover-dark.bs-popover-auto[x-placement^=\"top\"] > .arrow::before {\n  border-top-color: #c6c8ca;\n}\n\n.b-popover-dark.bs-popover-top > .arrow::after, .b-popover-dark.bs-popover-auto[x-placement^=\"top\"] > .arrow::after {\n  border-top-color: #d6d8d9;\n}\n\n.b-popover-dark.bs-popover-right > .arrow::before, .b-popover-dark.bs-popover-auto[x-placement^=\"right\"] > .arrow::before {\n  border-right-color: #c6c8ca;\n}\n\n.b-popover-dark.bs-popover-right > .arrow::after, .b-popover-dark.bs-popover-auto[x-placement^=\"right\"] > .arrow::after {\n  border-right-color: #d6d8d9;\n}\n\n.b-popover-dark.bs-popover-bottom > .arrow::before, .b-popover-dark.bs-popover-auto[x-placement^=\"bottom\"] > .arrow::before {\n  border-bottom-color: #c6c8ca;\n}\n\n.b-popover-dark.bs-popover-bottom > .arrow::after, .b-popover-dark.bs-popover-auto[x-placement^=\"bottom\"] > .arrow::after {\n  border-bottom-color: #ced0d2;\n}\n\n.b-popover-dark.bs-popover-bottom .popover-header::before, .b-popover-dark.bs-popover-auto[x-placement^=\"bottom\"] .popover-header::before {\n  border-bottom-color: #ced0d2;\n}\n\n.b-popover-dark.bs-popover-left > .arrow::before, .b-popover-dark.bs-popover-auto[x-placement^=\"left\"] > .arrow::before {\n  border-left-color: #c6c8ca;\n}\n\n.b-popover-dark.bs-popover-left > .arrow::after, .b-popover-dark.bs-popover-auto[x-placement^=\"left\"] > .arrow::after {\n  border-left-color: #d6d8d9;\n}\n\n.b-popover-dark .popover-header {\n  color: #212529;\n  background-color: #ced0d2;\n  border-bottom-color: #c1c4c5;\n}\n\n.b-popover-dark .popover-body {\n  color: #1b1e21;\n}\n\n.b-sidebar-outer {\n  position: fixed !important;\n  top: 0;\n  left: 0;\n  right: 0;\n  height: 0;\n  overflow: visible;\n  z-index: calc(1030 + 5);\n}\n\n.b-sidebar-backdrop {\n  position: fixed !important;\n  top: 0;\n  left: 0;\n  z-index: -1;\n  width: 100vw;\n  height: 100vh;\n  background-color: #000;\n  opacity: 0.5;\n}\n\n.b-sidebar {\n  display: flex;\n  flex-direction: column;\n  position: fixed !important;\n  top: 0;\n  height: 100vh;\n  width: 320px;\n  max-width: 100% !important;\n  height: 100vh !important;\n  margin: 0 !important;\n  outline: 0;\n  transform: translateX(0);\n}\n\n.b-sidebar.slide {\n  transition: transform 0.3s ease-in-out;\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .b-sidebar.slide {\n    transition: none;\n  }\n}\n\n.b-sidebar:not(.b-sidebar-right) {\n  left: 0;\n  right: auto;\n}\n\n.b-sidebar:not(.b-sidebar-right).slide:not(.show) {\n  transform: translateX(-100%);\n}\n\n.b-sidebar:not(.b-sidebar-right) > .b-sidebar-header .close {\n  margin-left: auto;\n}\n\n.b-sidebar.b-sidebar-right {\n  left: auto;\n  right: 0;\n}\n\n.b-sidebar.b-sidebar-right.slide:not(.show) {\n  transform: translateX(100%);\n}\n\n.b-sidebar.b-sidebar-right > .b-sidebar-header .close {\n  margin-right: auto;\n}\n\n.b-sidebar > .b-sidebar-header {\n  font-size: 1.5rem;\n  padding: 0.5rem 1rem;\n  display: flex;\n  flex-direction: row;\n  flex-grow: 0;\n  align-items: center;\n}\n\n[dir=\"rtl\"] .b-sidebar > .b-sidebar-header {\n  flex-direction: row-reverse;\n}\n\n.b-sidebar > .b-sidebar-header .close {\n  float: none;\n  font-size: 1.5rem;\n}\n\n.b-sidebar > .b-sidebar-body {\n  flex-grow: 1;\n  height: 100%;\n  overflow-y: auto;\n}\n\n.b-sidebar > .b-sidebar-footer {\n  flex-grow: 0;\n}\n\n.table.b-table.b-table-fixed {\n  table-layout: fixed;\n}\n\n.table.b-table.b-table-no-border-collapse {\n  border-collapse: separate;\n  border-spacing: 0;\n}\n\n.table.b-table[aria-busy=\"true\"] {\n  opacity: 0.55;\n}\n\n.table.b-table > tbody > tr.b-table-details > td {\n  border-top: none !important;\n}\n\n.table.b-table > caption {\n  caption-side: bottom;\n}\n\n.table.b-table.b-table-caption-top > caption {\n  caption-side: top !important;\n}\n\n.table.b-table > tbody > .table-active,\n.table.b-table > tbody > .table-active > th,\n.table.b-table > tbody > .table-active > td {\n  background-color: rgba(0, 0, 0, 0.075);\n}\n\n.table.b-table.table-hover > tbody > tr.table-active:hover td,\n.table.b-table.table-hover > tbody > tr.table-active:hover th {\n  color: #212529;\n  background-image: linear-gradient(rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.075));\n  background-repeat: no-repeat;\n}\n\n.table.b-table > tbody > .bg-active,\n.table.b-table > tbody > .bg-active > th,\n.table.b-table > tbody > .bg-active > td {\n  background-color: rgba(255, 255, 255, 0.075) !important;\n}\n\n.table.b-table.table-hover.table-dark > tbody > tr.bg-active:hover td,\n.table.b-table.table-hover.table-dark > tbody > tr.bg-active:hover th {\n  color: #fff;\n  background-image: linear-gradient(rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.075));\n  background-repeat: no-repeat;\n}\n\n.b-table-sticky-header,\n.table-responsive,\n[class*=\"table-responsive-\"] {\n  margin-bottom: 1rem;\n}\n\n.b-table-sticky-header > .table,\n.table-responsive > .table,\n[class*=\"table-responsive-\"] > .table {\n  margin-bottom: 0;\n}\n\n.b-table-sticky-header {\n  overflow-y: auto;\n  max-height: 300px;\n}\n\n@media print {\n  .b-table-sticky-header {\n    overflow-y: visible !important;\n    max-height: none !important;\n  }\n}\n\n@supports ((position: -webkit-sticky) or (position: sticky)) {\n  .b-table-sticky-header > .table.b-table > thead > tr > th {\n    position: -webkit-sticky;\n    position: sticky;\n    top: 0;\n    z-index: 2;\n  }\n  .b-table-sticky-header > .table.b-table > thead > tr > .b-table-sticky-column,\n  .b-table-sticky-header > .table.b-table > tbody > tr > .b-table-sticky-column,\n  .b-table-sticky-header > .table.b-table > tfoot > tr > .b-table-sticky-column,\n  .table-responsive > .table.b-table > thead > tr > .b-table-sticky-column,\n  .table-responsive > .table.b-table > tbody > tr > .b-table-sticky-column,\n  .table-responsive > .table.b-table > tfoot > tr > .b-table-sticky-column,\n  [class*=\"table-responsive-\"] > .table.b-table > thead > tr > .b-table-sticky-column,\n  [class*=\"table-responsive-\"] > .table.b-table > tbody > tr > .b-table-sticky-column,\n  [class*=\"table-responsive-\"] > .table.b-table > tfoot > tr > .b-table-sticky-column {\n    position: -webkit-sticky;\n    position: sticky;\n    left: 0;\n  }\n  .b-table-sticky-header > .table.b-table > thead > tr > .b-table-sticky-column,\n  .table-responsive > .table.b-table > thead > tr > .b-table-sticky-column,\n  [class*=\"table-responsive-\"] > .table.b-table > thead > tr > .b-table-sticky-column {\n    z-index: 5;\n  }\n  .b-table-sticky-header > .table.b-table > tbody > tr > .b-table-sticky-column,\n  .b-table-sticky-header > .table.b-table > tfoot > tr > .b-table-sticky-column,\n  .table-responsive > .table.b-table > tbody > tr > .b-table-sticky-column,\n  .table-responsive > .table.b-table > tfoot > tr > .b-table-sticky-column,\n  [class*=\"table-responsive-\"] > .table.b-table > tbody > tr > .b-table-sticky-column,\n  [class*=\"table-responsive-\"] > .table.b-table > tfoot > tr > .b-table-sticky-column {\n    z-index: 2;\n  }\n  .table.b-table > thead > tr > .table-b-table-default,\n  .table.b-table > tbody > tr > .table-b-table-default,\n  .table.b-table > tfoot > tr > .table-b-table-default {\n    color: #212529;\n    background-color: #fff;\n  }\n  .table.b-table.table-dark > thead > tr > .bg-b-table-default,\n  .table.b-table.table-dark > tbody > tr > .bg-b-table-default,\n  .table.b-table.table-dark > tfoot > tr > .bg-b-table-default {\n    color: #fff;\n    background-color: #343a40;\n  }\n  .table.b-table.table-striped > tbody > tr:nth-of-type(odd) > .table-b-table-default {\n    background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05));\n    background-repeat: no-repeat;\n  }\n  .table.b-table.table-striped.table-dark > tbody > tr:nth-of-type(odd) > .bg-b-table-default {\n    background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05));\n    background-repeat: no-repeat;\n  }\n  .table.b-table.table-hover > tbody > tr:hover > .table-b-table-default {\n    color: #212529;\n    background-image: linear-gradient(rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.075));\n    background-repeat: no-repeat;\n  }\n  .table.b-table.table-hover.table-dark > tbody > tr:hover > .bg-b-table-default {\n    color: #fff;\n    background-image: linear-gradient(rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.075));\n    background-repeat: no-repeat;\n  }\n}\n\n.table.b-table > thead > tr > [aria-sort],\n.table.b-table > tfoot > tr > [aria-sort] {\n  cursor: pointer;\n  background-image: none;\n  background-repeat: no-repeat;\n  background-size: 0.65em 1em;\n}\n\n.table.b-table > thead > tr > [aria-sort]:not(.b-table-sort-icon-left),\n.table.b-table > tfoot > tr > [aria-sort]:not(.b-table-sort-icon-left) {\n  background-position: right calc(0.75rem / 2) center;\n  padding-right: calc(0.75rem + 0.65em);\n}\n\n.table.b-table > thead > tr > [aria-sort].b-table-sort-icon-left,\n.table.b-table > tfoot > tr > [aria-sort].b-table-sort-icon-left {\n  background-position: left calc(0.75rem / 2) center;\n  padding-left: calc(0.75rem + 0.65em);\n}\n\n.table.b-table > thead > tr > [aria-sort=\"none\"],\n.table.b-table > tfoot > tr > [aria-sort=\"none\"] {\n  background-image: url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='101' height='101' view-box='0 0 101 101' preserveAspectRatio='none'%3e%3cpath fill='black' opacity='.3' d='M51 1l25 23 24 22H1l25-22zM51 101l25-23 24-22H1l25 22z'/%3e%3c/svg%3e\");\n}\n\n.table.b-table > thead > tr > [aria-sort=\"ascending\"],\n.table.b-table > tfoot > tr > [aria-sort=\"ascending\"] {\n  background-image: url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='101' height='101' view-box='0 0 101 101' preserveAspectRatio='none'%3e%3cpath fill='black' d='M51 1l25 23 24 22H1l25-22z'/%3e%3cpath fill='black' opacity='.3' d='M51 101l25-23 24-22H1l25 22z'/%3e%3c/svg%3e\");\n}\n\n.table.b-table > thead > tr > [aria-sort=\"descending\"],\n.table.b-table > tfoot > tr > [aria-sort=\"descending\"] {\n  background-image: url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='101' height='101' view-box='0 0 101 101' preserveAspectRatio='none'%3e%3cpath fill='black' opacity='.3' d='M51 1l25 23 24 22H1l25-22z'/%3e%3cpath fill='black' d='M51 101l25-23 24-22H1l25 22z'/%3e%3c/svg%3e\");\n}\n\n.table.b-table.table-dark > thead > tr > [aria-sort=\"none\"],\n.table.b-table.table-dark > tfoot > tr > [aria-sort=\"none\"],\n.table.b-table > .thead-dark > tr > [aria-sort=\"none\"] {\n  background-image: url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='101' height='101' view-box='0 0 101 101' preserveAspectRatio='none'%3e%3cpath fill='white' opacity='.3' d='M51 1l25 23 24 22H1l25-22zM51 101l25-23 24-22H1l25 22z'/%3e%3c/svg%3e\");\n}\n\n.table.b-table.table-dark > thead > tr > [aria-sort=\"ascending\"],\n.table.b-table.table-dark > tfoot > tr > [aria-sort=\"ascending\"],\n.table.b-table > .thead-dark > tr > [aria-sort=\"ascending\"] {\n  background-image: url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='101' height='101' view-box='0 0 101 101' preserveAspectRatio='none'%3e%3cpath fill='white' d='M51 1l25 23 24 22H1l25-22z'/%3e%3cpath fill='white' opacity='.3' d='M51 101l25-23 24-22H1l25 22z'/%3e%3c/svg%3e\");\n}\n\n.table.b-table.table-dark > thead > tr > [aria-sort=\"descending\"],\n.table.b-table.table-dark > tfoot > tr > [aria-sort=\"descending\"],\n.table.b-table > .thead-dark > tr > [aria-sort=\"descending\"] {\n  background-image: url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='101' height='101' view-box='0 0 101 101' preserveAspectRatio='none'%3e%3cpath fill='white' opacity='.3' d='M51 1l25 23 24 22H1l25-22z'/%3e%3cpath fill='white' d='M51 101l25-23 24-22H1l25 22z'/%3e%3c/svg%3e\");\n}\n\n.table.b-table > thead > tr > .table-dark[aria-sort=\"none\"],\n.table.b-table > tfoot > tr > .table-dark[aria-sort=\"none\"] {\n  background-image: url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='101' height='101' view-box='0 0 101 101' preserveAspectRatio='none'%3e%3cpath fill='white' opacity='.3' d='M51 1l25 23 24 22H1l25-22zM51 101l25-23 24-22H1l25 22z'/%3e%3c/svg%3e\");\n}\n\n.table.b-table > thead > tr > .table-dark[aria-sort=\"ascending\"],\n.table.b-table > tfoot > tr > .table-dark[aria-sort=\"ascending\"] {\n  background-image: url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='101' height='101' view-box='0 0 101 101' preserveAspectRatio='none'%3e%3cpath fill='white' d='M51 1l25 23 24 22H1l25-22z'/%3e%3cpath fill='white' opacity='.3' d='M51 101l25-23 24-22H1l25 22z'/%3e%3c/svg%3e\");\n}\n\n.table.b-table > thead > tr > .table-dark[aria-sort=\"descending\"],\n.table.b-table > tfoot > tr > .table-dark[aria-sort=\"descending\"] {\n  background-image: url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='101' height='101' view-box='0 0 101 101' preserveAspectRatio='none'%3e%3cpath fill='white' opacity='.3' d='M51 1l25 23 24 22H1l25-22z'/%3e%3cpath fill='white' d='M51 101l25-23 24-22H1l25 22z'/%3e%3c/svg%3e\");\n}\n\n.table.b-table.table-sm > thead > tr > [aria-sort]:not(.b-table-sort-icon-left),\n.table.b-table.table-sm > tfoot > tr > [aria-sort]:not(.b-table-sort-icon-left) {\n  background-position: right calc(0.3rem / 2) center;\n  padding-right: calc(0.3rem + 0.65em);\n}\n\n.table.b-table.table-sm > thead > tr > [aria-sort].b-table-sort-icon-left,\n.table.b-table.table-sm > tfoot > tr > [aria-sort].b-table-sort-icon-left {\n  background-position: left calc(0.3rem / 2) center;\n  padding-left: calc(0.3rem + 0.65em);\n}\n\n.table.b-table.b-table-selectable:not(.b-table-selectable-no-click) > tbody > tr {\n  cursor: pointer;\n}\n\n.table.b-table.b-table-selectable:not(.b-table-selectable-no-click).b-table-selecting.b-table-select-range > tbody > tr {\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n}\n\n@media (max-width: 575.98px) {\n  .table.b-table.b-table-stacked-sm {\n    display: block;\n    width: 100%;\n  }\n  .table.b-table.b-table-stacked-sm > caption,\n  .table.b-table.b-table-stacked-sm > tbody,\n  .table.b-table.b-table-stacked-sm > tbody > tr,\n  .table.b-table.b-table-stacked-sm > tbody > tr > td,\n  .table.b-table.b-table-stacked-sm > tbody > tr > th {\n    display: block;\n  }\n  .table.b-table.b-table-stacked-sm > thead,\n  .table.b-table.b-table-stacked-sm > tfoot {\n    display: none;\n  }\n  .table.b-table.b-table-stacked-sm > thead > tr.b-table-top-row,\n  .table.b-table.b-table-stacked-sm > thead > tr.b-table-bottom-row,\n  .table.b-table.b-table-stacked-sm > tfoot > tr.b-table-top-row,\n  .table.b-table.b-table-stacked-sm > tfoot > tr.b-table-bottom-row {\n    display: none;\n  }\n  .table.b-table.b-table-stacked-sm > caption {\n    caption-side: top !important;\n  }\n  .table.b-table.b-table-stacked-sm > tbody > tr > [data-label]::before {\n    content: attr(data-label);\n    width: 40%;\n    float: left;\n    text-align: right;\n    overflow-wrap: break-word;\n    font-weight: bold;\n    font-style: normal;\n    padding: 0 calc(1rem / 2) 0 0;\n    margin: 0;\n  }\n  .table.b-table.b-table-stacked-sm > tbody > tr > [data-label]::after {\n    display: block;\n    clear: both;\n    content: \"\";\n  }\n  .table.b-table.b-table-stacked-sm > tbody > tr > [data-label] > div {\n    display: inline-block;\n    width: calc(100% - 40%);\n    padding: 0 0 0 calc(1rem / 2);\n    margin: 0;\n  }\n  .table.b-table.b-table-stacked-sm > tbody > tr.top-row, .table.b-table.b-table-stacked-sm > tbody > tr.bottom-row {\n    display: none;\n  }\n  .table.b-table.b-table-stacked-sm > tbody > tr > :first-child {\n    border-top-width: 3px;\n  }\n  .table.b-table.b-table-stacked-sm > tbody > tr > [rowspan] + td,\n  .table.b-table.b-table-stacked-sm > tbody > tr > [rowspan] + th {\n    border-top-width: 3px;\n  }\n}\n\n@media (max-width: 767.98px) {\n  .table.b-table.b-table-stacked-md {\n    display: block;\n    width: 100%;\n  }\n  .table.b-table.b-table-stacked-md > caption,\n  .table.b-table.b-table-stacked-md > tbody,\n  .table.b-table.b-table-stacked-md > tbody > tr,\n  .table.b-table.b-table-stacked-md > tbody > tr > td,\n  .table.b-table.b-table-stacked-md > tbody > tr > th {\n    display: block;\n  }\n  .table.b-table.b-table-stacked-md > thead,\n  .table.b-table.b-table-stacked-md > tfoot {\n    display: none;\n  }\n  .table.b-table.b-table-stacked-md > thead > tr.b-table-top-row,\n  .table.b-table.b-table-stacked-md > thead > tr.b-table-bottom-row,\n  .table.b-table.b-table-stacked-md > tfoot > tr.b-table-top-row,\n  .table.b-table.b-table-stacked-md > tfoot > tr.b-table-bottom-row {\n    display: none;\n  }\n  .table.b-table.b-table-stacked-md > caption {\n    caption-side: top !important;\n  }\n  .table.b-table.b-table-stacked-md > tbody > tr > [data-label]::before {\n    content: attr(data-label);\n    width: 40%;\n    float: left;\n    text-align: right;\n    overflow-wrap: break-word;\n    font-weight: bold;\n    font-style: normal;\n    padding: 0 calc(1rem / 2) 0 0;\n    margin: 0;\n  }\n  .table.b-table.b-table-stacked-md > tbody > tr > [data-label]::after {\n    display: block;\n    clear: both;\n    content: \"\";\n  }\n  .table.b-table.b-table-stacked-md > tbody > tr > [data-label] > div {\n    display: inline-block;\n    width: calc(100% - 40%);\n    padding: 0 0 0 calc(1rem / 2);\n    margin: 0;\n  }\n  .table.b-table.b-table-stacked-md > tbody > tr.top-row, .table.b-table.b-table-stacked-md > tbody > tr.bottom-row {\n    display: none;\n  }\n  .table.b-table.b-table-stacked-md > tbody > tr > :first-child {\n    border-top-width: 3px;\n  }\n  .table.b-table.b-table-stacked-md > tbody > tr > [rowspan] + td,\n  .table.b-table.b-table-stacked-md > tbody > tr > [rowspan] + th {\n    border-top-width: 3px;\n  }\n}\n\n@media (max-width: 991.98px) {\n  .table.b-table.b-table-stacked-lg {\n    display: block;\n    width: 100%;\n  }\n  .table.b-table.b-table-stacked-lg > caption,\n  .table.b-table.b-table-stacked-lg > tbody,\n  .table.b-table.b-table-stacked-lg > tbody > tr,\n  .table.b-table.b-table-stacked-lg > tbody > tr > td,\n  .table.b-table.b-table-stacked-lg > tbody > tr > th {\n    display: block;\n  }\n  .table.b-table.b-table-stacked-lg > thead,\n  .table.b-table.b-table-stacked-lg > tfoot {\n    display: none;\n  }\n  .table.b-table.b-table-stacked-lg > thead > tr.b-table-top-row,\n  .table.b-table.b-table-stacked-lg > thead > tr.b-table-bottom-row,\n  .table.b-table.b-table-stacked-lg > tfoot > tr.b-table-top-row,\n  .table.b-table.b-table-stacked-lg > tfoot > tr.b-table-bottom-row {\n    display: none;\n  }\n  .table.b-table.b-table-stacked-lg > caption {\n    caption-side: top !important;\n  }\n  .table.b-table.b-table-stacked-lg > tbody > tr > [data-label]::before {\n    content: attr(data-label);\n    width: 40%;\n    float: left;\n    text-align: right;\n    overflow-wrap: break-word;\n    font-weight: bold;\n    font-style: normal;\n    padding: 0 calc(1rem / 2) 0 0;\n    margin: 0;\n  }\n  .table.b-table.b-table-stacked-lg > tbody > tr > [data-label]::after {\n    display: block;\n    clear: both;\n    content: \"\";\n  }\n  .table.b-table.b-table-stacked-lg > tbody > tr > [data-label] > div {\n    display: inline-block;\n    width: calc(100% - 40%);\n    padding: 0 0 0 calc(1rem / 2);\n    margin: 0;\n  }\n  .table.b-table.b-table-stacked-lg > tbody > tr.top-row, .table.b-table.b-table-stacked-lg > tbody > tr.bottom-row {\n    display: none;\n  }\n  .table.b-table.b-table-stacked-lg > tbody > tr > :first-child {\n    border-top-width: 3px;\n  }\n  .table.b-table.b-table-stacked-lg > tbody > tr > [rowspan] + td,\n  .table.b-table.b-table-stacked-lg > tbody > tr > [rowspan] + th {\n    border-top-width: 3px;\n  }\n}\n\n@media (max-width: 1199.98px) {\n  .table.b-table.b-table-stacked-xl {\n    display: block;\n    width: 100%;\n  }\n  .table.b-table.b-table-stacked-xl > caption,\n  .table.b-table.b-table-stacked-xl > tbody,\n  .table.b-table.b-table-stacked-xl > tbody > tr,\n  .table.b-table.b-table-stacked-xl > tbody > tr > td,\n  .table.b-table.b-table-stacked-xl > tbody > tr > th {\n    display: block;\n  }\n  .table.b-table.b-table-stacked-xl > thead,\n  .table.b-table.b-table-stacked-xl > tfoot {\n    display: none;\n  }\n  .table.b-table.b-table-stacked-xl > thead > tr.b-table-top-row,\n  .table.b-table.b-table-stacked-xl > thead > tr.b-table-bottom-row,\n  .table.b-table.b-table-stacked-xl > tfoot > tr.b-table-top-row,\n  .table.b-table.b-table-stacked-xl > tfoot > tr.b-table-bottom-row {\n    display: none;\n  }\n  .table.b-table.b-table-stacked-xl > caption {\n    caption-side: top !important;\n  }\n  .table.b-table.b-table-stacked-xl > tbody > tr > [data-label]::before {\n    content: attr(data-label);\n    width: 40%;\n    float: left;\n    text-align: right;\n    overflow-wrap: break-word;\n    font-weight: bold;\n    font-style: normal;\n    padding: 0 calc(1rem / 2) 0 0;\n    margin: 0;\n  }\n  .table.b-table.b-table-stacked-xl > tbody > tr > [data-label]::after {\n    display: block;\n    clear: both;\n    content: \"\";\n  }\n  .table.b-table.b-table-stacked-xl > tbody > tr > [data-label] > div {\n    display: inline-block;\n    width: calc(100% - 40%);\n    padding: 0 0 0 calc(1rem / 2);\n    margin: 0;\n  }\n  .table.b-table.b-table-stacked-xl > tbody > tr.top-row, .table.b-table.b-table-stacked-xl > tbody > tr.bottom-row {\n    display: none;\n  }\n  .table.b-table.b-table-stacked-xl > tbody > tr > :first-child {\n    border-top-width: 3px;\n  }\n  .table.b-table.b-table-stacked-xl > tbody > tr > [rowspan] + td,\n  .table.b-table.b-table-stacked-xl > tbody > tr > [rowspan] + th {\n    border-top-width: 3px;\n  }\n}\n\n.table.b-table.b-table-stacked {\n  display: block;\n  width: 100%;\n}\n\n.table.b-table.b-table-stacked > caption,\n.table.b-table.b-table-stacked > tbody,\n.table.b-table.b-table-stacked > tbody > tr,\n.table.b-table.b-table-stacked > tbody > tr > td,\n.table.b-table.b-table-stacked > tbody > tr > th {\n  display: block;\n}\n\n.table.b-table.b-table-stacked > thead,\n.table.b-table.b-table-stacked > tfoot {\n  display: none;\n}\n\n.table.b-table.b-table-stacked > thead > tr.b-table-top-row,\n.table.b-table.b-table-stacked > thead > tr.b-table-bottom-row,\n.table.b-table.b-table-stacked > tfoot > tr.b-table-top-row,\n.table.b-table.b-table-stacked > tfoot > tr.b-table-bottom-row {\n  display: none;\n}\n\n.table.b-table.b-table-stacked > caption {\n  caption-side: top !important;\n}\n\n.table.b-table.b-table-stacked > tbody > tr > [data-label]::before {\n  content: attr(data-label);\n  width: 40%;\n  float: left;\n  text-align: right;\n  overflow-wrap: break-word;\n  font-weight: bold;\n  font-style: normal;\n  padding: 0 calc(1rem / 2) 0 0;\n  margin: 0;\n}\n\n.table.b-table.b-table-stacked > tbody > tr > [data-label]::after {\n  display: block;\n  clear: both;\n  content: \"\";\n}\n\n.table.b-table.b-table-stacked > tbody > tr > [data-label] > div {\n  display: inline-block;\n  width: calc(100% - 40%);\n  padding: 0 0 0 calc(1rem / 2);\n  margin: 0;\n}\n\n.table.b-table.b-table-stacked > tbody > tr.top-row, .table.b-table.b-table-stacked > tbody > tr.bottom-row {\n  display: none;\n}\n\n.table.b-table.b-table-stacked > tbody > tr > :first-child {\n  border-top-width: 3px;\n}\n\n.table.b-table.b-table-stacked > tbody > tr > [rowspan] + td,\n.table.b-table.b-table-stacked > tbody > tr > [rowspan] + th {\n  border-top-width: 3px;\n}\n\n.b-time {\n  min-width: 150px;\n}\n\n.b-time[aria-disabled=\"true\"] output,\n.b-time[aria-readonly=\"true\"] output,\n.b-time output.disabled {\n  background-color: #e9ecef;\n  opacity: 1;\n}\n\n.b-time[aria-disabled=\"true\"] output {\n  pointer-events: none;\n}\n\n[dir=\"rtl\"] .b-time > .d-flex:not(.flex-column) {\n  flex-direction: row-reverse;\n}\n\n.b-time .b-time-header {\n  margin-bottom: 0.5rem;\n}\n\n.b-time .b-time-header output {\n  padding: 0.25rem;\n  font-size: 80%;\n}\n\n.b-time .b-time-footer {\n  margin-top: 0.5rem;\n}\n\n.b-time .b-time-ampm {\n  margin-left: 0.5rem;\n}\n\n.b-toast {\n  display: block;\n  position: relative;\n  max-width: 350px;\n  -webkit-backface-visibility: hidden;\n  backface-visibility: hidden;\n  background-clip: padding-box;\n  z-index: 1;\n  border-radius: 0.25rem;\n}\n\n.b-toast .toast {\n  background-color: rgba(255, 255, 255, 0.85);\n}\n\n.b-toast:not(:last-child) {\n  margin-bottom: 0.75rem;\n}\n\n.b-toast.b-toast-solid .toast {\n  background-color: white;\n}\n\n.b-toast .toast {\n  opacity: 1;\n}\n\n.b-toast .toast.fade:not(.show) {\n  opacity: 0;\n}\n\n.b-toast .toast .toast-body {\n  display: block;\n}\n\n.b-toast-primary .toast {\n  background-color: rgba(230, 242, 255, 0.85);\n  border-color: rgba(184, 218, 255, 0.85);\n  color: #004085;\n}\n\n.b-toast-primary .toast .toast-header {\n  color: #004085;\n  background-color: rgba(204, 229, 255, 0.85);\n  border-bottom-color: rgba(184, 218, 255, 0.85);\n}\n\n.b-toast-primary.b-toast-solid .toast {\n  background-color: #e6f2ff;\n}\n\n.b-toast-secondary .toast {\n  background-color: rgba(239, 240, 241, 0.85);\n  border-color: rgba(214, 216, 219, 0.85);\n  color: #383d41;\n}\n\n.b-toast-secondary .toast .toast-header {\n  color: #383d41;\n  background-color: rgba(226, 227, 229, 0.85);\n  border-bottom-color: rgba(214, 216, 219, 0.85);\n}\n\n.b-toast-secondary.b-toast-solid .toast {\n  background-color: #eff0f1;\n}\n\n.b-toast-success .toast {\n  background-color: rgba(230, 245, 233, 0.85);\n  border-color: rgba(195, 230, 203, 0.85);\n  color: #155724;\n}\n\n.b-toast-success .toast .toast-header {\n  color: #155724;\n  background-color: rgba(212, 237, 218, 0.85);\n  border-bottom-color: rgba(195, 230, 203, 0.85);\n}\n\n.b-toast-success.b-toast-solid .toast {\n  background-color: #e6f5e9;\n}\n\n.b-toast-info .toast {\n  background-color: rgba(229, 244, 247, 0.85);\n  border-color: rgba(190, 229, 235, 0.85);\n  color: #0c5460;\n}\n\n.b-toast-info .toast .toast-header {\n  color: #0c5460;\n  background-color: rgba(209, 236, 241, 0.85);\n  border-bottom-color: rgba(190, 229, 235, 0.85);\n}\n\n.b-toast-info.b-toast-solid .toast {\n  background-color: #e5f4f7;\n}\n\n.b-toast-warning .toast {\n  background-color: rgba(255, 249, 231, 0.85);\n  border-color: rgba(255, 238, 186, 0.85);\n  color: #856404;\n}\n\n.b-toast-warning .toast .toast-header {\n  color: #856404;\n  background-color: rgba(255, 243, 205, 0.85);\n  border-bottom-color: rgba(255, 238, 186, 0.85);\n}\n\n.b-toast-warning.b-toast-solid .toast {\n  background-color: #fff9e7;\n}\n\n.b-toast-danger .toast {\n  background-color: rgba(252, 237, 238, 0.85);\n  border-color: rgba(245, 198, 203, 0.85);\n  color: #721c24;\n}\n\n.b-toast-danger .toast .toast-header {\n  color: #721c24;\n  background-color: rgba(248, 215, 218, 0.85);\n  border-bottom-color: rgba(245, 198, 203, 0.85);\n}\n\n.b-toast-danger.b-toast-solid .toast {\n  background-color: #fcedee;\n}\n\n.b-toast-light .toast {\n  background-color: rgba(255, 255, 255, 0.85);\n  border-color: rgba(253, 253, 254, 0.85);\n  color: #818182;\n}\n\n.b-toast-light .toast .toast-header {\n  color: #818182;\n  background-color: rgba(254, 254, 254, 0.85);\n  border-bottom-color: rgba(253, 253, 254, 0.85);\n}\n\n.b-toast-light.b-toast-solid .toast {\n  background-color: white;\n}\n\n.b-toast-dark .toast {\n  background-color: rgba(227, 229, 229, 0.85);\n  border-color: rgba(198, 200, 202, 0.85);\n  color: #1b1e21;\n}\n\n.b-toast-dark .toast .toast-header {\n  color: #1b1e21;\n  background-color: rgba(214, 216, 217, 0.85);\n  border-bottom-color: rgba(198, 200, 202, 0.85);\n}\n\n.b-toast-dark.b-toast-solid .toast {\n  background-color: #e3e5e5;\n}\n\n.b-toaster {\n  z-index: 1100;\n}\n\n.b-toaster .b-toaster-slot {\n  position: relative;\n  display: block;\n}\n\n.b-toaster .b-toaster-slot:empty {\n  display: none !important;\n}\n\n.b-toaster.b-toaster-top-right, .b-toaster.b-toaster-top-left, .b-toaster.b-toaster-top-center, .b-toaster.b-toaster-top-full, .b-toaster.b-toaster-bottom-right, .b-toaster.b-toaster-bottom-left, .b-toaster.b-toaster-bottom-center, .b-toaster.b-toaster-bottom-full {\n  position: fixed;\n  left: 0.5rem;\n  right: 0.5rem;\n  margin: 0;\n  padding: 0;\n  height: 0;\n  overflow: visible;\n}\n\n.b-toaster.b-toaster-top-right .b-toaster-slot, .b-toaster.b-toaster-top-left .b-toaster-slot, .b-toaster.b-toaster-top-center .b-toaster-slot, .b-toaster.b-toaster-top-full .b-toaster-slot, .b-toaster.b-toaster-bottom-right .b-toaster-slot, .b-toaster.b-toaster-bottom-left .b-toaster-slot, .b-toaster.b-toaster-bottom-center .b-toaster-slot, .b-toaster.b-toaster-bottom-full .b-toaster-slot {\n  position: absolute;\n  max-width: 350px;\n  width: 100%;\n  /* IE 11 fix */\n  left: 0;\n  right: 0;\n  padding: 0;\n  margin: 0;\n}\n\n.b-toaster.b-toaster-top-full .b-toaster-slot, .b-toaster.b-toaster-bottom-full .b-toaster-slot {\n  width: 100%;\n  max-width: 100%;\n}\n\n.b-toaster.b-toaster-top-full .b-toaster-slot .b-toast,\n.b-toaster.b-toaster-top-full .b-toaster-slot .toast, .b-toaster.b-toaster-bottom-full .b-toaster-slot .b-toast,\n.b-toaster.b-toaster-bottom-full .b-toaster-slot .toast {\n  width: 100%;\n  max-width: 100%;\n}\n\n.b-toaster.b-toaster-top-right, .b-toaster.b-toaster-top-left, .b-toaster.b-toaster-top-center, .b-toaster.b-toaster-top-full {\n  top: 0;\n}\n\n.b-toaster.b-toaster-top-right .b-toaster-slot, .b-toaster.b-toaster-top-left .b-toaster-slot, .b-toaster.b-toaster-top-center .b-toaster-slot, .b-toaster.b-toaster-top-full .b-toaster-slot {\n  top: 0.5rem;\n}\n\n.b-toaster.b-toaster-bottom-right, .b-toaster.b-toaster-bottom-left, .b-toaster.b-toaster-bottom-center, .b-toaster.b-toaster-bottom-full {\n  bottom: 0;\n}\n\n.b-toaster.b-toaster-bottom-right .b-toaster-slot, .b-toaster.b-toaster-bottom-left .b-toaster-slot, .b-toaster.b-toaster-bottom-center .b-toaster-slot, .b-toaster.b-toaster-bottom-full .b-toaster-slot {\n  bottom: 0.5rem;\n}\n\n.b-toaster.b-toaster-top-right .b-toaster-slot, .b-toaster.b-toaster-bottom-right .b-toaster-slot, .b-toaster.b-toaster-top-center .b-toaster-slot, .b-toaster.b-toaster-bottom-center .b-toaster-slot {\n  margin-left: auto;\n}\n\n.b-toaster.b-toaster-top-left .b-toaster-slot, .b-toaster.b-toaster-bottom-left .b-toaster-slot, .b-toaster.b-toaster-top-center .b-toaster-slot, .b-toaster.b-toaster-bottom-center .b-toaster-slot {\n  margin-right: auto;\n}\n\n.b-toaster.b-toaster-top-right .b-toast.b-toaster-enter-active, .b-toaster.b-toaster-top-right .b-toast.b-toaster-leave-active, .b-toaster.b-toaster-top-right .b-toast.b-toaster-move, .b-toaster.b-toaster-top-left .b-toast.b-toaster-enter-active, .b-toaster.b-toaster-top-left .b-toast.b-toaster-leave-active, .b-toaster.b-toaster-top-left .b-toast.b-toaster-move, .b-toaster.b-toaster-bottom-right .b-toast.b-toaster-enter-active, .b-toaster.b-toaster-bottom-right .b-toast.b-toaster-leave-active, .b-toaster.b-toaster-bottom-right .b-toast.b-toaster-move, .b-toaster.b-toaster-bottom-left .b-toast.b-toaster-enter-active, .b-toaster.b-toaster-bottom-left .b-toast.b-toaster-leave-active, .b-toaster.b-toaster-bottom-left .b-toast.b-toaster-move {\n  transition: transform 0.175s;\n}\n\n.b-toaster.b-toaster-top-right .b-toast.b-toaster-enter-to .toast.fade, .b-toaster.b-toaster-top-right .b-toast.b-toaster-enter-active .toast.fade, .b-toaster.b-toaster-top-left .b-toast.b-toaster-enter-to .toast.fade, .b-toaster.b-toaster-top-left .b-toast.b-toaster-enter-active .toast.fade, .b-toaster.b-toaster-bottom-right .b-toast.b-toaster-enter-to .toast.fade, .b-toaster.b-toaster-bottom-right .b-toast.b-toaster-enter-active .toast.fade, .b-toaster.b-toaster-bottom-left .b-toast.b-toaster-enter-to .toast.fade, .b-toaster.b-toaster-bottom-left .b-toast.b-toaster-enter-active .toast.fade {\n  transition-delay: 0.175s;\n}\n\n.b-toaster.b-toaster-top-right .b-toast.b-toaster-leave-active, .b-toaster.b-toaster-top-left .b-toast.b-toaster-leave-active, .b-toaster.b-toaster-bottom-right .b-toast.b-toaster-leave-active, .b-toaster.b-toaster-bottom-left .b-toast.b-toaster-leave-active {\n  position: absolute;\n  transition-delay: 0.175s;\n}\n\n.b-toaster.b-toaster-top-right .b-toast.b-toaster-leave-active .toast.fade, .b-toaster.b-toaster-top-left .b-toast.b-toaster-leave-active .toast.fade, .b-toaster.b-toaster-bottom-right .b-toast.b-toaster-leave-active .toast.fade, .b-toaster.b-toaster-bottom-left .b-toast.b-toaster-leave-active .toast.fade {\n  transition-delay: 0s;\n}\n\n.tooltip.b-tooltip {\n  display: block;\n  opacity: 0.9;\n  outline: 0;\n}\n\n.tooltip.b-tooltip.fade:not(.show) {\n  opacity: 0;\n}\n\n.tooltip.b-tooltip.show {\n  opacity: 0.9;\n}\n\n.tooltip.b-tooltip.noninteractive {\n  pointer-events: none;\n}\n\n.tooltip.b-tooltip .arrow {\n  margin: 0 0.25rem;\n}\n\n.tooltip.b-tooltip.bs-tooltip-right .arrow, .tooltip.b-tooltip.b-tooltip-primary.bs-tooltip-auto[x-placement^=\"right\"] .arrow, .tooltip.b-tooltip.b-tooltip-secondary.bs-tooltip-auto[x-placement^=\"right\"] .arrow, .tooltip.b-tooltip.b-tooltip-success.bs-tooltip-auto[x-placement^=\"right\"] .arrow, .tooltip.b-tooltip.b-tooltip-info.bs-tooltip-auto[x-placement^=\"right\"] .arrow, .tooltip.b-tooltip.b-tooltip-warning.bs-tooltip-auto[x-placement^=\"right\"] .arrow, .tooltip.b-tooltip.b-tooltip-danger.bs-tooltip-auto[x-placement^=\"right\"] .arrow, .tooltip.b-tooltip.b-tooltip-light.bs-tooltip-auto[x-placement^=\"right\"] .arrow, .tooltip.b-tooltip.b-tooltip-dark.bs-tooltip-auto[x-placement^=\"right\"] .arrow, .tooltip.b-tooltip.bs-tooltip-left .arrow, .tooltip.b-tooltip.b-tooltip-primary.bs-tooltip-auto[x-placement^=\"left\"] .arrow, .tooltip.b-tooltip.b-tooltip-secondary.bs-tooltip-auto[x-placement^=\"left\"] .arrow, .tooltip.b-tooltip.b-tooltip-success.bs-tooltip-auto[x-placement^=\"left\"] .arrow, .tooltip.b-tooltip.b-tooltip-info.bs-tooltip-auto[x-placement^=\"left\"] .arrow, .tooltip.b-tooltip.b-tooltip-warning.bs-tooltip-auto[x-placement^=\"left\"] .arrow, .tooltip.b-tooltip.b-tooltip-danger.bs-tooltip-auto[x-placement^=\"left\"] .arrow, .tooltip.b-tooltip.b-tooltip-light.bs-tooltip-auto[x-placement^=\"left\"] .arrow, .tooltip.b-tooltip.b-tooltip-dark.bs-tooltip-auto[x-placement^=\"left\"] .arrow {\n  margin: 0.25rem 0;\n}\n\n.tooltip.b-tooltip-primary.bs-tooltip-top .arrow::before, .tooltip.b-tooltip-primary.bs-tooltip-auto[x-placement^=\"top\"] .arrow::before {\n  border-top-color: #007bff;\n}\n\n.tooltip.b-tooltip-primary.bs-tooltip-right .arrow::before, .tooltip.b-tooltip-primary.bs-tooltip-auto[x-placement^=\"right\"] .arrow::before {\n  border-right-color: #007bff;\n}\n\n.tooltip.b-tooltip-primary.bs-tooltip-bottom .arrow::before, .tooltip.b-tooltip-primary.bs-tooltip-auto[x-placement^=\"bottom\"] .arrow::before {\n  border-bottom-color: #007bff;\n}\n\n.tooltip.b-tooltip-primary.bs-tooltip-left .arrow::before, .tooltip.b-tooltip-primary.bs-tooltip-auto[x-placement^=\"left\"] .arrow::before {\n  border-left-color: #007bff;\n}\n\n.tooltip.b-tooltip-primary .tooltip-inner {\n  color: #fff;\n  background-color: #007bff;\n}\n\n.tooltip.b-tooltip-secondary.bs-tooltip-top .arrow::before, .tooltip.b-tooltip-secondary.bs-tooltip-auto[x-placement^=\"top\"] .arrow::before {\n  border-top-color: #6c757d;\n}\n\n.tooltip.b-tooltip-secondary.bs-tooltip-right .arrow::before, .tooltip.b-tooltip-secondary.bs-tooltip-auto[x-placement^=\"right\"] .arrow::before {\n  border-right-color: #6c757d;\n}\n\n.tooltip.b-tooltip-secondary.bs-tooltip-bottom .arrow::before, .tooltip.b-tooltip-secondary.bs-tooltip-auto[x-placement^=\"bottom\"] .arrow::before {\n  border-bottom-color: #6c757d;\n}\n\n.tooltip.b-tooltip-secondary.bs-tooltip-left .arrow::before, .tooltip.b-tooltip-secondary.bs-tooltip-auto[x-placement^=\"left\"] .arrow::before {\n  border-left-color: #6c757d;\n}\n\n.tooltip.b-tooltip-secondary .tooltip-inner {\n  color: #fff;\n  background-color: #6c757d;\n}\n\n.tooltip.b-tooltip-success.bs-tooltip-top .arrow::before, .tooltip.b-tooltip-success.bs-tooltip-auto[x-placement^=\"top\"] .arrow::before {\n  border-top-color: #28a745;\n}\n\n.tooltip.b-tooltip-success.bs-tooltip-right .arrow::before, .tooltip.b-tooltip-success.bs-tooltip-auto[x-placement^=\"right\"] .arrow::before {\n  border-right-color: #28a745;\n}\n\n.tooltip.b-tooltip-success.bs-tooltip-bottom .arrow::before, .tooltip.b-tooltip-success.bs-tooltip-auto[x-placement^=\"bottom\"] .arrow::before {\n  border-bottom-color: #28a745;\n}\n\n.tooltip.b-tooltip-success.bs-tooltip-left .arrow::before, .tooltip.b-tooltip-success.bs-tooltip-auto[x-placement^=\"left\"] .arrow::before {\n  border-left-color: #28a745;\n}\n\n.tooltip.b-tooltip-success .tooltip-inner {\n  color: #fff;\n  background-color: #28a745;\n}\n\n.tooltip.b-tooltip-info.bs-tooltip-top .arrow::before, .tooltip.b-tooltip-info.bs-tooltip-auto[x-placement^=\"top\"] .arrow::before {\n  border-top-color: #17a2b8;\n}\n\n.tooltip.b-tooltip-info.bs-tooltip-right .arrow::before, .tooltip.b-tooltip-info.bs-tooltip-auto[x-placement^=\"right\"] .arrow::before {\n  border-right-color: #17a2b8;\n}\n\n.tooltip.b-tooltip-info.bs-tooltip-bottom .arrow::before, .tooltip.b-tooltip-info.bs-tooltip-auto[x-placement^=\"bottom\"] .arrow::before {\n  border-bottom-color: #17a2b8;\n}\n\n.tooltip.b-tooltip-info.bs-tooltip-left .arrow::before, .tooltip.b-tooltip-info.bs-tooltip-auto[x-placement^=\"left\"] .arrow::before {\n  border-left-color: #17a2b8;\n}\n\n.tooltip.b-tooltip-info .tooltip-inner {\n  color: #fff;\n  background-color: #17a2b8;\n}\n\n.tooltip.b-tooltip-warning.bs-tooltip-top .arrow::before, .tooltip.b-tooltip-warning.bs-tooltip-auto[x-placement^=\"top\"] .arrow::before {\n  border-top-color: #ffc107;\n}\n\n.tooltip.b-tooltip-warning.bs-tooltip-right .arrow::before, .tooltip.b-tooltip-warning.bs-tooltip-auto[x-placement^=\"right\"] .arrow::before {\n  border-right-color: #ffc107;\n}\n\n.tooltip.b-tooltip-warning.bs-tooltip-bottom .arrow::before, .tooltip.b-tooltip-warning.bs-tooltip-auto[x-placement^=\"bottom\"] .arrow::before {\n  border-bottom-color: #ffc107;\n}\n\n.tooltip.b-tooltip-warning.bs-tooltip-left .arrow::before, .tooltip.b-tooltip-warning.bs-tooltip-auto[x-placement^=\"left\"] .arrow::before {\n  border-left-color: #ffc107;\n}\n\n.tooltip.b-tooltip-warning .tooltip-inner {\n  color: #212529;\n  background-color: #ffc107;\n}\n\n.tooltip.b-tooltip-danger.bs-tooltip-top .arrow::before, .tooltip.b-tooltip-danger.bs-tooltip-auto[x-placement^=\"top\"] .arrow::before {\n  border-top-color: #dc3545;\n}\n\n.tooltip.b-tooltip-danger.bs-tooltip-right .arrow::before, .tooltip.b-tooltip-danger.bs-tooltip-auto[x-placement^=\"right\"] .arrow::before {\n  border-right-color: #dc3545;\n}\n\n.tooltip.b-tooltip-danger.bs-tooltip-bottom .arrow::before, .tooltip.b-tooltip-danger.bs-tooltip-auto[x-placement^=\"bottom\"] .arrow::before {\n  border-bottom-color: #dc3545;\n}\n\n.tooltip.b-tooltip-danger.bs-tooltip-left .arrow::before, .tooltip.b-tooltip-danger.bs-tooltip-auto[x-placement^=\"left\"] .arrow::before {\n  border-left-color: #dc3545;\n}\n\n.tooltip.b-tooltip-danger .tooltip-inner {\n  color: #fff;\n  background-color: #dc3545;\n}\n\n.tooltip.b-tooltip-light.bs-tooltip-top .arrow::before, .tooltip.b-tooltip-light.bs-tooltip-auto[x-placement^=\"top\"] .arrow::before {\n  border-top-color: #f8f9fa;\n}\n\n.tooltip.b-tooltip-light.bs-tooltip-right .arrow::before, .tooltip.b-tooltip-light.bs-tooltip-auto[x-placement^=\"right\"] .arrow::before {\n  border-right-color: #f8f9fa;\n}\n\n.tooltip.b-tooltip-light.bs-tooltip-bottom .arrow::before, .tooltip.b-tooltip-light.bs-tooltip-auto[x-placement^=\"bottom\"] .arrow::before {\n  border-bottom-color: #f8f9fa;\n}\n\n.tooltip.b-tooltip-light.bs-tooltip-left .arrow::before, .tooltip.b-tooltip-light.bs-tooltip-auto[x-placement^=\"left\"] .arrow::before {\n  border-left-color: #f8f9fa;\n}\n\n.tooltip.b-tooltip-light .tooltip-inner {\n  color: #212529;\n  background-color: #f8f9fa;\n}\n\n.tooltip.b-tooltip-dark.bs-tooltip-top .arrow::before, .tooltip.b-tooltip-dark.bs-tooltip-auto[x-placement^=\"top\"] .arrow::before {\n  border-top-color: #343a40;\n}\n\n.tooltip.b-tooltip-dark.bs-tooltip-right .arrow::before, .tooltip.b-tooltip-dark.bs-tooltip-auto[x-placement^=\"right\"] .arrow::before {\n  border-right-color: #343a40;\n}\n\n.tooltip.b-tooltip-dark.bs-tooltip-bottom .arrow::before, .tooltip.b-tooltip-dark.bs-tooltip-auto[x-placement^=\"bottom\"] .arrow::before {\n  border-bottom-color: #343a40;\n}\n\n.tooltip.b-tooltip-dark.bs-tooltip-left .arrow::before, .tooltip.b-tooltip-dark.bs-tooltip-auto[x-placement^=\"left\"] .arrow::before {\n  border-left-color: #343a40;\n}\n\n.tooltip.b-tooltip-dark .tooltip-inner {\n  color: #fff;\n  background-color: #343a40;\n}\n\n.b-icon.bi {\n  display: inline-block;\n  overflow: visible;\n  vertical-align: -0.15em;\n}\n\n.b-icon.b-icon-animation-cylon,\n.b-icon.b-iconstack .b-icon-animation-cylon > g {\n  transform-origin: center;\n  -webkit-animation: 0.75s infinite ease-in-out alternate b-icon-animation-cylon;\n  animation: 0.75s infinite ease-in-out alternate b-icon-animation-cylon;\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .b-icon.b-icon-animation-cylon,\n  .b-icon.b-iconstack .b-icon-animation-cylon > g {\n    -webkit-animation: none;\n    animation: none;\n  }\n}\n\n.b-icon.b-icon-animation-cylon-vertical,\n.b-icon.b-iconstack .b-icon-animation-cylon-vertical > g {\n  transform-origin: center;\n  -webkit-animation: 0.75s infinite ease-in-out alternate b-icon-animation-cylon-vertical;\n  animation: 0.75s infinite ease-in-out alternate b-icon-animation-cylon-vertical;\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .b-icon.b-icon-animation-cylon-vertical,\n  .b-icon.b-iconstack .b-icon-animation-cylon-vertical > g {\n    -webkit-animation: none;\n    animation: none;\n  }\n}\n\n.b-icon.b-icon-animation-fade,\n.b-icon.b-iconstack .b-icon-animation-fade > g {\n  transform-origin: center;\n  -webkit-animation: 0.75s infinite ease-in-out alternate b-icon-animation-fade;\n  animation: 0.75s infinite ease-in-out alternate b-icon-animation-fade;\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .b-icon.b-icon-animation-fade,\n  .b-icon.b-iconstack .b-icon-animation-fade > g {\n    -webkit-animation: none;\n    animation: none;\n  }\n}\n\n.b-icon.b-icon-animation-spin,\n.b-icon.b-iconstack .b-icon-animation-spin > g {\n  transform-origin: center;\n  -webkit-animation: 2s infinite linear normal b-icon-animation-spin;\n  animation: 2s infinite linear normal b-icon-animation-spin;\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .b-icon.b-icon-animation-spin,\n  .b-icon.b-iconstack .b-icon-animation-spin > g {\n    -webkit-animation: none;\n    animation: none;\n  }\n}\n\n.b-icon.b-icon-animation-spin-reverse,\n.b-icon.b-iconstack .b-icon-animation-spin-reverse > g {\n  transform-origin: center;\n  animation: 2s infinite linear reverse b-icon-animation-spin;\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .b-icon.b-icon-animation-spin-reverse,\n  .b-icon.b-iconstack .b-icon-animation-spin-reverse > g {\n    -webkit-animation: none;\n    animation: none;\n  }\n}\n\n.b-icon.b-icon-animation-spin-pulse,\n.b-icon.b-iconstack .b-icon-animation-spin-pulse > g {\n  transform-origin: center;\n  -webkit-animation: 1s infinite steps(8) normal b-icon-animation-spin;\n  animation: 1s infinite steps(8) normal b-icon-animation-spin;\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .b-icon.b-icon-animation-spin-pulse,\n  .b-icon.b-iconstack .b-icon-animation-spin-pulse > g {\n    -webkit-animation: none;\n    animation: none;\n  }\n}\n\n.b-icon.b-icon-animation-spin-reverse-pulse,\n.b-icon.b-iconstack .b-icon-animation-spin-reverse-pulse > g {\n  transform-origin: center;\n  animation: 1s infinite steps(8) reverse b-icon-animation-spin;\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .b-icon.b-icon-animation-spin-reverse-pulse,\n  .b-icon.b-iconstack .b-icon-animation-spin-reverse-pulse > g {\n    -webkit-animation: none;\n    animation: none;\n  }\n}\n\n.b-icon.b-icon-animation-throb,\n.b-icon.b-iconstack .b-icon-animation-throb > g {\n  transform-origin: center;\n  -webkit-animation: 0.75s infinite ease-in-out alternate b-icon-animation-throb;\n  animation: 0.75s infinite ease-in-out alternate b-icon-animation-throb;\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .b-icon.b-icon-animation-throb,\n  .b-icon.b-iconstack .b-icon-animation-throb > g {\n    -webkit-animation: none;\n    animation: none;\n  }\n}\n\n@-webkit-keyframes b-icon-animation-cylon {\n  0% {\n    transform: translateX(-25%);\n  }\n  100% {\n    transform: translateX(25%);\n  }\n}\n\n@keyframes b-icon-animation-cylon {\n  0% {\n    transform: translateX(-25%);\n  }\n  100% {\n    transform: translateX(25%);\n  }\n}\n\n@-webkit-keyframes b-icon-animation-cylon-vertical {\n  0% {\n    transform: translateY(25%);\n  }\n  100% {\n    transform: translateY(-25%);\n  }\n}\n\n@keyframes b-icon-animation-cylon-vertical {\n  0% {\n    transform: translateY(25%);\n  }\n  100% {\n    transform: translateY(-25%);\n  }\n}\n\n@-webkit-keyframes b-icon-animation-fade {\n  0% {\n    opacity: 0.1;\n  }\n  100% {\n    opacity: 1;\n  }\n}\n\n@keyframes b-icon-animation-fade {\n  0% {\n    opacity: 0.1;\n  }\n  100% {\n    opacity: 1;\n  }\n}\n\n@-webkit-keyframes b-icon-animation-spin {\n  0% {\n    transform: rotate(0deg);\n  }\n  100% {\n    transform: rotate(359deg);\n  }\n}\n\n@keyframes b-icon-animation-spin {\n  0% {\n    transform: rotate(0deg);\n  }\n  100% {\n    transform: rotate(359deg);\n  }\n}\n\n@-webkit-keyframes b-icon-animation-throb {\n  0% {\n    opacity: 0.5;\n    transform: scale(0.5);\n  }\n  100% {\n    opacity: 1;\n    transform: scale(1);\n  }\n}\n\n@keyframes b-icon-animation-throb {\n  0% {\n    opacity: 0.5;\n    transform: scale(0.5);\n  }\n  100% {\n    opacity: 1;\n    transform: scale(1);\n  }\n}\n\n.btn .b-icon.bi,\n.nav-link .b-icon.bi,\n.dropdown-toggle .b-icon.bi,\n.dropdown-item .b-icon.bi,\n.input-group-text .b-icon.bi {\n  font-size: 125%;\n  vertical-align: text-bottom;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/bootstrap/dist/css/bootstrap.css":
+/*!***************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/bootstrap/dist/css/bootstrap.css ***!
+  \***************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "/*!\n * Bootstrap v4.5.0 (https://getbootstrap.com/)\n * Copyright 2011-2020 The Bootstrap Authors\n * Copyright 2011-2020 Twitter, Inc.\n * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)\n */\n:root {\n  --blue: #007bff;\n  --indigo: #6610f2;\n  --purple: #6f42c1;\n  --pink: #e83e8c;\n  --red: #dc3545;\n  --orange: #fd7e14;\n  --yellow: #ffc107;\n  --green: #28a745;\n  --teal: #20c997;\n  --cyan: #17a2b8;\n  --white: #fff;\n  --gray: #6c757d;\n  --gray-dark: #343a40;\n  --primary: #007bff;\n  --secondary: #6c757d;\n  --success: #28a745;\n  --info: #17a2b8;\n  --warning: #ffc107;\n  --danger: #dc3545;\n  --light: #f8f9fa;\n  --dark: #343a40;\n  --breakpoint-xs: 0;\n  --breakpoint-sm: 576px;\n  --breakpoint-md: 768px;\n  --breakpoint-lg: 992px;\n  --breakpoint-xl: 1200px;\n  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\";\n  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace;\n}\n\n*,\n*::before,\n*::after {\n  box-sizing: border-box;\n}\n\nhtml {\n  font-family: sans-serif;\n  line-height: 1.15;\n  -webkit-text-size-adjust: 100%;\n  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\n}\n\narticle, aside, figcaption, figure, footer, header, hgroup, main, nav, section {\n  display: block;\n}\n\nbody {\n  margin: 0;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\";\n  font-size: 1rem;\n  font-weight: 400;\n  line-height: 1.5;\n  color: #212529;\n  text-align: left;\n  background-color: #fff;\n}\n\n[tabindex=\"-1\"]:focus:not(:focus-visible) {\n  outline: 0 !important;\n}\n\nhr {\n  box-sizing: content-box;\n  height: 0;\n  overflow: visible;\n}\n\nh1, h2, h3, h4, h5, h6 {\n  margin-top: 0;\n  margin-bottom: 0.5rem;\n}\n\np {\n  margin-top: 0;\n  margin-bottom: 1rem;\n}\n\nabbr[title],\nabbr[data-original-title] {\n  text-decoration: underline;\n  -webkit-text-decoration: underline dotted;\n  text-decoration: underline dotted;\n  cursor: help;\n  border-bottom: 0;\n  -webkit-text-decoration-skip-ink: none;\n  text-decoration-skip-ink: none;\n}\n\naddress {\n  margin-bottom: 1rem;\n  font-style: normal;\n  line-height: inherit;\n}\n\nol,\nul,\ndl {\n  margin-top: 0;\n  margin-bottom: 1rem;\n}\n\nol ol,\nul ul,\nol ul,\nul ol {\n  margin-bottom: 0;\n}\n\ndt {\n  font-weight: 700;\n}\n\ndd {\n  margin-bottom: .5rem;\n  margin-left: 0;\n}\n\nblockquote {\n  margin: 0 0 1rem;\n}\n\nb,\nstrong {\n  font-weight: bolder;\n}\n\nsmall {\n  font-size: 80%;\n}\n\nsub,\nsup {\n  position: relative;\n  font-size: 75%;\n  line-height: 0;\n  vertical-align: baseline;\n}\n\nsub {\n  bottom: -.25em;\n}\n\nsup {\n  top: -.5em;\n}\n\na {\n  color: #007bff;\n  text-decoration: none;\n  background-color: transparent;\n}\n\na:hover {\n  color: #0056b3;\n  text-decoration: underline;\n}\n\na:not([href]) {\n  color: inherit;\n  text-decoration: none;\n}\n\na:not([href]):hover {\n  color: inherit;\n  text-decoration: none;\n}\n\npre,\ncode,\nkbd,\nsamp {\n  font-family: SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace;\n  font-size: 1em;\n}\n\npre {\n  margin-top: 0;\n  margin-bottom: 1rem;\n  overflow: auto;\n  -ms-overflow-style: scrollbar;\n}\n\nfigure {\n  margin: 0 0 1rem;\n}\n\nimg {\n  vertical-align: middle;\n  border-style: none;\n}\n\nsvg {\n  overflow: hidden;\n  vertical-align: middle;\n}\n\ntable {\n  border-collapse: collapse;\n}\n\ncaption {\n  padding-top: 0.75rem;\n  padding-bottom: 0.75rem;\n  color: #6c757d;\n  text-align: left;\n  caption-side: bottom;\n}\n\nth {\n  text-align: inherit;\n}\n\nlabel {\n  display: inline-block;\n  margin-bottom: 0.5rem;\n}\n\nbutton {\n  border-radius: 0;\n}\n\nbutton:focus {\n  outline: 1px dotted;\n  outline: 5px auto -webkit-focus-ring-color;\n}\n\ninput,\nbutton,\nselect,\noptgroup,\ntextarea {\n  margin: 0;\n  font-family: inherit;\n  font-size: inherit;\n  line-height: inherit;\n}\n\nbutton,\ninput {\n  overflow: visible;\n}\n\nbutton,\nselect {\n  text-transform: none;\n}\n\n[role=\"button\"] {\n  cursor: pointer;\n}\n\nselect {\n  word-wrap: normal;\n}\n\nbutton,\n[type=\"button\"],\n[type=\"reset\"],\n[type=\"submit\"] {\n  -webkit-appearance: button;\n}\n\nbutton:not(:disabled),\n[type=\"button\"]:not(:disabled),\n[type=\"reset\"]:not(:disabled),\n[type=\"submit\"]:not(:disabled) {\n  cursor: pointer;\n}\n\nbutton::-moz-focus-inner,\n[type=\"button\"]::-moz-focus-inner,\n[type=\"reset\"]::-moz-focus-inner,\n[type=\"submit\"]::-moz-focus-inner {\n  padding: 0;\n  border-style: none;\n}\n\ninput[type=\"radio\"],\ninput[type=\"checkbox\"] {\n  box-sizing: border-box;\n  padding: 0;\n}\n\ntextarea {\n  overflow: auto;\n  resize: vertical;\n}\n\nfieldset {\n  min-width: 0;\n  padding: 0;\n  margin: 0;\n  border: 0;\n}\n\nlegend {\n  display: block;\n  width: 100%;\n  max-width: 100%;\n  padding: 0;\n  margin-bottom: .5rem;\n  font-size: 1.5rem;\n  line-height: inherit;\n  color: inherit;\n  white-space: normal;\n}\n\nprogress {\n  vertical-align: baseline;\n}\n\n[type=\"number\"]::-webkit-inner-spin-button,\n[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto;\n}\n\n[type=\"search\"] {\n  outline-offset: -2px;\n  -webkit-appearance: none;\n}\n\n[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none;\n}\n\n::-webkit-file-upload-button {\n  font: inherit;\n  -webkit-appearance: button;\n}\n\noutput {\n  display: inline-block;\n}\n\nsummary {\n  display: list-item;\n  cursor: pointer;\n}\n\ntemplate {\n  display: none;\n}\n\n[hidden] {\n  display: none !important;\n}\n\nh1, h2, h3, h4, h5, h6,\n.h1, .h2, .h3, .h4, .h5, .h6 {\n  margin-bottom: 0.5rem;\n  font-weight: 500;\n  line-height: 1.2;\n}\n\nh1, .h1 {\n  font-size: 2.5rem;\n}\n\nh2, .h2 {\n  font-size: 2rem;\n}\n\nh3, .h3 {\n  font-size: 1.75rem;\n}\n\nh4, .h4 {\n  font-size: 1.5rem;\n}\n\nh5, .h5 {\n  font-size: 1.25rem;\n}\n\nh6, .h6 {\n  font-size: 1rem;\n}\n\n.lead {\n  font-size: 1.25rem;\n  font-weight: 300;\n}\n\n.display-1 {\n  font-size: 6rem;\n  font-weight: 300;\n  line-height: 1.2;\n}\n\n.display-2 {\n  font-size: 5.5rem;\n  font-weight: 300;\n  line-height: 1.2;\n}\n\n.display-3 {\n  font-size: 4.5rem;\n  font-weight: 300;\n  line-height: 1.2;\n}\n\n.display-4 {\n  font-size: 3.5rem;\n  font-weight: 300;\n  line-height: 1.2;\n}\n\nhr {\n  margin-top: 1rem;\n  margin-bottom: 1rem;\n  border: 0;\n  border-top: 1px solid rgba(0, 0, 0, 0.1);\n}\n\nsmall,\n.small {\n  font-size: 80%;\n  font-weight: 400;\n}\n\nmark,\n.mark {\n  padding: 0.2em;\n  background-color: #fcf8e3;\n}\n\n.list-unstyled {\n  padding-left: 0;\n  list-style: none;\n}\n\n.list-inline {\n  padding-left: 0;\n  list-style: none;\n}\n\n.list-inline-item {\n  display: inline-block;\n}\n\n.list-inline-item:not(:last-child) {\n  margin-right: 0.5rem;\n}\n\n.initialism {\n  font-size: 90%;\n  text-transform: uppercase;\n}\n\n.blockquote {\n  margin-bottom: 1rem;\n  font-size: 1.25rem;\n}\n\n.blockquote-footer {\n  display: block;\n  font-size: 80%;\n  color: #6c757d;\n}\n\n.blockquote-footer::before {\n  content: \"\\2014\\A0\";\n}\n\n.img-fluid {\n  max-width: 100%;\n  height: auto;\n}\n\n.img-thumbnail {\n  padding: 0.25rem;\n  background-color: #fff;\n  border: 1px solid #dee2e6;\n  border-radius: 0.25rem;\n  max-width: 100%;\n  height: auto;\n}\n\n.figure {\n  display: inline-block;\n}\n\n.figure-img {\n  margin-bottom: 0.5rem;\n  line-height: 1;\n}\n\n.figure-caption {\n  font-size: 90%;\n  color: #6c757d;\n}\n\ncode {\n  font-size: 87.5%;\n  color: #e83e8c;\n  word-wrap: break-word;\n}\n\na > code {\n  color: inherit;\n}\n\nkbd {\n  padding: 0.2rem 0.4rem;\n  font-size: 87.5%;\n  color: #fff;\n  background-color: #212529;\n  border-radius: 0.2rem;\n}\n\nkbd kbd {\n  padding: 0;\n  font-size: 100%;\n  font-weight: 700;\n}\n\npre {\n  display: block;\n  font-size: 87.5%;\n  color: #212529;\n}\n\npre code {\n  font-size: inherit;\n  color: inherit;\n  word-break: normal;\n}\n\n.pre-scrollable {\n  max-height: 340px;\n  overflow-y: scroll;\n}\n\n.container {\n  width: 100%;\n  padding-right: 15px;\n  padding-left: 15px;\n  margin-right: auto;\n  margin-left: auto;\n}\n\n@media (min-width: 576px) {\n  .container {\n    max-width: 540px;\n  }\n}\n\n@media (min-width: 768px) {\n  .container {\n    max-width: 720px;\n  }\n}\n\n@media (min-width: 992px) {\n  .container {\n    max-width: 960px;\n  }\n}\n\n@media (min-width: 1200px) {\n  .container {\n    max-width: 1140px;\n  }\n}\n\n.container-fluid, .container-sm, .container-md, .container-lg, .container-xl {\n  width: 100%;\n  padding-right: 15px;\n  padding-left: 15px;\n  margin-right: auto;\n  margin-left: auto;\n}\n\n@media (min-width: 576px) {\n  .container, .container-sm {\n    max-width: 540px;\n  }\n}\n\n@media (min-width: 768px) {\n  .container, .container-sm, .container-md {\n    max-width: 720px;\n  }\n}\n\n@media (min-width: 992px) {\n  .container, .container-sm, .container-md, .container-lg {\n    max-width: 960px;\n  }\n}\n\n@media (min-width: 1200px) {\n  .container, .container-sm, .container-md, .container-lg, .container-xl {\n    max-width: 1140px;\n  }\n}\n\n.row {\n  display: flex;\n  flex-wrap: wrap;\n  margin-right: -15px;\n  margin-left: -15px;\n}\n\n.no-gutters {\n  margin-right: 0;\n  margin-left: 0;\n}\n\n.no-gutters > .col,\n.no-gutters > [class*=\"col-\"] {\n  padding-right: 0;\n  padding-left: 0;\n}\n\n.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,\n.col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,\n.col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,\n.col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,\n.col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,\n.col-xl-auto {\n  position: relative;\n  width: 100%;\n  padding-right: 15px;\n  padding-left: 15px;\n}\n\n.col {\n  flex-basis: 0;\n  flex-grow: 1;\n  min-width: 0;\n  max-width: 100%;\n}\n\n.row-cols-1 > * {\n  flex: 0 0 100%;\n  max-width: 100%;\n}\n\n.row-cols-2 > * {\n  flex: 0 0 50%;\n  max-width: 50%;\n}\n\n.row-cols-3 > * {\n  flex: 0 0 33.333333%;\n  max-width: 33.333333%;\n}\n\n.row-cols-4 > * {\n  flex: 0 0 25%;\n  max-width: 25%;\n}\n\n.row-cols-5 > * {\n  flex: 0 0 20%;\n  max-width: 20%;\n}\n\n.row-cols-6 > * {\n  flex: 0 0 16.666667%;\n  max-width: 16.666667%;\n}\n\n.col-auto {\n  flex: 0 0 auto;\n  width: auto;\n  max-width: 100%;\n}\n\n.col-1 {\n  flex: 0 0 8.333333%;\n  max-width: 8.333333%;\n}\n\n.col-2 {\n  flex: 0 0 16.666667%;\n  max-width: 16.666667%;\n}\n\n.col-3 {\n  flex: 0 0 25%;\n  max-width: 25%;\n}\n\n.col-4 {\n  flex: 0 0 33.333333%;\n  max-width: 33.333333%;\n}\n\n.col-5 {\n  flex: 0 0 41.666667%;\n  max-width: 41.666667%;\n}\n\n.col-6 {\n  flex: 0 0 50%;\n  max-width: 50%;\n}\n\n.col-7 {\n  flex: 0 0 58.333333%;\n  max-width: 58.333333%;\n}\n\n.col-8 {\n  flex: 0 0 66.666667%;\n  max-width: 66.666667%;\n}\n\n.col-9 {\n  flex: 0 0 75%;\n  max-width: 75%;\n}\n\n.col-10 {\n  flex: 0 0 83.333333%;\n  max-width: 83.333333%;\n}\n\n.col-11 {\n  flex: 0 0 91.666667%;\n  max-width: 91.666667%;\n}\n\n.col-12 {\n  flex: 0 0 100%;\n  max-width: 100%;\n}\n\n.order-first {\n  order: -1;\n}\n\n.order-last {\n  order: 13;\n}\n\n.order-0 {\n  order: 0;\n}\n\n.order-1 {\n  order: 1;\n}\n\n.order-2 {\n  order: 2;\n}\n\n.order-3 {\n  order: 3;\n}\n\n.order-4 {\n  order: 4;\n}\n\n.order-5 {\n  order: 5;\n}\n\n.order-6 {\n  order: 6;\n}\n\n.order-7 {\n  order: 7;\n}\n\n.order-8 {\n  order: 8;\n}\n\n.order-9 {\n  order: 9;\n}\n\n.order-10 {\n  order: 10;\n}\n\n.order-11 {\n  order: 11;\n}\n\n.order-12 {\n  order: 12;\n}\n\n.offset-1 {\n  margin-left: 8.333333%;\n}\n\n.offset-2 {\n  margin-left: 16.666667%;\n}\n\n.offset-3 {\n  margin-left: 25%;\n}\n\n.offset-4 {\n  margin-left: 33.333333%;\n}\n\n.offset-5 {\n  margin-left: 41.666667%;\n}\n\n.offset-6 {\n  margin-left: 50%;\n}\n\n.offset-7 {\n  margin-left: 58.333333%;\n}\n\n.offset-8 {\n  margin-left: 66.666667%;\n}\n\n.offset-9 {\n  margin-left: 75%;\n}\n\n.offset-10 {\n  margin-left: 83.333333%;\n}\n\n.offset-11 {\n  margin-left: 91.666667%;\n}\n\n@media (min-width: 576px) {\n  .col-sm {\n    flex-basis: 0;\n    flex-grow: 1;\n    min-width: 0;\n    max-width: 100%;\n  }\n  .row-cols-sm-1 > * {\n    flex: 0 0 100%;\n    max-width: 100%;\n  }\n  .row-cols-sm-2 > * {\n    flex: 0 0 50%;\n    max-width: 50%;\n  }\n  .row-cols-sm-3 > * {\n    flex: 0 0 33.333333%;\n    max-width: 33.333333%;\n  }\n  .row-cols-sm-4 > * {\n    flex: 0 0 25%;\n    max-width: 25%;\n  }\n  .row-cols-sm-5 > * {\n    flex: 0 0 20%;\n    max-width: 20%;\n  }\n  .row-cols-sm-6 > * {\n    flex: 0 0 16.666667%;\n    max-width: 16.666667%;\n  }\n  .col-sm-auto {\n    flex: 0 0 auto;\n    width: auto;\n    max-width: 100%;\n  }\n  .col-sm-1 {\n    flex: 0 0 8.333333%;\n    max-width: 8.333333%;\n  }\n  .col-sm-2 {\n    flex: 0 0 16.666667%;\n    max-width: 16.666667%;\n  }\n  .col-sm-3 {\n    flex: 0 0 25%;\n    max-width: 25%;\n  }\n  .col-sm-4 {\n    flex: 0 0 33.333333%;\n    max-width: 33.333333%;\n  }\n  .col-sm-5 {\n    flex: 0 0 41.666667%;\n    max-width: 41.666667%;\n  }\n  .col-sm-6 {\n    flex: 0 0 50%;\n    max-width: 50%;\n  }\n  .col-sm-7 {\n    flex: 0 0 58.333333%;\n    max-width: 58.333333%;\n  }\n  .col-sm-8 {\n    flex: 0 0 66.666667%;\n    max-width: 66.666667%;\n  }\n  .col-sm-9 {\n    flex: 0 0 75%;\n    max-width: 75%;\n  }\n  .col-sm-10 {\n    flex: 0 0 83.333333%;\n    max-width: 83.333333%;\n  }\n  .col-sm-11 {\n    flex: 0 0 91.666667%;\n    max-width: 91.666667%;\n  }\n  .col-sm-12 {\n    flex: 0 0 100%;\n    max-width: 100%;\n  }\n  .order-sm-first {\n    order: -1;\n  }\n  .order-sm-last {\n    order: 13;\n  }\n  .order-sm-0 {\n    order: 0;\n  }\n  .order-sm-1 {\n    order: 1;\n  }\n  .order-sm-2 {\n    order: 2;\n  }\n  .order-sm-3 {\n    order: 3;\n  }\n  .order-sm-4 {\n    order: 4;\n  }\n  .order-sm-5 {\n    order: 5;\n  }\n  .order-sm-6 {\n    order: 6;\n  }\n  .order-sm-7 {\n    order: 7;\n  }\n  .order-sm-8 {\n    order: 8;\n  }\n  .order-sm-9 {\n    order: 9;\n  }\n  .order-sm-10 {\n    order: 10;\n  }\n  .order-sm-11 {\n    order: 11;\n  }\n  .order-sm-12 {\n    order: 12;\n  }\n  .offset-sm-0 {\n    margin-left: 0;\n  }\n  .offset-sm-1 {\n    margin-left: 8.333333%;\n  }\n  .offset-sm-2 {\n    margin-left: 16.666667%;\n  }\n  .offset-sm-3 {\n    margin-left: 25%;\n  }\n  .offset-sm-4 {\n    margin-left: 33.333333%;\n  }\n  .offset-sm-5 {\n    margin-left: 41.666667%;\n  }\n  .offset-sm-6 {\n    margin-left: 50%;\n  }\n  .offset-sm-7 {\n    margin-left: 58.333333%;\n  }\n  .offset-sm-8 {\n    margin-left: 66.666667%;\n  }\n  .offset-sm-9 {\n    margin-left: 75%;\n  }\n  .offset-sm-10 {\n    margin-left: 83.333333%;\n  }\n  .offset-sm-11 {\n    margin-left: 91.666667%;\n  }\n}\n\n@media (min-width: 768px) {\n  .col-md {\n    flex-basis: 0;\n    flex-grow: 1;\n    min-width: 0;\n    max-width: 100%;\n  }\n  .row-cols-md-1 > * {\n    flex: 0 0 100%;\n    max-width: 100%;\n  }\n  .row-cols-md-2 > * {\n    flex: 0 0 50%;\n    max-width: 50%;\n  }\n  .row-cols-md-3 > * {\n    flex: 0 0 33.333333%;\n    max-width: 33.333333%;\n  }\n  .row-cols-md-4 > * {\n    flex: 0 0 25%;\n    max-width: 25%;\n  }\n  .row-cols-md-5 > * {\n    flex: 0 0 20%;\n    max-width: 20%;\n  }\n  .row-cols-md-6 > * {\n    flex: 0 0 16.666667%;\n    max-width: 16.666667%;\n  }\n  .col-md-auto {\n    flex: 0 0 auto;\n    width: auto;\n    max-width: 100%;\n  }\n  .col-md-1 {\n    flex: 0 0 8.333333%;\n    max-width: 8.333333%;\n  }\n  .col-md-2 {\n    flex: 0 0 16.666667%;\n    max-width: 16.666667%;\n  }\n  .col-md-3 {\n    flex: 0 0 25%;\n    max-width: 25%;\n  }\n  .col-md-4 {\n    flex: 0 0 33.333333%;\n    max-width: 33.333333%;\n  }\n  .col-md-5 {\n    flex: 0 0 41.666667%;\n    max-width: 41.666667%;\n  }\n  .col-md-6 {\n    flex: 0 0 50%;\n    max-width: 50%;\n  }\n  .col-md-7 {\n    flex: 0 0 58.333333%;\n    max-width: 58.333333%;\n  }\n  .col-md-8 {\n    flex: 0 0 66.666667%;\n    max-width: 66.666667%;\n  }\n  .col-md-9 {\n    flex: 0 0 75%;\n    max-width: 75%;\n  }\n  .col-md-10 {\n    flex: 0 0 83.333333%;\n    max-width: 83.333333%;\n  }\n  .col-md-11 {\n    flex: 0 0 91.666667%;\n    max-width: 91.666667%;\n  }\n  .col-md-12 {\n    flex: 0 0 100%;\n    max-width: 100%;\n  }\n  .order-md-first {\n    order: -1;\n  }\n  .order-md-last {\n    order: 13;\n  }\n  .order-md-0 {\n    order: 0;\n  }\n  .order-md-1 {\n    order: 1;\n  }\n  .order-md-2 {\n    order: 2;\n  }\n  .order-md-3 {\n    order: 3;\n  }\n  .order-md-4 {\n    order: 4;\n  }\n  .order-md-5 {\n    order: 5;\n  }\n  .order-md-6 {\n    order: 6;\n  }\n  .order-md-7 {\n    order: 7;\n  }\n  .order-md-8 {\n    order: 8;\n  }\n  .order-md-9 {\n    order: 9;\n  }\n  .order-md-10 {\n    order: 10;\n  }\n  .order-md-11 {\n    order: 11;\n  }\n  .order-md-12 {\n    order: 12;\n  }\n  .offset-md-0 {\n    margin-left: 0;\n  }\n  .offset-md-1 {\n    margin-left: 8.333333%;\n  }\n  .offset-md-2 {\n    margin-left: 16.666667%;\n  }\n  .offset-md-3 {\n    margin-left: 25%;\n  }\n  .offset-md-4 {\n    margin-left: 33.333333%;\n  }\n  .offset-md-5 {\n    margin-left: 41.666667%;\n  }\n  .offset-md-6 {\n    margin-left: 50%;\n  }\n  .offset-md-7 {\n    margin-left: 58.333333%;\n  }\n  .offset-md-8 {\n    margin-left: 66.666667%;\n  }\n  .offset-md-9 {\n    margin-left: 75%;\n  }\n  .offset-md-10 {\n    margin-left: 83.333333%;\n  }\n  .offset-md-11 {\n    margin-left: 91.666667%;\n  }\n}\n\n@media (min-width: 992px) {\n  .col-lg {\n    flex-basis: 0;\n    flex-grow: 1;\n    min-width: 0;\n    max-width: 100%;\n  }\n  .row-cols-lg-1 > * {\n    flex: 0 0 100%;\n    max-width: 100%;\n  }\n  .row-cols-lg-2 > * {\n    flex: 0 0 50%;\n    max-width: 50%;\n  }\n  .row-cols-lg-3 > * {\n    flex: 0 0 33.333333%;\n    max-width: 33.333333%;\n  }\n  .row-cols-lg-4 > * {\n    flex: 0 0 25%;\n    max-width: 25%;\n  }\n  .row-cols-lg-5 > * {\n    flex: 0 0 20%;\n    max-width: 20%;\n  }\n  .row-cols-lg-6 > * {\n    flex: 0 0 16.666667%;\n    max-width: 16.666667%;\n  }\n  .col-lg-auto {\n    flex: 0 0 auto;\n    width: auto;\n    max-width: 100%;\n  }\n  .col-lg-1 {\n    flex: 0 0 8.333333%;\n    max-width: 8.333333%;\n  }\n  .col-lg-2 {\n    flex: 0 0 16.666667%;\n    max-width: 16.666667%;\n  }\n  .col-lg-3 {\n    flex: 0 0 25%;\n    max-width: 25%;\n  }\n  .col-lg-4 {\n    flex: 0 0 33.333333%;\n    max-width: 33.333333%;\n  }\n  .col-lg-5 {\n    flex: 0 0 41.666667%;\n    max-width: 41.666667%;\n  }\n  .col-lg-6 {\n    flex: 0 0 50%;\n    max-width: 50%;\n  }\n  .col-lg-7 {\n    flex: 0 0 58.333333%;\n    max-width: 58.333333%;\n  }\n  .col-lg-8 {\n    flex: 0 0 66.666667%;\n    max-width: 66.666667%;\n  }\n  .col-lg-9 {\n    flex: 0 0 75%;\n    max-width: 75%;\n  }\n  .col-lg-10 {\n    flex: 0 0 83.333333%;\n    max-width: 83.333333%;\n  }\n  .col-lg-11 {\n    flex: 0 0 91.666667%;\n    max-width: 91.666667%;\n  }\n  .col-lg-12 {\n    flex: 0 0 100%;\n    max-width: 100%;\n  }\n  .order-lg-first {\n    order: -1;\n  }\n  .order-lg-last {\n    order: 13;\n  }\n  .order-lg-0 {\n    order: 0;\n  }\n  .order-lg-1 {\n    order: 1;\n  }\n  .order-lg-2 {\n    order: 2;\n  }\n  .order-lg-3 {\n    order: 3;\n  }\n  .order-lg-4 {\n    order: 4;\n  }\n  .order-lg-5 {\n    order: 5;\n  }\n  .order-lg-6 {\n    order: 6;\n  }\n  .order-lg-7 {\n    order: 7;\n  }\n  .order-lg-8 {\n    order: 8;\n  }\n  .order-lg-9 {\n    order: 9;\n  }\n  .order-lg-10 {\n    order: 10;\n  }\n  .order-lg-11 {\n    order: 11;\n  }\n  .order-lg-12 {\n    order: 12;\n  }\n  .offset-lg-0 {\n    margin-left: 0;\n  }\n  .offset-lg-1 {\n    margin-left: 8.333333%;\n  }\n  .offset-lg-2 {\n    margin-left: 16.666667%;\n  }\n  .offset-lg-3 {\n    margin-left: 25%;\n  }\n  .offset-lg-4 {\n    margin-left: 33.333333%;\n  }\n  .offset-lg-5 {\n    margin-left: 41.666667%;\n  }\n  .offset-lg-6 {\n    margin-left: 50%;\n  }\n  .offset-lg-7 {\n    margin-left: 58.333333%;\n  }\n  .offset-lg-8 {\n    margin-left: 66.666667%;\n  }\n  .offset-lg-9 {\n    margin-left: 75%;\n  }\n  .offset-lg-10 {\n    margin-left: 83.333333%;\n  }\n  .offset-lg-11 {\n    margin-left: 91.666667%;\n  }\n}\n\n@media (min-width: 1200px) {\n  .col-xl {\n    flex-basis: 0;\n    flex-grow: 1;\n    min-width: 0;\n    max-width: 100%;\n  }\n  .row-cols-xl-1 > * {\n    flex: 0 0 100%;\n    max-width: 100%;\n  }\n  .row-cols-xl-2 > * {\n    flex: 0 0 50%;\n    max-width: 50%;\n  }\n  .row-cols-xl-3 > * {\n    flex: 0 0 33.333333%;\n    max-width: 33.333333%;\n  }\n  .row-cols-xl-4 > * {\n    flex: 0 0 25%;\n    max-width: 25%;\n  }\n  .row-cols-xl-5 > * {\n    flex: 0 0 20%;\n    max-width: 20%;\n  }\n  .row-cols-xl-6 > * {\n    flex: 0 0 16.666667%;\n    max-width: 16.666667%;\n  }\n  .col-xl-auto {\n    flex: 0 0 auto;\n    width: auto;\n    max-width: 100%;\n  }\n  .col-xl-1 {\n    flex: 0 0 8.333333%;\n    max-width: 8.333333%;\n  }\n  .col-xl-2 {\n    flex: 0 0 16.666667%;\n    max-width: 16.666667%;\n  }\n  .col-xl-3 {\n    flex: 0 0 25%;\n    max-width: 25%;\n  }\n  .col-xl-4 {\n    flex: 0 0 33.333333%;\n    max-width: 33.333333%;\n  }\n  .col-xl-5 {\n    flex: 0 0 41.666667%;\n    max-width: 41.666667%;\n  }\n  .col-xl-6 {\n    flex: 0 0 50%;\n    max-width: 50%;\n  }\n  .col-xl-7 {\n    flex: 0 0 58.333333%;\n    max-width: 58.333333%;\n  }\n  .col-xl-8 {\n    flex: 0 0 66.666667%;\n    max-width: 66.666667%;\n  }\n  .col-xl-9 {\n    flex: 0 0 75%;\n    max-width: 75%;\n  }\n  .col-xl-10 {\n    flex: 0 0 83.333333%;\n    max-width: 83.333333%;\n  }\n  .col-xl-11 {\n    flex: 0 0 91.666667%;\n    max-width: 91.666667%;\n  }\n  .col-xl-12 {\n    flex: 0 0 100%;\n    max-width: 100%;\n  }\n  .order-xl-first {\n    order: -1;\n  }\n  .order-xl-last {\n    order: 13;\n  }\n  .order-xl-0 {\n    order: 0;\n  }\n  .order-xl-1 {\n    order: 1;\n  }\n  .order-xl-2 {\n    order: 2;\n  }\n  .order-xl-3 {\n    order: 3;\n  }\n  .order-xl-4 {\n    order: 4;\n  }\n  .order-xl-5 {\n    order: 5;\n  }\n  .order-xl-6 {\n    order: 6;\n  }\n  .order-xl-7 {\n    order: 7;\n  }\n  .order-xl-8 {\n    order: 8;\n  }\n  .order-xl-9 {\n    order: 9;\n  }\n  .order-xl-10 {\n    order: 10;\n  }\n  .order-xl-11 {\n    order: 11;\n  }\n  .order-xl-12 {\n    order: 12;\n  }\n  .offset-xl-0 {\n    margin-left: 0;\n  }\n  .offset-xl-1 {\n    margin-left: 8.333333%;\n  }\n  .offset-xl-2 {\n    margin-left: 16.666667%;\n  }\n  .offset-xl-3 {\n    margin-left: 25%;\n  }\n  .offset-xl-4 {\n    margin-left: 33.333333%;\n  }\n  .offset-xl-5 {\n    margin-left: 41.666667%;\n  }\n  .offset-xl-6 {\n    margin-left: 50%;\n  }\n  .offset-xl-7 {\n    margin-left: 58.333333%;\n  }\n  .offset-xl-8 {\n    margin-left: 66.666667%;\n  }\n  .offset-xl-9 {\n    margin-left: 75%;\n  }\n  .offset-xl-10 {\n    margin-left: 83.333333%;\n  }\n  .offset-xl-11 {\n    margin-left: 91.666667%;\n  }\n}\n\n.table {\n  width: 100%;\n  margin-bottom: 1rem;\n  color: #212529;\n}\n\n.table th,\n.table td {\n  padding: 0.75rem;\n  vertical-align: top;\n  border-top: 1px solid #dee2e6;\n}\n\n.table thead th {\n  vertical-align: bottom;\n  border-bottom: 2px solid #dee2e6;\n}\n\n.table tbody + tbody {\n  border-top: 2px solid #dee2e6;\n}\n\n.table-sm th,\n.table-sm td {\n  padding: 0.3rem;\n}\n\n.table-bordered {\n  border: 1px solid #dee2e6;\n}\n\n.table-bordered th,\n.table-bordered td {\n  border: 1px solid #dee2e6;\n}\n\n.table-bordered thead th,\n.table-bordered thead td {\n  border-bottom-width: 2px;\n}\n\n.table-borderless th,\n.table-borderless td,\n.table-borderless thead th,\n.table-borderless tbody + tbody {\n  border: 0;\n}\n\n.table-striped tbody tr:nth-of-type(odd) {\n  background-color: rgba(0, 0, 0, 0.05);\n}\n\n.table-hover tbody tr:hover {\n  color: #212529;\n  background-color: rgba(0, 0, 0, 0.075);\n}\n\n.table-primary,\n.table-primary > th,\n.table-primary > td {\n  background-color: #b8daff;\n}\n\n.table-primary th,\n.table-primary td,\n.table-primary thead th,\n.table-primary tbody + tbody {\n  border-color: #7abaff;\n}\n\n.table-hover .table-primary:hover {\n  background-color: #9fcdff;\n}\n\n.table-hover .table-primary:hover > td,\n.table-hover .table-primary:hover > th {\n  background-color: #9fcdff;\n}\n\n.table-secondary,\n.table-secondary > th,\n.table-secondary > td {\n  background-color: #d6d8db;\n}\n\n.table-secondary th,\n.table-secondary td,\n.table-secondary thead th,\n.table-secondary tbody + tbody {\n  border-color: #b3b7bb;\n}\n\n.table-hover .table-secondary:hover {\n  background-color: #c8cbcf;\n}\n\n.table-hover .table-secondary:hover > td,\n.table-hover .table-secondary:hover > th {\n  background-color: #c8cbcf;\n}\n\n.table-success,\n.table-success > th,\n.table-success > td {\n  background-color: #c3e6cb;\n}\n\n.table-success th,\n.table-success td,\n.table-success thead th,\n.table-success tbody + tbody {\n  border-color: #8fd19e;\n}\n\n.table-hover .table-success:hover {\n  background-color: #b1dfbb;\n}\n\n.table-hover .table-success:hover > td,\n.table-hover .table-success:hover > th {\n  background-color: #b1dfbb;\n}\n\n.table-info,\n.table-info > th,\n.table-info > td {\n  background-color: #bee5eb;\n}\n\n.table-info th,\n.table-info td,\n.table-info thead th,\n.table-info tbody + tbody {\n  border-color: #86cfda;\n}\n\n.table-hover .table-info:hover {\n  background-color: #abdde5;\n}\n\n.table-hover .table-info:hover > td,\n.table-hover .table-info:hover > th {\n  background-color: #abdde5;\n}\n\n.table-warning,\n.table-warning > th,\n.table-warning > td {\n  background-color: #ffeeba;\n}\n\n.table-warning th,\n.table-warning td,\n.table-warning thead th,\n.table-warning tbody + tbody {\n  border-color: #ffdf7e;\n}\n\n.table-hover .table-warning:hover {\n  background-color: #ffe8a1;\n}\n\n.table-hover .table-warning:hover > td,\n.table-hover .table-warning:hover > th {\n  background-color: #ffe8a1;\n}\n\n.table-danger,\n.table-danger > th,\n.table-danger > td {\n  background-color: #f5c6cb;\n}\n\n.table-danger th,\n.table-danger td,\n.table-danger thead th,\n.table-danger tbody + tbody {\n  border-color: #ed969e;\n}\n\n.table-hover .table-danger:hover {\n  background-color: #f1b0b7;\n}\n\n.table-hover .table-danger:hover > td,\n.table-hover .table-danger:hover > th {\n  background-color: #f1b0b7;\n}\n\n.table-light,\n.table-light > th,\n.table-light > td {\n  background-color: #fdfdfe;\n}\n\n.table-light th,\n.table-light td,\n.table-light thead th,\n.table-light tbody + tbody {\n  border-color: #fbfcfc;\n}\n\n.table-hover .table-light:hover {\n  background-color: #ececf6;\n}\n\n.table-hover .table-light:hover > td,\n.table-hover .table-light:hover > th {\n  background-color: #ececf6;\n}\n\n.table-dark,\n.table-dark > th,\n.table-dark > td {\n  background-color: #c6c8ca;\n}\n\n.table-dark th,\n.table-dark td,\n.table-dark thead th,\n.table-dark tbody + tbody {\n  border-color: #95999c;\n}\n\n.table-hover .table-dark:hover {\n  background-color: #b9bbbe;\n}\n\n.table-hover .table-dark:hover > td,\n.table-hover .table-dark:hover > th {\n  background-color: #b9bbbe;\n}\n\n.table-active,\n.table-active > th,\n.table-active > td {\n  background-color: rgba(0, 0, 0, 0.075);\n}\n\n.table-hover .table-active:hover {\n  background-color: rgba(0, 0, 0, 0.075);\n}\n\n.table-hover .table-active:hover > td,\n.table-hover .table-active:hover > th {\n  background-color: rgba(0, 0, 0, 0.075);\n}\n\n.table .thead-dark th {\n  color: #fff;\n  background-color: #343a40;\n  border-color: #454d55;\n}\n\n.table .thead-light th {\n  color: #495057;\n  background-color: #e9ecef;\n  border-color: #dee2e6;\n}\n\n.table-dark {\n  color: #fff;\n  background-color: #343a40;\n}\n\n.table-dark th,\n.table-dark td,\n.table-dark thead th {\n  border-color: #454d55;\n}\n\n.table-dark.table-bordered {\n  border: 0;\n}\n\n.table-dark.table-striped tbody tr:nth-of-type(odd) {\n  background-color: rgba(255, 255, 255, 0.05);\n}\n\n.table-dark.table-hover tbody tr:hover {\n  color: #fff;\n  background-color: rgba(255, 255, 255, 0.075);\n}\n\n@media (max-width: 575.98px) {\n  .table-responsive-sm {\n    display: block;\n    width: 100%;\n    overflow-x: auto;\n    -webkit-overflow-scrolling: touch;\n  }\n  .table-responsive-sm > .table-bordered {\n    border: 0;\n  }\n}\n\n@media (max-width: 767.98px) {\n  .table-responsive-md {\n    display: block;\n    width: 100%;\n    overflow-x: auto;\n    -webkit-overflow-scrolling: touch;\n  }\n  .table-responsive-md > .table-bordered {\n    border: 0;\n  }\n}\n\n@media (max-width: 991.98px) {\n  .table-responsive-lg {\n    display: block;\n    width: 100%;\n    overflow-x: auto;\n    -webkit-overflow-scrolling: touch;\n  }\n  .table-responsive-lg > .table-bordered {\n    border: 0;\n  }\n}\n\n@media (max-width: 1199.98px) {\n  .table-responsive-xl {\n    display: block;\n    width: 100%;\n    overflow-x: auto;\n    -webkit-overflow-scrolling: touch;\n  }\n  .table-responsive-xl > .table-bordered {\n    border: 0;\n  }\n}\n\n.table-responsive {\n  display: block;\n  width: 100%;\n  overflow-x: auto;\n  -webkit-overflow-scrolling: touch;\n}\n\n.table-responsive > .table-bordered {\n  border: 0;\n}\n\n.form-control {\n  display: block;\n  width: 100%;\n  height: calc(1.5em + 0.75rem + 2px);\n  padding: 0.375rem 0.75rem;\n  font-size: 1rem;\n  font-weight: 400;\n  line-height: 1.5;\n  color: #495057;\n  background-color: #fff;\n  background-clip: padding-box;\n  border: 1px solid #ced4da;\n  border-radius: 0.25rem;\n  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .form-control {\n    transition: none;\n  }\n}\n\n.form-control::-ms-expand {\n  background-color: transparent;\n  border: 0;\n}\n\n.form-control:-moz-focusring {\n  color: transparent;\n  text-shadow: 0 0 0 #495057;\n}\n\n.form-control:focus {\n  color: #495057;\n  background-color: #fff;\n  border-color: #80bdff;\n  outline: 0;\n  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);\n}\n\n.form-control::-webkit-input-placeholder {\n  color: #6c757d;\n  opacity: 1;\n}\n\n.form-control::-moz-placeholder {\n  color: #6c757d;\n  opacity: 1;\n}\n\n.form-control:-ms-input-placeholder {\n  color: #6c757d;\n  opacity: 1;\n}\n\n.form-control::-ms-input-placeholder {\n  color: #6c757d;\n  opacity: 1;\n}\n\n.form-control::placeholder {\n  color: #6c757d;\n  opacity: 1;\n}\n\n.form-control:disabled, .form-control[readonly] {\n  background-color: #e9ecef;\n  opacity: 1;\n}\n\ninput[type=\"date\"].form-control,\ninput[type=\"time\"].form-control,\ninput[type=\"datetime-local\"].form-control,\ninput[type=\"month\"].form-control {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n}\n\nselect.form-control:focus::-ms-value {\n  color: #495057;\n  background-color: #fff;\n}\n\n.form-control-file,\n.form-control-range {\n  display: block;\n  width: 100%;\n}\n\n.col-form-label {\n  padding-top: calc(0.375rem + 1px);\n  padding-bottom: calc(0.375rem + 1px);\n  margin-bottom: 0;\n  font-size: inherit;\n  line-height: 1.5;\n}\n\n.col-form-label-lg {\n  padding-top: calc(0.5rem + 1px);\n  padding-bottom: calc(0.5rem + 1px);\n  font-size: 1.25rem;\n  line-height: 1.5;\n}\n\n.col-form-label-sm {\n  padding-top: calc(0.25rem + 1px);\n  padding-bottom: calc(0.25rem + 1px);\n  font-size: 0.875rem;\n  line-height: 1.5;\n}\n\n.form-control-plaintext {\n  display: block;\n  width: 100%;\n  padding: 0.375rem 0;\n  margin-bottom: 0;\n  font-size: 1rem;\n  line-height: 1.5;\n  color: #212529;\n  background-color: transparent;\n  border: solid transparent;\n  border-width: 1px 0;\n}\n\n.form-control-plaintext.form-control-sm, .form-control-plaintext.form-control-lg {\n  padding-right: 0;\n  padding-left: 0;\n}\n\n.form-control-sm {\n  height: calc(1.5em + 0.5rem + 2px);\n  padding: 0.25rem 0.5rem;\n  font-size: 0.875rem;\n  line-height: 1.5;\n  border-radius: 0.2rem;\n}\n\n.form-control-lg {\n  height: calc(1.5em + 1rem + 2px);\n  padding: 0.5rem 1rem;\n  font-size: 1.25rem;\n  line-height: 1.5;\n  border-radius: 0.3rem;\n}\n\nselect.form-control[size], select.form-control[multiple] {\n  height: auto;\n}\n\ntextarea.form-control {\n  height: auto;\n}\n\n.form-group {\n  margin-bottom: 1rem;\n}\n\n.form-text {\n  display: block;\n  margin-top: 0.25rem;\n}\n\n.form-row {\n  display: flex;\n  flex-wrap: wrap;\n  margin-right: -5px;\n  margin-left: -5px;\n}\n\n.form-row > .col,\n.form-row > [class*=\"col-\"] {\n  padding-right: 5px;\n  padding-left: 5px;\n}\n\n.form-check {\n  position: relative;\n  display: block;\n  padding-left: 1.25rem;\n}\n\n.form-check-input {\n  position: absolute;\n  margin-top: 0.3rem;\n  margin-left: -1.25rem;\n}\n\n.form-check-input[disabled] ~ .form-check-label,\n.form-check-input:disabled ~ .form-check-label {\n  color: #6c757d;\n}\n\n.form-check-label {\n  margin-bottom: 0;\n}\n\n.form-check-inline {\n  display: inline-flex;\n  align-items: center;\n  padding-left: 0;\n  margin-right: 0.75rem;\n}\n\n.form-check-inline .form-check-input {\n  position: static;\n  margin-top: 0;\n  margin-right: 0.3125rem;\n  margin-left: 0;\n}\n\n.valid-feedback {\n  display: none;\n  width: 100%;\n  margin-top: 0.25rem;\n  font-size: 80%;\n  color: #28a745;\n}\n\n.valid-tooltip {\n  position: absolute;\n  top: 100%;\n  z-index: 5;\n  display: none;\n  max-width: 100%;\n  padding: 0.25rem 0.5rem;\n  margin-top: .1rem;\n  font-size: 0.875rem;\n  line-height: 1.5;\n  color: #fff;\n  background-color: rgba(40, 167, 69, 0.9);\n  border-radius: 0.25rem;\n}\n\n.was-validated :valid ~ .valid-feedback,\n.was-validated :valid ~ .valid-tooltip,\n.is-valid ~ .valid-feedback,\n.is-valid ~ .valid-tooltip {\n  display: block;\n}\n\n.was-validated .form-control:valid, .form-control.is-valid {\n  border-color: #28a745;\n  padding-right: calc(1.5em + 0.75rem);\n  background-image: url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e\");\n  background-repeat: no-repeat;\n  background-position: right calc(0.375em + 0.1875rem) center;\n  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);\n}\n\n.was-validated .form-control:valid:focus, .form-control.is-valid:focus {\n  border-color: #28a745;\n  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);\n}\n\n.was-validated textarea.form-control:valid, textarea.form-control.is-valid {\n  padding-right: calc(1.5em + 0.75rem);\n  background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem);\n}\n\n.was-validated .custom-select:valid, .custom-select.is-valid {\n  border-color: #28a745;\n  padding-right: calc(0.75em + 2.3125rem);\n  background: url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e\") no-repeat right 0.75rem center/8px 10px, url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e\") #fff no-repeat center right 1.75rem/calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);\n}\n\n.was-validated .custom-select:valid:focus, .custom-select.is-valid:focus {\n  border-color: #28a745;\n  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);\n}\n\n.was-validated .form-check-input:valid ~ .form-check-label, .form-check-input.is-valid ~ .form-check-label {\n  color: #28a745;\n}\n\n.was-validated .form-check-input:valid ~ .valid-feedback,\n.was-validated .form-check-input:valid ~ .valid-tooltip, .form-check-input.is-valid ~ .valid-feedback,\n.form-check-input.is-valid ~ .valid-tooltip {\n  display: block;\n}\n\n.was-validated .custom-control-input:valid ~ .custom-control-label, .custom-control-input.is-valid ~ .custom-control-label {\n  color: #28a745;\n}\n\n.was-validated .custom-control-input:valid ~ .custom-control-label::before, .custom-control-input.is-valid ~ .custom-control-label::before {\n  border-color: #28a745;\n}\n\n.was-validated .custom-control-input:valid:checked ~ .custom-control-label::before, .custom-control-input.is-valid:checked ~ .custom-control-label::before {\n  border-color: #34ce57;\n  background-color: #34ce57;\n}\n\n.was-validated .custom-control-input:valid:focus ~ .custom-control-label::before, .custom-control-input.is-valid:focus ~ .custom-control-label::before {\n  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);\n}\n\n.was-validated .custom-control-input:valid:focus:not(:checked) ~ .custom-control-label::before, .custom-control-input.is-valid:focus:not(:checked) ~ .custom-control-label::before {\n  border-color: #28a745;\n}\n\n.was-validated .custom-file-input:valid ~ .custom-file-label, .custom-file-input.is-valid ~ .custom-file-label {\n  border-color: #28a745;\n}\n\n.was-validated .custom-file-input:valid:focus ~ .custom-file-label, .custom-file-input.is-valid:focus ~ .custom-file-label {\n  border-color: #28a745;\n  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);\n}\n\n.invalid-feedback {\n  display: none;\n  width: 100%;\n  margin-top: 0.25rem;\n  font-size: 80%;\n  color: #dc3545;\n}\n\n.invalid-tooltip {\n  position: absolute;\n  top: 100%;\n  z-index: 5;\n  display: none;\n  max-width: 100%;\n  padding: 0.25rem 0.5rem;\n  margin-top: .1rem;\n  font-size: 0.875rem;\n  line-height: 1.5;\n  color: #fff;\n  background-color: rgba(220, 53, 69, 0.9);\n  border-radius: 0.25rem;\n}\n\n.was-validated :invalid ~ .invalid-feedback,\n.was-validated :invalid ~ .invalid-tooltip,\n.is-invalid ~ .invalid-feedback,\n.is-invalid ~ .invalid-tooltip {\n  display: block;\n}\n\n.was-validated .form-control:invalid, .form-control.is-invalid {\n  border-color: #dc3545;\n  padding-right: calc(1.5em + 0.75rem);\n  background-image: url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e\");\n  background-repeat: no-repeat;\n  background-position: right calc(0.375em + 0.1875rem) center;\n  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);\n}\n\n.was-validated .form-control:invalid:focus, .form-control.is-invalid:focus {\n  border-color: #dc3545;\n  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);\n}\n\n.was-validated textarea.form-control:invalid, textarea.form-control.is-invalid {\n  padding-right: calc(1.5em + 0.75rem);\n  background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem);\n}\n\n.was-validated .custom-select:invalid, .custom-select.is-invalid {\n  border-color: #dc3545;\n  padding-right: calc(0.75em + 2.3125rem);\n  background: url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e\") no-repeat right 0.75rem center/8px 10px, url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e\") #fff no-repeat center right 1.75rem/calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);\n}\n\n.was-validated .custom-select:invalid:focus, .custom-select.is-invalid:focus {\n  border-color: #dc3545;\n  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);\n}\n\n.was-validated .form-check-input:invalid ~ .form-check-label, .form-check-input.is-invalid ~ .form-check-label {\n  color: #dc3545;\n}\n\n.was-validated .form-check-input:invalid ~ .invalid-feedback,\n.was-validated .form-check-input:invalid ~ .invalid-tooltip, .form-check-input.is-invalid ~ .invalid-feedback,\n.form-check-input.is-invalid ~ .invalid-tooltip {\n  display: block;\n}\n\n.was-validated .custom-control-input:invalid ~ .custom-control-label, .custom-control-input.is-invalid ~ .custom-control-label {\n  color: #dc3545;\n}\n\n.was-validated .custom-control-input:invalid ~ .custom-control-label::before, .custom-control-input.is-invalid ~ .custom-control-label::before {\n  border-color: #dc3545;\n}\n\n.was-validated .custom-control-input:invalid:checked ~ .custom-control-label::before, .custom-control-input.is-invalid:checked ~ .custom-control-label::before {\n  border-color: #e4606d;\n  background-color: #e4606d;\n}\n\n.was-validated .custom-control-input:invalid:focus ~ .custom-control-label::before, .custom-control-input.is-invalid:focus ~ .custom-control-label::before {\n  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);\n}\n\n.was-validated .custom-control-input:invalid:focus:not(:checked) ~ .custom-control-label::before, .custom-control-input.is-invalid:focus:not(:checked) ~ .custom-control-label::before {\n  border-color: #dc3545;\n}\n\n.was-validated .custom-file-input:invalid ~ .custom-file-label, .custom-file-input.is-invalid ~ .custom-file-label {\n  border-color: #dc3545;\n}\n\n.was-validated .custom-file-input:invalid:focus ~ .custom-file-label, .custom-file-input.is-invalid:focus ~ .custom-file-label {\n  border-color: #dc3545;\n  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);\n}\n\n.form-inline {\n  display: flex;\n  flex-flow: row wrap;\n  align-items: center;\n}\n\n.form-inline .form-check {\n  width: 100%;\n}\n\n@media (min-width: 576px) {\n  .form-inline label {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    margin-bottom: 0;\n  }\n  .form-inline .form-group {\n    display: flex;\n    flex: 0 0 auto;\n    flex-flow: row wrap;\n    align-items: center;\n    margin-bottom: 0;\n  }\n  .form-inline .form-control {\n    display: inline-block;\n    width: auto;\n    vertical-align: middle;\n  }\n  .form-inline .form-control-plaintext {\n    display: inline-block;\n  }\n  .form-inline .input-group,\n  .form-inline .custom-select {\n    width: auto;\n  }\n  .form-inline .form-check {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: auto;\n    padding-left: 0;\n  }\n  .form-inline .form-check-input {\n    position: relative;\n    flex-shrink: 0;\n    margin-top: 0;\n    margin-right: 0.25rem;\n    margin-left: 0;\n  }\n  .form-inline .custom-control {\n    align-items: center;\n    justify-content: center;\n  }\n  .form-inline .custom-control-label {\n    margin-bottom: 0;\n  }\n}\n\n.btn {\n  display: inline-block;\n  font-weight: 400;\n  color: #212529;\n  text-align: center;\n  vertical-align: middle;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  background-color: transparent;\n  border: 1px solid transparent;\n  padding: 0.375rem 0.75rem;\n  font-size: 1rem;\n  line-height: 1.5;\n  border-radius: 0.25rem;\n  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .btn {\n    transition: none;\n  }\n}\n\n.btn:hover {\n  color: #212529;\n  text-decoration: none;\n}\n\n.btn:focus, .btn.focus {\n  outline: 0;\n  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);\n}\n\n.btn.disabled, .btn:disabled {\n  opacity: 0.65;\n}\n\n.btn:not(:disabled):not(.disabled) {\n  cursor: pointer;\n}\n\na.btn.disabled,\nfieldset:disabled a.btn {\n  pointer-events: none;\n}\n\n.btn-primary {\n  color: #fff;\n  background-color: #007bff;\n  border-color: #007bff;\n}\n\n.btn-primary:hover {\n  color: #fff;\n  background-color: #0069d9;\n  border-color: #0062cc;\n}\n\n.btn-primary:focus, .btn-primary.focus {\n  color: #fff;\n  background-color: #0069d9;\n  border-color: #0062cc;\n  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);\n}\n\n.btn-primary.disabled, .btn-primary:disabled {\n  color: #fff;\n  background-color: #007bff;\n  border-color: #007bff;\n}\n\n.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,\n.show > .btn-primary.dropdown-toggle {\n  color: #fff;\n  background-color: #0062cc;\n  border-color: #005cbf;\n}\n\n.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,\n.show > .btn-primary.dropdown-toggle:focus {\n  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);\n}\n\n.btn-secondary {\n  color: #fff;\n  background-color: #6c757d;\n  border-color: #6c757d;\n}\n\n.btn-secondary:hover {\n  color: #fff;\n  background-color: #5a6268;\n  border-color: #545b62;\n}\n\n.btn-secondary:focus, .btn-secondary.focus {\n  color: #fff;\n  background-color: #5a6268;\n  border-color: #545b62;\n  box-shadow: 0 0 0 0.2rem rgba(130, 138, 145, 0.5);\n}\n\n.btn-secondary.disabled, .btn-secondary:disabled {\n  color: #fff;\n  background-color: #6c757d;\n  border-color: #6c757d;\n}\n\n.btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active,\n.show > .btn-secondary.dropdown-toggle {\n  color: #fff;\n  background-color: #545b62;\n  border-color: #4e555b;\n}\n\n.btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus,\n.show > .btn-secondary.dropdown-toggle:focus {\n  box-shadow: 0 0 0 0.2rem rgba(130, 138, 145, 0.5);\n}\n\n.btn-success {\n  color: #fff;\n  background-color: #28a745;\n  border-color: #28a745;\n}\n\n.btn-success:hover {\n  color: #fff;\n  background-color: #218838;\n  border-color: #1e7e34;\n}\n\n.btn-success:focus, .btn-success.focus {\n  color: #fff;\n  background-color: #218838;\n  border-color: #1e7e34;\n  box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);\n}\n\n.btn-success.disabled, .btn-success:disabled {\n  color: #fff;\n  background-color: #28a745;\n  border-color: #28a745;\n}\n\n.btn-success:not(:disabled):not(.disabled):active, .btn-success:not(:disabled):not(.disabled).active,\n.show > .btn-success.dropdown-toggle {\n  color: #fff;\n  background-color: #1e7e34;\n  border-color: #1c7430;\n}\n\n.btn-success:not(:disabled):not(.disabled):active:focus, .btn-success:not(:disabled):not(.disabled).active:focus,\n.show > .btn-success.dropdown-toggle:focus {\n  box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);\n}\n\n.btn-info {\n  color: #fff;\n  background-color: #17a2b8;\n  border-color: #17a2b8;\n}\n\n.btn-info:hover {\n  color: #fff;\n  background-color: #138496;\n  border-color: #117a8b;\n}\n\n.btn-info:focus, .btn-info.focus {\n  color: #fff;\n  background-color: #138496;\n  border-color: #117a8b;\n  box-shadow: 0 0 0 0.2rem rgba(58, 176, 195, 0.5);\n}\n\n.btn-info.disabled, .btn-info:disabled {\n  color: #fff;\n  background-color: #17a2b8;\n  border-color: #17a2b8;\n}\n\n.btn-info:not(:disabled):not(.disabled):active, .btn-info:not(:disabled):not(.disabled).active,\n.show > .btn-info.dropdown-toggle {\n  color: #fff;\n  background-color: #117a8b;\n  border-color: #10707f;\n}\n\n.btn-info:not(:disabled):not(.disabled):active:focus, .btn-info:not(:disabled):not(.disabled).active:focus,\n.show > .btn-info.dropdown-toggle:focus {\n  box-shadow: 0 0 0 0.2rem rgba(58, 176, 195, 0.5);\n}\n\n.btn-warning {\n  color: #212529;\n  background-color: #ffc107;\n  border-color: #ffc107;\n}\n\n.btn-warning:hover {\n  color: #212529;\n  background-color: #e0a800;\n  border-color: #d39e00;\n}\n\n.btn-warning:focus, .btn-warning.focus {\n  color: #212529;\n  background-color: #e0a800;\n  border-color: #d39e00;\n  box-shadow: 0 0 0 0.2rem rgba(222, 170, 12, 0.5);\n}\n\n.btn-warning.disabled, .btn-warning:disabled {\n  color: #212529;\n  background-color: #ffc107;\n  border-color: #ffc107;\n}\n\n.btn-warning:not(:disabled):not(.disabled):active, .btn-warning:not(:disabled):not(.disabled).active,\n.show > .btn-warning.dropdown-toggle {\n  color: #212529;\n  background-color: #d39e00;\n  border-color: #c69500;\n}\n\n.btn-warning:not(:disabled):not(.disabled):active:focus, .btn-warning:not(:disabled):not(.disabled).active:focus,\n.show > .btn-warning.dropdown-toggle:focus {\n  box-shadow: 0 0 0 0.2rem rgba(222, 170, 12, 0.5);\n}\n\n.btn-danger {\n  color: #fff;\n  background-color: #dc3545;\n  border-color: #dc3545;\n}\n\n.btn-danger:hover {\n  color: #fff;\n  background-color: #c82333;\n  border-color: #bd2130;\n}\n\n.btn-danger:focus, .btn-danger.focus {\n  color: #fff;\n  background-color: #c82333;\n  border-color: #bd2130;\n  box-shadow: 0 0 0 0.2rem rgba(225, 83, 97, 0.5);\n}\n\n.btn-danger.disabled, .btn-danger:disabled {\n  color: #fff;\n  background-color: #dc3545;\n  border-color: #dc3545;\n}\n\n.btn-danger:not(:disabled):not(.disabled):active, .btn-danger:not(:disabled):not(.disabled).active,\n.show > .btn-danger.dropdown-toggle {\n  color: #fff;\n  background-color: #bd2130;\n  border-color: #b21f2d;\n}\n\n.btn-danger:not(:disabled):not(.disabled):active:focus, .btn-danger:not(:disabled):not(.disabled).active:focus,\n.show > .btn-danger.dropdown-toggle:focus {\n  box-shadow: 0 0 0 0.2rem rgba(225, 83, 97, 0.5);\n}\n\n.btn-light {\n  color: #212529;\n  background-color: #f8f9fa;\n  border-color: #f8f9fa;\n}\n\n.btn-light:hover {\n  color: #212529;\n  background-color: #e2e6ea;\n  border-color: #dae0e5;\n}\n\n.btn-light:focus, .btn-light.focus {\n  color: #212529;\n  background-color: #e2e6ea;\n  border-color: #dae0e5;\n  box-shadow: 0 0 0 0.2rem rgba(216, 217, 219, 0.5);\n}\n\n.btn-light.disabled, .btn-light:disabled {\n  color: #212529;\n  background-color: #f8f9fa;\n  border-color: #f8f9fa;\n}\n\n.btn-light:not(:disabled):not(.disabled):active, .btn-light:not(:disabled):not(.disabled).active,\n.show > .btn-light.dropdown-toggle {\n  color: #212529;\n  background-color: #dae0e5;\n  border-color: #d3d9df;\n}\n\n.btn-light:not(:disabled):not(.disabled):active:focus, .btn-light:not(:disabled):not(.disabled).active:focus,\n.show > .btn-light.dropdown-toggle:focus {\n  box-shadow: 0 0 0 0.2rem rgba(216, 217, 219, 0.5);\n}\n\n.btn-dark {\n  color: #fff;\n  background-color: #343a40;\n  border-color: #343a40;\n}\n\n.btn-dark:hover {\n  color: #fff;\n  background-color: #23272b;\n  border-color: #1d2124;\n}\n\n.btn-dark:focus, .btn-dark.focus {\n  color: #fff;\n  background-color: #23272b;\n  border-color: #1d2124;\n  box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);\n}\n\n.btn-dark.disabled, .btn-dark:disabled {\n  color: #fff;\n  background-color: #343a40;\n  border-color: #343a40;\n}\n\n.btn-dark:not(:disabled):not(.disabled):active, .btn-dark:not(:disabled):not(.disabled).active,\n.show > .btn-dark.dropdown-toggle {\n  color: #fff;\n  background-color: #1d2124;\n  border-color: #171a1d;\n}\n\n.btn-dark:not(:disabled):not(.disabled):active:focus, .btn-dark:not(:disabled):not(.disabled).active:focus,\n.show > .btn-dark.dropdown-toggle:focus {\n  box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);\n}\n\n.btn-outline-primary {\n  color: #007bff;\n  border-color: #007bff;\n}\n\n.btn-outline-primary:hover {\n  color: #fff;\n  background-color: #007bff;\n  border-color: #007bff;\n}\n\n.btn-outline-primary:focus, .btn-outline-primary.focus {\n  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);\n}\n\n.btn-outline-primary.disabled, .btn-outline-primary:disabled {\n  color: #007bff;\n  background-color: transparent;\n}\n\n.btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active,\n.show > .btn-outline-primary.dropdown-toggle {\n  color: #fff;\n  background-color: #007bff;\n  border-color: #007bff;\n}\n\n.btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus,\n.show > .btn-outline-primary.dropdown-toggle:focus {\n  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);\n}\n\n.btn-outline-secondary {\n  color: #6c757d;\n  border-color: #6c757d;\n}\n\n.btn-outline-secondary:hover {\n  color: #fff;\n  background-color: #6c757d;\n  border-color: #6c757d;\n}\n\n.btn-outline-secondary:focus, .btn-outline-secondary.focus {\n  box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5);\n}\n\n.btn-outline-secondary.disabled, .btn-outline-secondary:disabled {\n  color: #6c757d;\n  background-color: transparent;\n}\n\n.btn-outline-secondary:not(:disabled):not(.disabled):active, .btn-outline-secondary:not(:disabled):not(.disabled).active,\n.show > .btn-outline-secondary.dropdown-toggle {\n  color: #fff;\n  background-color: #6c757d;\n  border-color: #6c757d;\n}\n\n.btn-outline-secondary:not(:disabled):not(.disabled):active:focus, .btn-outline-secondary:not(:disabled):not(.disabled).active:focus,\n.show > .btn-outline-secondary.dropdown-toggle:focus {\n  box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5);\n}\n\n.btn-outline-success {\n  color: #28a745;\n  border-color: #28a745;\n}\n\n.btn-outline-success:hover {\n  color: #fff;\n  background-color: #28a745;\n  border-color: #28a745;\n}\n\n.btn-outline-success:focus, .btn-outline-success.focus {\n  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);\n}\n\n.btn-outline-success.disabled, .btn-outline-success:disabled {\n  color: #28a745;\n  background-color: transparent;\n}\n\n.btn-outline-success:not(:disabled):not(.disabled):active, .btn-outline-success:not(:disabled):not(.disabled).active,\n.show > .btn-outline-success.dropdown-toggle {\n  color: #fff;\n  background-color: #28a745;\n  border-color: #28a745;\n}\n\n.btn-outline-success:not(:disabled):not(.disabled):active:focus, .btn-outline-success:not(:disabled):not(.disabled).active:focus,\n.show > .btn-outline-success.dropdown-toggle:focus {\n  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);\n}\n\n.btn-outline-info {\n  color: #17a2b8;\n  border-color: #17a2b8;\n}\n\n.btn-outline-info:hover {\n  color: #fff;\n  background-color: #17a2b8;\n  border-color: #17a2b8;\n}\n\n.btn-outline-info:focus, .btn-outline-info.focus {\n  box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5);\n}\n\n.btn-outline-info.disabled, .btn-outline-info:disabled {\n  color: #17a2b8;\n  background-color: transparent;\n}\n\n.btn-outline-info:not(:disabled):not(.disabled):active, .btn-outline-info:not(:disabled):not(.disabled).active,\n.show > .btn-outline-info.dropdown-toggle {\n  color: #fff;\n  background-color: #17a2b8;\n  border-color: #17a2b8;\n}\n\n.btn-outline-info:not(:disabled):not(.disabled):active:focus, .btn-outline-info:not(:disabled):not(.disabled).active:focus,\n.show > .btn-outline-info.dropdown-toggle:focus {\n  box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5);\n}\n\n.btn-outline-warning {\n  color: #ffc107;\n  border-color: #ffc107;\n}\n\n.btn-outline-warning:hover {\n  color: #212529;\n  background-color: #ffc107;\n  border-color: #ffc107;\n}\n\n.btn-outline-warning:focus, .btn-outline-warning.focus {\n  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5);\n}\n\n.btn-outline-warning.disabled, .btn-outline-warning:disabled {\n  color: #ffc107;\n  background-color: transparent;\n}\n\n.btn-outline-warning:not(:disabled):not(.disabled):active, .btn-outline-warning:not(:disabled):not(.disabled).active,\n.show > .btn-outline-warning.dropdown-toggle {\n  color: #212529;\n  background-color: #ffc107;\n  border-color: #ffc107;\n}\n\n.btn-outline-warning:not(:disabled):not(.disabled):active:focus, .btn-outline-warning:not(:disabled):not(.disabled).active:focus,\n.show > .btn-outline-warning.dropdown-toggle:focus {\n  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5);\n}\n\n.btn-outline-danger {\n  color: #dc3545;\n  border-color: #dc3545;\n}\n\n.btn-outline-danger:hover {\n  color: #fff;\n  background-color: #dc3545;\n  border-color: #dc3545;\n}\n\n.btn-outline-danger:focus, .btn-outline-danger.focus {\n  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);\n}\n\n.btn-outline-danger.disabled, .btn-outline-danger:disabled {\n  color: #dc3545;\n  background-color: transparent;\n}\n\n.btn-outline-danger:not(:disabled):not(.disabled):active, .btn-outline-danger:not(:disabled):not(.disabled).active,\n.show > .btn-outline-danger.dropdown-toggle {\n  color: #fff;\n  background-color: #dc3545;\n  border-color: #dc3545;\n}\n\n.btn-outline-danger:not(:disabled):not(.disabled):active:focus, .btn-outline-danger:not(:disabled):not(.disabled).active:focus,\n.show > .btn-outline-danger.dropdown-toggle:focus {\n  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);\n}\n\n.btn-outline-light {\n  color: #f8f9fa;\n  border-color: #f8f9fa;\n}\n\n.btn-outline-light:hover {\n  color: #212529;\n  background-color: #f8f9fa;\n  border-color: #f8f9fa;\n}\n\n.btn-outline-light:focus, .btn-outline-light.focus {\n  box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);\n}\n\n.btn-outline-light.disabled, .btn-outline-light:disabled {\n  color: #f8f9fa;\n  background-color: transparent;\n}\n\n.btn-outline-light:not(:disabled):not(.disabled):active, .btn-outline-light:not(:disabled):not(.disabled).active,\n.show > .btn-outline-light.dropdown-toggle {\n  color: #212529;\n  background-color: #f8f9fa;\n  border-color: #f8f9fa;\n}\n\n.btn-outline-light:not(:disabled):not(.disabled):active:focus, .btn-outline-light:not(:disabled):not(.disabled).active:focus,\n.show > .btn-outline-light.dropdown-toggle:focus {\n  box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);\n}\n\n.btn-outline-dark {\n  color: #343a40;\n  border-color: #343a40;\n}\n\n.btn-outline-dark:hover {\n  color: #fff;\n  background-color: #343a40;\n  border-color: #343a40;\n}\n\n.btn-outline-dark:focus, .btn-outline-dark.focus {\n  box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);\n}\n\n.btn-outline-dark.disabled, .btn-outline-dark:disabled {\n  color: #343a40;\n  background-color: transparent;\n}\n\n.btn-outline-dark:not(:disabled):not(.disabled):active, .btn-outline-dark:not(:disabled):not(.disabled).active,\n.show > .btn-outline-dark.dropdown-toggle {\n  color: #fff;\n  background-color: #343a40;\n  border-color: #343a40;\n}\n\n.btn-outline-dark:not(:disabled):not(.disabled):active:focus, .btn-outline-dark:not(:disabled):not(.disabled).active:focus,\n.show > .btn-outline-dark.dropdown-toggle:focus {\n  box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);\n}\n\n.btn-link {\n  font-weight: 400;\n  color: #007bff;\n  text-decoration: none;\n}\n\n.btn-link:hover {\n  color: #0056b3;\n  text-decoration: underline;\n}\n\n.btn-link:focus, .btn-link.focus {\n  text-decoration: underline;\n}\n\n.btn-link:disabled, .btn-link.disabled {\n  color: #6c757d;\n  pointer-events: none;\n}\n\n.btn-lg, .btn-group-lg > .btn {\n  padding: 0.5rem 1rem;\n  font-size: 1.25rem;\n  line-height: 1.5;\n  border-radius: 0.3rem;\n}\n\n.btn-sm, .btn-group-sm > .btn {\n  padding: 0.25rem 0.5rem;\n  font-size: 0.875rem;\n  line-height: 1.5;\n  border-radius: 0.2rem;\n}\n\n.btn-block {\n  display: block;\n  width: 100%;\n}\n\n.btn-block + .btn-block {\n  margin-top: 0.5rem;\n}\n\ninput[type=\"submit\"].btn-block,\ninput[type=\"reset\"].btn-block,\ninput[type=\"button\"].btn-block {\n  width: 100%;\n}\n\n.fade {\n  transition: opacity 0.15s linear;\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .fade {\n    transition: none;\n  }\n}\n\n.fade:not(.show) {\n  opacity: 0;\n}\n\n.collapse:not(.show) {\n  display: none;\n}\n\n.collapsing {\n  position: relative;\n  height: 0;\n  overflow: hidden;\n  transition: height 0.35s ease;\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .collapsing {\n    transition: none;\n  }\n}\n\n.dropup,\n.dropright,\n.dropdown,\n.dropleft {\n  position: relative;\n}\n\n.dropdown-toggle {\n  white-space: nowrap;\n}\n\n.dropdown-toggle::after {\n  display: inline-block;\n  margin-left: 0.255em;\n  vertical-align: 0.255em;\n  content: \"\";\n  border-top: 0.3em solid;\n  border-right: 0.3em solid transparent;\n  border-bottom: 0;\n  border-left: 0.3em solid transparent;\n}\n\n.dropdown-toggle:empty::after {\n  margin-left: 0;\n}\n\n.dropdown-menu {\n  position: absolute;\n  top: 100%;\n  left: 0;\n  z-index: 1000;\n  display: none;\n  float: left;\n  min-width: 10rem;\n  padding: 0.5rem 0;\n  margin: 0.125rem 0 0;\n  font-size: 1rem;\n  color: #212529;\n  text-align: left;\n  list-style: none;\n  background-color: #fff;\n  background-clip: padding-box;\n  border: 1px solid rgba(0, 0, 0, 0.15);\n  border-radius: 0.25rem;\n}\n\n.dropdown-menu-left {\n  right: auto;\n  left: 0;\n}\n\n.dropdown-menu-right {\n  right: 0;\n  left: auto;\n}\n\n@media (min-width: 576px) {\n  .dropdown-menu-sm-left {\n    right: auto;\n    left: 0;\n  }\n  .dropdown-menu-sm-right {\n    right: 0;\n    left: auto;\n  }\n}\n\n@media (min-width: 768px) {\n  .dropdown-menu-md-left {\n    right: auto;\n    left: 0;\n  }\n  .dropdown-menu-md-right {\n    right: 0;\n    left: auto;\n  }\n}\n\n@media (min-width: 992px) {\n  .dropdown-menu-lg-left {\n    right: auto;\n    left: 0;\n  }\n  .dropdown-menu-lg-right {\n    right: 0;\n    left: auto;\n  }\n}\n\n@media (min-width: 1200px) {\n  .dropdown-menu-xl-left {\n    right: auto;\n    left: 0;\n  }\n  .dropdown-menu-xl-right {\n    right: 0;\n    left: auto;\n  }\n}\n\n.dropup .dropdown-menu {\n  top: auto;\n  bottom: 100%;\n  margin-top: 0;\n  margin-bottom: 0.125rem;\n}\n\n.dropup .dropdown-toggle::after {\n  display: inline-block;\n  margin-left: 0.255em;\n  vertical-align: 0.255em;\n  content: \"\";\n  border-top: 0;\n  border-right: 0.3em solid transparent;\n  border-bottom: 0.3em solid;\n  border-left: 0.3em solid transparent;\n}\n\n.dropup .dropdown-toggle:empty::after {\n  margin-left: 0;\n}\n\n.dropright .dropdown-menu {\n  top: 0;\n  right: auto;\n  left: 100%;\n  margin-top: 0;\n  margin-left: 0.125rem;\n}\n\n.dropright .dropdown-toggle::after {\n  display: inline-block;\n  margin-left: 0.255em;\n  vertical-align: 0.255em;\n  content: \"\";\n  border-top: 0.3em solid transparent;\n  border-right: 0;\n  border-bottom: 0.3em solid transparent;\n  border-left: 0.3em solid;\n}\n\n.dropright .dropdown-toggle:empty::after {\n  margin-left: 0;\n}\n\n.dropright .dropdown-toggle::after {\n  vertical-align: 0;\n}\n\n.dropleft .dropdown-menu {\n  top: 0;\n  right: 100%;\n  left: auto;\n  margin-top: 0;\n  margin-right: 0.125rem;\n}\n\n.dropleft .dropdown-toggle::after {\n  display: inline-block;\n  margin-left: 0.255em;\n  vertical-align: 0.255em;\n  content: \"\";\n}\n\n.dropleft .dropdown-toggle::after {\n  display: none;\n}\n\n.dropleft .dropdown-toggle::before {\n  display: inline-block;\n  margin-right: 0.255em;\n  vertical-align: 0.255em;\n  content: \"\";\n  border-top: 0.3em solid transparent;\n  border-right: 0.3em solid;\n  border-bottom: 0.3em solid transparent;\n}\n\n.dropleft .dropdown-toggle:empty::after {\n  margin-left: 0;\n}\n\n.dropleft .dropdown-toggle::before {\n  vertical-align: 0;\n}\n\n.dropdown-menu[x-placement^=\"top\"], .dropdown-menu[x-placement^=\"right\"], .dropdown-menu[x-placement^=\"bottom\"], .dropdown-menu[x-placement^=\"left\"] {\n  right: auto;\n  bottom: auto;\n}\n\n.dropdown-divider {\n  height: 0;\n  margin: 0.5rem 0;\n  overflow: hidden;\n  border-top: 1px solid #e9ecef;\n}\n\n.dropdown-item {\n  display: block;\n  width: 100%;\n  padding: 0.25rem 1.5rem;\n  clear: both;\n  font-weight: 400;\n  color: #212529;\n  text-align: inherit;\n  white-space: nowrap;\n  background-color: transparent;\n  border: 0;\n}\n\n.dropdown-item:hover, .dropdown-item:focus {\n  color: #16181b;\n  text-decoration: none;\n  background-color: #f8f9fa;\n}\n\n.dropdown-item.active, .dropdown-item:active {\n  color: #fff;\n  text-decoration: none;\n  background-color: #007bff;\n}\n\n.dropdown-item.disabled, .dropdown-item:disabled {\n  color: #6c757d;\n  pointer-events: none;\n  background-color: transparent;\n}\n\n.dropdown-menu.show {\n  display: block;\n}\n\n.dropdown-header {\n  display: block;\n  padding: 0.5rem 1.5rem;\n  margin-bottom: 0;\n  font-size: 0.875rem;\n  color: #6c757d;\n  white-space: nowrap;\n}\n\n.dropdown-item-text {\n  display: block;\n  padding: 0.25rem 1.5rem;\n  color: #212529;\n}\n\n.btn-group,\n.btn-group-vertical {\n  position: relative;\n  display: inline-flex;\n  vertical-align: middle;\n}\n\n.btn-group > .btn,\n.btn-group-vertical > .btn {\n  position: relative;\n  flex: 1 1 auto;\n}\n\n.btn-group > .btn:hover,\n.btn-group-vertical > .btn:hover {\n  z-index: 1;\n}\n\n.btn-group > .btn:focus, .btn-group > .btn:active, .btn-group > .btn.active,\n.btn-group-vertical > .btn:focus,\n.btn-group-vertical > .btn:active,\n.btn-group-vertical > .btn.active {\n  z-index: 1;\n}\n\n.btn-toolbar {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: flex-start;\n}\n\n.btn-toolbar .input-group {\n  width: auto;\n}\n\n.btn-group > .btn:not(:first-child),\n.btn-group > .btn-group:not(:first-child) {\n  margin-left: -1px;\n}\n\n.btn-group > .btn:not(:last-child):not(.dropdown-toggle),\n.btn-group > .btn-group:not(:last-child) > .btn {\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n}\n\n.btn-group > .btn:not(:first-child),\n.btn-group > .btn-group:not(:first-child) > .btn {\n  border-top-left-radius: 0;\n  border-bottom-left-radius: 0;\n}\n\n.dropdown-toggle-split {\n  padding-right: 0.5625rem;\n  padding-left: 0.5625rem;\n}\n\n.dropdown-toggle-split::after,\n.dropup .dropdown-toggle-split::after,\n.dropright .dropdown-toggle-split::after {\n  margin-left: 0;\n}\n\n.dropleft .dropdown-toggle-split::before {\n  margin-right: 0;\n}\n\n.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split {\n  padding-right: 0.375rem;\n  padding-left: 0.375rem;\n}\n\n.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split {\n  padding-right: 0.75rem;\n  padding-left: 0.75rem;\n}\n\n.btn-group-vertical {\n  flex-direction: column;\n  align-items: flex-start;\n  justify-content: center;\n}\n\n.btn-group-vertical > .btn,\n.btn-group-vertical > .btn-group {\n  width: 100%;\n}\n\n.btn-group-vertical > .btn:not(:first-child),\n.btn-group-vertical > .btn-group:not(:first-child) {\n  margin-top: -1px;\n}\n\n.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),\n.btn-group-vertical > .btn-group:not(:last-child) > .btn {\n  border-bottom-right-radius: 0;\n  border-bottom-left-radius: 0;\n}\n\n.btn-group-vertical > .btn:not(:first-child),\n.btn-group-vertical > .btn-group:not(:first-child) > .btn {\n  border-top-left-radius: 0;\n  border-top-right-radius: 0;\n}\n\n.btn-group-toggle > .btn,\n.btn-group-toggle > .btn-group > .btn {\n  margin-bottom: 0;\n}\n\n.btn-group-toggle > .btn input[type=\"radio\"],\n.btn-group-toggle > .btn input[type=\"checkbox\"],\n.btn-group-toggle > .btn-group > .btn input[type=\"radio\"],\n.btn-group-toggle > .btn-group > .btn input[type=\"checkbox\"] {\n  position: absolute;\n  clip: rect(0, 0, 0, 0);\n  pointer-events: none;\n}\n\n.input-group {\n  position: relative;\n  display: flex;\n  flex-wrap: wrap;\n  align-items: stretch;\n  width: 100%;\n}\n\n.input-group > .form-control,\n.input-group > .form-control-plaintext,\n.input-group > .custom-select,\n.input-group > .custom-file {\n  position: relative;\n  flex: 1 1 auto;\n  width: 1%;\n  min-width: 0;\n  margin-bottom: 0;\n}\n\n.input-group > .form-control + .form-control,\n.input-group > .form-control + .custom-select,\n.input-group > .form-control + .custom-file,\n.input-group > .form-control-plaintext + .form-control,\n.input-group > .form-control-plaintext + .custom-select,\n.input-group > .form-control-plaintext + .custom-file,\n.input-group > .custom-select + .form-control,\n.input-group > .custom-select + .custom-select,\n.input-group > .custom-select + .custom-file,\n.input-group > .custom-file + .form-control,\n.input-group > .custom-file + .custom-select,\n.input-group > .custom-file + .custom-file {\n  margin-left: -1px;\n}\n\n.input-group > .form-control:focus,\n.input-group > .custom-select:focus,\n.input-group > .custom-file .custom-file-input:focus ~ .custom-file-label {\n  z-index: 3;\n}\n\n.input-group > .custom-file .custom-file-input:focus {\n  z-index: 4;\n}\n\n.input-group > .form-control:not(:last-child),\n.input-group > .custom-select:not(:last-child) {\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n}\n\n.input-group > .form-control:not(:first-child),\n.input-group > .custom-select:not(:first-child) {\n  border-top-left-radius: 0;\n  border-bottom-left-radius: 0;\n}\n\n.input-group > .custom-file {\n  display: flex;\n  align-items: center;\n}\n\n.input-group > .custom-file:not(:last-child) .custom-file-label,\n.input-group > .custom-file:not(:last-child) .custom-file-label::after {\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n}\n\n.input-group > .custom-file:not(:first-child) .custom-file-label {\n  border-top-left-radius: 0;\n  border-bottom-left-radius: 0;\n}\n\n.input-group-prepend,\n.input-group-append {\n  display: flex;\n}\n\n.input-group-prepend .btn,\n.input-group-append .btn {\n  position: relative;\n  z-index: 2;\n}\n\n.input-group-prepend .btn:focus,\n.input-group-append .btn:focus {\n  z-index: 3;\n}\n\n.input-group-prepend .btn + .btn,\n.input-group-prepend .btn + .input-group-text,\n.input-group-prepend .input-group-text + .input-group-text,\n.input-group-prepend .input-group-text + .btn,\n.input-group-append .btn + .btn,\n.input-group-append .btn + .input-group-text,\n.input-group-append .input-group-text + .input-group-text,\n.input-group-append .input-group-text + .btn {\n  margin-left: -1px;\n}\n\n.input-group-prepend {\n  margin-right: -1px;\n}\n\n.input-group-append {\n  margin-left: -1px;\n}\n\n.input-group-text {\n  display: flex;\n  align-items: center;\n  padding: 0.375rem 0.75rem;\n  margin-bottom: 0;\n  font-size: 1rem;\n  font-weight: 400;\n  line-height: 1.5;\n  color: #495057;\n  text-align: center;\n  white-space: nowrap;\n  background-color: #e9ecef;\n  border: 1px solid #ced4da;\n  border-radius: 0.25rem;\n}\n\n.input-group-text input[type=\"radio\"],\n.input-group-text input[type=\"checkbox\"] {\n  margin-top: 0;\n}\n\n.input-group-lg > .form-control:not(textarea),\n.input-group-lg > .custom-select {\n  height: calc(1.5em + 1rem + 2px);\n}\n\n.input-group-lg > .form-control,\n.input-group-lg > .custom-select,\n.input-group-lg > .input-group-prepend > .input-group-text,\n.input-group-lg > .input-group-append > .input-group-text,\n.input-group-lg > .input-group-prepend > .btn,\n.input-group-lg > .input-group-append > .btn {\n  padding: 0.5rem 1rem;\n  font-size: 1.25rem;\n  line-height: 1.5;\n  border-radius: 0.3rem;\n}\n\n.input-group-sm > .form-control:not(textarea),\n.input-group-sm > .custom-select {\n  height: calc(1.5em + 0.5rem + 2px);\n}\n\n.input-group-sm > .form-control,\n.input-group-sm > .custom-select,\n.input-group-sm > .input-group-prepend > .input-group-text,\n.input-group-sm > .input-group-append > .input-group-text,\n.input-group-sm > .input-group-prepend > .btn,\n.input-group-sm > .input-group-append > .btn {\n  padding: 0.25rem 0.5rem;\n  font-size: 0.875rem;\n  line-height: 1.5;\n  border-radius: 0.2rem;\n}\n\n.input-group-lg > .custom-select,\n.input-group-sm > .custom-select {\n  padding-right: 1.75rem;\n}\n\n.input-group > .input-group-prepend > .btn,\n.input-group > .input-group-prepend > .input-group-text,\n.input-group > .input-group-append:not(:last-child) > .btn,\n.input-group > .input-group-append:not(:last-child) > .input-group-text,\n.input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),\n.input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n}\n\n.input-group > .input-group-append > .btn,\n.input-group > .input-group-append > .input-group-text,\n.input-group > .input-group-prepend:not(:first-child) > .btn,\n.input-group > .input-group-prepend:not(:first-child) > .input-group-text,\n.input-group > .input-group-prepend:first-child > .btn:not(:first-child),\n.input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {\n  border-top-left-radius: 0;\n  border-bottom-left-radius: 0;\n}\n\n.custom-control {\n  position: relative;\n  display: block;\n  min-height: 1.5rem;\n  padding-left: 1.5rem;\n}\n\n.custom-control-inline {\n  display: inline-flex;\n  margin-right: 1rem;\n}\n\n.custom-control-input {\n  position: absolute;\n  left: 0;\n  z-index: -1;\n  width: 1rem;\n  height: 1.25rem;\n  opacity: 0;\n}\n\n.custom-control-input:checked ~ .custom-control-label::before {\n  color: #fff;\n  border-color: #007bff;\n  background-color: #007bff;\n}\n\n.custom-control-input:focus ~ .custom-control-label::before {\n  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);\n}\n\n.custom-control-input:focus:not(:checked) ~ .custom-control-label::before {\n  border-color: #80bdff;\n}\n\n.custom-control-input:not(:disabled):active ~ .custom-control-label::before {\n  color: #fff;\n  background-color: #b3d7ff;\n  border-color: #b3d7ff;\n}\n\n.custom-control-input[disabled] ~ .custom-control-label, .custom-control-input:disabled ~ .custom-control-label {\n  color: #6c757d;\n}\n\n.custom-control-input[disabled] ~ .custom-control-label::before, .custom-control-input:disabled ~ .custom-control-label::before {\n  background-color: #e9ecef;\n}\n\n.custom-control-label {\n  position: relative;\n  margin-bottom: 0;\n  vertical-align: top;\n}\n\n.custom-control-label::before {\n  position: absolute;\n  top: 0.25rem;\n  left: -1.5rem;\n  display: block;\n  width: 1rem;\n  height: 1rem;\n  pointer-events: none;\n  content: \"\";\n  background-color: #fff;\n  border: #adb5bd solid 1px;\n}\n\n.custom-control-label::after {\n  position: absolute;\n  top: 0.25rem;\n  left: -1.5rem;\n  display: block;\n  width: 1rem;\n  height: 1rem;\n  content: \"\";\n  background: no-repeat 50% / 50% 50%;\n}\n\n.custom-checkbox .custom-control-label::before {\n  border-radius: 0.25rem;\n}\n\n.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {\n  background-image: url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26l2.974 2.99L8 2.193z'/%3e%3c/svg%3e\");\n}\n\n.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::before {\n  border-color: #007bff;\n  background-color: #007bff;\n}\n\n.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::after {\n  background-image: url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3e%3cpath stroke='%23fff' d='M0 2h4'/%3e%3c/svg%3e\");\n}\n\n.custom-checkbox .custom-control-input:disabled:checked ~ .custom-control-label::before {\n  background-color: rgba(0, 123, 255, 0.5);\n}\n\n.custom-checkbox .custom-control-input:disabled:indeterminate ~ .custom-control-label::before {\n  background-color: rgba(0, 123, 255, 0.5);\n}\n\n.custom-radio .custom-control-label::before {\n  border-radius: 50%;\n}\n\n.custom-radio .custom-control-input:checked ~ .custom-control-label::after {\n  background-image: url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e\");\n}\n\n.custom-radio .custom-control-input:disabled:checked ~ .custom-control-label::before {\n  background-color: rgba(0, 123, 255, 0.5);\n}\n\n.custom-switch {\n  padding-left: 2.25rem;\n}\n\n.custom-switch .custom-control-label::before {\n  left: -2.25rem;\n  width: 1.75rem;\n  pointer-events: all;\n  border-radius: 0.5rem;\n}\n\n.custom-switch .custom-control-label::after {\n  top: calc(0.25rem + 2px);\n  left: calc(-2.25rem + 2px);\n  width: calc(1rem - 4px);\n  height: calc(1rem - 4px);\n  background-color: #adb5bd;\n  border-radius: 0.5rem;\n  transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .custom-switch .custom-control-label::after {\n    transition: none;\n  }\n}\n\n.custom-switch .custom-control-input:checked ~ .custom-control-label::after {\n  background-color: #fff;\n  transform: translateX(0.75rem);\n}\n\n.custom-switch .custom-control-input:disabled:checked ~ .custom-control-label::before {\n  background-color: rgba(0, 123, 255, 0.5);\n}\n\n.custom-select {\n  display: inline-block;\n  width: 100%;\n  height: calc(1.5em + 0.75rem + 2px);\n  padding: 0.375rem 1.75rem 0.375rem 0.75rem;\n  font-size: 1rem;\n  font-weight: 400;\n  line-height: 1.5;\n  color: #495057;\n  vertical-align: middle;\n  background: #fff url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e\") no-repeat right 0.75rem center/8px 10px;\n  border: 1px solid #ced4da;\n  border-radius: 0.25rem;\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n}\n\n.custom-select:focus {\n  border-color: #80bdff;\n  outline: 0;\n  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);\n}\n\n.custom-select:focus::-ms-value {\n  color: #495057;\n  background-color: #fff;\n}\n\n.custom-select[multiple], .custom-select[size]:not([size=\"1\"]) {\n  height: auto;\n  padding-right: 0.75rem;\n  background-image: none;\n}\n\n.custom-select:disabled {\n  color: #6c757d;\n  background-color: #e9ecef;\n}\n\n.custom-select::-ms-expand {\n  display: none;\n}\n\n.custom-select:-moz-focusring {\n  color: transparent;\n  text-shadow: 0 0 0 #495057;\n}\n\n.custom-select-sm {\n  height: calc(1.5em + 0.5rem + 2px);\n  padding-top: 0.25rem;\n  padding-bottom: 0.25rem;\n  padding-left: 0.5rem;\n  font-size: 0.875rem;\n}\n\n.custom-select-lg {\n  height: calc(1.5em + 1rem + 2px);\n  padding-top: 0.5rem;\n  padding-bottom: 0.5rem;\n  padding-left: 1rem;\n  font-size: 1.25rem;\n}\n\n.custom-file {\n  position: relative;\n  display: inline-block;\n  width: 100%;\n  height: calc(1.5em + 0.75rem + 2px);\n  margin-bottom: 0;\n}\n\n.custom-file-input {\n  position: relative;\n  z-index: 2;\n  width: 100%;\n  height: calc(1.5em + 0.75rem + 2px);\n  margin: 0;\n  opacity: 0;\n}\n\n.custom-file-input:focus ~ .custom-file-label {\n  border-color: #80bdff;\n  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);\n}\n\n.custom-file-input[disabled] ~ .custom-file-label,\n.custom-file-input:disabled ~ .custom-file-label {\n  background-color: #e9ecef;\n}\n\n.custom-file-input:lang(en) ~ .custom-file-label::after {\n  content: \"Browse\";\n}\n\n.custom-file-input ~ .custom-file-label[data-browse]::after {\n  content: attr(data-browse);\n}\n\n.custom-file-label {\n  position: absolute;\n  top: 0;\n  right: 0;\n  left: 0;\n  z-index: 1;\n  height: calc(1.5em + 0.75rem + 2px);\n  padding: 0.375rem 0.75rem;\n  font-weight: 400;\n  line-height: 1.5;\n  color: #495057;\n  background-color: #fff;\n  border: 1px solid #ced4da;\n  border-radius: 0.25rem;\n}\n\n.custom-file-label::after {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  z-index: 3;\n  display: block;\n  height: calc(1.5em + 0.75rem);\n  padding: 0.375rem 0.75rem;\n  line-height: 1.5;\n  color: #495057;\n  content: \"Browse\";\n  background-color: #e9ecef;\n  border-left: inherit;\n  border-radius: 0 0.25rem 0.25rem 0;\n}\n\n.custom-range {\n  width: 100%;\n  height: 1.4rem;\n  padding: 0;\n  background-color: transparent;\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n}\n\n.custom-range:focus {\n  outline: none;\n}\n\n.custom-range:focus::-webkit-slider-thumb {\n  box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);\n}\n\n.custom-range:focus::-moz-range-thumb {\n  box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);\n}\n\n.custom-range:focus::-ms-thumb {\n  box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 123, 255, 0.25);\n}\n\n.custom-range::-moz-focus-outer {\n  border: 0;\n}\n\n.custom-range::-webkit-slider-thumb {\n  width: 1rem;\n  height: 1rem;\n  margin-top: -0.25rem;\n  background-color: #007bff;\n  border: 0;\n  border-radius: 1rem;\n  -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n  -webkit-appearance: none;\n  appearance: none;\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .custom-range::-webkit-slider-thumb {\n    -webkit-transition: none;\n    transition: none;\n  }\n}\n\n.custom-range::-webkit-slider-thumb:active {\n  background-color: #b3d7ff;\n}\n\n.custom-range::-webkit-slider-runnable-track {\n  width: 100%;\n  height: 0.5rem;\n  color: transparent;\n  cursor: pointer;\n  background-color: #dee2e6;\n  border-color: transparent;\n  border-radius: 1rem;\n}\n\n.custom-range::-moz-range-thumb {\n  width: 1rem;\n  height: 1rem;\n  background-color: #007bff;\n  border: 0;\n  border-radius: 1rem;\n  -moz-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n  -moz-appearance: none;\n  appearance: none;\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .custom-range::-moz-range-thumb {\n    -moz-transition: none;\n    transition: none;\n  }\n}\n\n.custom-range::-moz-range-thumb:active {\n  background-color: #b3d7ff;\n}\n\n.custom-range::-moz-range-track {\n  width: 100%;\n  height: 0.5rem;\n  color: transparent;\n  cursor: pointer;\n  background-color: #dee2e6;\n  border-color: transparent;\n  border-radius: 1rem;\n}\n\n.custom-range::-ms-thumb {\n  width: 1rem;\n  height: 1rem;\n  margin-top: 0;\n  margin-right: 0.2rem;\n  margin-left: 0.2rem;\n  background-color: #007bff;\n  border: 0;\n  border-radius: 1rem;\n  -ms-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n  appearance: none;\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .custom-range::-ms-thumb {\n    -ms-transition: none;\n    transition: none;\n  }\n}\n\n.custom-range::-ms-thumb:active {\n  background-color: #b3d7ff;\n}\n\n.custom-range::-ms-track {\n  width: 100%;\n  height: 0.5rem;\n  color: transparent;\n  cursor: pointer;\n  background-color: transparent;\n  border-color: transparent;\n  border-width: 0.5rem;\n}\n\n.custom-range::-ms-fill-lower {\n  background-color: #dee2e6;\n  border-radius: 1rem;\n}\n\n.custom-range::-ms-fill-upper {\n  margin-right: 15px;\n  background-color: #dee2e6;\n  border-radius: 1rem;\n}\n\n.custom-range:disabled::-webkit-slider-thumb {\n  background-color: #adb5bd;\n}\n\n.custom-range:disabled::-webkit-slider-runnable-track {\n  cursor: default;\n}\n\n.custom-range:disabled::-moz-range-thumb {\n  background-color: #adb5bd;\n}\n\n.custom-range:disabled::-moz-range-track {\n  cursor: default;\n}\n\n.custom-range:disabled::-ms-thumb {\n  background-color: #adb5bd;\n}\n\n.custom-control-label::before,\n.custom-file-label,\n.custom-select {\n  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .custom-control-label::before,\n  .custom-file-label,\n  .custom-select {\n    transition: none;\n  }\n}\n\n.nav {\n  display: flex;\n  flex-wrap: wrap;\n  padding-left: 0;\n  margin-bottom: 0;\n  list-style: none;\n}\n\n.nav-link {\n  display: block;\n  padding: 0.5rem 1rem;\n}\n\n.nav-link:hover, .nav-link:focus {\n  text-decoration: none;\n}\n\n.nav-link.disabled {\n  color: #6c757d;\n  pointer-events: none;\n  cursor: default;\n}\n\n.nav-tabs {\n  border-bottom: 1px solid #dee2e6;\n}\n\n.nav-tabs .nav-item {\n  margin-bottom: -1px;\n}\n\n.nav-tabs .nav-link {\n  border: 1px solid transparent;\n  border-top-left-radius: 0.25rem;\n  border-top-right-radius: 0.25rem;\n}\n\n.nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {\n  border-color: #e9ecef #e9ecef #dee2e6;\n}\n\n.nav-tabs .nav-link.disabled {\n  color: #6c757d;\n  background-color: transparent;\n  border-color: transparent;\n}\n\n.nav-tabs .nav-link.active,\n.nav-tabs .nav-item.show .nav-link {\n  color: #495057;\n  background-color: #fff;\n  border-color: #dee2e6 #dee2e6 #fff;\n}\n\n.nav-tabs .dropdown-menu {\n  margin-top: -1px;\n  border-top-left-radius: 0;\n  border-top-right-radius: 0;\n}\n\n.nav-pills .nav-link {\n  border-radius: 0.25rem;\n}\n\n.nav-pills .nav-link.active,\n.nav-pills .show > .nav-link {\n  color: #fff;\n  background-color: #007bff;\n}\n\n.nav-fill .nav-item {\n  flex: 1 1 auto;\n  text-align: center;\n}\n\n.nav-justified .nav-item {\n  flex-basis: 0;\n  flex-grow: 1;\n  text-align: center;\n}\n\n.tab-content > .tab-pane {\n  display: none;\n}\n\n.tab-content > .active {\n  display: block;\n}\n\n.navbar {\n  position: relative;\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  justify-content: space-between;\n  padding: 0.5rem 1rem;\n}\n\n.navbar .container,\n.navbar .container-fluid, .navbar .container-sm, .navbar .container-md, .navbar .container-lg, .navbar .container-xl {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  justify-content: space-between;\n}\n\n.navbar-brand {\n  display: inline-block;\n  padding-top: 0.3125rem;\n  padding-bottom: 0.3125rem;\n  margin-right: 1rem;\n  font-size: 1.25rem;\n  line-height: inherit;\n  white-space: nowrap;\n}\n\n.navbar-brand:hover, .navbar-brand:focus {\n  text-decoration: none;\n}\n\n.navbar-nav {\n  display: flex;\n  flex-direction: column;\n  padding-left: 0;\n  margin-bottom: 0;\n  list-style: none;\n}\n\n.navbar-nav .nav-link {\n  padding-right: 0;\n  padding-left: 0;\n}\n\n.navbar-nav .dropdown-menu {\n  position: static;\n  float: none;\n}\n\n.navbar-text {\n  display: inline-block;\n  padding-top: 0.5rem;\n  padding-bottom: 0.5rem;\n}\n\n.navbar-collapse {\n  flex-basis: 100%;\n  flex-grow: 1;\n  align-items: center;\n}\n\n.navbar-toggler {\n  padding: 0.25rem 0.75rem;\n  font-size: 1.25rem;\n  line-height: 1;\n  background-color: transparent;\n  border: 1px solid transparent;\n  border-radius: 0.25rem;\n}\n\n.navbar-toggler:hover, .navbar-toggler:focus {\n  text-decoration: none;\n}\n\n.navbar-toggler-icon {\n  display: inline-block;\n  width: 1.5em;\n  height: 1.5em;\n  vertical-align: middle;\n  content: \"\";\n  background: no-repeat center center;\n  background-size: 100% 100%;\n}\n\n@media (max-width: 575.98px) {\n  .navbar-expand-sm > .container,\n  .navbar-expand-sm > .container-fluid, .navbar-expand-sm > .container-sm, .navbar-expand-sm > .container-md, .navbar-expand-sm > .container-lg, .navbar-expand-sm > .container-xl {\n    padding-right: 0;\n    padding-left: 0;\n  }\n}\n\n@media (min-width: 576px) {\n  .navbar-expand-sm {\n    flex-flow: row nowrap;\n    justify-content: flex-start;\n  }\n  .navbar-expand-sm .navbar-nav {\n    flex-direction: row;\n  }\n  .navbar-expand-sm .navbar-nav .dropdown-menu {\n    position: absolute;\n  }\n  .navbar-expand-sm .navbar-nav .nav-link {\n    padding-right: 0.5rem;\n    padding-left: 0.5rem;\n  }\n  .navbar-expand-sm > .container,\n  .navbar-expand-sm > .container-fluid, .navbar-expand-sm > .container-sm, .navbar-expand-sm > .container-md, .navbar-expand-sm > .container-lg, .navbar-expand-sm > .container-xl {\n    flex-wrap: nowrap;\n  }\n  .navbar-expand-sm .navbar-collapse {\n    display: flex !important;\n    flex-basis: auto;\n  }\n  .navbar-expand-sm .navbar-toggler {\n    display: none;\n  }\n}\n\n@media (max-width: 767.98px) {\n  .navbar-expand-md > .container,\n  .navbar-expand-md > .container-fluid, .navbar-expand-md > .container-sm, .navbar-expand-md > .container-md, .navbar-expand-md > .container-lg, .navbar-expand-md > .container-xl {\n    padding-right: 0;\n    padding-left: 0;\n  }\n}\n\n@media (min-width: 768px) {\n  .navbar-expand-md {\n    flex-flow: row nowrap;\n    justify-content: flex-start;\n  }\n  .navbar-expand-md .navbar-nav {\n    flex-direction: row;\n  }\n  .navbar-expand-md .navbar-nav .dropdown-menu {\n    position: absolute;\n  }\n  .navbar-expand-md .navbar-nav .nav-link {\n    padding-right: 0.5rem;\n    padding-left: 0.5rem;\n  }\n  .navbar-expand-md > .container,\n  .navbar-expand-md > .container-fluid, .navbar-expand-md > .container-sm, .navbar-expand-md > .container-md, .navbar-expand-md > .container-lg, .navbar-expand-md > .container-xl {\n    flex-wrap: nowrap;\n  }\n  .navbar-expand-md .navbar-collapse {\n    display: flex !important;\n    flex-basis: auto;\n  }\n  .navbar-expand-md .navbar-toggler {\n    display: none;\n  }\n}\n\n@media (max-width: 991.98px) {\n  .navbar-expand-lg > .container,\n  .navbar-expand-lg > .container-fluid, .navbar-expand-lg > .container-sm, .navbar-expand-lg > .container-md, .navbar-expand-lg > .container-lg, .navbar-expand-lg > .container-xl {\n    padding-right: 0;\n    padding-left: 0;\n  }\n}\n\n@media (min-width: 992px) {\n  .navbar-expand-lg {\n    flex-flow: row nowrap;\n    justify-content: flex-start;\n  }\n  .navbar-expand-lg .navbar-nav {\n    flex-direction: row;\n  }\n  .navbar-expand-lg .navbar-nav .dropdown-menu {\n    position: absolute;\n  }\n  .navbar-expand-lg .navbar-nav .nav-link {\n    padding-right: 0.5rem;\n    padding-left: 0.5rem;\n  }\n  .navbar-expand-lg > .container,\n  .navbar-expand-lg > .container-fluid, .navbar-expand-lg > .container-sm, .navbar-expand-lg > .container-md, .navbar-expand-lg > .container-lg, .navbar-expand-lg > .container-xl {\n    flex-wrap: nowrap;\n  }\n  .navbar-expand-lg .navbar-collapse {\n    display: flex !important;\n    flex-basis: auto;\n  }\n  .navbar-expand-lg .navbar-toggler {\n    display: none;\n  }\n}\n\n@media (max-width: 1199.98px) {\n  .navbar-expand-xl > .container,\n  .navbar-expand-xl > .container-fluid, .navbar-expand-xl > .container-sm, .navbar-expand-xl > .container-md, .navbar-expand-xl > .container-lg, .navbar-expand-xl > .container-xl {\n    padding-right: 0;\n    padding-left: 0;\n  }\n}\n\n@media (min-width: 1200px) {\n  .navbar-expand-xl {\n    flex-flow: row nowrap;\n    justify-content: flex-start;\n  }\n  .navbar-expand-xl .navbar-nav {\n    flex-direction: row;\n  }\n  .navbar-expand-xl .navbar-nav .dropdown-menu {\n    position: absolute;\n  }\n  .navbar-expand-xl .navbar-nav .nav-link {\n    padding-right: 0.5rem;\n    padding-left: 0.5rem;\n  }\n  .navbar-expand-xl > .container,\n  .navbar-expand-xl > .container-fluid, .navbar-expand-xl > .container-sm, .navbar-expand-xl > .container-md, .navbar-expand-xl > .container-lg, .navbar-expand-xl > .container-xl {\n    flex-wrap: nowrap;\n  }\n  .navbar-expand-xl .navbar-collapse {\n    display: flex !important;\n    flex-basis: auto;\n  }\n  .navbar-expand-xl .navbar-toggler {\n    display: none;\n  }\n}\n\n.navbar-expand {\n  flex-flow: row nowrap;\n  justify-content: flex-start;\n}\n\n.navbar-expand > .container,\n.navbar-expand > .container-fluid, .navbar-expand > .container-sm, .navbar-expand > .container-md, .navbar-expand > .container-lg, .navbar-expand > .container-xl {\n  padding-right: 0;\n  padding-left: 0;\n}\n\n.navbar-expand .navbar-nav {\n  flex-direction: row;\n}\n\n.navbar-expand .navbar-nav .dropdown-menu {\n  position: absolute;\n}\n\n.navbar-expand .navbar-nav .nav-link {\n  padding-right: 0.5rem;\n  padding-left: 0.5rem;\n}\n\n.navbar-expand > .container,\n.navbar-expand > .container-fluid, .navbar-expand > .container-sm, .navbar-expand > .container-md, .navbar-expand > .container-lg, .navbar-expand > .container-xl {\n  flex-wrap: nowrap;\n}\n\n.navbar-expand .navbar-collapse {\n  display: flex !important;\n  flex-basis: auto;\n}\n\n.navbar-expand .navbar-toggler {\n  display: none;\n}\n\n.navbar-light .navbar-brand {\n  color: rgba(0, 0, 0, 0.9);\n}\n\n.navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {\n  color: rgba(0, 0, 0, 0.9);\n}\n\n.navbar-light .navbar-nav .nav-link {\n  color: rgba(0, 0, 0, 0.5);\n}\n\n.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {\n  color: rgba(0, 0, 0, 0.7);\n}\n\n.navbar-light .navbar-nav .nav-link.disabled {\n  color: rgba(0, 0, 0, 0.3);\n}\n\n.navbar-light .navbar-nav .show > .nav-link,\n.navbar-light .navbar-nav .active > .nav-link,\n.navbar-light .navbar-nav .nav-link.show,\n.navbar-light .navbar-nav .nav-link.active {\n  color: rgba(0, 0, 0, 0.9);\n}\n\n.navbar-light .navbar-toggler {\n  color: rgba(0, 0, 0, 0.5);\n  border-color: rgba(0, 0, 0, 0.1);\n}\n\n.navbar-light .navbar-toggler-icon {\n  background-image: url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e\");\n}\n\n.navbar-light .navbar-text {\n  color: rgba(0, 0, 0, 0.5);\n}\n\n.navbar-light .navbar-text a {\n  color: rgba(0, 0, 0, 0.9);\n}\n\n.navbar-light .navbar-text a:hover, .navbar-light .navbar-text a:focus {\n  color: rgba(0, 0, 0, 0.9);\n}\n\n.navbar-dark .navbar-brand {\n  color: #fff;\n}\n\n.navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {\n  color: #fff;\n}\n\n.navbar-dark .navbar-nav .nav-link {\n  color: rgba(255, 255, 255, 0.5);\n}\n\n.navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {\n  color: rgba(255, 255, 255, 0.75);\n}\n\n.navbar-dark .navbar-nav .nav-link.disabled {\n  color: rgba(255, 255, 255, 0.25);\n}\n\n.navbar-dark .navbar-nav .show > .nav-link,\n.navbar-dark .navbar-nav .active > .nav-link,\n.navbar-dark .navbar-nav .nav-link.show,\n.navbar-dark .navbar-nav .nav-link.active {\n  color: #fff;\n}\n\n.navbar-dark .navbar-toggler {\n  color: rgba(255, 255, 255, 0.5);\n  border-color: rgba(255, 255, 255, 0.1);\n}\n\n.navbar-dark .navbar-toggler-icon {\n  background-image: url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e\");\n}\n\n.navbar-dark .navbar-text {\n  color: rgba(255, 255, 255, 0.5);\n}\n\n.navbar-dark .navbar-text a {\n  color: #fff;\n}\n\n.navbar-dark .navbar-text a:hover, .navbar-dark .navbar-text a:focus {\n  color: #fff;\n}\n\n.card {\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  min-width: 0;\n  word-wrap: break-word;\n  background-color: #fff;\n  background-clip: border-box;\n  border: 1px solid rgba(0, 0, 0, 0.125);\n  border-radius: 0.25rem;\n}\n\n.card > hr {\n  margin-right: 0;\n  margin-left: 0;\n}\n\n.card > .list-group {\n  border-top: inherit;\n  border-bottom: inherit;\n}\n\n.card > .list-group:first-child {\n  border-top-width: 0;\n  border-top-left-radius: calc(0.25rem - 1px);\n  border-top-right-radius: calc(0.25rem - 1px);\n}\n\n.card > .list-group:last-child {\n  border-bottom-width: 0;\n  border-bottom-right-radius: calc(0.25rem - 1px);\n  border-bottom-left-radius: calc(0.25rem - 1px);\n}\n\n.card-body {\n  flex: 1 1 auto;\n  min-height: 1px;\n  padding: 1.25rem;\n}\n\n.card-title {\n  margin-bottom: 0.75rem;\n}\n\n.card-subtitle {\n  margin-top: -0.375rem;\n  margin-bottom: 0;\n}\n\n.card-text:last-child {\n  margin-bottom: 0;\n}\n\n.card-link:hover {\n  text-decoration: none;\n}\n\n.card-link + .card-link {\n  margin-left: 1.25rem;\n}\n\n.card-header {\n  padding: 0.75rem 1.25rem;\n  margin-bottom: 0;\n  background-color: rgba(0, 0, 0, 0.03);\n  border-bottom: 1px solid rgba(0, 0, 0, 0.125);\n}\n\n.card-header:first-child {\n  border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;\n}\n\n.card-header + .list-group .list-group-item:first-child {\n  border-top: 0;\n}\n\n.card-footer {\n  padding: 0.75rem 1.25rem;\n  background-color: rgba(0, 0, 0, 0.03);\n  border-top: 1px solid rgba(0, 0, 0, 0.125);\n}\n\n.card-footer:last-child {\n  border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);\n}\n\n.card-header-tabs {\n  margin-right: -0.625rem;\n  margin-bottom: -0.75rem;\n  margin-left: -0.625rem;\n  border-bottom: 0;\n}\n\n.card-header-pills {\n  margin-right: -0.625rem;\n  margin-left: -0.625rem;\n}\n\n.card-img-overlay {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  padding: 1.25rem;\n}\n\n.card-img,\n.card-img-top,\n.card-img-bottom {\n  flex-shrink: 0;\n  width: 100%;\n}\n\n.card-img,\n.card-img-top {\n  border-top-left-radius: calc(0.25rem - 1px);\n  border-top-right-radius: calc(0.25rem - 1px);\n}\n\n.card-img,\n.card-img-bottom {\n  border-bottom-right-radius: calc(0.25rem - 1px);\n  border-bottom-left-radius: calc(0.25rem - 1px);\n}\n\n.card-deck .card {\n  margin-bottom: 15px;\n}\n\n@media (min-width: 576px) {\n  .card-deck {\n    display: flex;\n    flex-flow: row wrap;\n    margin-right: -15px;\n    margin-left: -15px;\n  }\n  .card-deck .card {\n    flex: 1 0 0%;\n    margin-right: 15px;\n    margin-bottom: 0;\n    margin-left: 15px;\n  }\n}\n\n.card-group > .card {\n  margin-bottom: 15px;\n}\n\n@media (min-width: 576px) {\n  .card-group {\n    display: flex;\n    flex-flow: row wrap;\n  }\n  .card-group > .card {\n    flex: 1 0 0%;\n    margin-bottom: 0;\n  }\n  .card-group > .card + .card {\n    margin-left: 0;\n    border-left: 0;\n  }\n  .card-group > .card:not(:last-child) {\n    border-top-right-radius: 0;\n    border-bottom-right-radius: 0;\n  }\n  .card-group > .card:not(:last-child) .card-img-top,\n  .card-group > .card:not(:last-child) .card-header {\n    border-top-right-radius: 0;\n  }\n  .card-group > .card:not(:last-child) .card-img-bottom,\n  .card-group > .card:not(:last-child) .card-footer {\n    border-bottom-right-radius: 0;\n  }\n  .card-group > .card:not(:first-child) {\n    border-top-left-radius: 0;\n    border-bottom-left-radius: 0;\n  }\n  .card-group > .card:not(:first-child) .card-img-top,\n  .card-group > .card:not(:first-child) .card-header {\n    border-top-left-radius: 0;\n  }\n  .card-group > .card:not(:first-child) .card-img-bottom,\n  .card-group > .card:not(:first-child) .card-footer {\n    border-bottom-left-radius: 0;\n  }\n}\n\n.card-columns .card {\n  margin-bottom: 0.75rem;\n}\n\n@media (min-width: 576px) {\n  .card-columns {\n    -moz-column-count: 3;\n    column-count: 3;\n    -moz-column-gap: 1.25rem;\n    column-gap: 1.25rem;\n    orphans: 1;\n    widows: 1;\n  }\n  .card-columns .card {\n    display: inline-block;\n    width: 100%;\n  }\n}\n\n.accordion > .card {\n  overflow: hidden;\n}\n\n.accordion > .card:not(:last-of-type) {\n  border-bottom: 0;\n  border-bottom-right-radius: 0;\n  border-bottom-left-radius: 0;\n}\n\n.accordion > .card:not(:first-of-type) {\n  border-top-left-radius: 0;\n  border-top-right-radius: 0;\n}\n\n.accordion > .card > .card-header {\n  border-radius: 0;\n  margin-bottom: -1px;\n}\n\n.breadcrumb {\n  display: flex;\n  flex-wrap: wrap;\n  padding: 0.75rem 1rem;\n  margin-bottom: 1rem;\n  list-style: none;\n  background-color: #e9ecef;\n  border-radius: 0.25rem;\n}\n\n.breadcrumb-item {\n  display: flex;\n}\n\n.breadcrumb-item + .breadcrumb-item {\n  padding-left: 0.5rem;\n}\n\n.breadcrumb-item + .breadcrumb-item::before {\n  display: inline-block;\n  padding-right: 0.5rem;\n  color: #6c757d;\n  content: \"/\";\n}\n\n.breadcrumb-item + .breadcrumb-item:hover::before {\n  text-decoration: underline;\n}\n\n.breadcrumb-item + .breadcrumb-item:hover::before {\n  text-decoration: none;\n}\n\n.breadcrumb-item.active {\n  color: #6c757d;\n}\n\n.pagination {\n  display: flex;\n  padding-left: 0;\n  list-style: none;\n  border-radius: 0.25rem;\n}\n\n.page-link {\n  position: relative;\n  display: block;\n  padding: 0.5rem 0.75rem;\n  margin-left: -1px;\n  line-height: 1.25;\n  color: #007bff;\n  background-color: #fff;\n  border: 1px solid #dee2e6;\n}\n\n.page-link:hover {\n  z-index: 2;\n  color: #0056b3;\n  text-decoration: none;\n  background-color: #e9ecef;\n  border-color: #dee2e6;\n}\n\n.page-link:focus {\n  z-index: 3;\n  outline: 0;\n  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);\n}\n\n.page-item:first-child .page-link {\n  margin-left: 0;\n  border-top-left-radius: 0.25rem;\n  border-bottom-left-radius: 0.25rem;\n}\n\n.page-item:last-child .page-link {\n  border-top-right-radius: 0.25rem;\n  border-bottom-right-radius: 0.25rem;\n}\n\n.page-item.active .page-link {\n  z-index: 3;\n  color: #fff;\n  background-color: #007bff;\n  border-color: #007bff;\n}\n\n.page-item.disabled .page-link {\n  color: #6c757d;\n  pointer-events: none;\n  cursor: auto;\n  background-color: #fff;\n  border-color: #dee2e6;\n}\n\n.pagination-lg .page-link {\n  padding: 0.75rem 1.5rem;\n  font-size: 1.25rem;\n  line-height: 1.5;\n}\n\n.pagination-lg .page-item:first-child .page-link {\n  border-top-left-radius: 0.3rem;\n  border-bottom-left-radius: 0.3rem;\n}\n\n.pagination-lg .page-item:last-child .page-link {\n  border-top-right-radius: 0.3rem;\n  border-bottom-right-radius: 0.3rem;\n}\n\n.pagination-sm .page-link {\n  padding: 0.25rem 0.5rem;\n  font-size: 0.875rem;\n  line-height: 1.5;\n}\n\n.pagination-sm .page-item:first-child .page-link {\n  border-top-left-radius: 0.2rem;\n  border-bottom-left-radius: 0.2rem;\n}\n\n.pagination-sm .page-item:last-child .page-link {\n  border-top-right-radius: 0.2rem;\n  border-bottom-right-radius: 0.2rem;\n}\n\n.badge {\n  display: inline-block;\n  padding: 0.25em 0.4em;\n  font-size: 75%;\n  font-weight: 700;\n  line-height: 1;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: baseline;\n  border-radius: 0.25rem;\n  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .badge {\n    transition: none;\n  }\n}\n\na.badge:hover, a.badge:focus {\n  text-decoration: none;\n}\n\n.badge:empty {\n  display: none;\n}\n\n.btn .badge {\n  position: relative;\n  top: -1px;\n}\n\n.badge-pill {\n  padding-right: 0.6em;\n  padding-left: 0.6em;\n  border-radius: 10rem;\n}\n\n.badge-primary {\n  color: #fff;\n  background-color: #007bff;\n}\n\na.badge-primary:hover, a.badge-primary:focus {\n  color: #fff;\n  background-color: #0062cc;\n}\n\na.badge-primary:focus, a.badge-primary.focus {\n  outline: 0;\n  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);\n}\n\n.badge-secondary {\n  color: #fff;\n  background-color: #6c757d;\n}\n\na.badge-secondary:hover, a.badge-secondary:focus {\n  color: #fff;\n  background-color: #545b62;\n}\n\na.badge-secondary:focus, a.badge-secondary.focus {\n  outline: 0;\n  box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5);\n}\n\n.badge-success {\n  color: #fff;\n  background-color: #28a745;\n}\n\na.badge-success:hover, a.badge-success:focus {\n  color: #fff;\n  background-color: #1e7e34;\n}\n\na.badge-success:focus, a.badge-success.focus {\n  outline: 0;\n  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);\n}\n\n.badge-info {\n  color: #fff;\n  background-color: #17a2b8;\n}\n\na.badge-info:hover, a.badge-info:focus {\n  color: #fff;\n  background-color: #117a8b;\n}\n\na.badge-info:focus, a.badge-info.focus {\n  outline: 0;\n  box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5);\n}\n\n.badge-warning {\n  color: #212529;\n  background-color: #ffc107;\n}\n\na.badge-warning:hover, a.badge-warning:focus {\n  color: #212529;\n  background-color: #d39e00;\n}\n\na.badge-warning:focus, a.badge-warning.focus {\n  outline: 0;\n  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5);\n}\n\n.badge-danger {\n  color: #fff;\n  background-color: #dc3545;\n}\n\na.badge-danger:hover, a.badge-danger:focus {\n  color: #fff;\n  background-color: #bd2130;\n}\n\na.badge-danger:focus, a.badge-danger.focus {\n  outline: 0;\n  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);\n}\n\n.badge-light {\n  color: #212529;\n  background-color: #f8f9fa;\n}\n\na.badge-light:hover, a.badge-light:focus {\n  color: #212529;\n  background-color: #dae0e5;\n}\n\na.badge-light:focus, a.badge-light.focus {\n  outline: 0;\n  box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);\n}\n\n.badge-dark {\n  color: #fff;\n  background-color: #343a40;\n}\n\na.badge-dark:hover, a.badge-dark:focus {\n  color: #fff;\n  background-color: #1d2124;\n}\n\na.badge-dark:focus, a.badge-dark.focus {\n  outline: 0;\n  box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);\n}\n\n.jumbotron {\n  padding: 2rem 1rem;\n  margin-bottom: 2rem;\n  background-color: #e9ecef;\n  border-radius: 0.3rem;\n}\n\n@media (min-width: 576px) {\n  .jumbotron {\n    padding: 4rem 2rem;\n  }\n}\n\n.jumbotron-fluid {\n  padding-right: 0;\n  padding-left: 0;\n  border-radius: 0;\n}\n\n.alert {\n  position: relative;\n  padding: 0.75rem 1.25rem;\n  margin-bottom: 1rem;\n  border: 1px solid transparent;\n  border-radius: 0.25rem;\n}\n\n.alert-heading {\n  color: inherit;\n}\n\n.alert-link {\n  font-weight: 700;\n}\n\n.alert-dismissible {\n  padding-right: 4rem;\n}\n\n.alert-dismissible .close {\n  position: absolute;\n  top: 0;\n  right: 0;\n  padding: 0.75rem 1.25rem;\n  color: inherit;\n}\n\n.alert-primary {\n  color: #004085;\n  background-color: #cce5ff;\n  border-color: #b8daff;\n}\n\n.alert-primary hr {\n  border-top-color: #9fcdff;\n}\n\n.alert-primary .alert-link {\n  color: #002752;\n}\n\n.alert-secondary {\n  color: #383d41;\n  background-color: #e2e3e5;\n  border-color: #d6d8db;\n}\n\n.alert-secondary hr {\n  border-top-color: #c8cbcf;\n}\n\n.alert-secondary .alert-link {\n  color: #202326;\n}\n\n.alert-success {\n  color: #155724;\n  background-color: #d4edda;\n  border-color: #c3e6cb;\n}\n\n.alert-success hr {\n  border-top-color: #b1dfbb;\n}\n\n.alert-success .alert-link {\n  color: #0b2e13;\n}\n\n.alert-info {\n  color: #0c5460;\n  background-color: #d1ecf1;\n  border-color: #bee5eb;\n}\n\n.alert-info hr {\n  border-top-color: #abdde5;\n}\n\n.alert-info .alert-link {\n  color: #062c33;\n}\n\n.alert-warning {\n  color: #856404;\n  background-color: #fff3cd;\n  border-color: #ffeeba;\n}\n\n.alert-warning hr {\n  border-top-color: #ffe8a1;\n}\n\n.alert-warning .alert-link {\n  color: #533f03;\n}\n\n.alert-danger {\n  color: #721c24;\n  background-color: #f8d7da;\n  border-color: #f5c6cb;\n}\n\n.alert-danger hr {\n  border-top-color: #f1b0b7;\n}\n\n.alert-danger .alert-link {\n  color: #491217;\n}\n\n.alert-light {\n  color: #818182;\n  background-color: #fefefe;\n  border-color: #fdfdfe;\n}\n\n.alert-light hr {\n  border-top-color: #ececf6;\n}\n\n.alert-light .alert-link {\n  color: #686868;\n}\n\n.alert-dark {\n  color: #1b1e21;\n  background-color: #d6d8d9;\n  border-color: #c6c8ca;\n}\n\n.alert-dark hr {\n  border-top-color: #b9bbbe;\n}\n\n.alert-dark .alert-link {\n  color: #040505;\n}\n\n@-webkit-keyframes progress-bar-stripes {\n  from {\n    background-position: 1rem 0;\n  }\n  to {\n    background-position: 0 0;\n  }\n}\n\n@keyframes progress-bar-stripes {\n  from {\n    background-position: 1rem 0;\n  }\n  to {\n    background-position: 0 0;\n  }\n}\n\n.progress {\n  display: flex;\n  height: 1rem;\n  overflow: hidden;\n  line-height: 0;\n  font-size: 0.75rem;\n  background-color: #e9ecef;\n  border-radius: 0.25rem;\n}\n\n.progress-bar {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  overflow: hidden;\n  color: #fff;\n  text-align: center;\n  white-space: nowrap;\n  background-color: #007bff;\n  transition: width 0.6s ease;\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .progress-bar {\n    transition: none;\n  }\n}\n\n.progress-bar-striped {\n  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-size: 1rem 1rem;\n}\n\n.progress-bar-animated {\n  -webkit-animation: progress-bar-stripes 1s linear infinite;\n  animation: progress-bar-stripes 1s linear infinite;\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .progress-bar-animated {\n    -webkit-animation: none;\n    animation: none;\n  }\n}\n\n.media {\n  display: flex;\n  align-items: flex-start;\n}\n\n.media-body {\n  flex: 1;\n}\n\n.list-group {\n  display: flex;\n  flex-direction: column;\n  padding-left: 0;\n  margin-bottom: 0;\n  border-radius: 0.25rem;\n}\n\n.list-group-item-action {\n  width: 100%;\n  color: #495057;\n  text-align: inherit;\n}\n\n.list-group-item-action:hover, .list-group-item-action:focus {\n  z-index: 1;\n  color: #495057;\n  text-decoration: none;\n  background-color: #f8f9fa;\n}\n\n.list-group-item-action:active {\n  color: #212529;\n  background-color: #e9ecef;\n}\n\n.list-group-item {\n  position: relative;\n  display: block;\n  padding: 0.75rem 1.25rem;\n  background-color: #fff;\n  border: 1px solid rgba(0, 0, 0, 0.125);\n}\n\n.list-group-item:first-child {\n  border-top-left-radius: inherit;\n  border-top-right-radius: inherit;\n}\n\n.list-group-item:last-child {\n  border-bottom-right-radius: inherit;\n  border-bottom-left-radius: inherit;\n}\n\n.list-group-item.disabled, .list-group-item:disabled {\n  color: #6c757d;\n  pointer-events: none;\n  background-color: #fff;\n}\n\n.list-group-item.active {\n  z-index: 2;\n  color: #fff;\n  background-color: #007bff;\n  border-color: #007bff;\n}\n\n.list-group-item + .list-group-item {\n  border-top-width: 0;\n}\n\n.list-group-item + .list-group-item.active {\n  margin-top: -1px;\n  border-top-width: 1px;\n}\n\n.list-group-horizontal {\n  flex-direction: row;\n}\n\n.list-group-horizontal > .list-group-item:first-child {\n  border-bottom-left-radius: 0.25rem;\n  border-top-right-radius: 0;\n}\n\n.list-group-horizontal > .list-group-item:last-child {\n  border-top-right-radius: 0.25rem;\n  border-bottom-left-radius: 0;\n}\n\n.list-group-horizontal > .list-group-item.active {\n  margin-top: 0;\n}\n\n.list-group-horizontal > .list-group-item + .list-group-item {\n  border-top-width: 1px;\n  border-left-width: 0;\n}\n\n.list-group-horizontal > .list-group-item + .list-group-item.active {\n  margin-left: -1px;\n  border-left-width: 1px;\n}\n\n@media (min-width: 576px) {\n  .list-group-horizontal-sm {\n    flex-direction: row;\n  }\n  .list-group-horizontal-sm > .list-group-item:first-child {\n    border-bottom-left-radius: 0.25rem;\n    border-top-right-radius: 0;\n  }\n  .list-group-horizontal-sm > .list-group-item:last-child {\n    border-top-right-radius: 0.25rem;\n    border-bottom-left-radius: 0;\n  }\n  .list-group-horizontal-sm > .list-group-item.active {\n    margin-top: 0;\n  }\n  .list-group-horizontal-sm > .list-group-item + .list-group-item {\n    border-top-width: 1px;\n    border-left-width: 0;\n  }\n  .list-group-horizontal-sm > .list-group-item + .list-group-item.active {\n    margin-left: -1px;\n    border-left-width: 1px;\n  }\n}\n\n@media (min-width: 768px) {\n  .list-group-horizontal-md {\n    flex-direction: row;\n  }\n  .list-group-horizontal-md > .list-group-item:first-child {\n    border-bottom-left-radius: 0.25rem;\n    border-top-right-radius: 0;\n  }\n  .list-group-horizontal-md > .list-group-item:last-child {\n    border-top-right-radius: 0.25rem;\n    border-bottom-left-radius: 0;\n  }\n  .list-group-horizontal-md > .list-group-item.active {\n    margin-top: 0;\n  }\n  .list-group-horizontal-md > .list-group-item + .list-group-item {\n    border-top-width: 1px;\n    border-left-width: 0;\n  }\n  .list-group-horizontal-md > .list-group-item + .list-group-item.active {\n    margin-left: -1px;\n    border-left-width: 1px;\n  }\n}\n\n@media (min-width: 992px) {\n  .list-group-horizontal-lg {\n    flex-direction: row;\n  }\n  .list-group-horizontal-lg > .list-group-item:first-child {\n    border-bottom-left-radius: 0.25rem;\n    border-top-right-radius: 0;\n  }\n  .list-group-horizontal-lg > .list-group-item:last-child {\n    border-top-right-radius: 0.25rem;\n    border-bottom-left-radius: 0;\n  }\n  .list-group-horizontal-lg > .list-group-item.active {\n    margin-top: 0;\n  }\n  .list-group-horizontal-lg > .list-group-item + .list-group-item {\n    border-top-width: 1px;\n    border-left-width: 0;\n  }\n  .list-group-horizontal-lg > .list-group-item + .list-group-item.active {\n    margin-left: -1px;\n    border-left-width: 1px;\n  }\n}\n\n@media (min-width: 1200px) {\n  .list-group-horizontal-xl {\n    flex-direction: row;\n  }\n  .list-group-horizontal-xl > .list-group-item:first-child {\n    border-bottom-left-radius: 0.25rem;\n    border-top-right-radius: 0;\n  }\n  .list-group-horizontal-xl > .list-group-item:last-child {\n    border-top-right-radius: 0.25rem;\n    border-bottom-left-radius: 0;\n  }\n  .list-group-horizontal-xl > .list-group-item.active {\n    margin-top: 0;\n  }\n  .list-group-horizontal-xl > .list-group-item + .list-group-item {\n    border-top-width: 1px;\n    border-left-width: 0;\n  }\n  .list-group-horizontal-xl > .list-group-item + .list-group-item.active {\n    margin-left: -1px;\n    border-left-width: 1px;\n  }\n}\n\n.list-group-flush {\n  border-radius: 0;\n}\n\n.list-group-flush > .list-group-item {\n  border-width: 0 0 1px;\n}\n\n.list-group-flush > .list-group-item:last-child {\n  border-bottom-width: 0;\n}\n\n.list-group-item-primary {\n  color: #004085;\n  background-color: #b8daff;\n}\n\n.list-group-item-primary.list-group-item-action:hover, .list-group-item-primary.list-group-item-action:focus {\n  color: #004085;\n  background-color: #9fcdff;\n}\n\n.list-group-item-primary.list-group-item-action.active {\n  color: #fff;\n  background-color: #004085;\n  border-color: #004085;\n}\n\n.list-group-item-secondary {\n  color: #383d41;\n  background-color: #d6d8db;\n}\n\n.list-group-item-secondary.list-group-item-action:hover, .list-group-item-secondary.list-group-item-action:focus {\n  color: #383d41;\n  background-color: #c8cbcf;\n}\n\n.list-group-item-secondary.list-group-item-action.active {\n  color: #fff;\n  background-color: #383d41;\n  border-color: #383d41;\n}\n\n.list-group-item-success {\n  color: #155724;\n  background-color: #c3e6cb;\n}\n\n.list-group-item-success.list-group-item-action:hover, .list-group-item-success.list-group-item-action:focus {\n  color: #155724;\n  background-color: #b1dfbb;\n}\n\n.list-group-item-success.list-group-item-action.active {\n  color: #fff;\n  background-color: #155724;\n  border-color: #155724;\n}\n\n.list-group-item-info {\n  color: #0c5460;\n  background-color: #bee5eb;\n}\n\n.list-group-item-info.list-group-item-action:hover, .list-group-item-info.list-group-item-action:focus {\n  color: #0c5460;\n  background-color: #abdde5;\n}\n\n.list-group-item-info.list-group-item-action.active {\n  color: #fff;\n  background-color: #0c5460;\n  border-color: #0c5460;\n}\n\n.list-group-item-warning {\n  color: #856404;\n  background-color: #ffeeba;\n}\n\n.list-group-item-warning.list-group-item-action:hover, .list-group-item-warning.list-group-item-action:focus {\n  color: #856404;\n  background-color: #ffe8a1;\n}\n\n.list-group-item-warning.list-group-item-action.active {\n  color: #fff;\n  background-color: #856404;\n  border-color: #856404;\n}\n\n.list-group-item-danger {\n  color: #721c24;\n  background-color: #f5c6cb;\n}\n\n.list-group-item-danger.list-group-item-action:hover, .list-group-item-danger.list-group-item-action:focus {\n  color: #721c24;\n  background-color: #f1b0b7;\n}\n\n.list-group-item-danger.list-group-item-action.active {\n  color: #fff;\n  background-color: #721c24;\n  border-color: #721c24;\n}\n\n.list-group-item-light {\n  color: #818182;\n  background-color: #fdfdfe;\n}\n\n.list-group-item-light.list-group-item-action:hover, .list-group-item-light.list-group-item-action:focus {\n  color: #818182;\n  background-color: #ececf6;\n}\n\n.list-group-item-light.list-group-item-action.active {\n  color: #fff;\n  background-color: #818182;\n  border-color: #818182;\n}\n\n.list-group-item-dark {\n  color: #1b1e21;\n  background-color: #c6c8ca;\n}\n\n.list-group-item-dark.list-group-item-action:hover, .list-group-item-dark.list-group-item-action:focus {\n  color: #1b1e21;\n  background-color: #b9bbbe;\n}\n\n.list-group-item-dark.list-group-item-action.active {\n  color: #fff;\n  background-color: #1b1e21;\n  border-color: #1b1e21;\n}\n\n.close {\n  float: right;\n  font-size: 1.5rem;\n  font-weight: 700;\n  line-height: 1;\n  color: #000;\n  text-shadow: 0 1px 0 #fff;\n  opacity: .5;\n}\n\n.close:hover {\n  color: #000;\n  text-decoration: none;\n}\n\n.close:not(:disabled):not(.disabled):hover, .close:not(:disabled):not(.disabled):focus {\n  opacity: .75;\n}\n\nbutton.close {\n  padding: 0;\n  background-color: transparent;\n  border: 0;\n}\n\na.close.disabled {\n  pointer-events: none;\n}\n\n.toast {\n  max-width: 350px;\n  overflow: hidden;\n  font-size: 0.875rem;\n  background-color: rgba(255, 255, 255, 0.85);\n  background-clip: padding-box;\n  border: 1px solid rgba(0, 0, 0, 0.1);\n  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);\n  -webkit-backdrop-filter: blur(10px);\n  backdrop-filter: blur(10px);\n  opacity: 0;\n  border-radius: 0.25rem;\n}\n\n.toast:not(:last-child) {\n  margin-bottom: 0.75rem;\n}\n\n.toast.showing {\n  opacity: 1;\n}\n\n.toast.show {\n  display: block;\n  opacity: 1;\n}\n\n.toast.hide {\n  display: none;\n}\n\n.toast-header {\n  display: flex;\n  align-items: center;\n  padding: 0.25rem 0.75rem;\n  color: #6c757d;\n  background-color: rgba(255, 255, 255, 0.85);\n  background-clip: padding-box;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.05);\n}\n\n.toast-body {\n  padding: 0.75rem;\n}\n\n.modal-open {\n  overflow: hidden;\n}\n\n.modal-open .modal {\n  overflow-x: hidden;\n  overflow-y: auto;\n}\n\n.modal {\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 1050;\n  display: none;\n  width: 100%;\n  height: 100%;\n  overflow: hidden;\n  outline: 0;\n}\n\n.modal-dialog {\n  position: relative;\n  width: auto;\n  margin: 0.5rem;\n  pointer-events: none;\n}\n\n.modal.fade .modal-dialog {\n  transition: transform 0.3s ease-out;\n  transform: translate(0, -50px);\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .modal.fade .modal-dialog {\n    transition: none;\n  }\n}\n\n.modal.show .modal-dialog {\n  transform: none;\n}\n\n.modal.modal-static .modal-dialog {\n  transform: scale(1.02);\n}\n\n.modal-dialog-scrollable {\n  display: flex;\n  max-height: calc(100% - 1rem);\n}\n\n.modal-dialog-scrollable .modal-content {\n  max-height: calc(100vh - 1rem);\n  overflow: hidden;\n}\n\n.modal-dialog-scrollable .modal-header,\n.modal-dialog-scrollable .modal-footer {\n  flex-shrink: 0;\n}\n\n.modal-dialog-scrollable .modal-body {\n  overflow-y: auto;\n}\n\n.modal-dialog-centered {\n  display: flex;\n  align-items: center;\n  min-height: calc(100% - 1rem);\n}\n\n.modal-dialog-centered::before {\n  display: block;\n  height: calc(100vh - 1rem);\n  height: -webkit-min-content;\n  height: -moz-min-content;\n  height: min-content;\n  content: \"\";\n}\n\n.modal-dialog-centered.modal-dialog-scrollable {\n  flex-direction: column;\n  justify-content: center;\n  height: 100%;\n}\n\n.modal-dialog-centered.modal-dialog-scrollable .modal-content {\n  max-height: none;\n}\n\n.modal-dialog-centered.modal-dialog-scrollable::before {\n  content: none;\n}\n\n.modal-content {\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  pointer-events: auto;\n  background-color: #fff;\n  background-clip: padding-box;\n  border: 1px solid rgba(0, 0, 0, 0.2);\n  border-radius: 0.3rem;\n  outline: 0;\n}\n\n.modal-backdrop {\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 1040;\n  width: 100vw;\n  height: 100vh;\n  background-color: #000;\n}\n\n.modal-backdrop.fade {\n  opacity: 0;\n}\n\n.modal-backdrop.show {\n  opacity: 0.5;\n}\n\n.modal-header {\n  display: flex;\n  align-items: flex-start;\n  justify-content: space-between;\n  padding: 1rem 1rem;\n  border-bottom: 1px solid #dee2e6;\n  border-top-left-radius: calc(0.3rem - 1px);\n  border-top-right-radius: calc(0.3rem - 1px);\n}\n\n.modal-header .close {\n  padding: 1rem 1rem;\n  margin: -1rem -1rem -1rem auto;\n}\n\n.modal-title {\n  margin-bottom: 0;\n  line-height: 1.5;\n}\n\n.modal-body {\n  position: relative;\n  flex: 1 1 auto;\n  padding: 1rem;\n}\n\n.modal-footer {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  justify-content: flex-end;\n  padding: 0.75rem;\n  border-top: 1px solid #dee2e6;\n  border-bottom-right-radius: calc(0.3rem - 1px);\n  border-bottom-left-radius: calc(0.3rem - 1px);\n}\n\n.modal-footer > * {\n  margin: 0.25rem;\n}\n\n.modal-scrollbar-measure {\n  position: absolute;\n  top: -9999px;\n  width: 50px;\n  height: 50px;\n  overflow: scroll;\n}\n\n@media (min-width: 576px) {\n  .modal-dialog {\n    max-width: 500px;\n    margin: 1.75rem auto;\n  }\n  .modal-dialog-scrollable {\n    max-height: calc(100% - 3.5rem);\n  }\n  .modal-dialog-scrollable .modal-content {\n    max-height: calc(100vh - 3.5rem);\n  }\n  .modal-dialog-centered {\n    min-height: calc(100% - 3.5rem);\n  }\n  .modal-dialog-centered::before {\n    height: calc(100vh - 3.5rem);\n    height: -webkit-min-content;\n    height: -moz-min-content;\n    height: min-content;\n  }\n  .modal-sm {\n    max-width: 300px;\n  }\n}\n\n@media (min-width: 992px) {\n  .modal-lg,\n  .modal-xl {\n    max-width: 800px;\n  }\n}\n\n@media (min-width: 1200px) {\n  .modal-xl {\n    max-width: 1140px;\n  }\n}\n\n.tooltip {\n  position: absolute;\n  z-index: 1070;\n  display: block;\n  margin: 0;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\";\n  font-style: normal;\n  font-weight: 400;\n  line-height: 1.5;\n  text-align: left;\n  text-align: start;\n  text-decoration: none;\n  text-shadow: none;\n  text-transform: none;\n  letter-spacing: normal;\n  word-break: normal;\n  word-spacing: normal;\n  white-space: normal;\n  line-break: auto;\n  font-size: 0.875rem;\n  word-wrap: break-word;\n  opacity: 0;\n}\n\n.tooltip.show {\n  opacity: 0.9;\n}\n\n.tooltip .arrow {\n  position: absolute;\n  display: block;\n  width: 0.8rem;\n  height: 0.4rem;\n}\n\n.tooltip .arrow::before {\n  position: absolute;\n  content: \"\";\n  border-color: transparent;\n  border-style: solid;\n}\n\n.bs-tooltip-top, .bs-tooltip-auto[x-placement^=\"top\"] {\n  padding: 0.4rem 0;\n}\n\n.bs-tooltip-top .arrow, .bs-tooltip-auto[x-placement^=\"top\"] .arrow {\n  bottom: 0;\n}\n\n.bs-tooltip-top .arrow::before, .bs-tooltip-auto[x-placement^=\"top\"] .arrow::before {\n  top: 0;\n  border-width: 0.4rem 0.4rem 0;\n  border-top-color: #000;\n}\n\n.bs-tooltip-right, .bs-tooltip-auto[x-placement^=\"right\"] {\n  padding: 0 0.4rem;\n}\n\n.bs-tooltip-right .arrow, .bs-tooltip-auto[x-placement^=\"right\"] .arrow {\n  left: 0;\n  width: 0.4rem;\n  height: 0.8rem;\n}\n\n.bs-tooltip-right .arrow::before, .bs-tooltip-auto[x-placement^=\"right\"] .arrow::before {\n  right: 0;\n  border-width: 0.4rem 0.4rem 0.4rem 0;\n  border-right-color: #000;\n}\n\n.bs-tooltip-bottom, .bs-tooltip-auto[x-placement^=\"bottom\"] {\n  padding: 0.4rem 0;\n}\n\n.bs-tooltip-bottom .arrow, .bs-tooltip-auto[x-placement^=\"bottom\"] .arrow {\n  top: 0;\n}\n\n.bs-tooltip-bottom .arrow::before, .bs-tooltip-auto[x-placement^=\"bottom\"] .arrow::before {\n  bottom: 0;\n  border-width: 0 0.4rem 0.4rem;\n  border-bottom-color: #000;\n}\n\n.bs-tooltip-left, .bs-tooltip-auto[x-placement^=\"left\"] {\n  padding: 0 0.4rem;\n}\n\n.bs-tooltip-left .arrow, .bs-tooltip-auto[x-placement^=\"left\"] .arrow {\n  right: 0;\n  width: 0.4rem;\n  height: 0.8rem;\n}\n\n.bs-tooltip-left .arrow::before, .bs-tooltip-auto[x-placement^=\"left\"] .arrow::before {\n  left: 0;\n  border-width: 0.4rem 0 0.4rem 0.4rem;\n  border-left-color: #000;\n}\n\n.tooltip-inner {\n  max-width: 200px;\n  padding: 0.25rem 0.5rem;\n  color: #fff;\n  text-align: center;\n  background-color: #000;\n  border-radius: 0.25rem;\n}\n\n.popover {\n  position: absolute;\n  top: 0;\n  left: 0;\n  z-index: 1060;\n  display: block;\n  max-width: 276px;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\";\n  font-style: normal;\n  font-weight: 400;\n  line-height: 1.5;\n  text-align: left;\n  text-align: start;\n  text-decoration: none;\n  text-shadow: none;\n  text-transform: none;\n  letter-spacing: normal;\n  word-break: normal;\n  word-spacing: normal;\n  white-space: normal;\n  line-break: auto;\n  font-size: 0.875rem;\n  word-wrap: break-word;\n  background-color: #fff;\n  background-clip: padding-box;\n  border: 1px solid rgba(0, 0, 0, 0.2);\n  border-radius: 0.3rem;\n}\n\n.popover .arrow {\n  position: absolute;\n  display: block;\n  width: 1rem;\n  height: 0.5rem;\n  margin: 0 0.3rem;\n}\n\n.popover .arrow::before, .popover .arrow::after {\n  position: absolute;\n  display: block;\n  content: \"\";\n  border-color: transparent;\n  border-style: solid;\n}\n\n.bs-popover-top, .bs-popover-auto[x-placement^=\"top\"] {\n  margin-bottom: 0.5rem;\n}\n\n.bs-popover-top > .arrow, .bs-popover-auto[x-placement^=\"top\"] > .arrow {\n  bottom: calc(-0.5rem - 1px);\n}\n\n.bs-popover-top > .arrow::before, .bs-popover-auto[x-placement^=\"top\"] > .arrow::before {\n  bottom: 0;\n  border-width: 0.5rem 0.5rem 0;\n  border-top-color: rgba(0, 0, 0, 0.25);\n}\n\n.bs-popover-top > .arrow::after, .bs-popover-auto[x-placement^=\"top\"] > .arrow::after {\n  bottom: 1px;\n  border-width: 0.5rem 0.5rem 0;\n  border-top-color: #fff;\n}\n\n.bs-popover-right, .bs-popover-auto[x-placement^=\"right\"] {\n  margin-left: 0.5rem;\n}\n\n.bs-popover-right > .arrow, .bs-popover-auto[x-placement^=\"right\"] > .arrow {\n  left: calc(-0.5rem - 1px);\n  width: 0.5rem;\n  height: 1rem;\n  margin: 0.3rem 0;\n}\n\n.bs-popover-right > .arrow::before, .bs-popover-auto[x-placement^=\"right\"] > .arrow::before {\n  left: 0;\n  border-width: 0.5rem 0.5rem 0.5rem 0;\n  border-right-color: rgba(0, 0, 0, 0.25);\n}\n\n.bs-popover-right > .arrow::after, .bs-popover-auto[x-placement^=\"right\"] > .arrow::after {\n  left: 1px;\n  border-width: 0.5rem 0.5rem 0.5rem 0;\n  border-right-color: #fff;\n}\n\n.bs-popover-bottom, .bs-popover-auto[x-placement^=\"bottom\"] {\n  margin-top: 0.5rem;\n}\n\n.bs-popover-bottom > .arrow, .bs-popover-auto[x-placement^=\"bottom\"] > .arrow {\n  top: calc(-0.5rem - 1px);\n}\n\n.bs-popover-bottom > .arrow::before, .bs-popover-auto[x-placement^=\"bottom\"] > .arrow::before {\n  top: 0;\n  border-width: 0 0.5rem 0.5rem 0.5rem;\n  border-bottom-color: rgba(0, 0, 0, 0.25);\n}\n\n.bs-popover-bottom > .arrow::after, .bs-popover-auto[x-placement^=\"bottom\"] > .arrow::after {\n  top: 1px;\n  border-width: 0 0.5rem 0.5rem 0.5rem;\n  border-bottom-color: #fff;\n}\n\n.bs-popover-bottom .popover-header::before, .bs-popover-auto[x-placement^=\"bottom\"] .popover-header::before {\n  position: absolute;\n  top: 0;\n  left: 50%;\n  display: block;\n  width: 1rem;\n  margin-left: -0.5rem;\n  content: \"\";\n  border-bottom: 1px solid #f7f7f7;\n}\n\n.bs-popover-left, .bs-popover-auto[x-placement^=\"left\"] {\n  margin-right: 0.5rem;\n}\n\n.bs-popover-left > .arrow, .bs-popover-auto[x-placement^=\"left\"] > .arrow {\n  right: calc(-0.5rem - 1px);\n  width: 0.5rem;\n  height: 1rem;\n  margin: 0.3rem 0;\n}\n\n.bs-popover-left > .arrow::before, .bs-popover-auto[x-placement^=\"left\"] > .arrow::before {\n  right: 0;\n  border-width: 0.5rem 0 0.5rem 0.5rem;\n  border-left-color: rgba(0, 0, 0, 0.25);\n}\n\n.bs-popover-left > .arrow::after, .bs-popover-auto[x-placement^=\"left\"] > .arrow::after {\n  right: 1px;\n  border-width: 0.5rem 0 0.5rem 0.5rem;\n  border-left-color: #fff;\n}\n\n.popover-header {\n  padding: 0.5rem 0.75rem;\n  margin-bottom: 0;\n  font-size: 1rem;\n  background-color: #f7f7f7;\n  border-bottom: 1px solid #ebebeb;\n  border-top-left-radius: calc(0.3rem - 1px);\n  border-top-right-radius: calc(0.3rem - 1px);\n}\n\n.popover-header:empty {\n  display: none;\n}\n\n.popover-body {\n  padding: 0.5rem 0.75rem;\n  color: #212529;\n}\n\n.carousel {\n  position: relative;\n}\n\n.carousel.pointer-event {\n  touch-action: pan-y;\n}\n\n.carousel-inner {\n  position: relative;\n  width: 100%;\n  overflow: hidden;\n}\n\n.carousel-inner::after {\n  display: block;\n  clear: both;\n  content: \"\";\n}\n\n.carousel-item {\n  position: relative;\n  display: none;\n  float: left;\n  width: 100%;\n  margin-right: -100%;\n  -webkit-backface-visibility: hidden;\n  backface-visibility: hidden;\n  transition: transform 0.6s ease-in-out;\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .carousel-item {\n    transition: none;\n  }\n}\n\n.carousel-item.active,\n.carousel-item-next,\n.carousel-item-prev {\n  display: block;\n}\n\n.carousel-item-next:not(.carousel-item-left),\n.active.carousel-item-right {\n  transform: translateX(100%);\n}\n\n.carousel-item-prev:not(.carousel-item-right),\n.active.carousel-item-left {\n  transform: translateX(-100%);\n}\n\n.carousel-fade .carousel-item {\n  opacity: 0;\n  transition-property: opacity;\n  transform: none;\n}\n\n.carousel-fade .carousel-item.active,\n.carousel-fade .carousel-item-next.carousel-item-left,\n.carousel-fade .carousel-item-prev.carousel-item-right {\n  z-index: 1;\n  opacity: 1;\n}\n\n.carousel-fade .active.carousel-item-left,\n.carousel-fade .active.carousel-item-right {\n  z-index: 0;\n  opacity: 0;\n  transition: opacity 0s 0.6s;\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .carousel-fade .active.carousel-item-left,\n  .carousel-fade .active.carousel-item-right {\n    transition: none;\n  }\n}\n\n.carousel-control-prev,\n.carousel-control-next {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  z-index: 1;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 15%;\n  color: #fff;\n  text-align: center;\n  opacity: 0.5;\n  transition: opacity 0.15s ease;\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .carousel-control-prev,\n  .carousel-control-next {\n    transition: none;\n  }\n}\n\n.carousel-control-prev:hover, .carousel-control-prev:focus,\n.carousel-control-next:hover,\n.carousel-control-next:focus {\n  color: #fff;\n  text-decoration: none;\n  outline: 0;\n  opacity: 0.9;\n}\n\n.carousel-control-prev {\n  left: 0;\n}\n\n.carousel-control-next {\n  right: 0;\n}\n\n.carousel-control-prev-icon,\n.carousel-control-next-icon {\n  display: inline-block;\n  width: 20px;\n  height: 20px;\n  background: no-repeat 50% / 100% 100%;\n}\n\n.carousel-control-prev-icon {\n  background-image: url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5L4.25 4l2.5-2.5L5.25 0z'/%3e%3c/svg%3e\");\n}\n\n.carousel-control-next-icon {\n  background-image: url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/%3e%3c/svg%3e\");\n}\n\n.carousel-indicators {\n  position: absolute;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  z-index: 15;\n  display: flex;\n  justify-content: center;\n  padding-left: 0;\n  margin-right: 15%;\n  margin-left: 15%;\n  list-style: none;\n}\n\n.carousel-indicators li {\n  box-sizing: content-box;\n  flex: 0 1 auto;\n  width: 30px;\n  height: 3px;\n  margin-right: 3px;\n  margin-left: 3px;\n  text-indent: -999px;\n  cursor: pointer;\n  background-color: #fff;\n  background-clip: padding-box;\n  border-top: 10px solid transparent;\n  border-bottom: 10px solid transparent;\n  opacity: .5;\n  transition: opacity 0.6s ease;\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .carousel-indicators li {\n    transition: none;\n  }\n}\n\n.carousel-indicators .active {\n  opacity: 1;\n}\n\n.carousel-caption {\n  position: absolute;\n  right: 15%;\n  bottom: 20px;\n  left: 15%;\n  z-index: 10;\n  padding-top: 20px;\n  padding-bottom: 20px;\n  color: #fff;\n  text-align: center;\n}\n\n@-webkit-keyframes spinner-border {\n  to {\n    transform: rotate(360deg);\n  }\n}\n\n@keyframes spinner-border {\n  to {\n    transform: rotate(360deg);\n  }\n}\n\n.spinner-border {\n  display: inline-block;\n  width: 2rem;\n  height: 2rem;\n  vertical-align: text-bottom;\n  border: 0.25em solid currentColor;\n  border-right-color: transparent;\n  border-radius: 50%;\n  -webkit-animation: spinner-border .75s linear infinite;\n  animation: spinner-border .75s linear infinite;\n}\n\n.spinner-border-sm {\n  width: 1rem;\n  height: 1rem;\n  border-width: 0.2em;\n}\n\n@-webkit-keyframes spinner-grow {\n  0% {\n    transform: scale(0);\n  }\n  50% {\n    opacity: 1;\n    transform: none;\n  }\n}\n\n@keyframes spinner-grow {\n  0% {\n    transform: scale(0);\n  }\n  50% {\n    opacity: 1;\n    transform: none;\n  }\n}\n\n.spinner-grow {\n  display: inline-block;\n  width: 2rem;\n  height: 2rem;\n  vertical-align: text-bottom;\n  background-color: currentColor;\n  border-radius: 50%;\n  opacity: 0;\n  -webkit-animation: spinner-grow .75s linear infinite;\n  animation: spinner-grow .75s linear infinite;\n}\n\n.spinner-grow-sm {\n  width: 1rem;\n  height: 1rem;\n}\n\n.align-baseline {\n  vertical-align: baseline !important;\n}\n\n.align-top {\n  vertical-align: top !important;\n}\n\n.align-middle {\n  vertical-align: middle !important;\n}\n\n.align-bottom {\n  vertical-align: bottom !important;\n}\n\n.align-text-bottom {\n  vertical-align: text-bottom !important;\n}\n\n.align-text-top {\n  vertical-align: text-top !important;\n}\n\n.bg-primary {\n  background-color: #007bff !important;\n}\n\na.bg-primary:hover, a.bg-primary:focus,\nbutton.bg-primary:hover,\nbutton.bg-primary:focus {\n  background-color: #0062cc !important;\n}\n\n.bg-secondary {\n  background-color: #6c757d !important;\n}\n\na.bg-secondary:hover, a.bg-secondary:focus,\nbutton.bg-secondary:hover,\nbutton.bg-secondary:focus {\n  background-color: #545b62 !important;\n}\n\n.bg-success {\n  background-color: #28a745 !important;\n}\n\na.bg-success:hover, a.bg-success:focus,\nbutton.bg-success:hover,\nbutton.bg-success:focus {\n  background-color: #1e7e34 !important;\n}\n\n.bg-info {\n  background-color: #17a2b8 !important;\n}\n\na.bg-info:hover, a.bg-info:focus,\nbutton.bg-info:hover,\nbutton.bg-info:focus {\n  background-color: #117a8b !important;\n}\n\n.bg-warning {\n  background-color: #ffc107 !important;\n}\n\na.bg-warning:hover, a.bg-warning:focus,\nbutton.bg-warning:hover,\nbutton.bg-warning:focus {\n  background-color: #d39e00 !important;\n}\n\n.bg-danger {\n  background-color: #dc3545 !important;\n}\n\na.bg-danger:hover, a.bg-danger:focus,\nbutton.bg-danger:hover,\nbutton.bg-danger:focus {\n  background-color: #bd2130 !important;\n}\n\n.bg-light {\n  background-color: #f8f9fa !important;\n}\n\na.bg-light:hover, a.bg-light:focus,\nbutton.bg-light:hover,\nbutton.bg-light:focus {\n  background-color: #dae0e5 !important;\n}\n\n.bg-dark {\n  background-color: #343a40 !important;\n}\n\na.bg-dark:hover, a.bg-dark:focus,\nbutton.bg-dark:hover,\nbutton.bg-dark:focus {\n  background-color: #1d2124 !important;\n}\n\n.bg-white {\n  background-color: #fff !important;\n}\n\n.bg-transparent {\n  background-color: transparent !important;\n}\n\n.border {\n  border: 1px solid #dee2e6 !important;\n}\n\n.border-top {\n  border-top: 1px solid #dee2e6 !important;\n}\n\n.border-right {\n  border-right: 1px solid #dee2e6 !important;\n}\n\n.border-bottom {\n  border-bottom: 1px solid #dee2e6 !important;\n}\n\n.border-left {\n  border-left: 1px solid #dee2e6 !important;\n}\n\n.border-0 {\n  border: 0 !important;\n}\n\n.border-top-0 {\n  border-top: 0 !important;\n}\n\n.border-right-0 {\n  border-right: 0 !important;\n}\n\n.border-bottom-0 {\n  border-bottom: 0 !important;\n}\n\n.border-left-0 {\n  border-left: 0 !important;\n}\n\n.border-primary {\n  border-color: #007bff !important;\n}\n\n.border-secondary {\n  border-color: #6c757d !important;\n}\n\n.border-success {\n  border-color: #28a745 !important;\n}\n\n.border-info {\n  border-color: #17a2b8 !important;\n}\n\n.border-warning {\n  border-color: #ffc107 !important;\n}\n\n.border-danger {\n  border-color: #dc3545 !important;\n}\n\n.border-light {\n  border-color: #f8f9fa !important;\n}\n\n.border-dark {\n  border-color: #343a40 !important;\n}\n\n.border-white {\n  border-color: #fff !important;\n}\n\n.rounded-sm {\n  border-radius: 0.2rem !important;\n}\n\n.rounded {\n  border-radius: 0.25rem !important;\n}\n\n.rounded-top {\n  border-top-left-radius: 0.25rem !important;\n  border-top-right-radius: 0.25rem !important;\n}\n\n.rounded-right {\n  border-top-right-radius: 0.25rem !important;\n  border-bottom-right-radius: 0.25rem !important;\n}\n\n.rounded-bottom {\n  border-bottom-right-radius: 0.25rem !important;\n  border-bottom-left-radius: 0.25rem !important;\n}\n\n.rounded-left {\n  border-top-left-radius: 0.25rem !important;\n  border-bottom-left-radius: 0.25rem !important;\n}\n\n.rounded-lg {\n  border-radius: 0.3rem !important;\n}\n\n.rounded-circle {\n  border-radius: 50% !important;\n}\n\n.rounded-pill {\n  border-radius: 50rem !important;\n}\n\n.rounded-0 {\n  border-radius: 0 !important;\n}\n\n.clearfix::after {\n  display: block;\n  clear: both;\n  content: \"\";\n}\n\n.d-none {\n  display: none !important;\n}\n\n.d-inline {\n  display: inline !important;\n}\n\n.d-inline-block {\n  display: inline-block !important;\n}\n\n.d-block {\n  display: block !important;\n}\n\n.d-table {\n  display: table !important;\n}\n\n.d-table-row {\n  display: table-row !important;\n}\n\n.d-table-cell {\n  display: table-cell !important;\n}\n\n.d-flex {\n  display: flex !important;\n}\n\n.d-inline-flex {\n  display: inline-flex !important;\n}\n\n@media (min-width: 576px) {\n  .d-sm-none {\n    display: none !important;\n  }\n  .d-sm-inline {\n    display: inline !important;\n  }\n  .d-sm-inline-block {\n    display: inline-block !important;\n  }\n  .d-sm-block {\n    display: block !important;\n  }\n  .d-sm-table {\n    display: table !important;\n  }\n  .d-sm-table-row {\n    display: table-row !important;\n  }\n  .d-sm-table-cell {\n    display: table-cell !important;\n  }\n  .d-sm-flex {\n    display: flex !important;\n  }\n  .d-sm-inline-flex {\n    display: inline-flex !important;\n  }\n}\n\n@media (min-width: 768px) {\n  .d-md-none {\n    display: none !important;\n  }\n  .d-md-inline {\n    display: inline !important;\n  }\n  .d-md-inline-block {\n    display: inline-block !important;\n  }\n  .d-md-block {\n    display: block !important;\n  }\n  .d-md-table {\n    display: table !important;\n  }\n  .d-md-table-row {\n    display: table-row !important;\n  }\n  .d-md-table-cell {\n    display: table-cell !important;\n  }\n  .d-md-flex {\n    display: flex !important;\n  }\n  .d-md-inline-flex {\n    display: inline-flex !important;\n  }\n}\n\n@media (min-width: 992px) {\n  .d-lg-none {\n    display: none !important;\n  }\n  .d-lg-inline {\n    display: inline !important;\n  }\n  .d-lg-inline-block {\n    display: inline-block !important;\n  }\n  .d-lg-block {\n    display: block !important;\n  }\n  .d-lg-table {\n    display: table !important;\n  }\n  .d-lg-table-row {\n    display: table-row !important;\n  }\n  .d-lg-table-cell {\n    display: table-cell !important;\n  }\n  .d-lg-flex {\n    display: flex !important;\n  }\n  .d-lg-inline-flex {\n    display: inline-flex !important;\n  }\n}\n\n@media (min-width: 1200px) {\n  .d-xl-none {\n    display: none !important;\n  }\n  .d-xl-inline {\n    display: inline !important;\n  }\n  .d-xl-inline-block {\n    display: inline-block !important;\n  }\n  .d-xl-block {\n    display: block !important;\n  }\n  .d-xl-table {\n    display: table !important;\n  }\n  .d-xl-table-row {\n    display: table-row !important;\n  }\n  .d-xl-table-cell {\n    display: table-cell !important;\n  }\n  .d-xl-flex {\n    display: flex !important;\n  }\n  .d-xl-inline-flex {\n    display: inline-flex !important;\n  }\n}\n\n@media print {\n  .d-print-none {\n    display: none !important;\n  }\n  .d-print-inline {\n    display: inline !important;\n  }\n  .d-print-inline-block {\n    display: inline-block !important;\n  }\n  .d-print-block {\n    display: block !important;\n  }\n  .d-print-table {\n    display: table !important;\n  }\n  .d-print-table-row {\n    display: table-row !important;\n  }\n  .d-print-table-cell {\n    display: table-cell !important;\n  }\n  .d-print-flex {\n    display: flex !important;\n  }\n  .d-print-inline-flex {\n    display: inline-flex !important;\n  }\n}\n\n.embed-responsive {\n  position: relative;\n  display: block;\n  width: 100%;\n  padding: 0;\n  overflow: hidden;\n}\n\n.embed-responsive::before {\n  display: block;\n  content: \"\";\n}\n\n.embed-responsive .embed-responsive-item,\n.embed-responsive iframe,\n.embed-responsive embed,\n.embed-responsive object,\n.embed-responsive video {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  border: 0;\n}\n\n.embed-responsive-21by9::before {\n  padding-top: 42.857143%;\n}\n\n.embed-responsive-16by9::before {\n  padding-top: 56.25%;\n}\n\n.embed-responsive-4by3::before {\n  padding-top: 75%;\n}\n\n.embed-responsive-1by1::before {\n  padding-top: 100%;\n}\n\n.flex-row {\n  flex-direction: row !important;\n}\n\n.flex-column {\n  flex-direction: column !important;\n}\n\n.flex-row-reverse {\n  flex-direction: row-reverse !important;\n}\n\n.flex-column-reverse {\n  flex-direction: column-reverse !important;\n}\n\n.flex-wrap {\n  flex-wrap: wrap !important;\n}\n\n.flex-nowrap {\n  flex-wrap: nowrap !important;\n}\n\n.flex-wrap-reverse {\n  flex-wrap: wrap-reverse !important;\n}\n\n.flex-fill {\n  flex: 1 1 auto !important;\n}\n\n.flex-grow-0 {\n  flex-grow: 0 !important;\n}\n\n.flex-grow-1 {\n  flex-grow: 1 !important;\n}\n\n.flex-shrink-0 {\n  flex-shrink: 0 !important;\n}\n\n.flex-shrink-1 {\n  flex-shrink: 1 !important;\n}\n\n.justify-content-start {\n  justify-content: flex-start !important;\n}\n\n.justify-content-end {\n  justify-content: flex-end !important;\n}\n\n.justify-content-center {\n  justify-content: center !important;\n}\n\n.justify-content-between {\n  justify-content: space-between !important;\n}\n\n.justify-content-around {\n  justify-content: space-around !important;\n}\n\n.align-items-start {\n  align-items: flex-start !important;\n}\n\n.align-items-end {\n  align-items: flex-end !important;\n}\n\n.align-items-center {\n  align-items: center !important;\n}\n\n.align-items-baseline {\n  align-items: baseline !important;\n}\n\n.align-items-stretch {\n  align-items: stretch !important;\n}\n\n.align-content-start {\n  align-content: flex-start !important;\n}\n\n.align-content-end {\n  align-content: flex-end !important;\n}\n\n.align-content-center {\n  align-content: center !important;\n}\n\n.align-content-between {\n  align-content: space-between !important;\n}\n\n.align-content-around {\n  align-content: space-around !important;\n}\n\n.align-content-stretch {\n  align-content: stretch !important;\n}\n\n.align-self-auto {\n  align-self: auto !important;\n}\n\n.align-self-start {\n  align-self: flex-start !important;\n}\n\n.align-self-end {\n  align-self: flex-end !important;\n}\n\n.align-self-center {\n  align-self: center !important;\n}\n\n.align-self-baseline {\n  align-self: baseline !important;\n}\n\n.align-self-stretch {\n  align-self: stretch !important;\n}\n\n@media (min-width: 576px) {\n  .flex-sm-row {\n    flex-direction: row !important;\n  }\n  .flex-sm-column {\n    flex-direction: column !important;\n  }\n  .flex-sm-row-reverse {\n    flex-direction: row-reverse !important;\n  }\n  .flex-sm-column-reverse {\n    flex-direction: column-reverse !important;\n  }\n  .flex-sm-wrap {\n    flex-wrap: wrap !important;\n  }\n  .flex-sm-nowrap {\n    flex-wrap: nowrap !important;\n  }\n  .flex-sm-wrap-reverse {\n    flex-wrap: wrap-reverse !important;\n  }\n  .flex-sm-fill {\n    flex: 1 1 auto !important;\n  }\n  .flex-sm-grow-0 {\n    flex-grow: 0 !important;\n  }\n  .flex-sm-grow-1 {\n    flex-grow: 1 !important;\n  }\n  .flex-sm-shrink-0 {\n    flex-shrink: 0 !important;\n  }\n  .flex-sm-shrink-1 {\n    flex-shrink: 1 !important;\n  }\n  .justify-content-sm-start {\n    justify-content: flex-start !important;\n  }\n  .justify-content-sm-end {\n    justify-content: flex-end !important;\n  }\n  .justify-content-sm-center {\n    justify-content: center !important;\n  }\n  .justify-content-sm-between {\n    justify-content: space-between !important;\n  }\n  .justify-content-sm-around {\n    justify-content: space-around !important;\n  }\n  .align-items-sm-start {\n    align-items: flex-start !important;\n  }\n  .align-items-sm-end {\n    align-items: flex-end !important;\n  }\n  .align-items-sm-center {\n    align-items: center !important;\n  }\n  .align-items-sm-baseline {\n    align-items: baseline !important;\n  }\n  .align-items-sm-stretch {\n    align-items: stretch !important;\n  }\n  .align-content-sm-start {\n    align-content: flex-start !important;\n  }\n  .align-content-sm-end {\n    align-content: flex-end !important;\n  }\n  .align-content-sm-center {\n    align-content: center !important;\n  }\n  .align-content-sm-between {\n    align-content: space-between !important;\n  }\n  .align-content-sm-around {\n    align-content: space-around !important;\n  }\n  .align-content-sm-stretch {\n    align-content: stretch !important;\n  }\n  .align-self-sm-auto {\n    align-self: auto !important;\n  }\n  .align-self-sm-start {\n    align-self: flex-start !important;\n  }\n  .align-self-sm-end {\n    align-self: flex-end !important;\n  }\n  .align-self-sm-center {\n    align-self: center !important;\n  }\n  .align-self-sm-baseline {\n    align-self: baseline !important;\n  }\n  .align-self-sm-stretch {\n    align-self: stretch !important;\n  }\n}\n\n@media (min-width: 768px) {\n  .flex-md-row {\n    flex-direction: row !important;\n  }\n  .flex-md-column {\n    flex-direction: column !important;\n  }\n  .flex-md-row-reverse {\n    flex-direction: row-reverse !important;\n  }\n  .flex-md-column-reverse {\n    flex-direction: column-reverse !important;\n  }\n  .flex-md-wrap {\n    flex-wrap: wrap !important;\n  }\n  .flex-md-nowrap {\n    flex-wrap: nowrap !important;\n  }\n  .flex-md-wrap-reverse {\n    flex-wrap: wrap-reverse !important;\n  }\n  .flex-md-fill {\n    flex: 1 1 auto !important;\n  }\n  .flex-md-grow-0 {\n    flex-grow: 0 !important;\n  }\n  .flex-md-grow-1 {\n    flex-grow: 1 !important;\n  }\n  .flex-md-shrink-0 {\n    flex-shrink: 0 !important;\n  }\n  .flex-md-shrink-1 {\n    flex-shrink: 1 !important;\n  }\n  .justify-content-md-start {\n    justify-content: flex-start !important;\n  }\n  .justify-content-md-end {\n    justify-content: flex-end !important;\n  }\n  .justify-content-md-center {\n    justify-content: center !important;\n  }\n  .justify-content-md-between {\n    justify-content: space-between !important;\n  }\n  .justify-content-md-around {\n    justify-content: space-around !important;\n  }\n  .align-items-md-start {\n    align-items: flex-start !important;\n  }\n  .align-items-md-end {\n    align-items: flex-end !important;\n  }\n  .align-items-md-center {\n    align-items: center !important;\n  }\n  .align-items-md-baseline {\n    align-items: baseline !important;\n  }\n  .align-items-md-stretch {\n    align-items: stretch !important;\n  }\n  .align-content-md-start {\n    align-content: flex-start !important;\n  }\n  .align-content-md-end {\n    align-content: flex-end !important;\n  }\n  .align-content-md-center {\n    align-content: center !important;\n  }\n  .align-content-md-between {\n    align-content: space-between !important;\n  }\n  .align-content-md-around {\n    align-content: space-around !important;\n  }\n  .align-content-md-stretch {\n    align-content: stretch !important;\n  }\n  .align-self-md-auto {\n    align-self: auto !important;\n  }\n  .align-self-md-start {\n    align-self: flex-start !important;\n  }\n  .align-self-md-end {\n    align-self: flex-end !important;\n  }\n  .align-self-md-center {\n    align-self: center !important;\n  }\n  .align-self-md-baseline {\n    align-self: baseline !important;\n  }\n  .align-self-md-stretch {\n    align-self: stretch !important;\n  }\n}\n\n@media (min-width: 992px) {\n  .flex-lg-row {\n    flex-direction: row !important;\n  }\n  .flex-lg-column {\n    flex-direction: column !important;\n  }\n  .flex-lg-row-reverse {\n    flex-direction: row-reverse !important;\n  }\n  .flex-lg-column-reverse {\n    flex-direction: column-reverse !important;\n  }\n  .flex-lg-wrap {\n    flex-wrap: wrap !important;\n  }\n  .flex-lg-nowrap {\n    flex-wrap: nowrap !important;\n  }\n  .flex-lg-wrap-reverse {\n    flex-wrap: wrap-reverse !important;\n  }\n  .flex-lg-fill {\n    flex: 1 1 auto !important;\n  }\n  .flex-lg-grow-0 {\n    flex-grow: 0 !important;\n  }\n  .flex-lg-grow-1 {\n    flex-grow: 1 !important;\n  }\n  .flex-lg-shrink-0 {\n    flex-shrink: 0 !important;\n  }\n  .flex-lg-shrink-1 {\n    flex-shrink: 1 !important;\n  }\n  .justify-content-lg-start {\n    justify-content: flex-start !important;\n  }\n  .justify-content-lg-end {\n    justify-content: flex-end !important;\n  }\n  .justify-content-lg-center {\n    justify-content: center !important;\n  }\n  .justify-content-lg-between {\n    justify-content: space-between !important;\n  }\n  .justify-content-lg-around {\n    justify-content: space-around !important;\n  }\n  .align-items-lg-start {\n    align-items: flex-start !important;\n  }\n  .align-items-lg-end {\n    align-items: flex-end !important;\n  }\n  .align-items-lg-center {\n    align-items: center !important;\n  }\n  .align-items-lg-baseline {\n    align-items: baseline !important;\n  }\n  .align-items-lg-stretch {\n    align-items: stretch !important;\n  }\n  .align-content-lg-start {\n    align-content: flex-start !important;\n  }\n  .align-content-lg-end {\n    align-content: flex-end !important;\n  }\n  .align-content-lg-center {\n    align-content: center !important;\n  }\n  .align-content-lg-between {\n    align-content: space-between !important;\n  }\n  .align-content-lg-around {\n    align-content: space-around !important;\n  }\n  .align-content-lg-stretch {\n    align-content: stretch !important;\n  }\n  .align-self-lg-auto {\n    align-self: auto !important;\n  }\n  .align-self-lg-start {\n    align-self: flex-start !important;\n  }\n  .align-self-lg-end {\n    align-self: flex-end !important;\n  }\n  .align-self-lg-center {\n    align-self: center !important;\n  }\n  .align-self-lg-baseline {\n    align-self: baseline !important;\n  }\n  .align-self-lg-stretch {\n    align-self: stretch !important;\n  }\n}\n\n@media (min-width: 1200px) {\n  .flex-xl-row {\n    flex-direction: row !important;\n  }\n  .flex-xl-column {\n    flex-direction: column !important;\n  }\n  .flex-xl-row-reverse {\n    flex-direction: row-reverse !important;\n  }\n  .flex-xl-column-reverse {\n    flex-direction: column-reverse !important;\n  }\n  .flex-xl-wrap {\n    flex-wrap: wrap !important;\n  }\n  .flex-xl-nowrap {\n    flex-wrap: nowrap !important;\n  }\n  .flex-xl-wrap-reverse {\n    flex-wrap: wrap-reverse !important;\n  }\n  .flex-xl-fill {\n    flex: 1 1 auto !important;\n  }\n  .flex-xl-grow-0 {\n    flex-grow: 0 !important;\n  }\n  .flex-xl-grow-1 {\n    flex-grow: 1 !important;\n  }\n  .flex-xl-shrink-0 {\n    flex-shrink: 0 !important;\n  }\n  .flex-xl-shrink-1 {\n    flex-shrink: 1 !important;\n  }\n  .justify-content-xl-start {\n    justify-content: flex-start !important;\n  }\n  .justify-content-xl-end {\n    justify-content: flex-end !important;\n  }\n  .justify-content-xl-center {\n    justify-content: center !important;\n  }\n  .justify-content-xl-between {\n    justify-content: space-between !important;\n  }\n  .justify-content-xl-around {\n    justify-content: space-around !important;\n  }\n  .align-items-xl-start {\n    align-items: flex-start !important;\n  }\n  .align-items-xl-end {\n    align-items: flex-end !important;\n  }\n  .align-items-xl-center {\n    align-items: center !important;\n  }\n  .align-items-xl-baseline {\n    align-items: baseline !important;\n  }\n  .align-items-xl-stretch {\n    align-items: stretch !important;\n  }\n  .align-content-xl-start {\n    align-content: flex-start !important;\n  }\n  .align-content-xl-end {\n    align-content: flex-end !important;\n  }\n  .align-content-xl-center {\n    align-content: center !important;\n  }\n  .align-content-xl-between {\n    align-content: space-between !important;\n  }\n  .align-content-xl-around {\n    align-content: space-around !important;\n  }\n  .align-content-xl-stretch {\n    align-content: stretch !important;\n  }\n  .align-self-xl-auto {\n    align-self: auto !important;\n  }\n  .align-self-xl-start {\n    align-self: flex-start !important;\n  }\n  .align-self-xl-end {\n    align-self: flex-end !important;\n  }\n  .align-self-xl-center {\n    align-self: center !important;\n  }\n  .align-self-xl-baseline {\n    align-self: baseline !important;\n  }\n  .align-self-xl-stretch {\n    align-self: stretch !important;\n  }\n}\n\n.float-left {\n  float: left !important;\n}\n\n.float-right {\n  float: right !important;\n}\n\n.float-none {\n  float: none !important;\n}\n\n@media (min-width: 576px) {\n  .float-sm-left {\n    float: left !important;\n  }\n  .float-sm-right {\n    float: right !important;\n  }\n  .float-sm-none {\n    float: none !important;\n  }\n}\n\n@media (min-width: 768px) {\n  .float-md-left {\n    float: left !important;\n  }\n  .float-md-right {\n    float: right !important;\n  }\n  .float-md-none {\n    float: none !important;\n  }\n}\n\n@media (min-width: 992px) {\n  .float-lg-left {\n    float: left !important;\n  }\n  .float-lg-right {\n    float: right !important;\n  }\n  .float-lg-none {\n    float: none !important;\n  }\n}\n\n@media (min-width: 1200px) {\n  .float-xl-left {\n    float: left !important;\n  }\n  .float-xl-right {\n    float: right !important;\n  }\n  .float-xl-none {\n    float: none !important;\n  }\n}\n\n.user-select-all {\n  -webkit-user-select: all !important;\n  -moz-user-select: all !important;\n  -ms-user-select: all !important;\n  user-select: all !important;\n}\n\n.user-select-auto {\n  -webkit-user-select: auto !important;\n  -moz-user-select: auto !important;\n  -ms-user-select: auto !important;\n  user-select: auto !important;\n}\n\n.user-select-none {\n  -webkit-user-select: none !important;\n  -moz-user-select: none !important;\n  -ms-user-select: none !important;\n  user-select: none !important;\n}\n\n.overflow-auto {\n  overflow: auto !important;\n}\n\n.overflow-hidden {\n  overflow: hidden !important;\n}\n\n.position-static {\n  position: static !important;\n}\n\n.position-relative {\n  position: relative !important;\n}\n\n.position-absolute {\n  position: absolute !important;\n}\n\n.position-fixed {\n  position: fixed !important;\n}\n\n.position-sticky {\n  position: -webkit-sticky !important;\n  position: sticky !important;\n}\n\n.fixed-top {\n  position: fixed;\n  top: 0;\n  right: 0;\n  left: 0;\n  z-index: 1030;\n}\n\n.fixed-bottom {\n  position: fixed;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  z-index: 1030;\n}\n\n@supports ((position: -webkit-sticky) or (position: sticky)) {\n  .sticky-top {\n    position: -webkit-sticky;\n    position: sticky;\n    top: 0;\n    z-index: 1020;\n  }\n}\n\n.sr-only {\n  position: absolute;\n  width: 1px;\n  height: 1px;\n  padding: 0;\n  margin: -1px;\n  overflow: hidden;\n  clip: rect(0, 0, 0, 0);\n  white-space: nowrap;\n  border: 0;\n}\n\n.sr-only-focusable:active, .sr-only-focusable:focus {\n  position: static;\n  width: auto;\n  height: auto;\n  overflow: visible;\n  clip: auto;\n  white-space: normal;\n}\n\n.shadow-sm {\n  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;\n}\n\n.shadow {\n  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;\n}\n\n.shadow-lg {\n  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;\n}\n\n.shadow-none {\n  box-shadow: none !important;\n}\n\n.w-25 {\n  width: 25% !important;\n}\n\n.w-50 {\n  width: 50% !important;\n}\n\n.w-75 {\n  width: 75% !important;\n}\n\n.w-100 {\n  width: 100% !important;\n}\n\n.w-auto {\n  width: auto !important;\n}\n\n.h-25 {\n  height: 25% !important;\n}\n\n.h-50 {\n  height: 50% !important;\n}\n\n.h-75 {\n  height: 75% !important;\n}\n\n.h-100 {\n  height: 100% !important;\n}\n\n.h-auto {\n  height: auto !important;\n}\n\n.mw-100 {\n  max-width: 100% !important;\n}\n\n.mh-100 {\n  max-height: 100% !important;\n}\n\n.min-vw-100 {\n  min-width: 100vw !important;\n}\n\n.min-vh-100 {\n  min-height: 100vh !important;\n}\n\n.vw-100 {\n  width: 100vw !important;\n}\n\n.vh-100 {\n  height: 100vh !important;\n}\n\n.m-0 {\n  margin: 0 !important;\n}\n\n.mt-0,\n.my-0 {\n  margin-top: 0 !important;\n}\n\n.mr-0,\n.mx-0 {\n  margin-right: 0 !important;\n}\n\n.mb-0,\n.my-0 {\n  margin-bottom: 0 !important;\n}\n\n.ml-0,\n.mx-0 {\n  margin-left: 0 !important;\n}\n\n.m-1 {\n  margin: 0.25rem !important;\n}\n\n.mt-1,\n.my-1 {\n  margin-top: 0.25rem !important;\n}\n\n.mr-1,\n.mx-1 {\n  margin-right: 0.25rem !important;\n}\n\n.mb-1,\n.my-1 {\n  margin-bottom: 0.25rem !important;\n}\n\n.ml-1,\n.mx-1 {\n  margin-left: 0.25rem !important;\n}\n\n.m-2 {\n  margin: 0.5rem !important;\n}\n\n.mt-2,\n.my-2 {\n  margin-top: 0.5rem !important;\n}\n\n.mr-2,\n.mx-2 {\n  margin-right: 0.5rem !important;\n}\n\n.mb-2,\n.my-2 {\n  margin-bottom: 0.5rem !important;\n}\n\n.ml-2,\n.mx-2 {\n  margin-left: 0.5rem !important;\n}\n\n.m-3 {\n  margin: 1rem !important;\n}\n\n.mt-3,\n.my-3 {\n  margin-top: 1rem !important;\n}\n\n.mr-3,\n.mx-3 {\n  margin-right: 1rem !important;\n}\n\n.mb-3,\n.my-3 {\n  margin-bottom: 1rem !important;\n}\n\n.ml-3,\n.mx-3 {\n  margin-left: 1rem !important;\n}\n\n.m-4 {\n  margin: 1.5rem !important;\n}\n\n.mt-4,\n.my-4 {\n  margin-top: 1.5rem !important;\n}\n\n.mr-4,\n.mx-4 {\n  margin-right: 1.5rem !important;\n}\n\n.mb-4,\n.my-4 {\n  margin-bottom: 1.5rem !important;\n}\n\n.ml-4,\n.mx-4 {\n  margin-left: 1.5rem !important;\n}\n\n.m-5 {\n  margin: 3rem !important;\n}\n\n.mt-5,\n.my-5 {\n  margin-top: 3rem !important;\n}\n\n.mr-5,\n.mx-5 {\n  margin-right: 3rem !important;\n}\n\n.mb-5,\n.my-5 {\n  margin-bottom: 3rem !important;\n}\n\n.ml-5,\n.mx-5 {\n  margin-left: 3rem !important;\n}\n\n.p-0 {\n  padding: 0 !important;\n}\n\n.pt-0,\n.py-0 {\n  padding-top: 0 !important;\n}\n\n.pr-0,\n.px-0 {\n  padding-right: 0 !important;\n}\n\n.pb-0,\n.py-0 {\n  padding-bottom: 0 !important;\n}\n\n.pl-0,\n.px-0 {\n  padding-left: 0 !important;\n}\n\n.p-1 {\n  padding: 0.25rem !important;\n}\n\n.pt-1,\n.py-1 {\n  padding-top: 0.25rem !important;\n}\n\n.pr-1,\n.px-1 {\n  padding-right: 0.25rem !important;\n}\n\n.pb-1,\n.py-1 {\n  padding-bottom: 0.25rem !important;\n}\n\n.pl-1,\n.px-1 {\n  padding-left: 0.25rem !important;\n}\n\n.p-2 {\n  padding: 0.5rem !important;\n}\n\n.pt-2,\n.py-2 {\n  padding-top: 0.5rem !important;\n}\n\n.pr-2,\n.px-2 {\n  padding-right: 0.5rem !important;\n}\n\n.pb-2,\n.py-2 {\n  padding-bottom: 0.5rem !important;\n}\n\n.pl-2,\n.px-2 {\n  padding-left: 0.5rem !important;\n}\n\n.p-3 {\n  padding: 1rem !important;\n}\n\n.pt-3,\n.py-3 {\n  padding-top: 1rem !important;\n}\n\n.pr-3,\n.px-3 {\n  padding-right: 1rem !important;\n}\n\n.pb-3,\n.py-3 {\n  padding-bottom: 1rem !important;\n}\n\n.pl-3,\n.px-3 {\n  padding-left: 1rem !important;\n}\n\n.p-4 {\n  padding: 1.5rem !important;\n}\n\n.pt-4,\n.py-4 {\n  padding-top: 1.5rem !important;\n}\n\n.pr-4,\n.px-4 {\n  padding-right: 1.5rem !important;\n}\n\n.pb-4,\n.py-4 {\n  padding-bottom: 1.5rem !important;\n}\n\n.pl-4,\n.px-4 {\n  padding-left: 1.5rem !important;\n}\n\n.p-5 {\n  padding: 3rem !important;\n}\n\n.pt-5,\n.py-5 {\n  padding-top: 3rem !important;\n}\n\n.pr-5,\n.px-5 {\n  padding-right: 3rem !important;\n}\n\n.pb-5,\n.py-5 {\n  padding-bottom: 3rem !important;\n}\n\n.pl-5,\n.px-5 {\n  padding-left: 3rem !important;\n}\n\n.m-n1 {\n  margin: -0.25rem !important;\n}\n\n.mt-n1,\n.my-n1 {\n  margin-top: -0.25rem !important;\n}\n\n.mr-n1,\n.mx-n1 {\n  margin-right: -0.25rem !important;\n}\n\n.mb-n1,\n.my-n1 {\n  margin-bottom: -0.25rem !important;\n}\n\n.ml-n1,\n.mx-n1 {\n  margin-left: -0.25rem !important;\n}\n\n.m-n2 {\n  margin: -0.5rem !important;\n}\n\n.mt-n2,\n.my-n2 {\n  margin-top: -0.5rem !important;\n}\n\n.mr-n2,\n.mx-n2 {\n  margin-right: -0.5rem !important;\n}\n\n.mb-n2,\n.my-n2 {\n  margin-bottom: -0.5rem !important;\n}\n\n.ml-n2,\n.mx-n2 {\n  margin-left: -0.5rem !important;\n}\n\n.m-n3 {\n  margin: -1rem !important;\n}\n\n.mt-n3,\n.my-n3 {\n  margin-top: -1rem !important;\n}\n\n.mr-n3,\n.mx-n3 {\n  margin-right: -1rem !important;\n}\n\n.mb-n3,\n.my-n3 {\n  margin-bottom: -1rem !important;\n}\n\n.ml-n3,\n.mx-n3 {\n  margin-left: -1rem !important;\n}\n\n.m-n4 {\n  margin: -1.5rem !important;\n}\n\n.mt-n4,\n.my-n4 {\n  margin-top: -1.5rem !important;\n}\n\n.mr-n4,\n.mx-n4 {\n  margin-right: -1.5rem !important;\n}\n\n.mb-n4,\n.my-n4 {\n  margin-bottom: -1.5rem !important;\n}\n\n.ml-n4,\n.mx-n4 {\n  margin-left: -1.5rem !important;\n}\n\n.m-n5 {\n  margin: -3rem !important;\n}\n\n.mt-n5,\n.my-n5 {\n  margin-top: -3rem !important;\n}\n\n.mr-n5,\n.mx-n5 {\n  margin-right: -3rem !important;\n}\n\n.mb-n5,\n.my-n5 {\n  margin-bottom: -3rem !important;\n}\n\n.ml-n5,\n.mx-n5 {\n  margin-left: -3rem !important;\n}\n\n.m-auto {\n  margin: auto !important;\n}\n\n.mt-auto,\n.my-auto {\n  margin-top: auto !important;\n}\n\n.mr-auto,\n.mx-auto {\n  margin-right: auto !important;\n}\n\n.mb-auto,\n.my-auto {\n  margin-bottom: auto !important;\n}\n\n.ml-auto,\n.mx-auto {\n  margin-left: auto !important;\n}\n\n@media (min-width: 576px) {\n  .m-sm-0 {\n    margin: 0 !important;\n  }\n  .mt-sm-0,\n  .my-sm-0 {\n    margin-top: 0 !important;\n  }\n  .mr-sm-0,\n  .mx-sm-0 {\n    margin-right: 0 !important;\n  }\n  .mb-sm-0,\n  .my-sm-0 {\n    margin-bottom: 0 !important;\n  }\n  .ml-sm-0,\n  .mx-sm-0 {\n    margin-left: 0 !important;\n  }\n  .m-sm-1 {\n    margin: 0.25rem !important;\n  }\n  .mt-sm-1,\n  .my-sm-1 {\n    margin-top: 0.25rem !important;\n  }\n  .mr-sm-1,\n  .mx-sm-1 {\n    margin-right: 0.25rem !important;\n  }\n  .mb-sm-1,\n  .my-sm-1 {\n    margin-bottom: 0.25rem !important;\n  }\n  .ml-sm-1,\n  .mx-sm-1 {\n    margin-left: 0.25rem !important;\n  }\n  .m-sm-2 {\n    margin: 0.5rem !important;\n  }\n  .mt-sm-2,\n  .my-sm-2 {\n    margin-top: 0.5rem !important;\n  }\n  .mr-sm-2,\n  .mx-sm-2 {\n    margin-right: 0.5rem !important;\n  }\n  .mb-sm-2,\n  .my-sm-2 {\n    margin-bottom: 0.5rem !important;\n  }\n  .ml-sm-2,\n  .mx-sm-2 {\n    margin-left: 0.5rem !important;\n  }\n  .m-sm-3 {\n    margin: 1rem !important;\n  }\n  .mt-sm-3,\n  .my-sm-3 {\n    margin-top: 1rem !important;\n  }\n  .mr-sm-3,\n  .mx-sm-3 {\n    margin-right: 1rem !important;\n  }\n  .mb-sm-3,\n  .my-sm-3 {\n    margin-bottom: 1rem !important;\n  }\n  .ml-sm-3,\n  .mx-sm-3 {\n    margin-left: 1rem !important;\n  }\n  .m-sm-4 {\n    margin: 1.5rem !important;\n  }\n  .mt-sm-4,\n  .my-sm-4 {\n    margin-top: 1.5rem !important;\n  }\n  .mr-sm-4,\n  .mx-sm-4 {\n    margin-right: 1.5rem !important;\n  }\n  .mb-sm-4,\n  .my-sm-4 {\n    margin-bottom: 1.5rem !important;\n  }\n  .ml-sm-4,\n  .mx-sm-4 {\n    margin-left: 1.5rem !important;\n  }\n  .m-sm-5 {\n    margin: 3rem !important;\n  }\n  .mt-sm-5,\n  .my-sm-5 {\n    margin-top: 3rem !important;\n  }\n  .mr-sm-5,\n  .mx-sm-5 {\n    margin-right: 3rem !important;\n  }\n  .mb-sm-5,\n  .my-sm-5 {\n    margin-bottom: 3rem !important;\n  }\n  .ml-sm-5,\n  .mx-sm-5 {\n    margin-left: 3rem !important;\n  }\n  .p-sm-0 {\n    padding: 0 !important;\n  }\n  .pt-sm-0,\n  .py-sm-0 {\n    padding-top: 0 !important;\n  }\n  .pr-sm-0,\n  .px-sm-0 {\n    padding-right: 0 !important;\n  }\n  .pb-sm-0,\n  .py-sm-0 {\n    padding-bottom: 0 !important;\n  }\n  .pl-sm-0,\n  .px-sm-0 {\n    padding-left: 0 !important;\n  }\n  .p-sm-1 {\n    padding: 0.25rem !important;\n  }\n  .pt-sm-1,\n  .py-sm-1 {\n    padding-top: 0.25rem !important;\n  }\n  .pr-sm-1,\n  .px-sm-1 {\n    padding-right: 0.25rem !important;\n  }\n  .pb-sm-1,\n  .py-sm-1 {\n    padding-bottom: 0.25rem !important;\n  }\n  .pl-sm-1,\n  .px-sm-1 {\n    padding-left: 0.25rem !important;\n  }\n  .p-sm-2 {\n    padding: 0.5rem !important;\n  }\n  .pt-sm-2,\n  .py-sm-2 {\n    padding-top: 0.5rem !important;\n  }\n  .pr-sm-2,\n  .px-sm-2 {\n    padding-right: 0.5rem !important;\n  }\n  .pb-sm-2,\n  .py-sm-2 {\n    padding-bottom: 0.5rem !important;\n  }\n  .pl-sm-2,\n  .px-sm-2 {\n    padding-left: 0.5rem !important;\n  }\n  .p-sm-3 {\n    padding: 1rem !important;\n  }\n  .pt-sm-3,\n  .py-sm-3 {\n    padding-top: 1rem !important;\n  }\n  .pr-sm-3,\n  .px-sm-3 {\n    padding-right: 1rem !important;\n  }\n  .pb-sm-3,\n  .py-sm-3 {\n    padding-bottom: 1rem !important;\n  }\n  .pl-sm-3,\n  .px-sm-3 {\n    padding-left: 1rem !important;\n  }\n  .p-sm-4 {\n    padding: 1.5rem !important;\n  }\n  .pt-sm-4,\n  .py-sm-4 {\n    padding-top: 1.5rem !important;\n  }\n  .pr-sm-4,\n  .px-sm-4 {\n    padding-right: 1.5rem !important;\n  }\n  .pb-sm-4,\n  .py-sm-4 {\n    padding-bottom: 1.5rem !important;\n  }\n  .pl-sm-4,\n  .px-sm-4 {\n    padding-left: 1.5rem !important;\n  }\n  .p-sm-5 {\n    padding: 3rem !important;\n  }\n  .pt-sm-5,\n  .py-sm-5 {\n    padding-top: 3rem !important;\n  }\n  .pr-sm-5,\n  .px-sm-5 {\n    padding-right: 3rem !important;\n  }\n  .pb-sm-5,\n  .py-sm-5 {\n    padding-bottom: 3rem !important;\n  }\n  .pl-sm-5,\n  .px-sm-5 {\n    padding-left: 3rem !important;\n  }\n  .m-sm-n1 {\n    margin: -0.25rem !important;\n  }\n  .mt-sm-n1,\n  .my-sm-n1 {\n    margin-top: -0.25rem !important;\n  }\n  .mr-sm-n1,\n  .mx-sm-n1 {\n    margin-right: -0.25rem !important;\n  }\n  .mb-sm-n1,\n  .my-sm-n1 {\n    margin-bottom: -0.25rem !important;\n  }\n  .ml-sm-n1,\n  .mx-sm-n1 {\n    margin-left: -0.25rem !important;\n  }\n  .m-sm-n2 {\n    margin: -0.5rem !important;\n  }\n  .mt-sm-n2,\n  .my-sm-n2 {\n    margin-top: -0.5rem !important;\n  }\n  .mr-sm-n2,\n  .mx-sm-n2 {\n    margin-right: -0.5rem !important;\n  }\n  .mb-sm-n2,\n  .my-sm-n2 {\n    margin-bottom: -0.5rem !important;\n  }\n  .ml-sm-n2,\n  .mx-sm-n2 {\n    margin-left: -0.5rem !important;\n  }\n  .m-sm-n3 {\n    margin: -1rem !important;\n  }\n  .mt-sm-n3,\n  .my-sm-n3 {\n    margin-top: -1rem !important;\n  }\n  .mr-sm-n3,\n  .mx-sm-n3 {\n    margin-right: -1rem !important;\n  }\n  .mb-sm-n3,\n  .my-sm-n3 {\n    margin-bottom: -1rem !important;\n  }\n  .ml-sm-n3,\n  .mx-sm-n3 {\n    margin-left: -1rem !important;\n  }\n  .m-sm-n4 {\n    margin: -1.5rem !important;\n  }\n  .mt-sm-n4,\n  .my-sm-n4 {\n    margin-top: -1.5rem !important;\n  }\n  .mr-sm-n4,\n  .mx-sm-n4 {\n    margin-right: -1.5rem !important;\n  }\n  .mb-sm-n4,\n  .my-sm-n4 {\n    margin-bottom: -1.5rem !important;\n  }\n  .ml-sm-n4,\n  .mx-sm-n4 {\n    margin-left: -1.5rem !important;\n  }\n  .m-sm-n5 {\n    margin: -3rem !important;\n  }\n  .mt-sm-n5,\n  .my-sm-n5 {\n    margin-top: -3rem !important;\n  }\n  .mr-sm-n5,\n  .mx-sm-n5 {\n    margin-right: -3rem !important;\n  }\n  .mb-sm-n5,\n  .my-sm-n5 {\n    margin-bottom: -3rem !important;\n  }\n  .ml-sm-n5,\n  .mx-sm-n5 {\n    margin-left: -3rem !important;\n  }\n  .m-sm-auto {\n    margin: auto !important;\n  }\n  .mt-sm-auto,\n  .my-sm-auto {\n    margin-top: auto !important;\n  }\n  .mr-sm-auto,\n  .mx-sm-auto {\n    margin-right: auto !important;\n  }\n  .mb-sm-auto,\n  .my-sm-auto {\n    margin-bottom: auto !important;\n  }\n  .ml-sm-auto,\n  .mx-sm-auto {\n    margin-left: auto !important;\n  }\n}\n\n@media (min-width: 768px) {\n  .m-md-0 {\n    margin: 0 !important;\n  }\n  .mt-md-0,\n  .my-md-0 {\n    margin-top: 0 !important;\n  }\n  .mr-md-0,\n  .mx-md-0 {\n    margin-right: 0 !important;\n  }\n  .mb-md-0,\n  .my-md-0 {\n    margin-bottom: 0 !important;\n  }\n  .ml-md-0,\n  .mx-md-0 {\n    margin-left: 0 !important;\n  }\n  .m-md-1 {\n    margin: 0.25rem !important;\n  }\n  .mt-md-1,\n  .my-md-1 {\n    margin-top: 0.25rem !important;\n  }\n  .mr-md-1,\n  .mx-md-1 {\n    margin-right: 0.25rem !important;\n  }\n  .mb-md-1,\n  .my-md-1 {\n    margin-bottom: 0.25rem !important;\n  }\n  .ml-md-1,\n  .mx-md-1 {\n    margin-left: 0.25rem !important;\n  }\n  .m-md-2 {\n    margin: 0.5rem !important;\n  }\n  .mt-md-2,\n  .my-md-2 {\n    margin-top: 0.5rem !important;\n  }\n  .mr-md-2,\n  .mx-md-2 {\n    margin-right: 0.5rem !important;\n  }\n  .mb-md-2,\n  .my-md-2 {\n    margin-bottom: 0.5rem !important;\n  }\n  .ml-md-2,\n  .mx-md-2 {\n    margin-left: 0.5rem !important;\n  }\n  .m-md-3 {\n    margin: 1rem !important;\n  }\n  .mt-md-3,\n  .my-md-3 {\n    margin-top: 1rem !important;\n  }\n  .mr-md-3,\n  .mx-md-3 {\n    margin-right: 1rem !important;\n  }\n  .mb-md-3,\n  .my-md-3 {\n    margin-bottom: 1rem !important;\n  }\n  .ml-md-3,\n  .mx-md-3 {\n    margin-left: 1rem !important;\n  }\n  .m-md-4 {\n    margin: 1.5rem !important;\n  }\n  .mt-md-4,\n  .my-md-4 {\n    margin-top: 1.5rem !important;\n  }\n  .mr-md-4,\n  .mx-md-4 {\n    margin-right: 1.5rem !important;\n  }\n  .mb-md-4,\n  .my-md-4 {\n    margin-bottom: 1.5rem !important;\n  }\n  .ml-md-4,\n  .mx-md-4 {\n    margin-left: 1.5rem !important;\n  }\n  .m-md-5 {\n    margin: 3rem !important;\n  }\n  .mt-md-5,\n  .my-md-5 {\n    margin-top: 3rem !important;\n  }\n  .mr-md-5,\n  .mx-md-5 {\n    margin-right: 3rem !important;\n  }\n  .mb-md-5,\n  .my-md-5 {\n    margin-bottom: 3rem !important;\n  }\n  .ml-md-5,\n  .mx-md-5 {\n    margin-left: 3rem !important;\n  }\n  .p-md-0 {\n    padding: 0 !important;\n  }\n  .pt-md-0,\n  .py-md-0 {\n    padding-top: 0 !important;\n  }\n  .pr-md-0,\n  .px-md-0 {\n    padding-right: 0 !important;\n  }\n  .pb-md-0,\n  .py-md-0 {\n    padding-bottom: 0 !important;\n  }\n  .pl-md-0,\n  .px-md-0 {\n    padding-left: 0 !important;\n  }\n  .p-md-1 {\n    padding: 0.25rem !important;\n  }\n  .pt-md-1,\n  .py-md-1 {\n    padding-top: 0.25rem !important;\n  }\n  .pr-md-1,\n  .px-md-1 {\n    padding-right: 0.25rem !important;\n  }\n  .pb-md-1,\n  .py-md-1 {\n    padding-bottom: 0.25rem !important;\n  }\n  .pl-md-1,\n  .px-md-1 {\n    padding-left: 0.25rem !important;\n  }\n  .p-md-2 {\n    padding: 0.5rem !important;\n  }\n  .pt-md-2,\n  .py-md-2 {\n    padding-top: 0.5rem !important;\n  }\n  .pr-md-2,\n  .px-md-2 {\n    padding-right: 0.5rem !important;\n  }\n  .pb-md-2,\n  .py-md-2 {\n    padding-bottom: 0.5rem !important;\n  }\n  .pl-md-2,\n  .px-md-2 {\n    padding-left: 0.5rem !important;\n  }\n  .p-md-3 {\n    padding: 1rem !important;\n  }\n  .pt-md-3,\n  .py-md-3 {\n    padding-top: 1rem !important;\n  }\n  .pr-md-3,\n  .px-md-3 {\n    padding-right: 1rem !important;\n  }\n  .pb-md-3,\n  .py-md-3 {\n    padding-bottom: 1rem !important;\n  }\n  .pl-md-3,\n  .px-md-3 {\n    padding-left: 1rem !important;\n  }\n  .p-md-4 {\n    padding: 1.5rem !important;\n  }\n  .pt-md-4,\n  .py-md-4 {\n    padding-top: 1.5rem !important;\n  }\n  .pr-md-4,\n  .px-md-4 {\n    padding-right: 1.5rem !important;\n  }\n  .pb-md-4,\n  .py-md-4 {\n    padding-bottom: 1.5rem !important;\n  }\n  .pl-md-4,\n  .px-md-4 {\n    padding-left: 1.5rem !important;\n  }\n  .p-md-5 {\n    padding: 3rem !important;\n  }\n  .pt-md-5,\n  .py-md-5 {\n    padding-top: 3rem !important;\n  }\n  .pr-md-5,\n  .px-md-5 {\n    padding-right: 3rem !important;\n  }\n  .pb-md-5,\n  .py-md-5 {\n    padding-bottom: 3rem !important;\n  }\n  .pl-md-5,\n  .px-md-5 {\n    padding-left: 3rem !important;\n  }\n  .m-md-n1 {\n    margin: -0.25rem !important;\n  }\n  .mt-md-n1,\n  .my-md-n1 {\n    margin-top: -0.25rem !important;\n  }\n  .mr-md-n1,\n  .mx-md-n1 {\n    margin-right: -0.25rem !important;\n  }\n  .mb-md-n1,\n  .my-md-n1 {\n    margin-bottom: -0.25rem !important;\n  }\n  .ml-md-n1,\n  .mx-md-n1 {\n    margin-left: -0.25rem !important;\n  }\n  .m-md-n2 {\n    margin: -0.5rem !important;\n  }\n  .mt-md-n2,\n  .my-md-n2 {\n    margin-top: -0.5rem !important;\n  }\n  .mr-md-n2,\n  .mx-md-n2 {\n    margin-right: -0.5rem !important;\n  }\n  .mb-md-n2,\n  .my-md-n2 {\n    margin-bottom: -0.5rem !important;\n  }\n  .ml-md-n2,\n  .mx-md-n2 {\n    margin-left: -0.5rem !important;\n  }\n  .m-md-n3 {\n    margin: -1rem !important;\n  }\n  .mt-md-n3,\n  .my-md-n3 {\n    margin-top: -1rem !important;\n  }\n  .mr-md-n3,\n  .mx-md-n3 {\n    margin-right: -1rem !important;\n  }\n  .mb-md-n3,\n  .my-md-n3 {\n    margin-bottom: -1rem !important;\n  }\n  .ml-md-n3,\n  .mx-md-n3 {\n    margin-left: -1rem !important;\n  }\n  .m-md-n4 {\n    margin: -1.5rem !important;\n  }\n  .mt-md-n4,\n  .my-md-n4 {\n    margin-top: -1.5rem !important;\n  }\n  .mr-md-n4,\n  .mx-md-n4 {\n    margin-right: -1.5rem !important;\n  }\n  .mb-md-n4,\n  .my-md-n4 {\n    margin-bottom: -1.5rem !important;\n  }\n  .ml-md-n4,\n  .mx-md-n4 {\n    margin-left: -1.5rem !important;\n  }\n  .m-md-n5 {\n    margin: -3rem !important;\n  }\n  .mt-md-n5,\n  .my-md-n5 {\n    margin-top: -3rem !important;\n  }\n  .mr-md-n5,\n  .mx-md-n5 {\n    margin-right: -3rem !important;\n  }\n  .mb-md-n5,\n  .my-md-n5 {\n    margin-bottom: -3rem !important;\n  }\n  .ml-md-n5,\n  .mx-md-n5 {\n    margin-left: -3rem !important;\n  }\n  .m-md-auto {\n    margin: auto !important;\n  }\n  .mt-md-auto,\n  .my-md-auto {\n    margin-top: auto !important;\n  }\n  .mr-md-auto,\n  .mx-md-auto {\n    margin-right: auto !important;\n  }\n  .mb-md-auto,\n  .my-md-auto {\n    margin-bottom: auto !important;\n  }\n  .ml-md-auto,\n  .mx-md-auto {\n    margin-left: auto !important;\n  }\n}\n\n@media (min-width: 992px) {\n  .m-lg-0 {\n    margin: 0 !important;\n  }\n  .mt-lg-0,\n  .my-lg-0 {\n    margin-top: 0 !important;\n  }\n  .mr-lg-0,\n  .mx-lg-0 {\n    margin-right: 0 !important;\n  }\n  .mb-lg-0,\n  .my-lg-0 {\n    margin-bottom: 0 !important;\n  }\n  .ml-lg-0,\n  .mx-lg-0 {\n    margin-left: 0 !important;\n  }\n  .m-lg-1 {\n    margin: 0.25rem !important;\n  }\n  .mt-lg-1,\n  .my-lg-1 {\n    margin-top: 0.25rem !important;\n  }\n  .mr-lg-1,\n  .mx-lg-1 {\n    margin-right: 0.25rem !important;\n  }\n  .mb-lg-1,\n  .my-lg-1 {\n    margin-bottom: 0.25rem !important;\n  }\n  .ml-lg-1,\n  .mx-lg-1 {\n    margin-left: 0.25rem !important;\n  }\n  .m-lg-2 {\n    margin: 0.5rem !important;\n  }\n  .mt-lg-2,\n  .my-lg-2 {\n    margin-top: 0.5rem !important;\n  }\n  .mr-lg-2,\n  .mx-lg-2 {\n    margin-right: 0.5rem !important;\n  }\n  .mb-lg-2,\n  .my-lg-2 {\n    margin-bottom: 0.5rem !important;\n  }\n  .ml-lg-2,\n  .mx-lg-2 {\n    margin-left: 0.5rem !important;\n  }\n  .m-lg-3 {\n    margin: 1rem !important;\n  }\n  .mt-lg-3,\n  .my-lg-3 {\n    margin-top: 1rem !important;\n  }\n  .mr-lg-3,\n  .mx-lg-3 {\n    margin-right: 1rem !important;\n  }\n  .mb-lg-3,\n  .my-lg-3 {\n    margin-bottom: 1rem !important;\n  }\n  .ml-lg-3,\n  .mx-lg-3 {\n    margin-left: 1rem !important;\n  }\n  .m-lg-4 {\n    margin: 1.5rem !important;\n  }\n  .mt-lg-4,\n  .my-lg-4 {\n    margin-top: 1.5rem !important;\n  }\n  .mr-lg-4,\n  .mx-lg-4 {\n    margin-right: 1.5rem !important;\n  }\n  .mb-lg-4,\n  .my-lg-4 {\n    margin-bottom: 1.5rem !important;\n  }\n  .ml-lg-4,\n  .mx-lg-4 {\n    margin-left: 1.5rem !important;\n  }\n  .m-lg-5 {\n    margin: 3rem !important;\n  }\n  .mt-lg-5,\n  .my-lg-5 {\n    margin-top: 3rem !important;\n  }\n  .mr-lg-5,\n  .mx-lg-5 {\n    margin-right: 3rem !important;\n  }\n  .mb-lg-5,\n  .my-lg-5 {\n    margin-bottom: 3rem !important;\n  }\n  .ml-lg-5,\n  .mx-lg-5 {\n    margin-left: 3rem !important;\n  }\n  .p-lg-0 {\n    padding: 0 !important;\n  }\n  .pt-lg-0,\n  .py-lg-0 {\n    padding-top: 0 !important;\n  }\n  .pr-lg-0,\n  .px-lg-0 {\n    padding-right: 0 !important;\n  }\n  .pb-lg-0,\n  .py-lg-0 {\n    padding-bottom: 0 !important;\n  }\n  .pl-lg-0,\n  .px-lg-0 {\n    padding-left: 0 !important;\n  }\n  .p-lg-1 {\n    padding: 0.25rem !important;\n  }\n  .pt-lg-1,\n  .py-lg-1 {\n    padding-top: 0.25rem !important;\n  }\n  .pr-lg-1,\n  .px-lg-1 {\n    padding-right: 0.25rem !important;\n  }\n  .pb-lg-1,\n  .py-lg-1 {\n    padding-bottom: 0.25rem !important;\n  }\n  .pl-lg-1,\n  .px-lg-1 {\n    padding-left: 0.25rem !important;\n  }\n  .p-lg-2 {\n    padding: 0.5rem !important;\n  }\n  .pt-lg-2,\n  .py-lg-2 {\n    padding-top: 0.5rem !important;\n  }\n  .pr-lg-2,\n  .px-lg-2 {\n    padding-right: 0.5rem !important;\n  }\n  .pb-lg-2,\n  .py-lg-2 {\n    padding-bottom: 0.5rem !important;\n  }\n  .pl-lg-2,\n  .px-lg-2 {\n    padding-left: 0.5rem !important;\n  }\n  .p-lg-3 {\n    padding: 1rem !important;\n  }\n  .pt-lg-3,\n  .py-lg-3 {\n    padding-top: 1rem !important;\n  }\n  .pr-lg-3,\n  .px-lg-3 {\n    padding-right: 1rem !important;\n  }\n  .pb-lg-3,\n  .py-lg-3 {\n    padding-bottom: 1rem !important;\n  }\n  .pl-lg-3,\n  .px-lg-3 {\n    padding-left: 1rem !important;\n  }\n  .p-lg-4 {\n    padding: 1.5rem !important;\n  }\n  .pt-lg-4,\n  .py-lg-4 {\n    padding-top: 1.5rem !important;\n  }\n  .pr-lg-4,\n  .px-lg-4 {\n    padding-right: 1.5rem !important;\n  }\n  .pb-lg-4,\n  .py-lg-4 {\n    padding-bottom: 1.5rem !important;\n  }\n  .pl-lg-4,\n  .px-lg-4 {\n    padding-left: 1.5rem !important;\n  }\n  .p-lg-5 {\n    padding: 3rem !important;\n  }\n  .pt-lg-5,\n  .py-lg-5 {\n    padding-top: 3rem !important;\n  }\n  .pr-lg-5,\n  .px-lg-5 {\n    padding-right: 3rem !important;\n  }\n  .pb-lg-5,\n  .py-lg-5 {\n    padding-bottom: 3rem !important;\n  }\n  .pl-lg-5,\n  .px-lg-5 {\n    padding-left: 3rem !important;\n  }\n  .m-lg-n1 {\n    margin: -0.25rem !important;\n  }\n  .mt-lg-n1,\n  .my-lg-n1 {\n    margin-top: -0.25rem !important;\n  }\n  .mr-lg-n1,\n  .mx-lg-n1 {\n    margin-right: -0.25rem !important;\n  }\n  .mb-lg-n1,\n  .my-lg-n1 {\n    margin-bottom: -0.25rem !important;\n  }\n  .ml-lg-n1,\n  .mx-lg-n1 {\n    margin-left: -0.25rem !important;\n  }\n  .m-lg-n2 {\n    margin: -0.5rem !important;\n  }\n  .mt-lg-n2,\n  .my-lg-n2 {\n    margin-top: -0.5rem !important;\n  }\n  .mr-lg-n2,\n  .mx-lg-n2 {\n    margin-right: -0.5rem !important;\n  }\n  .mb-lg-n2,\n  .my-lg-n2 {\n    margin-bottom: -0.5rem !important;\n  }\n  .ml-lg-n2,\n  .mx-lg-n2 {\n    margin-left: -0.5rem !important;\n  }\n  .m-lg-n3 {\n    margin: -1rem !important;\n  }\n  .mt-lg-n3,\n  .my-lg-n3 {\n    margin-top: -1rem !important;\n  }\n  .mr-lg-n3,\n  .mx-lg-n3 {\n    margin-right: -1rem !important;\n  }\n  .mb-lg-n3,\n  .my-lg-n3 {\n    margin-bottom: -1rem !important;\n  }\n  .ml-lg-n3,\n  .mx-lg-n3 {\n    margin-left: -1rem !important;\n  }\n  .m-lg-n4 {\n    margin: -1.5rem !important;\n  }\n  .mt-lg-n4,\n  .my-lg-n4 {\n    margin-top: -1.5rem !important;\n  }\n  .mr-lg-n4,\n  .mx-lg-n4 {\n    margin-right: -1.5rem !important;\n  }\n  .mb-lg-n4,\n  .my-lg-n4 {\n    margin-bottom: -1.5rem !important;\n  }\n  .ml-lg-n4,\n  .mx-lg-n4 {\n    margin-left: -1.5rem !important;\n  }\n  .m-lg-n5 {\n    margin: -3rem !important;\n  }\n  .mt-lg-n5,\n  .my-lg-n5 {\n    margin-top: -3rem !important;\n  }\n  .mr-lg-n5,\n  .mx-lg-n5 {\n    margin-right: -3rem !important;\n  }\n  .mb-lg-n5,\n  .my-lg-n5 {\n    margin-bottom: -3rem !important;\n  }\n  .ml-lg-n5,\n  .mx-lg-n5 {\n    margin-left: -3rem !important;\n  }\n  .m-lg-auto {\n    margin: auto !important;\n  }\n  .mt-lg-auto,\n  .my-lg-auto {\n    margin-top: auto !important;\n  }\n  .mr-lg-auto,\n  .mx-lg-auto {\n    margin-right: auto !important;\n  }\n  .mb-lg-auto,\n  .my-lg-auto {\n    margin-bottom: auto !important;\n  }\n  .ml-lg-auto,\n  .mx-lg-auto {\n    margin-left: auto !important;\n  }\n}\n\n@media (min-width: 1200px) {\n  .m-xl-0 {\n    margin: 0 !important;\n  }\n  .mt-xl-0,\n  .my-xl-0 {\n    margin-top: 0 !important;\n  }\n  .mr-xl-0,\n  .mx-xl-0 {\n    margin-right: 0 !important;\n  }\n  .mb-xl-0,\n  .my-xl-0 {\n    margin-bottom: 0 !important;\n  }\n  .ml-xl-0,\n  .mx-xl-0 {\n    margin-left: 0 !important;\n  }\n  .m-xl-1 {\n    margin: 0.25rem !important;\n  }\n  .mt-xl-1,\n  .my-xl-1 {\n    margin-top: 0.25rem !important;\n  }\n  .mr-xl-1,\n  .mx-xl-1 {\n    margin-right: 0.25rem !important;\n  }\n  .mb-xl-1,\n  .my-xl-1 {\n    margin-bottom: 0.25rem !important;\n  }\n  .ml-xl-1,\n  .mx-xl-1 {\n    margin-left: 0.25rem !important;\n  }\n  .m-xl-2 {\n    margin: 0.5rem !important;\n  }\n  .mt-xl-2,\n  .my-xl-2 {\n    margin-top: 0.5rem !important;\n  }\n  .mr-xl-2,\n  .mx-xl-2 {\n    margin-right: 0.5rem !important;\n  }\n  .mb-xl-2,\n  .my-xl-2 {\n    margin-bottom: 0.5rem !important;\n  }\n  .ml-xl-2,\n  .mx-xl-2 {\n    margin-left: 0.5rem !important;\n  }\n  .m-xl-3 {\n    margin: 1rem !important;\n  }\n  .mt-xl-3,\n  .my-xl-3 {\n    margin-top: 1rem !important;\n  }\n  .mr-xl-3,\n  .mx-xl-3 {\n    margin-right: 1rem !important;\n  }\n  .mb-xl-3,\n  .my-xl-3 {\n    margin-bottom: 1rem !important;\n  }\n  .ml-xl-3,\n  .mx-xl-3 {\n    margin-left: 1rem !important;\n  }\n  .m-xl-4 {\n    margin: 1.5rem !important;\n  }\n  .mt-xl-4,\n  .my-xl-4 {\n    margin-top: 1.5rem !important;\n  }\n  .mr-xl-4,\n  .mx-xl-4 {\n    margin-right: 1.5rem !important;\n  }\n  .mb-xl-4,\n  .my-xl-4 {\n    margin-bottom: 1.5rem !important;\n  }\n  .ml-xl-4,\n  .mx-xl-4 {\n    margin-left: 1.5rem !important;\n  }\n  .m-xl-5 {\n    margin: 3rem !important;\n  }\n  .mt-xl-5,\n  .my-xl-5 {\n    margin-top: 3rem !important;\n  }\n  .mr-xl-5,\n  .mx-xl-5 {\n    margin-right: 3rem !important;\n  }\n  .mb-xl-5,\n  .my-xl-5 {\n    margin-bottom: 3rem !important;\n  }\n  .ml-xl-5,\n  .mx-xl-5 {\n    margin-left: 3rem !important;\n  }\n  .p-xl-0 {\n    padding: 0 !important;\n  }\n  .pt-xl-0,\n  .py-xl-0 {\n    padding-top: 0 !important;\n  }\n  .pr-xl-0,\n  .px-xl-0 {\n    padding-right: 0 !important;\n  }\n  .pb-xl-0,\n  .py-xl-0 {\n    padding-bottom: 0 !important;\n  }\n  .pl-xl-0,\n  .px-xl-0 {\n    padding-left: 0 !important;\n  }\n  .p-xl-1 {\n    padding: 0.25rem !important;\n  }\n  .pt-xl-1,\n  .py-xl-1 {\n    padding-top: 0.25rem !important;\n  }\n  .pr-xl-1,\n  .px-xl-1 {\n    padding-right: 0.25rem !important;\n  }\n  .pb-xl-1,\n  .py-xl-1 {\n    padding-bottom: 0.25rem !important;\n  }\n  .pl-xl-1,\n  .px-xl-1 {\n    padding-left: 0.25rem !important;\n  }\n  .p-xl-2 {\n    padding: 0.5rem !important;\n  }\n  .pt-xl-2,\n  .py-xl-2 {\n    padding-top: 0.5rem !important;\n  }\n  .pr-xl-2,\n  .px-xl-2 {\n    padding-right: 0.5rem !important;\n  }\n  .pb-xl-2,\n  .py-xl-2 {\n    padding-bottom: 0.5rem !important;\n  }\n  .pl-xl-2,\n  .px-xl-2 {\n    padding-left: 0.5rem !important;\n  }\n  .p-xl-3 {\n    padding: 1rem !important;\n  }\n  .pt-xl-3,\n  .py-xl-3 {\n    padding-top: 1rem !important;\n  }\n  .pr-xl-3,\n  .px-xl-3 {\n    padding-right: 1rem !important;\n  }\n  .pb-xl-3,\n  .py-xl-3 {\n    padding-bottom: 1rem !important;\n  }\n  .pl-xl-3,\n  .px-xl-3 {\n    padding-left: 1rem !important;\n  }\n  .p-xl-4 {\n    padding: 1.5rem !important;\n  }\n  .pt-xl-4,\n  .py-xl-4 {\n    padding-top: 1.5rem !important;\n  }\n  .pr-xl-4,\n  .px-xl-4 {\n    padding-right: 1.5rem !important;\n  }\n  .pb-xl-4,\n  .py-xl-4 {\n    padding-bottom: 1.5rem !important;\n  }\n  .pl-xl-4,\n  .px-xl-4 {\n    padding-left: 1.5rem !important;\n  }\n  .p-xl-5 {\n    padding: 3rem !important;\n  }\n  .pt-xl-5,\n  .py-xl-5 {\n    padding-top: 3rem !important;\n  }\n  .pr-xl-5,\n  .px-xl-5 {\n    padding-right: 3rem !important;\n  }\n  .pb-xl-5,\n  .py-xl-5 {\n    padding-bottom: 3rem !important;\n  }\n  .pl-xl-5,\n  .px-xl-5 {\n    padding-left: 3rem !important;\n  }\n  .m-xl-n1 {\n    margin: -0.25rem !important;\n  }\n  .mt-xl-n1,\n  .my-xl-n1 {\n    margin-top: -0.25rem !important;\n  }\n  .mr-xl-n1,\n  .mx-xl-n1 {\n    margin-right: -0.25rem !important;\n  }\n  .mb-xl-n1,\n  .my-xl-n1 {\n    margin-bottom: -0.25rem !important;\n  }\n  .ml-xl-n1,\n  .mx-xl-n1 {\n    margin-left: -0.25rem !important;\n  }\n  .m-xl-n2 {\n    margin: -0.5rem !important;\n  }\n  .mt-xl-n2,\n  .my-xl-n2 {\n    margin-top: -0.5rem !important;\n  }\n  .mr-xl-n2,\n  .mx-xl-n2 {\n    margin-right: -0.5rem !important;\n  }\n  .mb-xl-n2,\n  .my-xl-n2 {\n    margin-bottom: -0.5rem !important;\n  }\n  .ml-xl-n2,\n  .mx-xl-n2 {\n    margin-left: -0.5rem !important;\n  }\n  .m-xl-n3 {\n    margin: -1rem !important;\n  }\n  .mt-xl-n3,\n  .my-xl-n3 {\n    margin-top: -1rem !important;\n  }\n  .mr-xl-n3,\n  .mx-xl-n3 {\n    margin-right: -1rem !important;\n  }\n  .mb-xl-n3,\n  .my-xl-n3 {\n    margin-bottom: -1rem !important;\n  }\n  .ml-xl-n3,\n  .mx-xl-n3 {\n    margin-left: -1rem !important;\n  }\n  .m-xl-n4 {\n    margin: -1.5rem !important;\n  }\n  .mt-xl-n4,\n  .my-xl-n4 {\n    margin-top: -1.5rem !important;\n  }\n  .mr-xl-n4,\n  .mx-xl-n4 {\n    margin-right: -1.5rem !important;\n  }\n  .mb-xl-n4,\n  .my-xl-n4 {\n    margin-bottom: -1.5rem !important;\n  }\n  .ml-xl-n4,\n  .mx-xl-n4 {\n    margin-left: -1.5rem !important;\n  }\n  .m-xl-n5 {\n    margin: -3rem !important;\n  }\n  .mt-xl-n5,\n  .my-xl-n5 {\n    margin-top: -3rem !important;\n  }\n  .mr-xl-n5,\n  .mx-xl-n5 {\n    margin-right: -3rem !important;\n  }\n  .mb-xl-n5,\n  .my-xl-n5 {\n    margin-bottom: -3rem !important;\n  }\n  .ml-xl-n5,\n  .mx-xl-n5 {\n    margin-left: -3rem !important;\n  }\n  .m-xl-auto {\n    margin: auto !important;\n  }\n  .mt-xl-auto,\n  .my-xl-auto {\n    margin-top: auto !important;\n  }\n  .mr-xl-auto,\n  .mx-xl-auto {\n    margin-right: auto !important;\n  }\n  .mb-xl-auto,\n  .my-xl-auto {\n    margin-bottom: auto !important;\n  }\n  .ml-xl-auto,\n  .mx-xl-auto {\n    margin-left: auto !important;\n  }\n}\n\n.stretched-link::after {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  z-index: 1;\n  pointer-events: auto;\n  content: \"\";\n  background-color: rgba(0, 0, 0, 0);\n}\n\n.text-monospace {\n  font-family: SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace !important;\n}\n\n.text-justify {\n  text-align: justify !important;\n}\n\n.text-wrap {\n  white-space: normal !important;\n}\n\n.text-nowrap {\n  white-space: nowrap !important;\n}\n\n.text-truncate {\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n}\n\n.text-left {\n  text-align: left !important;\n}\n\n.text-right {\n  text-align: right !important;\n}\n\n.text-center {\n  text-align: center !important;\n}\n\n@media (min-width: 576px) {\n  .text-sm-left {\n    text-align: left !important;\n  }\n  .text-sm-right {\n    text-align: right !important;\n  }\n  .text-sm-center {\n    text-align: center !important;\n  }\n}\n\n@media (min-width: 768px) {\n  .text-md-left {\n    text-align: left !important;\n  }\n  .text-md-right {\n    text-align: right !important;\n  }\n  .text-md-center {\n    text-align: center !important;\n  }\n}\n\n@media (min-width: 992px) {\n  .text-lg-left {\n    text-align: left !important;\n  }\n  .text-lg-right {\n    text-align: right !important;\n  }\n  .text-lg-center {\n    text-align: center !important;\n  }\n}\n\n@media (min-width: 1200px) {\n  .text-xl-left {\n    text-align: left !important;\n  }\n  .text-xl-right {\n    text-align: right !important;\n  }\n  .text-xl-center {\n    text-align: center !important;\n  }\n}\n\n.text-lowercase {\n  text-transform: lowercase !important;\n}\n\n.text-uppercase {\n  text-transform: uppercase !important;\n}\n\n.text-capitalize {\n  text-transform: capitalize !important;\n}\n\n.font-weight-light {\n  font-weight: 300 !important;\n}\n\n.font-weight-lighter {\n  font-weight: lighter !important;\n}\n\n.font-weight-normal {\n  font-weight: 400 !important;\n}\n\n.font-weight-bold {\n  font-weight: 700 !important;\n}\n\n.font-weight-bolder {\n  font-weight: bolder !important;\n}\n\n.font-italic {\n  font-style: italic !important;\n}\n\n.text-white {\n  color: #fff !important;\n}\n\n.text-primary {\n  color: #007bff !important;\n}\n\na.text-primary:hover, a.text-primary:focus {\n  color: #0056b3 !important;\n}\n\n.text-secondary {\n  color: #6c757d !important;\n}\n\na.text-secondary:hover, a.text-secondary:focus {\n  color: #494f54 !important;\n}\n\n.text-success {\n  color: #28a745 !important;\n}\n\na.text-success:hover, a.text-success:focus {\n  color: #19692c !important;\n}\n\n.text-info {\n  color: #17a2b8 !important;\n}\n\na.text-info:hover, a.text-info:focus {\n  color: #0f6674 !important;\n}\n\n.text-warning {\n  color: #ffc107 !important;\n}\n\na.text-warning:hover, a.text-warning:focus {\n  color: #ba8b00 !important;\n}\n\n.text-danger {\n  color: #dc3545 !important;\n}\n\na.text-danger:hover, a.text-danger:focus {\n  color: #a71d2a !important;\n}\n\n.text-light {\n  color: #f8f9fa !important;\n}\n\na.text-light:hover, a.text-light:focus {\n  color: #cbd3da !important;\n}\n\n.text-dark {\n  color: #343a40 !important;\n}\n\na.text-dark:hover, a.text-dark:focus {\n  color: #121416 !important;\n}\n\n.text-body {\n  color: #212529 !important;\n}\n\n.text-muted {\n  color: #6c757d !important;\n}\n\n.text-black-50 {\n  color: rgba(0, 0, 0, 0.5) !important;\n}\n\n.text-white-50 {\n  color: rgba(255, 255, 255, 0.5) !important;\n}\n\n.text-hide {\n  font: 0/0 a;\n  color: transparent;\n  text-shadow: none;\n  background-color: transparent;\n  border: 0;\n}\n\n.text-decoration-none {\n  text-decoration: none !important;\n}\n\n.text-break {\n  word-wrap: break-word !important;\n}\n\n.text-reset {\n  color: inherit !important;\n}\n\n.visible {\n  visibility: visible !important;\n}\n\n.invisible {\n  visibility: hidden !important;\n}\n\n@media print {\n  *,\n  *::before,\n  *::after {\n    text-shadow: none !important;\n    box-shadow: none !important;\n  }\n  a:not(.btn) {\n    text-decoration: underline;\n  }\n  abbr[title]::after {\n    content: \" (\" attr(title) \")\";\n  }\n  pre {\n    white-space: pre-wrap !important;\n  }\n  pre,\n  blockquote {\n    border: 1px solid #adb5bd;\n    page-break-inside: avoid;\n  }\n  thead {\n    display: table-header-group;\n  }\n  tr,\n  img {\n    page-break-inside: avoid;\n  }\n  p,\n  h2,\n  h3 {\n    orphans: 3;\n    widows: 3;\n  }\n  h2,\n  h3 {\n    page-break-after: avoid;\n  }\n  @page {\n    size: a3;\n  }\n  body {\n    min-width: 992px !important;\n  }\n  .container {\n    min-width: 992px !important;\n  }\n  .navbar {\n    display: none;\n  }\n  .badge {\n    border: 1px solid #000;\n  }\n  .table {\n    border-collapse: collapse !important;\n  }\n  .table td,\n  .table th {\n    background-color: #fff !important;\n  }\n  .table-bordered th,\n  .table-bordered td {\n    border: 1px solid #dee2e6 !important;\n  }\n  .table-dark {\n    color: inherit;\n  }\n  .table-dark th,\n  .table-dark td,\n  .table-dark thead th,\n  .table-dark tbody + tbody {\n    border-color: #dee2e6;\n  }\n  .table .thead-dark th {\n    color: inherit;\n    border-color: #dee2e6;\n  }\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/App.vue?vue&type=style&index=0&id=332fccf4&scoped=true&lang=css&":
 /*!*********************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/App.vue?vue&type=style&index=0&id=332fccf4&scoped=true&lang=css& ***!
@@ -7578,6 +7865,25 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 // module
 exports.push([module.i, "\n.siswa[data-v-332fccf4] {\n  text-decoration: none;\n  color: white;\n}\n.margin[data-v-332fccf4] {\n  margin-left: 300px;\n  margin-right: 200px;\n}\n*[data-v-332fccf4] {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  list-style: none;\n  text-decoration: none;\n  font-family: \"Josefin Sans\", sans-serif;\n}\nbody[data-v-332fccf4] {\n  background-color: #f3f5f9;\n}\n.wrapper[data-v-332fccf4] {\n  display: flex;\n  position: relative;\n}\n.wrapper .sidebar[data-v-332fccf4] {\n  width: 200px;\n  height: 100%;\n  background: #16744a;\n  padding: 30px 0px;\n  position: fixed;\n  color: white;\n}\n.wrapper .sidebar h3[data-v-332fccf4] {\n  color: #fff;\n  text-transform: uppercase;\n  text-align: center;\n  margin-bottom: 30px;\n}\n.wrapper .sidebar ul li[data-v-332fccf4] {\n  padding: 15px;\n  border-bottom: 1px solid #bdb8d7;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.05);\n  border-top: 1px solid rgba(255, 255, 255, 0.05);\n}\n.wrapper .sidebar ul li a[data-v-332fccf4] {\n  color: #bdb8d7;\n  display: block;\n}\n.wrapper .sidebar ul li a .fas[data-v-332fccf4] {\n  width: 25px;\n}\n.wrapper .sidebar ul li[data-v-332fccf4]:hover {\n  background-color: #594f8d;\n}\n.wrapper .sidebar ul li:hover a[data-v-332fccf4] {\n  color: #fff;\n}\n.wrapper .sidebar .social_media[data-v-332fccf4] {\n  position: absolute;\n  bottom: 0;\n  left: 50%;\n  transform: translateX(-50%);\n  display: flex;\n}\n.wrapper .sidebar .social_media a[data-v-332fccf4] {\n  display: block;\n  width: 40px;\n  background: #594f8d;\n  height: 40px;\n  line-height: 45px;\n  text-align: center;\n  margin: 0 5px;\n  color: #bdb8d7;\n  border-top-left-radius: 5px;\n  border-top-right-radius: 5px;\n}\n.wrapper .main_content[data-v-332fccf4] {\n  width: 100%;\n  margin-left: 200px;\n}\n.wrapper .main_content .header[data-v-332fccf4] {\n  padding: 20px;\n  background: #fff;\n  color: #717171;\n  border-bottom: 1px solid #e0e4e8;\n}\n.wrapper .main_content .info[data-v-332fccf4] {\n  margin: 20px;\n  color: #717171;\n  line-height: 25px;\n}\n.wrapper .main_content .info div[data-v-332fccf4] {\n  margin-bottom: 20px;\n}\n.center[data-v-332fccf4] {\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/matapelajaran/MataPelajaran.vue?vue&type=style&index=0&id=6511dc30&scoped=true&lang=css&":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/matapelajaran/MataPelajaran.vue?vue&type=style&index=0&id=6511dc30&scoped=true&lang=css& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.kelas > td[data-v-6511dc30] {\n  padding-right: 1.5em;\n}\n", ""]);
 
 // exports
 
@@ -38724,6 +39030,36 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/matapelajaran/MataPelajaran.vue?vue&type=style&index=0&id=6511dc30&scoped=true&lang=css&":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/matapelajaran/MataPelajaran.vue?vue&type=style&index=0&id=6511dc30&scoped=true&lang=css& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--6-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./MataPelajaran.vue?vue&type=style&index=0&id=6511dc30&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/matapelajaran/MataPelajaran.vue?vue&type=style&index=0&id=6511dc30&scoped=true&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/lib/addStyles.js":
 /*!****************************************************!*\
   !*** ./node_modules/style-loader/lib/addStyles.js ***!
@@ -39233,6 +39569,3128 @@ module.exports = function (css) {
 
 /***/ }),
 
+/***/ "./node_modules/sweetalert2/dist/sweetalert2.all.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/sweetalert2/dist/sweetalert2.all.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/*!
+* sweetalert2 v9.10.13
+* Released under the MIT License.
+*/
+(function (global, factory) {
+   true ? module.exports = factory() :
+  undefined;
+}(this, function () { 'use strict';
+
+  function _typeof(obj) {
+    "@babel/helpers - typeof";
+
+    if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+      _typeof = function (obj) {
+        return typeof obj;
+      };
+    } else {
+      _typeof = function (obj) {
+        return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+      };
+    }
+
+    return _typeof(obj);
+  }
+
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  function _defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];
+      descriptor.enumerable = descriptor.enumerable || false;
+      descriptor.configurable = true;
+      if ("value" in descriptor) descriptor.writable = true;
+      Object.defineProperty(target, descriptor.key, descriptor);
+    }
+  }
+
+  function _createClass(Constructor, protoProps, staticProps) {
+    if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) _defineProperties(Constructor, staticProps);
+    return Constructor;
+  }
+
+  function _extends() {
+    _extends = Object.assign || function (target) {
+      for (var i = 1; i < arguments.length; i++) {
+        var source = arguments[i];
+
+        for (var key in source) {
+          if (Object.prototype.hasOwnProperty.call(source, key)) {
+            target[key] = source[key];
+          }
+        }
+      }
+
+      return target;
+    };
+
+    return _extends.apply(this, arguments);
+  }
+
+  function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) {
+      throw new TypeError("Super expression must either be null or a function");
+    }
+
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+      constructor: {
+        value: subClass,
+        writable: true,
+        configurable: true
+      }
+    });
+    if (superClass) _setPrototypeOf(subClass, superClass);
+  }
+
+  function _getPrototypeOf(o) {
+    _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+      return o.__proto__ || Object.getPrototypeOf(o);
+    };
+    return _getPrototypeOf(o);
+  }
+
+  function _setPrototypeOf(o, p) {
+    _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+      o.__proto__ = p;
+      return o;
+    };
+
+    return _setPrototypeOf(o, p);
+  }
+
+  function _isNativeReflectConstruct() {
+    if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+    if (Reflect.construct.sham) return false;
+    if (typeof Proxy === "function") return true;
+
+    try {
+      Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function _construct(Parent, args, Class) {
+    if (_isNativeReflectConstruct()) {
+      _construct = Reflect.construct;
+    } else {
+      _construct = function _construct(Parent, args, Class) {
+        var a = [null];
+        a.push.apply(a, args);
+        var Constructor = Function.bind.apply(Parent, a);
+        var instance = new Constructor();
+        if (Class) _setPrototypeOf(instance, Class.prototype);
+        return instance;
+      };
+    }
+
+    return _construct.apply(null, arguments);
+  }
+
+  function _assertThisInitialized(self) {
+    if (self === void 0) {
+      throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    }
+
+    return self;
+  }
+
+  function _possibleConstructorReturn(self, call) {
+    if (call && (typeof call === "object" || typeof call === "function")) {
+      return call;
+    }
+
+    return _assertThisInitialized(self);
+  }
+
+  function _createSuper(Derived) {
+    var hasNativeReflectConstruct = _isNativeReflectConstruct();
+
+    return function () {
+      var Super = _getPrototypeOf(Derived),
+          result;
+
+      if (hasNativeReflectConstruct) {
+        var NewTarget = _getPrototypeOf(this).constructor;
+
+        result = Reflect.construct(Super, arguments, NewTarget);
+      } else {
+        result = Super.apply(this, arguments);
+      }
+
+      return _possibleConstructorReturn(this, result);
+    };
+  }
+
+  function _superPropBase(object, property) {
+    while (!Object.prototype.hasOwnProperty.call(object, property)) {
+      object = _getPrototypeOf(object);
+      if (object === null) break;
+    }
+
+    return object;
+  }
+
+  function _get(target, property, receiver) {
+    if (typeof Reflect !== "undefined" && Reflect.get) {
+      _get = Reflect.get;
+    } else {
+      _get = function _get(target, property, receiver) {
+        var base = _superPropBase(target, property);
+
+        if (!base) return;
+        var desc = Object.getOwnPropertyDescriptor(base, property);
+
+        if (desc.get) {
+          return desc.get.call(receiver);
+        }
+
+        return desc.value;
+      };
+    }
+
+    return _get(target, property, receiver || target);
+  }
+
+  var consolePrefix = 'SweetAlert2:';
+  /**
+   * Filter the unique values into a new array
+   * @param arr
+   */
+
+  var uniqueArray = function uniqueArray(arr) {
+    var result = [];
+
+    for (var i = 0; i < arr.length; i++) {
+      if (result.indexOf(arr[i]) === -1) {
+        result.push(arr[i]);
+      }
+    }
+
+    return result;
+  };
+  /**
+   * Capitalize the first letter of a string
+   * @param str
+   */
+
+  var capitalizeFirstLetter = function capitalizeFirstLetter(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  };
+  /**
+   * Returns the array ob object values (Object.values isn't supported in IE11)
+   * @param obj
+   */
+
+  var objectValues = function objectValues(obj) {
+    return Object.keys(obj).map(function (key) {
+      return obj[key];
+    });
+  };
+  /**
+   * Convert NodeList to Array
+   * @param nodeList
+   */
+
+  var toArray = function toArray(nodeList) {
+    return Array.prototype.slice.call(nodeList);
+  };
+  /**
+   * Standardise console warnings
+   * @param message
+   */
+
+  var warn = function warn(message) {
+    console.warn("".concat(consolePrefix, " ").concat(message));
+  };
+  /**
+   * Standardise console errors
+   * @param message
+   */
+
+  var error = function error(message) {
+    console.error("".concat(consolePrefix, " ").concat(message));
+  };
+  /**
+   * Private global state for `warnOnce`
+   * @type {Array}
+   * @private
+   */
+
+  var previousWarnOnceMessages = [];
+  /**
+   * Show a console warning, but only if it hasn't already been shown
+   * @param message
+   */
+
+  var warnOnce = function warnOnce(message) {
+    if (!(previousWarnOnceMessages.indexOf(message) !== -1)) {
+      previousWarnOnceMessages.push(message);
+      warn(message);
+    }
+  };
+  /**
+   * Show a one-time console warning about deprecated params/methods
+   */
+
+  var warnAboutDepreation = function warnAboutDepreation(deprecatedParam, useInstead) {
+    warnOnce("\"".concat(deprecatedParam, "\" is deprecated and will be removed in the next major release. Please use \"").concat(useInstead, "\" instead."));
+  };
+  /**
+   * If `arg` is a function, call it (with no arguments or context) and return the result.
+   * Otherwise, just pass the value through
+   * @param arg
+   */
+
+  var callIfFunction = function callIfFunction(arg) {
+    return typeof arg === 'function' ? arg() : arg;
+  };
+  var isPromise = function isPromise(arg) {
+    return arg && Promise.resolve(arg) === arg;
+  };
+
+  var DismissReason = Object.freeze({
+    cancel: 'cancel',
+    backdrop: 'backdrop',
+    close: 'close',
+    esc: 'esc',
+    timer: 'timer'
+  });
+
+  var isJqueryElement = function isJqueryElement(elem) {
+    return _typeof(elem) === 'object' && elem.jquery;
+  };
+
+  var isElement = function isElement(elem) {
+    return elem instanceof Element || isJqueryElement(elem);
+  };
+
+  var argsToParams = function argsToParams(args) {
+    var params = {};
+
+    if (_typeof(args[0]) === 'object' && !isElement(args[0])) {
+      _extends(params, args[0]);
+    } else {
+      ['title', 'html', 'icon'].forEach(function (name, index) {
+        var arg = args[index];
+
+        if (typeof arg === 'string' || isElement(arg)) {
+          params[name] = arg;
+        } else if (arg !== undefined) {
+          error("Unexpected type of ".concat(name, "! Expected \"string\" or \"Element\", got ").concat(_typeof(arg)));
+        }
+      });
+    }
+
+    return params;
+  };
+
+  var swalPrefix = 'swal2-';
+  var prefix = function prefix(items) {
+    var result = {};
+
+    for (var i in items) {
+      result[items[i]] = swalPrefix + items[i];
+    }
+
+    return result;
+  };
+  var swalClasses = prefix(['container', 'shown', 'height-auto', 'iosfix', 'popup', 'modal', 'no-backdrop', 'no-transition', 'toast', 'toast-shown', 'toast-column', 'show', 'hide', 'close', 'title', 'header', 'content', 'html-container', 'actions', 'confirm', 'cancel', 'footer', 'icon', 'icon-content', 'image', 'input', 'file', 'range', 'select', 'radio', 'checkbox', 'label', 'textarea', 'inputerror', 'validation-message', 'progress-steps', 'active-progress-step', 'progress-step', 'progress-step-line', 'loading', 'styled', 'top', 'top-start', 'top-end', 'top-left', 'top-right', 'center', 'center-start', 'center-end', 'center-left', 'center-right', 'bottom', 'bottom-start', 'bottom-end', 'bottom-left', 'bottom-right', 'grow-row', 'grow-column', 'grow-fullscreen', 'rtl', 'timer-progress-bar', 'timer-progress-bar-container', 'scrollbar-measure', 'icon-success', 'icon-warning', 'icon-info', 'icon-question', 'icon-error']);
+  var iconTypes = prefix(['success', 'warning', 'info', 'question', 'error']);
+
+  var getContainer = function getContainer() {
+    return document.body.querySelector(".".concat(swalClasses.container));
+  };
+  var elementBySelector = function elementBySelector(selectorString) {
+    var container = getContainer();
+    return container ? container.querySelector(selectorString) : null;
+  };
+
+  var elementByClass = function elementByClass(className) {
+    return elementBySelector(".".concat(className));
+  };
+
+  var getPopup = function getPopup() {
+    return elementByClass(swalClasses.popup);
+  };
+  var getIcons = function getIcons() {
+    var popup = getPopup();
+    return toArray(popup.querySelectorAll(".".concat(swalClasses.icon)));
+  };
+  var getIcon = function getIcon() {
+    var visibleIcon = getIcons().filter(function (icon) {
+      return isVisible(icon);
+    });
+    return visibleIcon.length ? visibleIcon[0] : null;
+  };
+  var getTitle = function getTitle() {
+    return elementByClass(swalClasses.title);
+  };
+  var getContent = function getContent() {
+    return elementByClass(swalClasses.content);
+  };
+  var getHtmlContainer = function getHtmlContainer() {
+    return elementByClass(swalClasses['html-container']);
+  };
+  var getImage = function getImage() {
+    return elementByClass(swalClasses.image);
+  };
+  var getProgressSteps = function getProgressSteps() {
+    return elementByClass(swalClasses['progress-steps']);
+  };
+  var getValidationMessage = function getValidationMessage() {
+    return elementByClass(swalClasses['validation-message']);
+  };
+  var getConfirmButton = function getConfirmButton() {
+    return elementBySelector(".".concat(swalClasses.actions, " .").concat(swalClasses.confirm));
+  };
+  var getCancelButton = function getCancelButton() {
+    return elementBySelector(".".concat(swalClasses.actions, " .").concat(swalClasses.cancel));
+  };
+  var getActions = function getActions() {
+    return elementByClass(swalClasses.actions);
+  };
+  var getHeader = function getHeader() {
+    return elementByClass(swalClasses.header);
+  };
+  var getFooter = function getFooter() {
+    return elementByClass(swalClasses.footer);
+  };
+  var getTimerProgressBar = function getTimerProgressBar() {
+    return elementByClass(swalClasses['timer-progress-bar']);
+  };
+  var getCloseButton = function getCloseButton() {
+    return elementByClass(swalClasses.close);
+  }; // https://github.com/jkup/focusable/blob/master/index.js
+
+  var focusable = "\n  a[href],\n  area[href],\n  input:not([disabled]),\n  select:not([disabled]),\n  textarea:not([disabled]),\n  button:not([disabled]),\n  iframe,\n  object,\n  embed,\n  [tabindex=\"0\"],\n  [contenteditable],\n  audio[controls],\n  video[controls],\n  summary\n";
+  var getFocusableElements = function getFocusableElements() {
+    var focusableElementsWithTabindex = toArray(getPopup().querySelectorAll('[tabindex]:not([tabindex="-1"]):not([tabindex="0"])')) // sort according to tabindex
+    .sort(function (a, b) {
+      a = parseInt(a.getAttribute('tabindex'));
+      b = parseInt(b.getAttribute('tabindex'));
+
+      if (a > b) {
+        return 1;
+      } else if (a < b) {
+        return -1;
+      }
+
+      return 0;
+    });
+    var otherFocusableElements = toArray(getPopup().querySelectorAll(focusable)).filter(function (el) {
+      return el.getAttribute('tabindex') !== '-1';
+    });
+    return uniqueArray(focusableElementsWithTabindex.concat(otherFocusableElements)).filter(function (el) {
+      return isVisible(el);
+    });
+  };
+  var isModal = function isModal() {
+    return !isToast() && !document.body.classList.contains(swalClasses['no-backdrop']);
+  };
+  var isToast = function isToast() {
+    return document.body.classList.contains(swalClasses['toast-shown']);
+  };
+  var isLoading = function isLoading() {
+    return getPopup().hasAttribute('data-loading');
+  };
+
+  var states = {
+    previousBodyPadding: null
+  };
+  var setInnerHtml = function setInnerHtml(elem, html) {
+    // #1926
+    elem.textContent = '';
+
+    if (html) {
+      var parser = new DOMParser();
+      var parsed = parser.parseFromString(html, "text/html");
+      toArray(parsed.querySelector('head').childNodes).forEach(function (child) {
+        elem.appendChild(child);
+      });
+      toArray(parsed.querySelector('body').childNodes).forEach(function (child) {
+        elem.appendChild(child);
+      });
+    }
+  };
+  var hasClass = function hasClass(elem, className) {
+    if (!className) {
+      return false;
+    }
+
+    var classList = className.split(/\s+/);
+
+    for (var i = 0; i < classList.length; i++) {
+      if (!elem.classList.contains(classList[i])) {
+        return false;
+      }
+    }
+
+    return true;
+  };
+
+  var removeCustomClasses = function removeCustomClasses(elem, params) {
+    toArray(elem.classList).forEach(function (className) {
+      if (!(objectValues(swalClasses).indexOf(className) !== -1) && !(objectValues(iconTypes).indexOf(className) !== -1) && !(objectValues(params.showClass).indexOf(className) !== -1)) {
+        elem.classList.remove(className);
+      }
+    });
+  };
+
+  var applyCustomClass = function applyCustomClass(elem, params, className) {
+    removeCustomClasses(elem, params);
+
+    if (params.customClass && params.customClass[className]) {
+      if (typeof params.customClass[className] !== 'string' && !params.customClass[className].forEach) {
+        return warn("Invalid type of customClass.".concat(className, "! Expected string or iterable object, got \"").concat(_typeof(params.customClass[className]), "\""));
+      }
+
+      addClass(elem, params.customClass[className]);
+    }
+  };
+  function getInput(content, inputType) {
+    if (!inputType) {
+      return null;
+    }
+
+    switch (inputType) {
+      case 'select':
+      case 'textarea':
+      case 'file':
+        return getChildByClass(content, swalClasses[inputType]);
+
+      case 'checkbox':
+        return content.querySelector(".".concat(swalClasses.checkbox, " input"));
+
+      case 'radio':
+        return content.querySelector(".".concat(swalClasses.radio, " input:checked")) || content.querySelector(".".concat(swalClasses.radio, " input:first-child"));
+
+      case 'range':
+        return content.querySelector(".".concat(swalClasses.range, " input"));
+
+      default:
+        return getChildByClass(content, swalClasses.input);
+    }
+  }
+  var focusInput = function focusInput(input) {
+    input.focus(); // place cursor at end of text in text input
+
+    if (input.type !== 'file') {
+      // http://stackoverflow.com/a/2345915
+      var val = input.value;
+      input.value = '';
+      input.value = val;
+    }
+  };
+  var toggleClass = function toggleClass(target, classList, condition) {
+    if (!target || !classList) {
+      return;
+    }
+
+    if (typeof classList === 'string') {
+      classList = classList.split(/\s+/).filter(Boolean);
+    }
+
+    classList.forEach(function (className) {
+      if (target.forEach) {
+        target.forEach(function (elem) {
+          condition ? elem.classList.add(className) : elem.classList.remove(className);
+        });
+      } else {
+        condition ? target.classList.add(className) : target.classList.remove(className);
+      }
+    });
+  };
+  var addClass = function addClass(target, classList) {
+    toggleClass(target, classList, true);
+  };
+  var removeClass = function removeClass(target, classList) {
+    toggleClass(target, classList, false);
+  };
+  var getChildByClass = function getChildByClass(elem, className) {
+    for (var i = 0; i < elem.childNodes.length; i++) {
+      if (hasClass(elem.childNodes[i], className)) {
+        return elem.childNodes[i];
+      }
+    }
+  };
+  var applyNumericalStyle = function applyNumericalStyle(elem, property, value) {
+    if (value || parseInt(value) === 0) {
+      elem.style[property] = typeof value === 'number' ? "".concat(value, "px") : value;
+    } else {
+      elem.style.removeProperty(property);
+    }
+  };
+  var show = function show(elem) {
+    var display = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'flex';
+    elem.style.opacity = '';
+    elem.style.display = display;
+  };
+  var hide = function hide(elem) {
+    elem.style.opacity = '';
+    elem.style.display = 'none';
+  };
+  var toggle = function toggle(elem, condition, display) {
+    condition ? show(elem, display) : hide(elem);
+  }; // borrowed from jquery $(elem).is(':visible') implementation
+
+  var isVisible = function isVisible(elem) {
+    return !!(elem && (elem.offsetWidth || elem.offsetHeight || elem.getClientRects().length));
+  };
+  /* istanbul ignore next */
+
+  var isScrollable = function isScrollable(elem) {
+    return !!(elem.scrollHeight > elem.clientHeight);
+  }; // borrowed from https://stackoverflow.com/a/46352119
+
+  var hasCssAnimation = function hasCssAnimation(elem) {
+    var style = window.getComputedStyle(elem);
+    var animDuration = parseFloat(style.getPropertyValue('animation-duration') || '0');
+    var transDuration = parseFloat(style.getPropertyValue('transition-duration') || '0');
+    return animDuration > 0 || transDuration > 0;
+  };
+  var contains = function contains(haystack, needle) {
+    if (typeof haystack.contains === 'function') {
+      return haystack.contains(needle);
+    }
+  };
+  var animateTimerProgressBar = function animateTimerProgressBar(timer) {
+    var reset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+    var timerProgressBar = getTimerProgressBar();
+
+    if (isVisible(timerProgressBar)) {
+      if (reset) {
+        timerProgressBar.style.transition = 'none';
+        timerProgressBar.style.width = '100%';
+      }
+
+      setTimeout(function () {
+        timerProgressBar.style.transition = "width ".concat(timer / 1000, "s linear");
+        timerProgressBar.style.width = '0%';
+      }, 10);
+    }
+  };
+  var stopTimerProgressBar = function stopTimerProgressBar() {
+    var timerProgressBar = getTimerProgressBar();
+    var timerProgressBarWidth = parseInt(window.getComputedStyle(timerProgressBar).width);
+    timerProgressBar.style.removeProperty('transition');
+    timerProgressBar.style.width = '100%';
+    var timerProgressBarFullWidth = parseInt(window.getComputedStyle(timerProgressBar).width);
+    var timerProgressBarPercent = parseInt(timerProgressBarWidth / timerProgressBarFullWidth * 100);
+    timerProgressBar.style.removeProperty('transition');
+    timerProgressBar.style.width = "".concat(timerProgressBarPercent, "%");
+  };
+
+  // Detect Node env
+  var isNodeEnv = function isNodeEnv() {
+    return typeof window === 'undefined' || typeof document === 'undefined';
+  };
+
+  var sweetHTML = "\n <div aria-labelledby=\"".concat(swalClasses.title, "\" aria-describedby=\"").concat(swalClasses.content, "\" class=\"").concat(swalClasses.popup, "\" tabindex=\"-1\">\n   <div class=\"").concat(swalClasses.header, "\">\n     <ul class=\"").concat(swalClasses['progress-steps'], "\"></ul>\n     <div class=\"").concat(swalClasses.icon, " ").concat(iconTypes.error, "\"></div>\n     <div class=\"").concat(swalClasses.icon, " ").concat(iconTypes.question, "\"></div>\n     <div class=\"").concat(swalClasses.icon, " ").concat(iconTypes.warning, "\"></div>\n     <div class=\"").concat(swalClasses.icon, " ").concat(iconTypes.info, "\"></div>\n     <div class=\"").concat(swalClasses.icon, " ").concat(iconTypes.success, "\"></div>\n     <img class=\"").concat(swalClasses.image, "\" />\n     <h2 class=\"").concat(swalClasses.title, "\" id=\"").concat(swalClasses.title, "\"></h2>\n     <button type=\"button\" class=\"").concat(swalClasses.close, "\"></button>\n   </div>\n   <div class=\"").concat(swalClasses.content, "\">\n     <div id=\"").concat(swalClasses.content, "\" class=\"").concat(swalClasses['html-container'], "\"></div>\n     <input class=\"").concat(swalClasses.input, "\" />\n     <input type=\"file\" class=\"").concat(swalClasses.file, "\" />\n     <div class=\"").concat(swalClasses.range, "\">\n       <input type=\"range\" />\n       <output></output>\n     </div>\n     <select class=\"").concat(swalClasses.select, "\"></select>\n     <div class=\"").concat(swalClasses.radio, "\"></div>\n     <label for=\"").concat(swalClasses.checkbox, "\" class=\"").concat(swalClasses.checkbox, "\">\n       <input type=\"checkbox\" />\n       <span class=\"").concat(swalClasses.label, "\"></span>\n     </label>\n     <textarea class=\"").concat(swalClasses.textarea, "\"></textarea>\n     <div class=\"").concat(swalClasses['validation-message'], "\" id=\"").concat(swalClasses['validation-message'], "\"></div>\n   </div>\n   <div class=\"").concat(swalClasses.actions, "\">\n     <button type=\"button\" class=\"").concat(swalClasses.confirm, "\">OK</button>\n     <button type=\"button\" class=\"").concat(swalClasses.cancel, "\">Cancel</button>\n   </div>\n   <div class=\"").concat(swalClasses.footer, "\"></div>\n   <div class=\"").concat(swalClasses['timer-progress-bar-container'], "\">\n     <div class=\"").concat(swalClasses['timer-progress-bar'], "\"></div>\n   </div>\n </div>\n").replace(/(^|\n)\s*/g, '');
+
+  var resetOldContainer = function resetOldContainer() {
+    var oldContainer = getContainer();
+
+    if (!oldContainer) {
+      return false;
+    }
+
+    oldContainer.parentNode.removeChild(oldContainer);
+    removeClass([document.documentElement, document.body], [swalClasses['no-backdrop'], swalClasses['toast-shown'], swalClasses['has-column']]);
+    return true;
+  };
+
+  var oldInputVal; // IE11 workaround, see #1109 for details
+
+  var resetValidationMessage = function resetValidationMessage(e) {
+    if (Swal.isVisible() && oldInputVal !== e.target.value) {
+      Swal.resetValidationMessage();
+    }
+
+    oldInputVal = e.target.value;
+  };
+
+  var addInputChangeListeners = function addInputChangeListeners() {
+    var content = getContent();
+    var input = getChildByClass(content, swalClasses.input);
+    var file = getChildByClass(content, swalClasses.file);
+    var range = content.querySelector(".".concat(swalClasses.range, " input"));
+    var rangeOutput = content.querySelector(".".concat(swalClasses.range, " output"));
+    var select = getChildByClass(content, swalClasses.select);
+    var checkbox = content.querySelector(".".concat(swalClasses.checkbox, " input"));
+    var textarea = getChildByClass(content, swalClasses.textarea);
+    input.oninput = resetValidationMessage;
+    file.onchange = resetValidationMessage;
+    select.onchange = resetValidationMessage;
+    checkbox.onchange = resetValidationMessage;
+    textarea.oninput = resetValidationMessage;
+
+    range.oninput = function (e) {
+      resetValidationMessage(e);
+      rangeOutput.value = range.value;
+    };
+
+    range.onchange = function (e) {
+      resetValidationMessage(e);
+      range.nextSibling.value = range.value;
+    };
+  };
+
+  var getTarget = function getTarget(target) {
+    return typeof target === 'string' ? document.querySelector(target) : target;
+  };
+
+  var setupAccessibility = function setupAccessibility(params) {
+    var popup = getPopup();
+    popup.setAttribute('role', params.toast ? 'alert' : 'dialog');
+    popup.setAttribute('aria-live', params.toast ? 'polite' : 'assertive');
+
+    if (!params.toast) {
+      popup.setAttribute('aria-modal', 'true');
+    }
+  };
+
+  var setupRTL = function setupRTL(targetElement) {
+    if (window.getComputedStyle(targetElement).direction === 'rtl') {
+      addClass(getContainer(), swalClasses.rtl);
+    }
+  };
+  /*
+   * Add modal + backdrop to DOM
+   */
+
+
+  var init = function init(params) {
+    // Clean up the old popup container if it exists
+    var oldContainerExisted = resetOldContainer();
+    /* istanbul ignore if */
+
+    if (isNodeEnv()) {
+      error('SweetAlert2 requires document to initialize');
+      return;
+    }
+
+    var container = document.createElement('div');
+    container.className = swalClasses.container;
+
+    if (oldContainerExisted) {
+      addClass(container, swalClasses['no-transition']);
+    }
+
+    setInnerHtml(container, sweetHTML);
+    var targetElement = getTarget(params.target);
+    targetElement.appendChild(container);
+    setupAccessibility(params);
+    setupRTL(targetElement);
+    addInputChangeListeners();
+  };
+
+  var parseHtmlToContainer = function parseHtmlToContainer(param, target) {
+    // DOM element
+    if (param instanceof HTMLElement) {
+      target.appendChild(param); // Object
+    } else if (_typeof(param) === 'object') {
+      handleObject(param, target); // Plain string
+    } else if (param) {
+      setInnerHtml(target, param);
+    }
+  };
+
+  var handleObject = function handleObject(param, target) {
+    // JQuery element(s)
+    if (param.jquery) {
+      handleJqueryElem(target, param); // For other objects use their string representation
+    } else {
+      setInnerHtml(target, param.toString());
+    }
+  };
+
+  var handleJqueryElem = function handleJqueryElem(target, elem) {
+    target.textContent = '';
+
+    if (0 in elem) {
+      for (var i = 0; (i in elem); i++) {
+        target.appendChild(elem[i].cloneNode(true));
+      }
+    } else {
+      target.appendChild(elem.cloneNode(true));
+    }
+  };
+
+  var animationEndEvent = function () {
+    // Prevent run in Node env
+
+    /* istanbul ignore if */
+    if (isNodeEnv()) {
+      return false;
+    }
+
+    var testEl = document.createElement('div');
+    var transEndEventNames = {
+      WebkitAnimation: 'webkitAnimationEnd',
+      OAnimation: 'oAnimationEnd oanimationend',
+      animation: 'animationend'
+    };
+
+    for (var i in transEndEventNames) {
+      if (Object.prototype.hasOwnProperty.call(transEndEventNames, i) && typeof testEl.style[i] !== 'undefined') {
+        return transEndEventNames[i];
+      }
+    }
+
+    return false;
+  }();
+
+  // https://github.com/twbs/bootstrap/blob/master/js/src/modal.js
+
+  var measureScrollbar = function measureScrollbar() {
+    var scrollDiv = document.createElement('div');
+    scrollDiv.className = swalClasses['scrollbar-measure'];
+    document.body.appendChild(scrollDiv);
+    var scrollbarWidth = scrollDiv.getBoundingClientRect().width - scrollDiv.clientWidth;
+    document.body.removeChild(scrollDiv);
+    return scrollbarWidth;
+  };
+
+  var renderActions = function renderActions(instance, params) {
+    var actions = getActions();
+    var confirmButton = getConfirmButton();
+    var cancelButton = getCancelButton(); // Actions (buttons) wrapper
+
+    if (!params.showConfirmButton && !params.showCancelButton) {
+      hide(actions);
+    } // Custom class
+
+
+    applyCustomClass(actions, params, 'actions'); // Render confirm button
+
+    renderButton(confirmButton, 'confirm', params); // render Cancel Button
+
+    renderButton(cancelButton, 'cancel', params);
+
+    if (params.buttonsStyling) {
+      handleButtonsStyling(confirmButton, cancelButton, params);
+    } else {
+      removeClass([confirmButton, cancelButton], swalClasses.styled);
+      confirmButton.style.backgroundColor = confirmButton.style.borderLeftColor = confirmButton.style.borderRightColor = '';
+      cancelButton.style.backgroundColor = cancelButton.style.borderLeftColor = cancelButton.style.borderRightColor = '';
+    }
+
+    if (params.reverseButtons) {
+      confirmButton.parentNode.insertBefore(cancelButton, confirmButton);
+    }
+  };
+
+  function handleButtonsStyling(confirmButton, cancelButton, params) {
+    addClass([confirmButton, cancelButton], swalClasses.styled); // Buttons background colors
+
+    if (params.confirmButtonColor) {
+      confirmButton.style.backgroundColor = params.confirmButtonColor;
+    }
+
+    if (params.cancelButtonColor) {
+      cancelButton.style.backgroundColor = params.cancelButtonColor;
+    } // Loading state
+
+
+    if (!isLoading()) {
+      var confirmButtonBackgroundColor = window.getComputedStyle(confirmButton).getPropertyValue('background-color');
+      confirmButton.style.borderLeftColor = confirmButtonBackgroundColor;
+      confirmButton.style.borderRightColor = confirmButtonBackgroundColor;
+    }
+  }
+
+  function renderButton(button, buttonType, params) {
+    toggle(button, params["show".concat(capitalizeFirstLetter(buttonType), "Button")], 'inline-block');
+    setInnerHtml(button, params["".concat(buttonType, "ButtonText")]); // Set caption text
+
+    button.setAttribute('aria-label', params["".concat(buttonType, "ButtonAriaLabel")]); // ARIA label
+    // Add buttons custom classes
+
+    button.className = swalClasses[buttonType];
+    applyCustomClass(button, params, "".concat(buttonType, "Button"));
+    addClass(button, params["".concat(buttonType, "ButtonClass")]);
+  }
+
+  function handleBackdropParam(container, backdrop) {
+    if (typeof backdrop === 'string') {
+      container.style.background = backdrop;
+    } else if (!backdrop) {
+      addClass([document.documentElement, document.body], swalClasses['no-backdrop']);
+    }
+  }
+
+  function handlePositionParam(container, position) {
+    if (position in swalClasses) {
+      addClass(container, swalClasses[position]);
+    } else {
+      warn('The "position" parameter is not valid, defaulting to "center"');
+      addClass(container, swalClasses.center);
+    }
+  }
+
+  function handleGrowParam(container, grow) {
+    if (grow && typeof grow === 'string') {
+      var growClass = "grow-".concat(grow);
+
+      if (growClass in swalClasses) {
+        addClass(container, swalClasses[growClass]);
+      }
+    }
+  }
+
+  var renderContainer = function renderContainer(instance, params) {
+    var container = getContainer();
+
+    if (!container) {
+      return;
+    }
+
+    handleBackdropParam(container, params.backdrop);
+
+    if (!params.backdrop && params.allowOutsideClick) {
+      warn('"allowOutsideClick" parameter requires `backdrop` parameter to be set to `true`');
+    }
+
+    handlePositionParam(container, params.position);
+    handleGrowParam(container, params.grow); // Custom class
+
+    applyCustomClass(container, params, 'container'); // Set queue step attribute for getQueueStep() method
+
+    var queueStep = document.body.getAttribute('data-swal2-queue-step');
+
+    if (queueStep) {
+      container.setAttribute('data-queue-step', queueStep);
+      document.body.removeAttribute('data-swal2-queue-step');
+    }
+  };
+
+  /**
+   * This module containts `WeakMap`s for each effectively-"private  property" that a `Swal` has.
+   * For example, to set the private property "foo" of `this` to "bar", you can `privateProps.foo.set(this, 'bar')`
+   * This is the approach that Babel will probably take to implement private methods/fields
+   *   https://github.com/tc39/proposal-private-methods
+   *   https://github.com/babel/babel/pull/7555
+   * Once we have the changes from that PR in Babel, and our core class fits reasonable in *one module*
+   *   then we can use that language feature.
+   */
+  var privateProps = {
+    promise: new WeakMap(),
+    innerParams: new WeakMap(),
+    domCache: new WeakMap()
+  };
+
+  var inputTypes = ['input', 'file', 'range', 'select', 'radio', 'checkbox', 'textarea'];
+  var renderInput = function renderInput(instance, params) {
+    var content = getContent();
+    var innerParams = privateProps.innerParams.get(instance);
+    var rerender = !innerParams || params.input !== innerParams.input;
+    inputTypes.forEach(function (inputType) {
+      var inputClass = swalClasses[inputType];
+      var inputContainer = getChildByClass(content, inputClass); // set attributes
+
+      setAttributes(inputType, params.inputAttributes); // set class
+
+      inputContainer.className = inputClass;
+
+      if (rerender) {
+        hide(inputContainer);
+      }
+    });
+
+    if (params.input) {
+      if (rerender) {
+        showInput(params);
+      } // set custom class
+
+
+      setCustomClass(params);
+    }
+  };
+
+  var showInput = function showInput(params) {
+    if (!renderInputType[params.input]) {
+      return error("Unexpected type of input! Expected \"text\", \"email\", \"password\", \"number\", \"tel\", \"select\", \"radio\", \"checkbox\", \"textarea\", \"file\" or \"url\", got \"".concat(params.input, "\""));
+    }
+
+    var inputContainer = getInputContainer(params.input);
+    var input = renderInputType[params.input](inputContainer, params);
+    show(input); // input autofocus
+
+    setTimeout(function () {
+      focusInput(input);
+    });
+  };
+
+  var removeAttributes = function removeAttributes(input) {
+    for (var i = 0; i < input.attributes.length; i++) {
+      var attrName = input.attributes[i].name;
+
+      if (!(['type', 'value', 'style'].indexOf(attrName) !== -1)) {
+        input.removeAttribute(attrName);
+      }
+    }
+  };
+
+  var setAttributes = function setAttributes(inputType, inputAttributes) {
+    var input = getInput(getContent(), inputType);
+
+    if (!input) {
+      return;
+    }
+
+    removeAttributes(input);
+
+    for (var attr in inputAttributes) {
+      // Do not set a placeholder for <input type="range">
+      // it'll crash Edge, #1298
+      if (inputType === 'range' && attr === 'placeholder') {
+        continue;
+      }
+
+      input.setAttribute(attr, inputAttributes[attr]);
+    }
+  };
+
+  var setCustomClass = function setCustomClass(params) {
+    var inputContainer = getInputContainer(params.input);
+
+    if (params.customClass) {
+      addClass(inputContainer, params.customClass.input);
+    }
+  };
+
+  var setInputPlaceholder = function setInputPlaceholder(input, params) {
+    if (!input.placeholder || params.inputPlaceholder) {
+      input.placeholder = params.inputPlaceholder;
+    }
+  };
+
+  var getInputContainer = function getInputContainer(inputType) {
+    var inputClass = swalClasses[inputType] ? swalClasses[inputType] : swalClasses.input;
+    return getChildByClass(getContent(), inputClass);
+  };
+
+  var renderInputType = {};
+
+  renderInputType.text = renderInputType.email = renderInputType.password = renderInputType.number = renderInputType.tel = renderInputType.url = function (input, params) {
+    if (typeof params.inputValue === 'string' || typeof params.inputValue === 'number') {
+      input.value = params.inputValue;
+    } else if (!isPromise(params.inputValue)) {
+      warn("Unexpected type of inputValue! Expected \"string\", \"number\" or \"Promise\", got \"".concat(_typeof(params.inputValue), "\""));
+    }
+
+    setInputPlaceholder(input, params);
+    input.type = params.input;
+    return input;
+  };
+
+  renderInputType.file = function (input, params) {
+    setInputPlaceholder(input, params);
+    return input;
+  };
+
+  renderInputType.range = function (range, params) {
+    var rangeInput = range.querySelector('input');
+    var rangeOutput = range.querySelector('output');
+    rangeInput.value = params.inputValue;
+    rangeInput.type = params.input;
+    rangeOutput.value = params.inputValue;
+    return range;
+  };
+
+  renderInputType.select = function (select, params) {
+    select.textContent = '';
+
+    if (params.inputPlaceholder) {
+      var placeholder = document.createElement('option');
+      setInnerHtml(placeholder, params.inputPlaceholder);
+      placeholder.value = '';
+      placeholder.disabled = true;
+      placeholder.selected = true;
+      select.appendChild(placeholder);
+    }
+
+    return select;
+  };
+
+  renderInputType.radio = function (radio) {
+    radio.textContent = '';
+    return radio;
+  };
+
+  renderInputType.checkbox = function (checkboxContainer, params) {
+    var checkbox = getInput(getContent(), 'checkbox');
+    checkbox.value = 1;
+    checkbox.id = swalClasses.checkbox;
+    checkbox.checked = Boolean(params.inputValue);
+    var label = checkboxContainer.querySelector('span');
+    setInnerHtml(label, params.inputPlaceholder);
+    return checkboxContainer;
+  };
+
+  renderInputType.textarea = function (textarea, params) {
+    textarea.value = params.inputValue;
+    setInputPlaceholder(textarea, params);
+
+    if ('MutationObserver' in window) {
+      // #1699
+      var initialPopupWidth = parseInt(window.getComputedStyle(getPopup()).width);
+      var popupPadding = parseInt(window.getComputedStyle(getPopup()).paddingLeft) + parseInt(window.getComputedStyle(getPopup()).paddingRight);
+
+      var outputsize = function outputsize() {
+        var contentWidth = textarea.offsetWidth + popupPadding;
+
+        if (contentWidth > initialPopupWidth) {
+          getPopup().style.width = "".concat(contentWidth, "px");
+        } else {
+          getPopup().style.width = null;
+        }
+      };
+
+      new MutationObserver(outputsize).observe(textarea, {
+        attributes: true,
+        attributeFilter: ['style']
+      });
+    }
+
+    return textarea;
+  };
+
+  var renderContent = function renderContent(instance, params) {
+    var content = getContent().querySelector("#".concat(swalClasses.content)); // Content as HTML
+
+    if (params.html) {
+      parseHtmlToContainer(params.html, content);
+      show(content, 'block'); // Content as plain text
+    } else if (params.text) {
+      content.textContent = params.text;
+      show(content, 'block'); // No content
+    } else {
+      hide(content);
+    }
+
+    renderInput(instance, params); // Custom class
+
+    applyCustomClass(getContent(), params, 'content');
+  };
+
+  var renderFooter = function renderFooter(instance, params) {
+    var footer = getFooter();
+    toggle(footer, params.footer);
+
+    if (params.footer) {
+      parseHtmlToContainer(params.footer, footer);
+    } // Custom class
+
+
+    applyCustomClass(footer, params, 'footer');
+  };
+
+  var renderCloseButton = function renderCloseButton(instance, params) {
+    var closeButton = getCloseButton();
+    setInnerHtml(closeButton, params.closeButtonHtml); // Custom class
+
+    applyCustomClass(closeButton, params, 'closeButton');
+    toggle(closeButton, params.showCloseButton);
+    closeButton.setAttribute('aria-label', params.closeButtonAriaLabel);
+  };
+
+  var renderIcon = function renderIcon(instance, params) {
+    var innerParams = privateProps.innerParams.get(instance); // if the give icon already rendered, apply the custom class without re-rendering the icon
+
+    if (innerParams && params.icon === innerParams.icon && getIcon()) {
+      applyCustomClass(getIcon(), params, 'icon');
+      return;
+    }
+
+    hideAllIcons();
+
+    if (!params.icon) {
+      return;
+    }
+
+    if (Object.keys(iconTypes).indexOf(params.icon) !== -1) {
+      var icon = elementBySelector(".".concat(swalClasses.icon, ".").concat(iconTypes[params.icon]));
+      show(icon); // Custom or default content
+
+      setContent(icon, params);
+      adjustSuccessIconBackgoundColor(); // Custom class
+
+      applyCustomClass(icon, params, 'icon'); // Animate icon
+
+      addClass(icon, params.showClass.icon);
+    } else {
+      error("Unknown icon! Expected \"success\", \"error\", \"warning\", \"info\" or \"question\", got \"".concat(params.icon, "\""));
+    }
+  };
+
+  var hideAllIcons = function hideAllIcons() {
+    var icons = getIcons();
+
+    for (var i = 0; i < icons.length; i++) {
+      hide(icons[i]);
+    }
+  }; // Adjust success icon background color to match the popup background color
+
+
+  var adjustSuccessIconBackgoundColor = function adjustSuccessIconBackgoundColor() {
+    var popup = getPopup();
+    var popupBackgroundColor = window.getComputedStyle(popup).getPropertyValue('background-color');
+    var successIconParts = popup.querySelectorAll('[class^=swal2-success-circular-line], .swal2-success-fix');
+
+    for (var i = 0; i < successIconParts.length; i++) {
+      successIconParts[i].style.backgroundColor = popupBackgroundColor;
+    }
+  };
+
+  var setContent = function setContent(icon, params) {
+    icon.textContent = '';
+
+    if (params.iconHtml) {
+      setInnerHtml(icon, iconContent(params.iconHtml));
+    } else if (params.icon === 'success') {
+      setInnerHtml(icon, "\n      <div class=\"swal2-success-circular-line-left\"></div>\n      <span class=\"swal2-success-line-tip\"></span> <span class=\"swal2-success-line-long\"></span>\n      <div class=\"swal2-success-ring\"></div> <div class=\"swal2-success-fix\"></div>\n      <div class=\"swal2-success-circular-line-right\"></div>\n    ");
+    } else if (params.icon === 'error') {
+      setInnerHtml(icon, "\n      <span class=\"swal2-x-mark\">\n        <span class=\"swal2-x-mark-line-left\"></span>\n        <span class=\"swal2-x-mark-line-right\"></span>\n      </span>\n    ");
+    } else {
+      var defaultIconHtml = {
+        question: '?',
+        warning: '!',
+        info: 'i'
+      };
+      setInnerHtml(icon, iconContent(defaultIconHtml[params.icon]));
+    }
+  };
+
+  var iconContent = function iconContent(content) {
+    return "<div class=\"".concat(swalClasses['icon-content'], "\">").concat(content, "</div>");
+  };
+
+  var renderImage = function renderImage(instance, params) {
+    var image = getImage();
+
+    if (!params.imageUrl) {
+      return hide(image);
+    }
+
+    show(image); // Src, alt
+
+    image.setAttribute('src', params.imageUrl);
+    image.setAttribute('alt', params.imageAlt); // Width, height
+
+    applyNumericalStyle(image, 'width', params.imageWidth);
+    applyNumericalStyle(image, 'height', params.imageHeight); // Class
+
+    image.className = swalClasses.image;
+    applyCustomClass(image, params, 'image');
+  };
+
+  var currentSteps = [];
+  /*
+   * Global function for chaining sweetAlert popups
+   */
+
+  var queue = function queue(steps) {
+    var Swal = this;
+    currentSteps = steps;
+
+    var resetAndResolve = function resetAndResolve(resolve, value) {
+      currentSteps = [];
+      resolve(value);
+    };
+
+    var queueResult = [];
+    return new Promise(function (resolve) {
+      (function step(i, callback) {
+        if (i < currentSteps.length) {
+          document.body.setAttribute('data-swal2-queue-step', i);
+          Swal.fire(currentSteps[i]).then(function (result) {
+            if (typeof result.value !== 'undefined') {
+              queueResult.push(result.value);
+              step(i + 1, callback);
+            } else {
+              resetAndResolve(resolve, {
+                dismiss: result.dismiss
+              });
+            }
+          });
+        } else {
+          resetAndResolve(resolve, {
+            value: queueResult
+          });
+        }
+      })(0);
+    });
+  };
+  /*
+   * Global function for getting the index of current popup in queue
+   */
+
+  var getQueueStep = function getQueueStep() {
+    return getContainer() && getContainer().getAttribute('data-queue-step');
+  };
+  /*
+   * Global function for inserting a popup to the queue
+   */
+
+  var insertQueueStep = function insertQueueStep(step, index) {
+    if (index && index < currentSteps.length) {
+      return currentSteps.splice(index, 0, step);
+    }
+
+    return currentSteps.push(step);
+  };
+  /*
+   * Global function for deleting a popup from the queue
+   */
+
+  var deleteQueueStep = function deleteQueueStep(index) {
+    if (typeof currentSteps[index] !== 'undefined') {
+      currentSteps.splice(index, 1);
+    }
+  };
+
+  var createStepElement = function createStepElement(step) {
+    var stepEl = document.createElement('li');
+    addClass(stepEl, swalClasses['progress-step']);
+    setInnerHtml(stepEl, step);
+    return stepEl;
+  };
+
+  var createLineElement = function createLineElement(params) {
+    var lineEl = document.createElement('li');
+    addClass(lineEl, swalClasses['progress-step-line']);
+
+    if (params.progressStepsDistance) {
+      lineEl.style.width = params.progressStepsDistance;
+    }
+
+    return lineEl;
+  };
+
+  var renderProgressSteps = function renderProgressSteps(instance, params) {
+    var progressStepsContainer = getProgressSteps();
+
+    if (!params.progressSteps || params.progressSteps.length === 0) {
+      return hide(progressStepsContainer);
+    }
+
+    show(progressStepsContainer);
+    progressStepsContainer.textContent = '';
+    var currentProgressStep = parseInt(params.currentProgressStep === undefined ? getQueueStep() : params.currentProgressStep);
+
+    if (currentProgressStep >= params.progressSteps.length) {
+      warn('Invalid currentProgressStep parameter, it should be less than progressSteps.length ' + '(currentProgressStep like JS arrays starts from 0)');
+    }
+
+    params.progressSteps.forEach(function (step, index) {
+      var stepEl = createStepElement(step);
+      progressStepsContainer.appendChild(stepEl);
+
+      if (index === currentProgressStep) {
+        addClass(stepEl, swalClasses['active-progress-step']);
+      }
+
+      if (index !== params.progressSteps.length - 1) {
+        var lineEl = createLineElement(step);
+        progressStepsContainer.appendChild(lineEl);
+      }
+    });
+  };
+
+  var renderTitle = function renderTitle(instance, params) {
+    var title = getTitle();
+    toggle(title, params.title || params.titleText);
+
+    if (params.title) {
+      parseHtmlToContainer(params.title, title);
+    }
+
+    if (params.titleText) {
+      title.innerText = params.titleText;
+    } // Custom class
+
+
+    applyCustomClass(title, params, 'title');
+  };
+
+  var renderHeader = function renderHeader(instance, params) {
+    var header = getHeader(); // Custom class
+
+    applyCustomClass(header, params, 'header'); // Progress steps
+
+    renderProgressSteps(instance, params); // Icon
+
+    renderIcon(instance, params); // Image
+
+    renderImage(instance, params); // Title
+
+    renderTitle(instance, params); // Close button
+
+    renderCloseButton(instance, params);
+  };
+
+  var renderPopup = function renderPopup(instance, params) {
+    var popup = getPopup(); // Width
+
+    applyNumericalStyle(popup, 'width', params.width); // Padding
+
+    applyNumericalStyle(popup, 'padding', params.padding); // Background
+
+    if (params.background) {
+      popup.style.background = params.background;
+    } // Classes
+
+
+    addClasses(popup, params);
+  };
+
+  var addClasses = function addClasses(popup, params) {
+    // Default Class + showClass when updating Swal.update({})
+    popup.className = "".concat(swalClasses.popup, " ").concat(isVisible(popup) ? params.showClass.popup : '');
+
+    if (params.toast) {
+      addClass([document.documentElement, document.body], swalClasses['toast-shown']);
+      addClass(popup, swalClasses.toast);
+    } else {
+      addClass(popup, swalClasses.modal);
+    } // Custom class
+
+
+    applyCustomClass(popup, params, 'popup');
+
+    if (typeof params.customClass === 'string') {
+      addClass(popup, params.customClass);
+    } // Icon class (#1842)
+
+
+    if (params.icon) {
+      addClass(popup, swalClasses["icon-".concat(params.icon)]);
+    }
+  };
+
+  var render = function render(instance, params) {
+    renderPopup(instance, params);
+    renderContainer(instance, params);
+    renderHeader(instance, params);
+    renderContent(instance, params);
+    renderActions(instance, params);
+    renderFooter(instance, params);
+
+    if (typeof params.onRender === 'function') {
+      params.onRender(getPopup());
+    }
+  };
+
+  /*
+   * Global function to determine if SweetAlert2 popup is shown
+   */
+
+  var isVisible$1 = function isVisible$$1() {
+    return isVisible(getPopup());
+  };
+  /*
+   * Global function to click 'Confirm' button
+   */
+
+  var clickConfirm = function clickConfirm() {
+    return getConfirmButton() && getConfirmButton().click();
+  };
+  /*
+   * Global function to click 'Cancel' button
+   */
+
+  var clickCancel = function clickCancel() {
+    return getCancelButton() && getCancelButton().click();
+  };
+
+  function fire() {
+    var Swal = this;
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _construct(Swal, args);
+  }
+
+  /**
+   * Returns an extended version of `Swal` containing `params` as defaults.
+   * Useful for reusing Swal configuration.
+   *
+   * For example:
+   *
+   * Before:
+   * const textPromptOptions = { input: 'text', showCancelButton: true }
+   * const {value: firstName} = await Swal.fire({ ...textPromptOptions, title: 'What is your first name?' })
+   * const {value: lastName} = await Swal.fire({ ...textPromptOptions, title: 'What is your last name?' })
+   *
+   * After:
+   * const TextPrompt = Swal.mixin({ input: 'text', showCancelButton: true })
+   * const {value: firstName} = await TextPrompt('What is your first name?')
+   * const {value: lastName} = await TextPrompt('What is your last name?')
+   *
+   * @param mixinParams
+   */
+  function mixin(mixinParams) {
+    var MixinSwal = /*#__PURE__*/function (_this) {
+      _inherits(MixinSwal, _this);
+
+      var _super = _createSuper(MixinSwal);
+
+      function MixinSwal() {
+        _classCallCheck(this, MixinSwal);
+
+        return _super.apply(this, arguments);
+      }
+
+      _createClass(MixinSwal, [{
+        key: "_main",
+        value: function _main(params) {
+          return _get(_getPrototypeOf(MixinSwal.prototype), "_main", this).call(this, _extends({}, mixinParams, params));
+        }
+      }]);
+
+      return MixinSwal;
+    }(this);
+
+    return MixinSwal;
+  }
+
+  /**
+   * Show spinner instead of Confirm button
+   */
+
+  var showLoading = function showLoading() {
+    var popup = getPopup();
+
+    if (!popup) {
+      Swal.fire();
+    }
+
+    popup = getPopup();
+    var actions = getActions();
+    var confirmButton = getConfirmButton();
+    show(actions);
+    show(confirmButton, 'inline-block');
+    addClass([popup, actions], swalClasses.loading);
+    confirmButton.disabled = true;
+    popup.setAttribute('data-loading', true);
+    popup.setAttribute('aria-busy', true);
+    popup.focus();
+  };
+
+  var RESTORE_FOCUS_TIMEOUT = 100;
+
+  var globalState = {};
+
+  var focusPreviousActiveElement = function focusPreviousActiveElement() {
+    if (globalState.previousActiveElement && globalState.previousActiveElement.focus) {
+      globalState.previousActiveElement.focus();
+      globalState.previousActiveElement = null;
+    } else if (document.body) {
+      document.body.focus();
+    }
+  }; // Restore previous active (focused) element
+
+
+  var restoreActiveElement = function restoreActiveElement() {
+    return new Promise(function (resolve) {
+      var x = window.scrollX;
+      var y = window.scrollY;
+      globalState.restoreFocusTimeout = setTimeout(function () {
+        focusPreviousActiveElement();
+        resolve();
+      }, RESTORE_FOCUS_TIMEOUT); // issues/900
+
+      /* istanbul ignore if */
+
+      if (typeof x !== 'undefined' && typeof y !== 'undefined') {
+        // IE doesn't have scrollX/scrollY support
+        window.scrollTo(x, y);
+      }
+    });
+  };
+
+  /**
+   * If `timer` parameter is set, returns number of milliseconds of timer remained.
+   * Otherwise, returns undefined.
+   */
+
+  var getTimerLeft = function getTimerLeft() {
+    return globalState.timeout && globalState.timeout.getTimerLeft();
+  };
+  /**
+   * Stop timer. Returns number of milliseconds of timer remained.
+   * If `timer` parameter isn't set, returns undefined.
+   */
+
+  var stopTimer = function stopTimer() {
+    if (globalState.timeout) {
+      stopTimerProgressBar();
+      return globalState.timeout.stop();
+    }
+  };
+  /**
+   * Resume timer. Returns number of milliseconds of timer remained.
+   * If `timer` parameter isn't set, returns undefined.
+   */
+
+  var resumeTimer = function resumeTimer() {
+    if (globalState.timeout) {
+      var remaining = globalState.timeout.start();
+      animateTimerProgressBar(remaining);
+      return remaining;
+    }
+  };
+  /**
+   * Resume timer. Returns number of milliseconds of timer remained.
+   * If `timer` parameter isn't set, returns undefined.
+   */
+
+  var toggleTimer = function toggleTimer() {
+    var timer = globalState.timeout;
+    return timer && (timer.running ? stopTimer() : resumeTimer());
+  };
+  /**
+   * Increase timer. Returns number of milliseconds of an updated timer.
+   * If `timer` parameter isn't set, returns undefined.
+   */
+
+  var increaseTimer = function increaseTimer(n) {
+    if (globalState.timeout) {
+      var remaining = globalState.timeout.increase(n);
+      animateTimerProgressBar(remaining, true);
+      return remaining;
+    }
+  };
+  /**
+   * Check if timer is running. Returns true if timer is running
+   * or false if timer is paused or stopped.
+   * If `timer` parameter isn't set, returns undefined
+   */
+
+  var isTimerRunning = function isTimerRunning() {
+    return globalState.timeout && globalState.timeout.isRunning();
+  };
+
+  var defaultParams = {
+    title: '',
+    titleText: '',
+    text: '',
+    html: '',
+    footer: '',
+    icon: undefined,
+    iconHtml: undefined,
+    toast: false,
+    animation: true,
+    showClass: {
+      popup: 'swal2-show',
+      backdrop: 'swal2-backdrop-show',
+      icon: 'swal2-icon-show'
+    },
+    hideClass: {
+      popup: 'swal2-hide',
+      backdrop: 'swal2-backdrop-hide',
+      icon: 'swal2-icon-hide'
+    },
+    customClass: undefined,
+    target: 'body',
+    backdrop: true,
+    heightAuto: true,
+    allowOutsideClick: true,
+    allowEscapeKey: true,
+    allowEnterKey: true,
+    stopKeydownPropagation: true,
+    keydownListenerCapture: false,
+    showConfirmButton: true,
+    showCancelButton: false,
+    preConfirm: undefined,
+    confirmButtonText: 'OK',
+    confirmButtonAriaLabel: '',
+    confirmButtonColor: undefined,
+    cancelButtonText: 'Cancel',
+    cancelButtonAriaLabel: '',
+    cancelButtonColor: undefined,
+    buttonsStyling: true,
+    reverseButtons: false,
+    focusConfirm: true,
+    focusCancel: false,
+    showCloseButton: false,
+    closeButtonHtml: '&times;',
+    closeButtonAriaLabel: 'Close this dialog',
+    showLoaderOnConfirm: false,
+    imageUrl: undefined,
+    imageWidth: undefined,
+    imageHeight: undefined,
+    imageAlt: '',
+    timer: undefined,
+    timerProgressBar: false,
+    width: undefined,
+    padding: undefined,
+    background: undefined,
+    input: undefined,
+    inputPlaceholder: '',
+    inputValue: '',
+    inputOptions: {},
+    inputAutoTrim: true,
+    inputAttributes: {},
+    inputValidator: undefined,
+    validationMessage: undefined,
+    grow: false,
+    position: 'center',
+    progressSteps: [],
+    currentProgressStep: undefined,
+    progressStepsDistance: undefined,
+    onBeforeOpen: undefined,
+    onOpen: undefined,
+    onRender: undefined,
+    onClose: undefined,
+    onAfterClose: undefined,
+    onDestroy: undefined,
+    scrollbarPadding: true
+  };
+  var updatableParams = ['title', 'titleText', 'text', 'html', 'icon', 'hideClass', 'customClass', 'allowOutsideClick', 'allowEscapeKey', 'showConfirmButton', 'showCancelButton', 'confirmButtonText', 'confirmButtonAriaLabel', 'confirmButtonColor', 'cancelButtonText', 'cancelButtonAriaLabel', 'cancelButtonColor', 'buttonsStyling', 'reverseButtons', 'imageUrl', 'imageWidth', 'imageHeight', 'imageAlt', 'progressSteps', 'currentProgressStep'];
+  var deprecatedParams = {
+    animation: 'showClass" and "hideClass'
+  };
+  var toastIncompatibleParams = ['allowOutsideClick', 'allowEnterKey', 'backdrop', 'focusConfirm', 'focusCancel', 'heightAuto', 'keydownListenerCapture'];
+  /**
+   * Is valid parameter
+   * @param {String} paramName
+   */
+
+  var isValidParameter = function isValidParameter(paramName) {
+    return Object.prototype.hasOwnProperty.call(defaultParams, paramName);
+  };
+  /**
+   * Is valid parameter for Swal.update() method
+   * @param {String} paramName
+   */
+
+  var isUpdatableParameter = function isUpdatableParameter(paramName) {
+    return updatableParams.indexOf(paramName) !== -1;
+  };
+  /**
+   * Is deprecated parameter
+   * @param {String} paramName
+   */
+
+  var isDeprecatedParameter = function isDeprecatedParameter(paramName) {
+    return deprecatedParams[paramName];
+  };
+
+  var checkIfParamIsValid = function checkIfParamIsValid(param) {
+    if (!isValidParameter(param)) {
+      warn("Unknown parameter \"".concat(param, "\""));
+    }
+  };
+
+  var checkIfToastParamIsValid = function checkIfToastParamIsValid(param) {
+    if (toastIncompatibleParams.indexOf(param) !== -1) {
+      warn("The parameter \"".concat(param, "\" is incompatible with toasts"));
+    }
+  };
+
+  var checkIfParamIsDeprecated = function checkIfParamIsDeprecated(param) {
+    if (isDeprecatedParameter(param)) {
+      warnAboutDepreation(param, isDeprecatedParameter(param));
+    }
+  };
+  /**
+   * Show relevant warnings for given params
+   *
+   * @param params
+   */
+
+
+  var showWarningsForParams = function showWarningsForParams(params) {
+    for (var param in params) {
+      checkIfParamIsValid(param);
+
+      if (params.toast) {
+        checkIfToastParamIsValid(param);
+      }
+
+      checkIfParamIsDeprecated(param);
+    }
+  };
+
+
+
+  var staticMethods = /*#__PURE__*/Object.freeze({
+    isValidParameter: isValidParameter,
+    isUpdatableParameter: isUpdatableParameter,
+    isDeprecatedParameter: isDeprecatedParameter,
+    argsToParams: argsToParams,
+    isVisible: isVisible$1,
+    clickConfirm: clickConfirm,
+    clickCancel: clickCancel,
+    getContainer: getContainer,
+    getPopup: getPopup,
+    getTitle: getTitle,
+    getContent: getContent,
+    getHtmlContainer: getHtmlContainer,
+    getImage: getImage,
+    getIcon: getIcon,
+    getIcons: getIcons,
+    getCloseButton: getCloseButton,
+    getActions: getActions,
+    getConfirmButton: getConfirmButton,
+    getCancelButton: getCancelButton,
+    getHeader: getHeader,
+    getFooter: getFooter,
+    getTimerProgressBar: getTimerProgressBar,
+    getFocusableElements: getFocusableElements,
+    getValidationMessage: getValidationMessage,
+    isLoading: isLoading,
+    fire: fire,
+    mixin: mixin,
+    queue: queue,
+    getQueueStep: getQueueStep,
+    insertQueueStep: insertQueueStep,
+    deleteQueueStep: deleteQueueStep,
+    showLoading: showLoading,
+    enableLoading: showLoading,
+    getTimerLeft: getTimerLeft,
+    stopTimer: stopTimer,
+    resumeTimer: resumeTimer,
+    toggleTimer: toggleTimer,
+    increaseTimer: increaseTimer,
+    isTimerRunning: isTimerRunning
+  });
+
+  /**
+   * Enables buttons and hide loader.
+   */
+
+  function hideLoading() {
+    // do nothing if popup is closed
+    var innerParams = privateProps.innerParams.get(this);
+
+    if (!innerParams) {
+      return;
+    }
+
+    var domCache = privateProps.domCache.get(this);
+
+    if (!innerParams.showConfirmButton) {
+      hide(domCache.confirmButton);
+
+      if (!innerParams.showCancelButton) {
+        hide(domCache.actions);
+      }
+    }
+
+    removeClass([domCache.popup, domCache.actions], swalClasses.loading);
+    domCache.popup.removeAttribute('aria-busy');
+    domCache.popup.removeAttribute('data-loading');
+    domCache.confirmButton.disabled = false;
+    domCache.cancelButton.disabled = false;
+  }
+
+  function getInput$1(instance) {
+    var innerParams = privateProps.innerParams.get(instance || this);
+    var domCache = privateProps.domCache.get(instance || this);
+
+    if (!domCache) {
+      return null;
+    }
+
+    return getInput(domCache.content, innerParams.input);
+  }
+
+  var fixScrollbar = function fixScrollbar() {
+    // for queues, do not do this more than once
+    if (states.previousBodyPadding !== null) {
+      return;
+    } // if the body has overflow
+
+
+    if (document.body.scrollHeight > window.innerHeight) {
+      // add padding so the content doesn't shift after removal of scrollbar
+      states.previousBodyPadding = parseInt(window.getComputedStyle(document.body).getPropertyValue('padding-right'));
+      document.body.style.paddingRight = "".concat(states.previousBodyPadding + measureScrollbar(), "px");
+    }
+  };
+  var undoScrollbar = function undoScrollbar() {
+    if (states.previousBodyPadding !== null) {
+      document.body.style.paddingRight = "".concat(states.previousBodyPadding, "px");
+      states.previousBodyPadding = null;
+    }
+  };
+
+  /* istanbul ignore file */
+
+  var iOSfix = function iOSfix() {
+    var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream || navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1;
+
+    if (iOS && !hasClass(document.body, swalClasses.iosfix)) {
+      var offset = document.body.scrollTop;
+      document.body.style.top = "".concat(offset * -1, "px");
+      addClass(document.body, swalClasses.iosfix);
+      lockBodyScroll();
+    }
+  };
+
+  var lockBodyScroll = function lockBodyScroll() {
+    // #1246
+    var container = getContainer();
+    var preventTouchMove;
+
+    container.ontouchstart = function (e) {
+      preventTouchMove = shouldPreventTouchMove(e.target);
+    };
+
+    container.ontouchmove = function (e) {
+      if (preventTouchMove) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+    };
+  };
+
+  var shouldPreventTouchMove = function shouldPreventTouchMove(target) {
+    var container = getContainer();
+
+    if (target === container) {
+      return true;
+    }
+
+    if (!isScrollable(container) && target.tagName !== 'INPUT' && // #1603
+    !(isScrollable(getContent()) && // #1944
+    getContent().contains(target))) {
+      return true;
+    }
+
+    return false;
+  };
+
+  var undoIOSfix = function undoIOSfix() {
+    if (hasClass(document.body, swalClasses.iosfix)) {
+      var offset = parseInt(document.body.style.top, 10);
+      removeClass(document.body, swalClasses.iosfix);
+      document.body.style.top = '';
+      document.body.scrollTop = offset * -1;
+    }
+  };
+
+  /* istanbul ignore file */
+
+  var isIE11 = function isIE11() {
+    return !!window.MSInputMethodContext && !!document.documentMode;
+  }; // Fix IE11 centering sweetalert2/issues/933
+
+
+  var fixVerticalPositionIE = function fixVerticalPositionIE() {
+    var container = getContainer();
+    var popup = getPopup();
+    container.style.removeProperty('align-items');
+
+    if (popup.offsetTop < 0) {
+      container.style.alignItems = 'flex-start';
+    }
+  };
+
+  var IEfix = function IEfix() {
+    if (typeof window !== 'undefined' && isIE11()) {
+      fixVerticalPositionIE();
+      window.addEventListener('resize', fixVerticalPositionIE);
+    }
+  };
+  var undoIEfix = function undoIEfix() {
+    if (typeof window !== 'undefined' && isIE11()) {
+      window.removeEventListener('resize', fixVerticalPositionIE);
+    }
+  };
+
+  // Adding aria-hidden="true" to elements outside of the active modal dialog ensures that
+  // elements not within the active modal dialog will not be surfaced if a user opens a screen
+  // reader’s list of elements (headings, form controls, landmarks, etc.) in the document.
+
+  var setAriaHidden = function setAriaHidden() {
+    var bodyChildren = toArray(document.body.children);
+    bodyChildren.forEach(function (el) {
+      if (el === getContainer() || contains(el, getContainer())) {
+        return;
+      }
+
+      if (el.hasAttribute('aria-hidden')) {
+        el.setAttribute('data-previous-aria-hidden', el.getAttribute('aria-hidden'));
+      }
+
+      el.setAttribute('aria-hidden', 'true');
+    });
+  };
+  var unsetAriaHidden = function unsetAriaHidden() {
+    var bodyChildren = toArray(document.body.children);
+    bodyChildren.forEach(function (el) {
+      if (el.hasAttribute('data-previous-aria-hidden')) {
+        el.setAttribute('aria-hidden', el.getAttribute('data-previous-aria-hidden'));
+        el.removeAttribute('data-previous-aria-hidden');
+      } else {
+        el.removeAttribute('aria-hidden');
+      }
+    });
+  };
+
+  /**
+   * This module containts `WeakMap`s for each effectively-"private  property" that a `Swal` has.
+   * For example, to set the private property "foo" of `this` to "bar", you can `privateProps.foo.set(this, 'bar')`
+   * This is the approach that Babel will probably take to implement private methods/fields
+   *   https://github.com/tc39/proposal-private-methods
+   *   https://github.com/babel/babel/pull/7555
+   * Once we have the changes from that PR in Babel, and our core class fits reasonable in *one module*
+   *   then we can use that language feature.
+   */
+  var privateMethods = {
+    swalPromiseResolve: new WeakMap()
+  };
+
+  /*
+   * Instance method to close sweetAlert
+   */
+
+  function removePopupAndResetState(instance, container, isToast$$1, onAfterClose) {
+    if (isToast$$1) {
+      triggerOnAfterCloseAndDispose(instance, onAfterClose);
+    } else {
+      restoreActiveElement().then(function () {
+        return triggerOnAfterCloseAndDispose(instance, onAfterClose);
+      });
+      globalState.keydownTarget.removeEventListener('keydown', globalState.keydownHandler, {
+        capture: globalState.keydownListenerCapture
+      });
+      globalState.keydownHandlerAdded = false;
+    }
+
+    if (container.parentNode && !document.body.getAttribute('data-swal2-queue-step')) {
+      container.parentNode.removeChild(container);
+    }
+
+    if (isModal()) {
+      undoScrollbar();
+      undoIOSfix();
+      undoIEfix();
+      unsetAriaHidden();
+    }
+
+    removeBodyClasses();
+  }
+
+  function removeBodyClasses() {
+    removeClass([document.documentElement, document.body], [swalClasses.shown, swalClasses['height-auto'], swalClasses['no-backdrop'], swalClasses['toast-shown'], swalClasses['toast-column']]);
+  }
+
+  function close(resolveValue) {
+    var popup = getPopup();
+
+    if (!popup) {
+      return;
+    }
+
+    var innerParams = privateProps.innerParams.get(this);
+
+    if (!innerParams || hasClass(popup, innerParams.hideClass.popup)) {
+      return;
+    }
+
+    var swalPromiseResolve = privateMethods.swalPromiseResolve.get(this);
+    removeClass(popup, innerParams.showClass.popup);
+    addClass(popup, innerParams.hideClass.popup);
+    var backdrop = getContainer();
+    removeClass(backdrop, innerParams.showClass.backdrop);
+    addClass(backdrop, innerParams.hideClass.backdrop);
+    handlePopupAnimation(this, popup, innerParams); // Resolve Swal promise
+
+    swalPromiseResolve(resolveValue || {});
+  }
+
+  var handlePopupAnimation = function handlePopupAnimation(instance, popup, innerParams) {
+    var container = getContainer(); // If animation is supported, animate
+
+    var animationIsSupported = animationEndEvent && hasCssAnimation(popup);
+    var onClose = innerParams.onClose,
+        onAfterClose = innerParams.onAfterClose;
+
+    if (onClose !== null && typeof onClose === 'function') {
+      onClose(popup);
+    }
+
+    if (animationIsSupported) {
+      animatePopup(instance, popup, container, onAfterClose);
+    } else {
+      // Otherwise, remove immediately
+      removePopupAndResetState(instance, container, isToast(), onAfterClose);
+    }
+  };
+
+  var animatePopup = function animatePopup(instance, popup, container, onAfterClose) {
+    globalState.swalCloseEventFinishedCallback = removePopupAndResetState.bind(null, instance, container, isToast(), onAfterClose);
+    popup.addEventListener(animationEndEvent, function (e) {
+      if (e.target === popup) {
+        globalState.swalCloseEventFinishedCallback();
+        delete globalState.swalCloseEventFinishedCallback;
+      }
+    });
+  };
+
+  var triggerOnAfterCloseAndDispose = function triggerOnAfterCloseAndDispose(instance, onAfterClose) {
+    setTimeout(function () {
+      if (typeof onAfterClose === 'function') {
+        onAfterClose();
+      }
+
+      instance._destroy();
+    });
+  };
+
+  function setButtonsDisabled(instance, buttons, disabled) {
+    var domCache = privateProps.domCache.get(instance);
+    buttons.forEach(function (button) {
+      domCache[button].disabled = disabled;
+    });
+  }
+
+  function setInputDisabled(input, disabled) {
+    if (!input) {
+      return false;
+    }
+
+    if (input.type === 'radio') {
+      var radiosContainer = input.parentNode.parentNode;
+      var radios = radiosContainer.querySelectorAll('input');
+
+      for (var i = 0; i < radios.length; i++) {
+        radios[i].disabled = disabled;
+      }
+    } else {
+      input.disabled = disabled;
+    }
+  }
+
+  function enableButtons() {
+    setButtonsDisabled(this, ['confirmButton', 'cancelButton'], false);
+  }
+  function disableButtons() {
+    setButtonsDisabled(this, ['confirmButton', 'cancelButton'], true);
+  }
+  function enableInput() {
+    return setInputDisabled(this.getInput(), false);
+  }
+  function disableInput() {
+    return setInputDisabled(this.getInput(), true);
+  }
+
+  function showValidationMessage(error) {
+    var domCache = privateProps.domCache.get(this);
+    setInnerHtml(domCache.validationMessage, error);
+    var popupComputedStyle = window.getComputedStyle(domCache.popup);
+    domCache.validationMessage.style.marginLeft = "-".concat(popupComputedStyle.getPropertyValue('padding-left'));
+    domCache.validationMessage.style.marginRight = "-".concat(popupComputedStyle.getPropertyValue('padding-right'));
+    show(domCache.validationMessage);
+    var input = this.getInput();
+
+    if (input) {
+      input.setAttribute('aria-invalid', true);
+      input.setAttribute('aria-describedBy', swalClasses['validation-message']);
+      focusInput(input);
+      addClass(input, swalClasses.inputerror);
+    }
+  } // Hide block with validation message
+
+  function resetValidationMessage$1() {
+    var domCache = privateProps.domCache.get(this);
+
+    if (domCache.validationMessage) {
+      hide(domCache.validationMessage);
+    }
+
+    var input = this.getInput();
+
+    if (input) {
+      input.removeAttribute('aria-invalid');
+      input.removeAttribute('aria-describedBy');
+      removeClass(input, swalClasses.inputerror);
+    }
+  }
+
+  function getProgressSteps$1() {
+    var domCache = privateProps.domCache.get(this);
+    return domCache.progressSteps;
+  }
+
+  var Timer = /*#__PURE__*/function () {
+    function Timer(callback, delay) {
+      _classCallCheck(this, Timer);
+
+      this.callback = callback;
+      this.remaining = delay;
+      this.running = false;
+      this.start();
+    }
+
+    _createClass(Timer, [{
+      key: "start",
+      value: function start() {
+        if (!this.running) {
+          this.running = true;
+          this.started = new Date();
+          this.id = setTimeout(this.callback, this.remaining);
+        }
+
+        return this.remaining;
+      }
+    }, {
+      key: "stop",
+      value: function stop() {
+        if (this.running) {
+          this.running = false;
+          clearTimeout(this.id);
+          this.remaining -= new Date() - this.started;
+        }
+
+        return this.remaining;
+      }
+    }, {
+      key: "increase",
+      value: function increase(n) {
+        var running = this.running;
+
+        if (running) {
+          this.stop();
+        }
+
+        this.remaining += n;
+
+        if (running) {
+          this.start();
+        }
+
+        return this.remaining;
+      }
+    }, {
+      key: "getTimerLeft",
+      value: function getTimerLeft() {
+        if (this.running) {
+          this.stop();
+          this.start();
+        }
+
+        return this.remaining;
+      }
+    }, {
+      key: "isRunning",
+      value: function isRunning() {
+        return this.running;
+      }
+    }]);
+
+    return Timer;
+  }();
+
+  var defaultInputValidators = {
+    email: function email(string, validationMessage) {
+      return /^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9.-]+\.[a-zA-Z0-9-]{2,24}$/.test(string) ? Promise.resolve() : Promise.resolve(validationMessage || 'Invalid email address');
+    },
+    url: function url(string, validationMessage) {
+      // taken from https://stackoverflow.com/a/3809435 with a small change from #1306
+      return /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,63}\b([-a-zA-Z0-9@:%_+.~#?&/=]*)$/.test(string) ? Promise.resolve() : Promise.resolve(validationMessage || 'Invalid URL');
+    }
+  };
+
+  function setDefaultInputValidators(params) {
+    // Use default `inputValidator` for supported input types if not provided
+    if (!params.inputValidator) {
+      Object.keys(defaultInputValidators).forEach(function (key) {
+        if (params.input === key) {
+          params.inputValidator = defaultInputValidators[key];
+        }
+      });
+    }
+  }
+
+  function validateCustomTargetElement(params) {
+    // Determine if the custom target element is valid
+    if (!params.target || typeof params.target === 'string' && !document.querySelector(params.target) || typeof params.target !== 'string' && !params.target.appendChild) {
+      warn('Target parameter is not valid, defaulting to "body"');
+      params.target = 'body';
+    }
+  }
+  /**
+   * Set type, text and actions on popup
+   *
+   * @param params
+   * @returns {boolean}
+   */
+
+
+  function setParameters(params) {
+    setDefaultInputValidators(params); // showLoaderOnConfirm && preConfirm
+
+    if (params.showLoaderOnConfirm && !params.preConfirm) {
+      warn('showLoaderOnConfirm is set to true, but preConfirm is not defined.\n' + 'showLoaderOnConfirm should be used together with preConfirm, see usage example:\n' + 'https://sweetalert2.github.io/#ajax-request');
+    } // params.animation will be actually used in renderPopup.js
+    // but in case when params.animation is a function, we need to call that function
+    // before popup (re)initialization, so it'll be possible to check Swal.isVisible()
+    // inside the params.animation function
+
+
+    params.animation = callIfFunction(params.animation);
+    validateCustomTargetElement(params); // Replace newlines with <br> in title
+
+    if (typeof params.title === 'string') {
+      params.title = params.title.split('\n').join('<br />');
+    }
+
+    init(params);
+  }
+
+  /**
+   * Open popup, add necessary classes and styles, fix scrollbar
+   *
+   * @param {Array} params
+   */
+
+  var openPopup = function openPopup(params) {
+    var container = getContainer();
+    var popup = getPopup();
+
+    if (typeof params.onBeforeOpen === 'function') {
+      params.onBeforeOpen(popup);
+    }
+
+    addClasses$1(container, popup, params); // scrolling is 'hidden' until animation is done, after that 'auto'
+
+    setScrollingVisibility(container, popup);
+
+    if (isModal()) {
+      fixScrollContainer(container, params.scrollbarPadding);
+    }
+
+    if (!isToast() && !globalState.previousActiveElement) {
+      globalState.previousActiveElement = document.activeElement;
+    }
+
+    if (typeof params.onOpen === 'function') {
+      setTimeout(function () {
+        return params.onOpen(popup);
+      });
+    }
+
+    removeClass(container, swalClasses['no-transition']);
+  };
+
+  function swalOpenAnimationFinished(event) {
+    var popup = getPopup();
+
+    if (event.target !== popup) {
+      return;
+    }
+
+    var container = getContainer();
+    popup.removeEventListener(animationEndEvent, swalOpenAnimationFinished);
+    container.style.overflowY = 'auto';
+  }
+
+  var setScrollingVisibility = function setScrollingVisibility(container, popup) {
+    if (animationEndEvent && hasCssAnimation(popup)) {
+      container.style.overflowY = 'hidden';
+      popup.addEventListener(animationEndEvent, swalOpenAnimationFinished);
+    } else {
+      container.style.overflowY = 'auto';
+    }
+  };
+
+  var fixScrollContainer = function fixScrollContainer(container, scrollbarPadding) {
+    iOSfix();
+    IEfix();
+    setAriaHidden();
+
+    if (scrollbarPadding) {
+      fixScrollbar();
+    } // sweetalert2/issues/1247
+
+
+    setTimeout(function () {
+      container.scrollTop = 0;
+    });
+  };
+
+  var addClasses$1 = function addClasses(container, popup, params) {
+    addClass(container, params.showClass.backdrop);
+    show(popup); // Animate popup right after showing it
+
+    addClass(popup, params.showClass.popup);
+    addClass([document.documentElement, document.body], swalClasses.shown);
+
+    if (params.heightAuto && params.backdrop && !params.toast) {
+      addClass([document.documentElement, document.body], swalClasses['height-auto']);
+    }
+  };
+
+  var handleInputOptionsAndValue = function handleInputOptionsAndValue(instance, params) {
+    if (params.input === 'select' || params.input === 'radio') {
+      handleInputOptions(instance, params);
+    } else if (['text', 'email', 'number', 'tel', 'textarea'].indexOf(params.input) !== -1 && isPromise(params.inputValue)) {
+      handleInputValue(instance, params);
+    }
+  };
+  var getInputValue = function getInputValue(instance, innerParams) {
+    var input = instance.getInput();
+
+    if (!input) {
+      return null;
+    }
+
+    switch (innerParams.input) {
+      case 'checkbox':
+        return getCheckboxValue(input);
+
+      case 'radio':
+        return getRadioValue(input);
+
+      case 'file':
+        return getFileValue(input);
+
+      default:
+        return innerParams.inputAutoTrim ? input.value.trim() : input.value;
+    }
+  };
+
+  var getCheckboxValue = function getCheckboxValue(input) {
+    return input.checked ? 1 : 0;
+  };
+
+  var getRadioValue = function getRadioValue(input) {
+    return input.checked ? input.value : null;
+  };
+
+  var getFileValue = function getFileValue(input) {
+    return input.files.length ? input.getAttribute('multiple') !== null ? input.files : input.files[0] : null;
+  };
+
+  var handleInputOptions = function handleInputOptions(instance, params) {
+    var content = getContent();
+
+    var processInputOptions = function processInputOptions(inputOptions) {
+      return populateInputOptions[params.input](content, formatInputOptions(inputOptions), params);
+    };
+
+    if (isPromise(params.inputOptions)) {
+      showLoading();
+      params.inputOptions.then(function (inputOptions) {
+        instance.hideLoading();
+        processInputOptions(inputOptions);
+      });
+    } else if (_typeof(params.inputOptions) === 'object') {
+      processInputOptions(params.inputOptions);
+    } else {
+      error("Unexpected type of inputOptions! Expected object, Map or Promise, got ".concat(_typeof(params.inputOptions)));
+    }
+  };
+
+  var handleInputValue = function handleInputValue(instance, params) {
+    var input = instance.getInput();
+    hide(input);
+    params.inputValue.then(function (inputValue) {
+      input.value = params.input === 'number' ? parseFloat(inputValue) || 0 : "".concat(inputValue);
+      show(input);
+      input.focus();
+      instance.hideLoading();
+    })["catch"](function (err) {
+      error("Error in inputValue promise: ".concat(err));
+      input.value = '';
+      show(input);
+      input.focus();
+      instance.hideLoading();
+    });
+  };
+
+  var populateInputOptions = {
+    select: function select(content, inputOptions, params) {
+      var select = getChildByClass(content, swalClasses.select);
+      inputOptions.forEach(function (inputOption) {
+        var optionValue = inputOption[0];
+        var optionLabel = inputOption[1];
+        var option = document.createElement('option');
+        option.value = optionValue;
+        setInnerHtml(option, optionLabel);
+
+        if (params.inputValue.toString() === optionValue.toString()) {
+          option.selected = true;
+        }
+
+        select.appendChild(option);
+      });
+      select.focus();
+    },
+    radio: function radio(content, inputOptions, params) {
+      var radio = getChildByClass(content, swalClasses.radio);
+      inputOptions.forEach(function (inputOption) {
+        var radioValue = inputOption[0];
+        var radioLabel = inputOption[1];
+        var radioInput = document.createElement('input');
+        var radioLabelElement = document.createElement('label');
+        radioInput.type = 'radio';
+        radioInput.name = swalClasses.radio;
+        radioInput.value = radioValue;
+
+        if (params.inputValue.toString() === radioValue.toString()) {
+          radioInput.checked = true;
+        }
+
+        var label = document.createElement('span');
+        setInnerHtml(label, radioLabel);
+        label.className = swalClasses.label;
+        radioLabelElement.appendChild(radioInput);
+        radioLabelElement.appendChild(label);
+        radio.appendChild(radioLabelElement);
+      });
+      var radios = radio.querySelectorAll('input');
+
+      if (radios.length) {
+        radios[0].focus();
+      }
+    }
+  };
+  /**
+   * Converts `inputOptions` into an array of `[value, label]`s
+   * @param inputOptions
+   */
+
+  var formatInputOptions = function formatInputOptions(inputOptions) {
+    var result = [];
+
+    if (typeof Map !== 'undefined' && inputOptions instanceof Map) {
+      inputOptions.forEach(function (value, key) {
+        result.push([key, value]);
+      });
+    } else {
+      Object.keys(inputOptions).forEach(function (key) {
+        result.push([key, inputOptions[key]]);
+      });
+    }
+
+    return result;
+  };
+
+  var handleConfirmButtonClick = function handleConfirmButtonClick(instance, innerParams) {
+    instance.disableButtons();
+
+    if (innerParams.input) {
+      handleConfirmWithInput(instance, innerParams);
+    } else {
+      confirm(instance, innerParams, true);
+    }
+  };
+  var handleCancelButtonClick = function handleCancelButtonClick(instance, dismissWith) {
+    instance.disableButtons();
+    dismissWith(DismissReason.cancel);
+  };
+
+  var handleConfirmWithInput = function handleConfirmWithInput(instance, innerParams) {
+    var inputValue = getInputValue(instance, innerParams);
+
+    if (innerParams.inputValidator) {
+      instance.disableInput();
+      var validationPromise = Promise.resolve().then(function () {
+        return innerParams.inputValidator(inputValue, innerParams.validationMessage);
+      });
+      validationPromise.then(function (validationMessage) {
+        instance.enableButtons();
+        instance.enableInput();
+
+        if (validationMessage) {
+          instance.showValidationMessage(validationMessage);
+        } else {
+          confirm(instance, innerParams, inputValue);
+        }
+      });
+    } else if (!instance.getInput().checkValidity()) {
+      instance.enableButtons();
+      instance.showValidationMessage(innerParams.validationMessage);
+    } else {
+      confirm(instance, innerParams, inputValue);
+    }
+  };
+
+  var succeedWith = function succeedWith(instance, value) {
+    instance.closePopup({
+      value: value
+    });
+  };
+
+  var confirm = function confirm(instance, innerParams, value) {
+    if (innerParams.showLoaderOnConfirm) {
+      showLoading(); // TODO: make showLoading an *instance* method
+    }
+
+    if (innerParams.preConfirm) {
+      instance.resetValidationMessage();
+      var preConfirmPromise = Promise.resolve().then(function () {
+        return innerParams.preConfirm(value, innerParams.validationMessage);
+      });
+      preConfirmPromise.then(function (preConfirmValue) {
+        if (isVisible(getValidationMessage()) || preConfirmValue === false) {
+          instance.hideLoading();
+        } else {
+          succeedWith(instance, typeof preConfirmValue === 'undefined' ? value : preConfirmValue);
+        }
+      });
+    } else {
+      succeedWith(instance, value);
+    }
+  };
+
+  var addKeydownHandler = function addKeydownHandler(instance, globalState, innerParams, dismissWith) {
+    if (globalState.keydownTarget && globalState.keydownHandlerAdded) {
+      globalState.keydownTarget.removeEventListener('keydown', globalState.keydownHandler, {
+        capture: globalState.keydownListenerCapture
+      });
+      globalState.keydownHandlerAdded = false;
+    }
+
+    if (!innerParams.toast) {
+      globalState.keydownHandler = function (e) {
+        return keydownHandler(instance, e, dismissWith);
+      };
+
+      globalState.keydownTarget = innerParams.keydownListenerCapture ? window : getPopup();
+      globalState.keydownListenerCapture = innerParams.keydownListenerCapture;
+      globalState.keydownTarget.addEventListener('keydown', globalState.keydownHandler, {
+        capture: globalState.keydownListenerCapture
+      });
+      globalState.keydownHandlerAdded = true;
+    }
+  }; // Focus handling
+
+  var setFocus = function setFocus(innerParams, index, increment) {
+    var focusableElements = getFocusableElements(); // search for visible elements and select the next possible match
+
+    for (var i = 0; i < focusableElements.length; i++) {
+      index = index + increment; // rollover to first item
+
+      if (index === focusableElements.length) {
+        index = 0; // go to last item
+      } else if (index === -1) {
+        index = focusableElements.length - 1;
+      }
+
+      return focusableElements[index].focus();
+    } // no visible focusable elements, focus the popup
+
+
+    getPopup().focus();
+  };
+  var arrowKeys = ['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'Left', 'Right', 'Up', 'Down' // IE11
+  ];
+  var escKeys = ['Escape', 'Esc' // IE11
+  ];
+
+  var keydownHandler = function keydownHandler(instance, e, dismissWith) {
+    var innerParams = privateProps.innerParams.get(instance);
+
+    if (innerParams.stopKeydownPropagation) {
+      e.stopPropagation();
+    } // ENTER
+
+
+    if (e.key === 'Enter') {
+      handleEnter(instance, e, innerParams); // TAB
+    } else if (e.key === 'Tab') {
+      handleTab(e, innerParams); // ARROWS - switch focus between buttons
+    } else if (arrowKeys.indexOf(e.key) !== -1) {
+      handleArrows(); // ESC
+    } else if (escKeys.indexOf(e.key) !== -1) {
+      handleEsc(e, innerParams, dismissWith);
+    }
+  };
+
+  var handleEnter = function handleEnter(instance, e, innerParams) {
+    // #720 #721
+    if (e.isComposing) {
+      return;
+    }
+
+    if (e.target && instance.getInput() && e.target.outerHTML === instance.getInput().outerHTML) {
+      if (['textarea', 'file'].indexOf(innerParams.input) !== -1) {
+        return; // do not submit
+      }
+
+      clickConfirm();
+      e.preventDefault();
+    }
+  };
+
+  var handleTab = function handleTab(e, innerParams) {
+    var targetElement = e.target;
+    var focusableElements = getFocusableElements();
+    var btnIndex = -1;
+
+    for (var i = 0; i < focusableElements.length; i++) {
+      if (targetElement === focusableElements[i]) {
+        btnIndex = i;
+        break;
+      }
+    }
+
+    if (!e.shiftKey) {
+      // Cycle to the next button
+      setFocus(innerParams, btnIndex, 1);
+    } else {
+      // Cycle to the prev button
+      setFocus(innerParams, btnIndex, -1);
+    }
+
+    e.stopPropagation();
+    e.preventDefault();
+  };
+
+  var handleArrows = function handleArrows() {
+    var confirmButton = getConfirmButton();
+    var cancelButton = getCancelButton(); // focus Cancel button if Confirm button is currently focused
+
+    if (document.activeElement === confirmButton && isVisible(cancelButton)) {
+      cancelButton.focus(); // and vice versa
+    } else if (document.activeElement === cancelButton && isVisible(confirmButton)) {
+      confirmButton.focus();
+    }
+  };
+
+  var handleEsc = function handleEsc(e, innerParams, dismissWith) {
+    if (callIfFunction(innerParams.allowEscapeKey)) {
+      e.preventDefault();
+      dismissWith(DismissReason.esc);
+    }
+  };
+
+  var handlePopupClick = function handlePopupClick(instance, domCache, dismissWith) {
+    var innerParams = privateProps.innerParams.get(instance);
+
+    if (innerParams.toast) {
+      handleToastClick(instance, domCache, dismissWith);
+    } else {
+      // Ignore click events that had mousedown on the popup but mouseup on the container
+      // This can happen when the user drags a slider
+      handleModalMousedown(domCache); // Ignore click events that had mousedown on the container but mouseup on the popup
+
+      handleContainerMousedown(domCache);
+      handleModalClick(instance, domCache, dismissWith);
+    }
+  };
+
+  var handleToastClick = function handleToastClick(instance, domCache, dismissWith) {
+    // Closing toast by internal click
+    domCache.popup.onclick = function () {
+      var innerParams = privateProps.innerParams.get(instance);
+
+      if (innerParams.showConfirmButton || innerParams.showCancelButton || innerParams.showCloseButton || innerParams.input) {
+        return;
+      }
+
+      dismissWith(DismissReason.close);
+    };
+  };
+
+  var ignoreOutsideClick = false;
+
+  var handleModalMousedown = function handleModalMousedown(domCache) {
+    domCache.popup.onmousedown = function () {
+      domCache.container.onmouseup = function (e) {
+        domCache.container.onmouseup = undefined; // We only check if the mouseup target is the container because usually it doesn't
+        // have any other direct children aside of the popup
+
+        if (e.target === domCache.container) {
+          ignoreOutsideClick = true;
+        }
+      };
+    };
+  };
+
+  var handleContainerMousedown = function handleContainerMousedown(domCache) {
+    domCache.container.onmousedown = function () {
+      domCache.popup.onmouseup = function (e) {
+        domCache.popup.onmouseup = undefined; // We also need to check if the mouseup target is a child of the popup
+
+        if (e.target === domCache.popup || domCache.popup.contains(e.target)) {
+          ignoreOutsideClick = true;
+        }
+      };
+    };
+  };
+
+  var handleModalClick = function handleModalClick(instance, domCache, dismissWith) {
+    domCache.container.onclick = function (e) {
+      var innerParams = privateProps.innerParams.get(instance);
+
+      if (ignoreOutsideClick) {
+        ignoreOutsideClick = false;
+        return;
+      }
+
+      if (e.target === domCache.container && callIfFunction(innerParams.allowOutsideClick)) {
+        dismissWith(DismissReason.backdrop);
+      }
+    };
+  };
+
+  function _main(userParams) {
+    showWarningsForParams(userParams);
+
+    if (globalState.currentInstance) {
+      globalState.currentInstance._destroy();
+    }
+
+    globalState.currentInstance = this;
+    var innerParams = prepareParams(userParams);
+    setParameters(innerParams);
+    Object.freeze(innerParams); // clear the previous timer
+
+    if (globalState.timeout) {
+      globalState.timeout.stop();
+      delete globalState.timeout;
+    } // clear the restore focus timeout
+
+
+    clearTimeout(globalState.restoreFocusTimeout);
+    var domCache = populateDomCache(this);
+    render(this, innerParams);
+    privateProps.innerParams.set(this, innerParams);
+    return swalPromise(this, domCache, innerParams);
+  }
+
+  var prepareParams = function prepareParams(userParams) {
+    var showClass = _extends({}, defaultParams.showClass, userParams.showClass);
+
+    var hideClass = _extends({}, defaultParams.hideClass, userParams.hideClass);
+
+    var params = _extends({}, defaultParams, userParams);
+
+    params.showClass = showClass;
+    params.hideClass = hideClass; // @deprecated
+
+    if (userParams.animation === false) {
+      params.showClass = {
+        popup: 'swal2-noanimation',
+        backdrop: 'swal2-noanimation'
+      };
+      params.hideClass = {};
+    }
+
+    return params;
+  };
+
+  var swalPromise = function swalPromise(instance, domCache, innerParams) {
+    return new Promise(function (resolve) {
+      // functions to handle all closings/dismissals
+      var dismissWith = function dismissWith(dismiss) {
+        instance.closePopup({
+          dismiss: dismiss
+        });
+      };
+
+      privateMethods.swalPromiseResolve.set(instance, resolve);
+
+      domCache.confirmButton.onclick = function () {
+        return handleConfirmButtonClick(instance, innerParams);
+      };
+
+      domCache.cancelButton.onclick = function () {
+        return handleCancelButtonClick(instance, dismissWith);
+      };
+
+      domCache.closeButton.onclick = function () {
+        return dismissWith(DismissReason.close);
+      };
+
+      handlePopupClick(instance, domCache, dismissWith);
+      addKeydownHandler(instance, globalState, innerParams, dismissWith);
+
+      if (innerParams.toast && (innerParams.input || innerParams.footer || innerParams.showCloseButton)) {
+        addClass(document.body, swalClasses['toast-column']);
+      } else {
+        removeClass(document.body, swalClasses['toast-column']);
+      }
+
+      handleInputOptionsAndValue(instance, innerParams);
+      openPopup(innerParams);
+      setupTimer(globalState, innerParams, dismissWith);
+      initFocus(domCache, innerParams); // Scroll container to top on open (#1247, #1946)
+
+      setTimeout(function () {
+        domCache.container.scrollTop = 0;
+      });
+    });
+  };
+
+  var populateDomCache = function populateDomCache(instance) {
+    var domCache = {
+      popup: getPopup(),
+      container: getContainer(),
+      content: getContent(),
+      actions: getActions(),
+      confirmButton: getConfirmButton(),
+      cancelButton: getCancelButton(),
+      closeButton: getCloseButton(),
+      validationMessage: getValidationMessage(),
+      progressSteps: getProgressSteps()
+    };
+    privateProps.domCache.set(instance, domCache);
+    return domCache;
+  };
+
+  var setupTimer = function setupTimer(globalState$$1, innerParams, dismissWith) {
+    var timerProgressBar = getTimerProgressBar();
+    hide(timerProgressBar);
+
+    if (innerParams.timer) {
+      globalState$$1.timeout = new Timer(function () {
+        dismissWith('timer');
+        delete globalState$$1.timeout;
+      }, innerParams.timer);
+
+      if (innerParams.timerProgressBar) {
+        show(timerProgressBar);
+        setTimeout(function () {
+          if (globalState$$1.timeout.running) {
+            // timer can be already stopped at this point
+            animateTimerProgressBar(innerParams.timer);
+          }
+        });
+      }
+    }
+  };
+
+  var initFocus = function initFocus(domCache, innerParams) {
+    if (innerParams.toast) {
+      return;
+    }
+
+    if (!callIfFunction(innerParams.allowEnterKey)) {
+      return blurActiveElement();
+    }
+
+    if (innerParams.focusCancel && isVisible(domCache.cancelButton)) {
+      return domCache.cancelButton.focus();
+    }
+
+    if (innerParams.focusConfirm && isVisible(domCache.confirmButton)) {
+      return domCache.confirmButton.focus();
+    }
+
+    setFocus(innerParams, -1, 1);
+  };
+
+  var blurActiveElement = function blurActiveElement() {
+    if (document.activeElement && typeof document.activeElement.blur === 'function') {
+      document.activeElement.blur();
+    }
+  };
+
+  /**
+   * Updates popup parameters.
+   */
+
+  function update(params) {
+    var popup = getPopup();
+    var innerParams = privateProps.innerParams.get(this);
+
+    if (!popup || hasClass(popup, innerParams.hideClass.popup)) {
+      return warn("You're trying to update the closed or closing popup, that won't work. Use the update() method in preConfirm parameter or show a new popup.");
+    }
+
+    var validUpdatableParams = {}; // assign valid params from `params` to `defaults`
+
+    Object.keys(params).forEach(function (param) {
+      if (Swal.isUpdatableParameter(param)) {
+        validUpdatableParams[param] = params[param];
+      } else {
+        warn("Invalid parameter to update: \"".concat(param, "\". Updatable params are listed here: https://github.com/sweetalert2/sweetalert2/blob/master/src/utils/params.js"));
+      }
+    });
+
+    var updatedParams = _extends({}, innerParams, validUpdatableParams);
+
+    render(this, updatedParams);
+    privateProps.innerParams.set(this, updatedParams);
+    Object.defineProperties(this, {
+      params: {
+        value: _extends({}, this.params, params),
+        writable: false,
+        enumerable: true
+      }
+    });
+  }
+
+  function _destroy() {
+    var domCache = privateProps.domCache.get(this);
+    var innerParams = privateProps.innerParams.get(this);
+
+    if (!innerParams) {
+      return; // This instance has already been destroyed
+    } // Check if there is another Swal closing
+
+
+    if (domCache.popup && globalState.swalCloseEventFinishedCallback) {
+      globalState.swalCloseEventFinishedCallback();
+      delete globalState.swalCloseEventFinishedCallback;
+    } // Check if there is a swal disposal defer timer
+
+
+    if (globalState.deferDisposalTimer) {
+      clearTimeout(globalState.deferDisposalTimer);
+      delete globalState.deferDisposalTimer;
+    }
+
+    if (typeof innerParams.onDestroy === 'function') {
+      innerParams.onDestroy();
+    }
+
+    disposeSwal(this);
+  }
+
+  var disposeSwal = function disposeSwal(instance) {
+    // Unset this.params so GC will dispose it (#1569)
+    delete instance.params; // Unset globalState props so GC will dispose globalState (#1569)
+
+    delete globalState.keydownHandler;
+    delete globalState.keydownTarget; // Unset WeakMaps so GC will be able to dispose them (#1569)
+
+    unsetWeakMaps(privateProps);
+    unsetWeakMaps(privateMethods);
+  };
+
+  var unsetWeakMaps = function unsetWeakMaps(obj) {
+    for (var i in obj) {
+      obj[i] = new WeakMap();
+    }
+  };
+
+
+
+  var instanceMethods = /*#__PURE__*/Object.freeze({
+    hideLoading: hideLoading,
+    disableLoading: hideLoading,
+    getInput: getInput$1,
+    close: close,
+    closePopup: close,
+    closeModal: close,
+    closeToast: close,
+    enableButtons: enableButtons,
+    disableButtons: disableButtons,
+    enableInput: enableInput,
+    disableInput: disableInput,
+    showValidationMessage: showValidationMessage,
+    resetValidationMessage: resetValidationMessage$1,
+    getProgressSteps: getProgressSteps$1,
+    _main: _main,
+    update: update,
+    _destroy: _destroy
+  });
+
+  var currentInstance;
+
+  var SweetAlert = /*#__PURE__*/function () {
+    function SweetAlert() {
+      _classCallCheck(this, SweetAlert);
+
+      // Prevent run in Node env
+      if (typeof window === 'undefined') {
+        return;
+      } // Check for the existence of Promise
+
+
+      if (typeof Promise === 'undefined') {
+        error('This package requires a Promise library, please include a shim to enable it in this browser (See: https://github.com/sweetalert2/sweetalert2/wiki/Migration-from-SweetAlert-to-SweetAlert2#1-ie-support)');
+      }
+
+      currentInstance = this;
+
+      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      var outerParams = Object.freeze(this.constructor.argsToParams(args));
+      Object.defineProperties(this, {
+        params: {
+          value: outerParams,
+          writable: false,
+          enumerable: true,
+          configurable: true
+        }
+      });
+
+      var promise = this._main(this.params);
+
+      privateProps.promise.set(this, promise);
+    } // `catch` cannot be the name of a module export, so we define our thenable methods here instead
+
+
+    _createClass(SweetAlert, [{
+      key: "then",
+      value: function then(onFulfilled) {
+        var promise = privateProps.promise.get(this);
+        return promise.then(onFulfilled);
+      }
+    }, {
+      key: "finally",
+      value: function _finally(onFinally) {
+        var promise = privateProps.promise.get(this);
+        return promise["finally"](onFinally);
+      }
+    }]);
+
+    return SweetAlert;
+  }(); // Assign instance methods from src/instanceMethods/*.js to prototype
+
+
+  _extends(SweetAlert.prototype, instanceMethods); // Assign static methods from src/staticMethods/*.js to constructor
+
+
+  _extends(SweetAlert, staticMethods); // Proxy to instance methods to constructor, for now, for backwards compatibility
+
+
+  Object.keys(instanceMethods).forEach(function (key) {
+    SweetAlert[key] = function () {
+      if (currentInstance) {
+        var _currentInstance;
+
+        return (_currentInstance = currentInstance)[key].apply(_currentInstance, arguments);
+      }
+    };
+  });
+  SweetAlert.DismissReason = DismissReason;
+  SweetAlert.version = '9.10.13';
+
+  var Swal = SweetAlert;
+  Swal["default"] = Swal;
+
+  return Swal;
+
+}));
+if (typeof this !== 'undefined' && this.Sweetalert2){  this.swal = this.sweetAlert = this.Swal = this.SweetAlert = this.Sweetalert2}
+
+"undefined"!=typeof document&&function(e,t){var n=e.createElement("style");if(e.getElementsByTagName("head")[0].appendChild(n),n.styleSheet)n.styleSheet.disabled||(n.styleSheet.cssText=t);else try{n.innerHTML=t}catch(e){n.innerText=t}}(document,".swal2-popup.swal2-toast{flex-direction:row;align-items:center;width:auto;padding:.625em;overflow-y:hidden;background:#fff;box-shadow:0 0 .625em #d9d9d9}.swal2-popup.swal2-toast .swal2-header{flex-direction:row}.swal2-popup.swal2-toast .swal2-title{flex-grow:1;justify-content:flex-start;margin:0 .6em;font-size:1em}.swal2-popup.swal2-toast .swal2-footer{margin:.5em 0 0;padding:.5em 0 0;font-size:.8em}.swal2-popup.swal2-toast .swal2-close{position:static;width:.8em;height:.8em;line-height:.8}.swal2-popup.swal2-toast .swal2-content{justify-content:flex-start;font-size:1em}.swal2-popup.swal2-toast .swal2-icon{width:2em;min-width:2em;height:2em;margin:0}.swal2-popup.swal2-toast .swal2-icon .swal2-icon-content{display:flex;align-items:center;font-size:1.8em;font-weight:700}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.swal2-popup.swal2-toast .swal2-icon .swal2-icon-content{font-size:.25em}}.swal2-popup.swal2-toast .swal2-icon.swal2-success .swal2-success-ring{width:2em;height:2em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line]{top:.875em;width:1.375em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left]{left:.3125em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right]{right:.3125em}.swal2-popup.swal2-toast .swal2-actions{flex-basis:auto!important;width:auto;height:auto;margin:0 .3125em}.swal2-popup.swal2-toast .swal2-styled{margin:0 .3125em;padding:.3125em .625em;font-size:1em}.swal2-popup.swal2-toast .swal2-styled:focus{box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(50,100,150,.4)}.swal2-popup.swal2-toast .swal2-success{border-color:#a5dc86}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line]{position:absolute;width:1.6em;height:3em;transform:rotate(45deg);border-radius:50%}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=left]{top:-.8em;left:-.5em;transform:rotate(-45deg);transform-origin:2em 2em;border-radius:4em 0 0 4em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=right]{top:-.25em;left:.9375em;transform-origin:0 1.5em;border-radius:0 4em 4em 0}.swal2-popup.swal2-toast .swal2-success .swal2-success-ring{width:2em;height:2em}.swal2-popup.swal2-toast .swal2-success .swal2-success-fix{top:0;left:.4375em;width:.4375em;height:2.6875em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line]{height:.3125em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=tip]{top:1.125em;left:.1875em;width:.75em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=long]{top:.9375em;right:.1875em;width:1.375em}.swal2-popup.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-tip{-webkit-animation:swal2-toast-animate-success-line-tip .75s;animation:swal2-toast-animate-success-line-tip .75s}.swal2-popup.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-long{-webkit-animation:swal2-toast-animate-success-line-long .75s;animation:swal2-toast-animate-success-line-long .75s}.swal2-popup.swal2-toast.swal2-show{-webkit-animation:swal2-toast-show .5s;animation:swal2-toast-show .5s}.swal2-popup.swal2-toast.swal2-hide{-webkit-animation:swal2-toast-hide .1s forwards;animation:swal2-toast-hide .1s forwards}.swal2-container{display:flex;position:fixed;z-index:1060;top:0;right:0;bottom:0;left:0;flex-direction:row;align-items:center;justify-content:center;padding:.625em;overflow-x:hidden;transition:background-color .1s;-webkit-overflow-scrolling:touch}.swal2-container.swal2-backdrop-show,.swal2-container.swal2-noanimation{background:rgba(0,0,0,.4)}.swal2-container.swal2-backdrop-hide{background:0 0!important}.swal2-container.swal2-top{align-items:flex-start}.swal2-container.swal2-top-left,.swal2-container.swal2-top-start{align-items:flex-start;justify-content:flex-start}.swal2-container.swal2-top-end,.swal2-container.swal2-top-right{align-items:flex-start;justify-content:flex-end}.swal2-container.swal2-center{align-items:center}.swal2-container.swal2-center-left,.swal2-container.swal2-center-start{align-items:center;justify-content:flex-start}.swal2-container.swal2-center-end,.swal2-container.swal2-center-right{align-items:center;justify-content:flex-end}.swal2-container.swal2-bottom{align-items:flex-end}.swal2-container.swal2-bottom-left,.swal2-container.swal2-bottom-start{align-items:flex-end;justify-content:flex-start}.swal2-container.swal2-bottom-end,.swal2-container.swal2-bottom-right{align-items:flex-end;justify-content:flex-end}.swal2-container.swal2-bottom-end>:first-child,.swal2-container.swal2-bottom-left>:first-child,.swal2-container.swal2-bottom-right>:first-child,.swal2-container.swal2-bottom-start>:first-child,.swal2-container.swal2-bottom>:first-child{margin-top:auto}.swal2-container.swal2-grow-fullscreen>.swal2-modal{display:flex!important;flex:1;align-self:stretch;justify-content:center}.swal2-container.swal2-grow-row>.swal2-modal{display:flex!important;flex:1;align-content:center;justify-content:center}.swal2-container.swal2-grow-column{flex:1;flex-direction:column}.swal2-container.swal2-grow-column.swal2-bottom,.swal2-container.swal2-grow-column.swal2-center,.swal2-container.swal2-grow-column.swal2-top{align-items:center}.swal2-container.swal2-grow-column.swal2-bottom-left,.swal2-container.swal2-grow-column.swal2-bottom-start,.swal2-container.swal2-grow-column.swal2-center-left,.swal2-container.swal2-grow-column.swal2-center-start,.swal2-container.swal2-grow-column.swal2-top-left,.swal2-container.swal2-grow-column.swal2-top-start{align-items:flex-start}.swal2-container.swal2-grow-column.swal2-bottom-end,.swal2-container.swal2-grow-column.swal2-bottom-right,.swal2-container.swal2-grow-column.swal2-center-end,.swal2-container.swal2-grow-column.swal2-center-right,.swal2-container.swal2-grow-column.swal2-top-end,.swal2-container.swal2-grow-column.swal2-top-right{align-items:flex-end}.swal2-container.swal2-grow-column>.swal2-modal{display:flex!important;flex:1;align-content:center;justify-content:center}.swal2-container.swal2-no-transition{transition:none!important}.swal2-container:not(.swal2-top):not(.swal2-top-start):not(.swal2-top-end):not(.swal2-top-left):not(.swal2-top-right):not(.swal2-center-start):not(.swal2-center-end):not(.swal2-center-left):not(.swal2-center-right):not(.swal2-bottom):not(.swal2-bottom-start):not(.swal2-bottom-end):not(.swal2-bottom-left):not(.swal2-bottom-right):not(.swal2-grow-fullscreen)>.swal2-modal{margin:auto}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.swal2-container .swal2-modal{margin:0!important}}.swal2-popup{display:none;position:relative;box-sizing:border-box;flex-direction:column;justify-content:center;width:32em;max-width:100%;padding:1.25em;border:none;border-radius:.3125em;background:#fff;font-family:inherit;font-size:1rem}.swal2-popup:focus{outline:0}.swal2-popup.swal2-loading{overflow-y:hidden}.swal2-header{display:flex;flex-direction:column;align-items:center}.swal2-title{position:relative;max-width:100%;margin:0 0 .4em;padding:0;color:#595959;font-size:1.875em;font-weight:600;text-align:center;text-transform:none;word-wrap:break-word}.swal2-actions{display:flex;z-index:1;flex-wrap:wrap;align-items:center;justify-content:center;width:100%;margin:1.25em auto 0}.swal2-actions:not(.swal2-loading) .swal2-styled[disabled]{opacity:.4}.swal2-actions:not(.swal2-loading) .swal2-styled:hover{background-image:linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.1))}.swal2-actions:not(.swal2-loading) .swal2-styled:active{background-image:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2))}.swal2-actions.swal2-loading .swal2-styled.swal2-confirm{box-sizing:border-box;width:2.5em;height:2.5em;margin:.46875em;padding:0;-webkit-animation:swal2-rotate-loading 1.5s linear 0s infinite normal;animation:swal2-rotate-loading 1.5s linear 0s infinite normal;border:.25em solid transparent;border-radius:100%;border-color:transparent;background-color:transparent!important;color:transparent!important;cursor:default;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.swal2-actions.swal2-loading .swal2-styled.swal2-cancel{margin-right:30px;margin-left:30px}.swal2-actions.swal2-loading :not(.swal2-styled).swal2-confirm::after{content:\"\";display:inline-block;width:15px;height:15px;margin-left:5px;-webkit-animation:swal2-rotate-loading 1.5s linear 0s infinite normal;animation:swal2-rotate-loading 1.5s linear 0s infinite normal;border:3px solid #999;border-radius:50%;border-right-color:transparent;box-shadow:1px 1px 1px #fff}.swal2-styled{margin:.3125em;padding:.625em 2em;box-shadow:none;font-weight:500}.swal2-styled:not([disabled]){cursor:pointer}.swal2-styled.swal2-confirm{border:0;border-radius:.25em;background:initial;background-color:#3085d6;color:#fff;font-size:1.0625em}.swal2-styled.swal2-cancel{border:0;border-radius:.25em;background:initial;background-color:#aaa;color:#fff;font-size:1.0625em}.swal2-styled:focus{outline:0;box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(50,100,150,.4)}.swal2-styled::-moz-focus-inner{border:0}.swal2-footer{justify-content:center;margin:1.25em 0 0;padding:1em 0 0;border-top:1px solid #eee;color:#545454;font-size:1em}.swal2-timer-progress-bar-container{position:absolute;right:0;bottom:0;left:0;height:.25em;overflow:hidden;border-bottom-right-radius:.3125em;border-bottom-left-radius:.3125em}.swal2-timer-progress-bar{width:100%;height:.25em;background:rgba(0,0,0,.2)}.swal2-image{max-width:100%;margin:1.25em auto}.swal2-close{position:absolute;z-index:2;top:0;right:0;align-items:center;justify-content:center;width:1.2em;height:1.2em;padding:0;overflow:hidden;transition:color .1s ease-out;border:none;border-radius:0;background:0 0;color:#ccc;font-family:serif;font-size:2.5em;line-height:1.2;cursor:pointer}.swal2-close:hover{transform:none;background:0 0;color:#f27474}.swal2-close::-moz-focus-inner{border:0}.swal2-content{z-index:1;justify-content:center;margin:0;padding:0;color:#545454;font-size:1.125em;font-weight:400;line-height:normal;text-align:center;word-wrap:break-word}.swal2-checkbox,.swal2-file,.swal2-input,.swal2-radio,.swal2-select,.swal2-textarea{margin:1em auto}.swal2-file,.swal2-input,.swal2-textarea{box-sizing:border-box;width:100%;transition:border-color .3s,box-shadow .3s;border:1px solid #d9d9d9;border-radius:.1875em;background:inherit;box-shadow:inset 0 1px 1px rgba(0,0,0,.06);color:inherit;font-size:1.125em}.swal2-file.swal2-inputerror,.swal2-input.swal2-inputerror,.swal2-textarea.swal2-inputerror{border-color:#f27474!important;box-shadow:0 0 2px #f27474!important}.swal2-file:focus,.swal2-input:focus,.swal2-textarea:focus{border:1px solid #b4dbed;outline:0;box-shadow:0 0 3px #c4e6f5}.swal2-file::-webkit-input-placeholder,.swal2-input::-webkit-input-placeholder,.swal2-textarea::-webkit-input-placeholder{color:#ccc}.swal2-file::-moz-placeholder,.swal2-input::-moz-placeholder,.swal2-textarea::-moz-placeholder{color:#ccc}.swal2-file:-ms-input-placeholder,.swal2-input:-ms-input-placeholder,.swal2-textarea:-ms-input-placeholder{color:#ccc}.swal2-file::-ms-input-placeholder,.swal2-input::-ms-input-placeholder,.swal2-textarea::-ms-input-placeholder{color:#ccc}.swal2-file::placeholder,.swal2-input::placeholder,.swal2-textarea::placeholder{color:#ccc}.swal2-range{margin:1em auto;background:#fff}.swal2-range input{width:80%}.swal2-range output{width:20%;color:inherit;font-weight:600;text-align:center}.swal2-range input,.swal2-range output{height:2.625em;padding:0;font-size:1.125em;line-height:2.625em}.swal2-input{height:2.625em;padding:0 .75em}.swal2-input[type=number]{max-width:10em}.swal2-file{background:inherit;font-size:1.125em}.swal2-textarea{height:6.75em;padding:.75em}.swal2-select{min-width:50%;max-width:100%;padding:.375em .625em;background:inherit;color:inherit;font-size:1.125em}.swal2-checkbox,.swal2-radio{align-items:center;justify-content:center;background:#fff;color:inherit}.swal2-checkbox label,.swal2-radio label{margin:0 .6em;font-size:1.125em}.swal2-checkbox input,.swal2-radio input{margin:0 .4em}.swal2-validation-message{display:none;align-items:center;justify-content:center;padding:.625em;overflow:hidden;background:#f0f0f0;color:#666;font-size:1em;font-weight:300}.swal2-validation-message::before{content:\"!\";display:inline-block;width:1.5em;min-width:1.5em;height:1.5em;margin:0 .625em;border-radius:50%;background-color:#f27474;color:#fff;font-weight:600;line-height:1.5em;text-align:center}.swal2-icon{position:relative;box-sizing:content-box;justify-content:center;width:5em;height:5em;margin:1.25em auto 1.875em;border:.25em solid transparent;border-radius:50%;font-family:inherit;line-height:5em;cursor:default;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.swal2-icon .swal2-icon-content{display:flex;align-items:center;font-size:3.75em}.swal2-icon.swal2-error{border-color:#f27474;color:#f27474}.swal2-icon.swal2-error .swal2-x-mark{position:relative;flex-grow:1}.swal2-icon.swal2-error [class^=swal2-x-mark-line]{display:block;position:absolute;top:2.3125em;width:2.9375em;height:.3125em;border-radius:.125em;background-color:#f27474}.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left]{left:1.0625em;transform:rotate(45deg)}.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right]{right:1em;transform:rotate(-45deg)}.swal2-icon.swal2-error.swal2-icon-show{-webkit-animation:swal2-animate-error-icon .5s;animation:swal2-animate-error-icon .5s}.swal2-icon.swal2-error.swal2-icon-show .swal2-x-mark{-webkit-animation:swal2-animate-error-x-mark .5s;animation:swal2-animate-error-x-mark .5s}.swal2-icon.swal2-warning{border-color:#facea8;color:#f8bb86}.swal2-icon.swal2-info{border-color:#9de0f6;color:#3fc3ee}.swal2-icon.swal2-question{border-color:#c9dae1;color:#87adbd}.swal2-icon.swal2-success{border-color:#a5dc86;color:#a5dc86}.swal2-icon.swal2-success [class^=swal2-success-circular-line]{position:absolute;width:3.75em;height:7.5em;transform:rotate(45deg);border-radius:50%}.swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=left]{top:-.4375em;left:-2.0635em;transform:rotate(-45deg);transform-origin:3.75em 3.75em;border-radius:7.5em 0 0 7.5em}.swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=right]{top:-.6875em;left:1.875em;transform:rotate(-45deg);transform-origin:0 3.75em;border-radius:0 7.5em 7.5em 0}.swal2-icon.swal2-success .swal2-success-ring{position:absolute;z-index:2;top:-.25em;left:-.25em;box-sizing:content-box;width:100%;height:100%;border:.25em solid rgba(165,220,134,.3);border-radius:50%}.swal2-icon.swal2-success .swal2-success-fix{position:absolute;z-index:1;top:.5em;left:1.625em;width:.4375em;height:5.625em;transform:rotate(-45deg)}.swal2-icon.swal2-success [class^=swal2-success-line]{display:block;position:absolute;z-index:2;height:.3125em;border-radius:.125em;background-color:#a5dc86}.swal2-icon.swal2-success [class^=swal2-success-line][class$=tip]{top:2.875em;left:.8125em;width:1.5625em;transform:rotate(45deg)}.swal2-icon.swal2-success [class^=swal2-success-line][class$=long]{top:2.375em;right:.5em;width:2.9375em;transform:rotate(-45deg)}.swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-tip{-webkit-animation:swal2-animate-success-line-tip .75s;animation:swal2-animate-success-line-tip .75s}.swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-long{-webkit-animation:swal2-animate-success-line-long .75s;animation:swal2-animate-success-line-long .75s}.swal2-icon.swal2-success.swal2-icon-show .swal2-success-circular-line-right{-webkit-animation:swal2-rotate-success-circular-line 4.25s ease-in;animation:swal2-rotate-success-circular-line 4.25s ease-in}.swal2-progress-steps{align-items:center;margin:0 0 1.25em;padding:0;background:inherit;font-weight:600}.swal2-progress-steps li{display:inline-block;position:relative}.swal2-progress-steps .swal2-progress-step{z-index:20;width:2em;height:2em;border-radius:2em;background:#3085d6;color:#fff;line-height:2em;text-align:center}.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step{background:#3085d6}.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step{background:#add8e6;color:#fff}.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step-line{background:#add8e6}.swal2-progress-steps .swal2-progress-step-line{z-index:10;width:2.5em;height:.4em;margin:0 -1px;background:#3085d6}[class^=swal2]{-webkit-tap-highlight-color:transparent}.swal2-show{-webkit-animation:swal2-show .3s;animation:swal2-show .3s}.swal2-hide{-webkit-animation:swal2-hide .15s forwards;animation:swal2-hide .15s forwards}.swal2-noanimation{transition:none}.swal2-scrollbar-measure{position:absolute;top:-9999px;width:50px;height:50px;overflow:scroll}.swal2-rtl .swal2-close{right:auto;left:0}.swal2-rtl .swal2-timer-progress-bar{right:0;left:auto}@supports (-ms-accelerator:true){.swal2-range input{width:100%!important}.swal2-range output{display:none}}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.swal2-range input{width:100%!important}.swal2-range output{display:none}}@-moz-document url-prefix(){.swal2-close:focus{outline:2px solid rgba(50,100,150,.4)}}@-webkit-keyframes swal2-toast-show{0%{transform:translateY(-.625em) rotateZ(2deg)}33%{transform:translateY(0) rotateZ(-2deg)}66%{transform:translateY(.3125em) rotateZ(2deg)}100%{transform:translateY(0) rotateZ(0)}}@keyframes swal2-toast-show{0%{transform:translateY(-.625em) rotateZ(2deg)}33%{transform:translateY(0) rotateZ(-2deg)}66%{transform:translateY(.3125em) rotateZ(2deg)}100%{transform:translateY(0) rotateZ(0)}}@-webkit-keyframes swal2-toast-hide{100%{transform:rotateZ(1deg);opacity:0}}@keyframes swal2-toast-hide{100%{transform:rotateZ(1deg);opacity:0}}@-webkit-keyframes swal2-toast-animate-success-line-tip{0%{top:.5625em;left:.0625em;width:0}54%{top:.125em;left:.125em;width:0}70%{top:.625em;left:-.25em;width:1.625em}84%{top:1.0625em;left:.75em;width:.5em}100%{top:1.125em;left:.1875em;width:.75em}}@keyframes swal2-toast-animate-success-line-tip{0%{top:.5625em;left:.0625em;width:0}54%{top:.125em;left:.125em;width:0}70%{top:.625em;left:-.25em;width:1.625em}84%{top:1.0625em;left:.75em;width:.5em}100%{top:1.125em;left:.1875em;width:.75em}}@-webkit-keyframes swal2-toast-animate-success-line-long{0%{top:1.625em;right:1.375em;width:0}65%{top:1.25em;right:.9375em;width:0}84%{top:.9375em;right:0;width:1.125em}100%{top:.9375em;right:.1875em;width:1.375em}}@keyframes swal2-toast-animate-success-line-long{0%{top:1.625em;right:1.375em;width:0}65%{top:1.25em;right:.9375em;width:0}84%{top:.9375em;right:0;width:1.125em}100%{top:.9375em;right:.1875em;width:1.375em}}@-webkit-keyframes swal2-show{0%{transform:scale(.7)}45%{transform:scale(1.05)}80%{transform:scale(.95)}100%{transform:scale(1)}}@keyframes swal2-show{0%{transform:scale(.7)}45%{transform:scale(1.05)}80%{transform:scale(.95)}100%{transform:scale(1)}}@-webkit-keyframes swal2-hide{0%{transform:scale(1);opacity:1}100%{transform:scale(.5);opacity:0}}@keyframes swal2-hide{0%{transform:scale(1);opacity:1}100%{transform:scale(.5);opacity:0}}@-webkit-keyframes swal2-animate-success-line-tip{0%{top:1.1875em;left:.0625em;width:0}54%{top:1.0625em;left:.125em;width:0}70%{top:2.1875em;left:-.375em;width:3.125em}84%{top:3em;left:1.3125em;width:1.0625em}100%{top:2.8125em;left:.8125em;width:1.5625em}}@keyframes swal2-animate-success-line-tip{0%{top:1.1875em;left:.0625em;width:0}54%{top:1.0625em;left:.125em;width:0}70%{top:2.1875em;left:-.375em;width:3.125em}84%{top:3em;left:1.3125em;width:1.0625em}100%{top:2.8125em;left:.8125em;width:1.5625em}}@-webkit-keyframes swal2-animate-success-line-long{0%{top:3.375em;right:2.875em;width:0}65%{top:3.375em;right:2.875em;width:0}84%{top:2.1875em;right:0;width:3.4375em}100%{top:2.375em;right:.5em;width:2.9375em}}@keyframes swal2-animate-success-line-long{0%{top:3.375em;right:2.875em;width:0}65%{top:3.375em;right:2.875em;width:0}84%{top:2.1875em;right:0;width:3.4375em}100%{top:2.375em;right:.5em;width:2.9375em}}@-webkit-keyframes swal2-rotate-success-circular-line{0%{transform:rotate(-45deg)}5%{transform:rotate(-45deg)}12%{transform:rotate(-405deg)}100%{transform:rotate(-405deg)}}@keyframes swal2-rotate-success-circular-line{0%{transform:rotate(-45deg)}5%{transform:rotate(-45deg)}12%{transform:rotate(-405deg)}100%{transform:rotate(-405deg)}}@-webkit-keyframes swal2-animate-error-x-mark{0%{margin-top:1.625em;transform:scale(.4);opacity:0}50%{margin-top:1.625em;transform:scale(.4);opacity:0}80%{margin-top:-.375em;transform:scale(1.15)}100%{margin-top:0;transform:scale(1);opacity:1}}@keyframes swal2-animate-error-x-mark{0%{margin-top:1.625em;transform:scale(.4);opacity:0}50%{margin-top:1.625em;transform:scale(.4);opacity:0}80%{margin-top:-.375em;transform:scale(1.15)}100%{margin-top:0;transform:scale(1);opacity:1}}@-webkit-keyframes swal2-animate-error-icon{0%{transform:rotateX(100deg);opacity:0}100%{transform:rotateX(0);opacity:1}}@keyframes swal2-animate-error-icon{0%{transform:rotateX(100deg);opacity:0}100%{transform:rotateX(0);opacity:1}}@-webkit-keyframes swal2-rotate-loading{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}@keyframes swal2-rotate-loading{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown){overflow:hidden}body.swal2-height-auto{height:auto!important}body.swal2-no-backdrop .swal2-container{top:auto;right:auto;bottom:auto;left:auto;max-width:calc(100% - .625em * 2);background-color:transparent!important}body.swal2-no-backdrop .swal2-container>.swal2-modal{box-shadow:0 0 10px rgba(0,0,0,.4)}body.swal2-no-backdrop .swal2-container.swal2-top{top:0;left:50%;transform:translateX(-50%)}body.swal2-no-backdrop .swal2-container.swal2-top-left,body.swal2-no-backdrop .swal2-container.swal2-top-start{top:0;left:0}body.swal2-no-backdrop .swal2-container.swal2-top-end,body.swal2-no-backdrop .swal2-container.swal2-top-right{top:0;right:0}body.swal2-no-backdrop .swal2-container.swal2-center{top:50%;left:50%;transform:translate(-50%,-50%)}body.swal2-no-backdrop .swal2-container.swal2-center-left,body.swal2-no-backdrop .swal2-container.swal2-center-start{top:50%;left:0;transform:translateY(-50%)}body.swal2-no-backdrop .swal2-container.swal2-center-end,body.swal2-no-backdrop .swal2-container.swal2-center-right{top:50%;right:0;transform:translateY(-50%)}body.swal2-no-backdrop .swal2-container.swal2-bottom{bottom:0;left:50%;transform:translateX(-50%)}body.swal2-no-backdrop .swal2-container.swal2-bottom-left,body.swal2-no-backdrop .swal2-container.swal2-bottom-start{bottom:0;left:0}body.swal2-no-backdrop .swal2-container.swal2-bottom-end,body.swal2-no-backdrop .swal2-container.swal2-bottom-right{right:0;bottom:0}@media print{body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown){overflow-y:scroll!important}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown)>[aria-hidden=true]{display:none}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) .swal2-container{position:static!important}}body.swal2-toast-shown .swal2-container{background-color:transparent}body.swal2-toast-shown .swal2-container.swal2-top{top:0;right:auto;bottom:auto;left:50%;transform:translateX(-50%)}body.swal2-toast-shown .swal2-container.swal2-top-end,body.swal2-toast-shown .swal2-container.swal2-top-right{top:0;right:0;bottom:auto;left:auto}body.swal2-toast-shown .swal2-container.swal2-top-left,body.swal2-toast-shown .swal2-container.swal2-top-start{top:0;right:auto;bottom:auto;left:0}body.swal2-toast-shown .swal2-container.swal2-center-left,body.swal2-toast-shown .swal2-container.swal2-center-start{top:50%;right:auto;bottom:auto;left:0;transform:translateY(-50%)}body.swal2-toast-shown .swal2-container.swal2-center{top:50%;right:auto;bottom:auto;left:50%;transform:translate(-50%,-50%)}body.swal2-toast-shown .swal2-container.swal2-center-end,body.swal2-toast-shown .swal2-container.swal2-center-right{top:50%;right:0;bottom:auto;left:auto;transform:translateY(-50%)}body.swal2-toast-shown .swal2-container.swal2-bottom-left,body.swal2-toast-shown .swal2-container.swal2-bottom-start{top:auto;right:auto;bottom:0;left:0}body.swal2-toast-shown .swal2-container.swal2-bottom{top:auto;right:auto;bottom:0;left:50%;transform:translateX(-50%)}body.swal2-toast-shown .swal2-container.swal2-bottom-end,body.swal2-toast-shown .swal2-container.swal2-bottom-right{top:auto;right:0;bottom:0;left:auto}body.swal2-toast-column .swal2-toast{flex-direction:column;align-items:stretch}body.swal2-toast-column .swal2-toast .swal2-actions{flex:1;align-self:stretch;height:2.2em;margin-top:.3125em}body.swal2-toast-column .swal2-toast .swal2-loading{justify-content:center}body.swal2-toast-column .swal2-toast .swal2-input{height:2em;margin:.3125em auto;font-size:1em}body.swal2-toast-column .swal2-toast .swal2-validation-message{font-size:1em}");
+
+/***/ }),
+
 /***/ "./node_modules/timers-browserify/main.js":
 /*!************************************************!*\
   !*** ./node_modules/timers-browserify/main.js ***!
@@ -39308,6 +42766,1028 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 
 /***/ }),
 
+/***/ "./node_modules/vform/dist/vform.common.js":
+/*!*************************************************!*\
+  !*** ./node_modules/vform/dist/vform.common.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports =
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "fb15");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "1eb2":
+/***/ (function(module, exports, __webpack_require__) {
+
+// This file is imported into lib/wc client bundles.
+
+if (typeof window !== 'undefined') {
+  var i
+  if ((i = window.document.currentScript) && (i = i.src.match(/(.+\/)[^/]+\.js$/))) {
+    __webpack_require__.p = i[1] // eslint-disable-line
+  }
+}
+
+
+/***/ }),
+
+/***/ "cebe":
+/***/ (function(module, exports) {
+
+module.exports = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+
+/***/ }),
+
+/***/ "fb15":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+
+// EXTERNAL MODULE: ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
+var setPublicPath = __webpack_require__("1eb2");
+
+// EXTERNAL MODULE: external "axios"
+var external_axios_ = __webpack_require__("cebe");
+var external_axios_default = /*#__PURE__*/__webpack_require__.n(external_axios_);
+
+// CONCATENATED MODULE: ./src/util.js
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+/**
+ * Deep copy the given object.
+ *
+ * @param  {Object} obj
+ * @return {Object}
+ */
+function deepCopy(obj) {
+  if (obj === null || _typeof(obj) !== 'object') {
+    return obj;
+  }
+
+  var copy = Array.isArray(obj) ? [] : {};
+  Object.keys(obj).forEach(function (key) {
+    copy[key] = deepCopy(obj[key]);
+  });
+  return copy;
+}
+/**
+ * If the given value is not an array, wrap it in one.
+ *
+ * @param  {Any} value
+ * @return {Array}
+ */
+
+function arrayWrap(value) {
+  return Array.isArray(value) ? value : [value];
+}
+// CONCATENATED MODULE: ./src/Errors.js
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function Errors_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { Errors_typeof = function _typeof(obj) { return typeof obj; }; } else { Errors_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return Errors_typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+
+
+var Errors_Errors =
+/*#__PURE__*/
+function () {
+  /**
+   * Create a new error bag instance.
+   */
+  function Errors() {
+    _classCallCheck(this, Errors);
+
+    this.errors = {};
+  }
+  /**
+   * Set the errors object or field error messages.
+   *
+   * @param {Object|String} field
+   * @param {Array|String|undefined} messages
+   */
+
+
+  _createClass(Errors, [{
+    key: "set",
+    value: function set(field, messages) {
+      if (Errors_typeof(field) === 'object') {
+        this.errors = field;
+      } else {
+        this.set(_objectSpread({}, this.errors, _defineProperty({}, field, arrayWrap(messages))));
+      }
+    }
+    /**
+     * Get all the errors.
+     *
+     * @return {Object}
+     */
+
+  }, {
+    key: "all",
+    value: function all() {
+      return this.errors;
+    }
+    /**
+     * Determine if there is an error for the given field.
+     *
+     * @param  {String} field
+     * @return {Boolean}
+     */
+
+  }, {
+    key: "has",
+    value: function has(field) {
+      return this.errors.hasOwnProperty(field);
+    }
+    /**
+     * Determine if there are any errors for the given fields.
+     *
+     * @param  {...String} fields
+     * @return {Boolean}
+     */
+
+  }, {
+    key: "hasAny",
+    value: function hasAny() {
+      var _this = this;
+
+      for (var _len = arguments.length, fields = new Array(_len), _key = 0; _key < _len; _key++) {
+        fields[_key] = arguments[_key];
+      }
+
+      return fields.some(function (field) {
+        return _this.has(field);
+      });
+    }
+    /**
+     * Determine if there are any errors.
+     *
+     * @return {Boolean}
+     */
+
+  }, {
+    key: "any",
+    value: function any() {
+      return Object.keys(this.errors).length > 0;
+    }
+    /**
+     * Get the first error message for the given field.
+     *
+     * @param  String} field
+     * @return {String|undefined}
+     */
+
+  }, {
+    key: "get",
+    value: function get(field) {
+      if (this.has(field)) {
+        return this.getAll(field)[0];
+      }
+    }
+    /**
+     * Get all the error messages for the given field.
+     *
+     * @param  {String} field
+     * @return {Array}
+     */
+
+  }, {
+    key: "getAll",
+    value: function getAll(field) {
+      return arrayWrap(this.errors[field] || []);
+    }
+    /**
+     * Get the error message for the given fields.
+     *
+     * @param  {...String} fields
+     * @return {Array}
+     */
+
+  }, {
+    key: "only",
+    value: function only() {
+      var _this2 = this;
+
+      var messages = [];
+
+      for (var _len2 = arguments.length, fields = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+        fields[_key2] = arguments[_key2];
+      }
+
+      fields.forEach(function (field) {
+        var message = _this2.get(field);
+
+        if (message) {
+          messages.push(message);
+        }
+      });
+      return messages;
+    }
+    /**
+     * Get all the errors in a flat array.
+     *
+     * @return {Array}
+     */
+
+  }, {
+    key: "flatten",
+    value: function flatten() {
+      return Object.values(this.errors).reduce(function (a, b) {
+        return a.concat(b);
+      }, []);
+    }
+    /**
+     * Clear one or all error fields.
+     *
+     * @param {String|undefined} field
+     */
+
+  }, {
+    key: "clear",
+    value: function clear(field) {
+      var _this3 = this;
+
+      var errors = {};
+
+      if (field) {
+        Object.keys(this.errors).forEach(function (key) {
+          if (key !== field) {
+            errors[key] = _this3.errors[key];
+          }
+        });
+      }
+
+      this.set(errors);
+    }
+  }]);
+
+  return Errors;
+}();
+
+
+// CONCATENATED MODULE: ./src/Form.js
+function Form_typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { Form_typeof = function _typeof(obj) { return typeof obj; }; } else { Form_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return Form_typeof(obj); }
+
+function Form_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { Form_defineProperty(target, key, source[key]); }); } return target; }
+
+function Form_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function Form_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function Form_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function Form_createClass(Constructor, protoProps, staticProps) { if (protoProps) Form_defineProperties(Constructor.prototype, protoProps); if (staticProps) Form_defineProperties(Constructor, staticProps); return Constructor; }
+
+
+
+
+
+var Form_Form =
+/*#__PURE__*/
+function () {
+  /**
+   * Create a new form instance.
+   *
+   * @param {Object} data
+   */
+  function Form() {
+    var data = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+    Form_classCallCheck(this, Form);
+
+    this.busy = false;
+    this.successful = false;
+    this.errors = new Errors_Errors();
+    this.originalData = deepCopy(data);
+    Object.assign(this, data);
+  }
+  /**
+   * Fill form data.
+   *
+   * @param {Object} data
+   */
+
+
+  Form_createClass(Form, [{
+    key: "fill",
+    value: function fill(data) {
+      var _this = this;
+
+      this.keys().forEach(function (key) {
+        _this[key] = data[key];
+      });
+    }
+    /**
+     * Get the form data.
+     *
+     * @return {Object}
+     */
+
+  }, {
+    key: "data",
+    value: function data() {
+      var _this2 = this;
+
+      return this.keys().reduce(function (data, key) {
+        return Form_objectSpread({}, data, Form_defineProperty({}, key, _this2[key]));
+      }, {});
+    }
+    /**
+     * Get the form data keys.
+     *
+     * @return {Array}
+     */
+
+  }, {
+    key: "keys",
+    value: function keys() {
+      return Object.keys(this).filter(function (key) {
+        return !Form.ignore.includes(key);
+      });
+    }
+    /**
+     * Start processing the form.
+     */
+
+  }, {
+    key: "startProcessing",
+    value: function startProcessing() {
+      this.errors.clear();
+      this.busy = true;
+      this.successful = false;
+    }
+    /**
+     * Finish processing the form.
+     */
+
+  }, {
+    key: "finishProcessing",
+    value: function finishProcessing() {
+      this.busy = false;
+      this.successful = true;
+    }
+    /**
+     * Clear the form errors.
+     */
+
+  }, {
+    key: "clear",
+    value: function clear() {
+      this.errors.clear();
+      this.successful = false;
+    }
+    /**
+     * Reset the form fields.
+     */
+
+  }, {
+    key: "reset",
+    value: function reset() {
+      var _this3 = this;
+
+      Object.keys(this).filter(function (key) {
+        return !Form.ignore.includes(key);
+      }).forEach(function (key) {
+        _this3[key] = deepCopy(_this3.originalData[key]);
+      });
+    }
+    /**
+     * Submit the form via a GET request.
+     *
+     * @param  {String} url
+     * @param  {Object} config (axios config)
+     * @return {Promise}
+     */
+
+  }, {
+    key: "get",
+    value: function get(url) {
+      var config = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+      return this.submit('get', url, config);
+    }
+    /**
+     * Submit the form via a POST request.
+     *
+     * @param  {String} url
+     * @param  {Object} config (axios config)
+     * @return {Promise}
+     */
+
+  }, {
+    key: "post",
+    value: function post(url) {
+      var config = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+      return this.submit('post', url, config);
+    }
+    /**
+     * Submit the form via a PATCH request.
+     *
+     * @param  {String} url
+     * @param  {Object} config (axios config)
+     * @return {Promise}
+     */
+
+  }, {
+    key: "patch",
+    value: function patch(url) {
+      var config = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+      return this.submit('patch', url, config);
+    }
+    /**
+     * Submit the form via a PUT request.
+     *
+     * @param  {String} url
+     * @param  {Object} config (axios config)
+     * @return {Promise}
+     */
+
+  }, {
+    key: "put",
+    value: function put(url) {
+      var config = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+      return this.submit('put', url, config);
+    }
+    /**
+     * Submit the form via a DELETE request.
+     *
+     * @param  {String} url
+     * @param  {Object} config (axios config)
+     * @return {Promise}
+     */
+
+  }, {
+    key: "delete",
+    value: function _delete(url) {
+      var config = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+      return this.submit('delete', url, config);
+    }
+    /**
+     * Submit the form data via an HTTP request.
+     *
+     * @param  {String} method (get, post, patch, put)
+     * @param  {String} url
+     * @param  {Object} config (axios config)
+     * @return {Promise}
+     */
+
+  }, {
+    key: "submit",
+    value: function submit(method, url) {
+      var _this4 = this;
+
+      var config = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+      this.startProcessing();
+      var data = method === 'get' ? {
+        params: this.data()
+      } : this.data();
+      return new Promise(function (resolve, reject) {
+        (Form.axios || external_axios_default.a).request(Form_objectSpread({
+          url: _this4.route(url),
+          method: method,
+          data: data
+        }, config)).then(function (response) {
+          _this4.finishProcessing();
+
+          resolve(response);
+        }).catch(function (error) {
+          _this4.busy = false;
+
+          if (error.response) {
+            _this4.errors.set(_this4.extractErrors(error.response));
+          }
+
+          reject(error);
+        });
+      });
+    }
+    /**
+     * Extract the errors from the response object.
+     *
+     * @param  {Object} response
+     * @return {Object}
+     */
+
+  }, {
+    key: "extractErrors",
+    value: function extractErrors(response) {
+      if (!response.data || Form_typeof(response.data) !== 'object') {
+        return {
+          error: Form.errorMessage
+        };
+      }
+
+      if (response.data.errors) {
+        return Form_objectSpread({}, response.data.errors);
+      }
+
+      if (response.data.message) {
+        return {
+          error: response.data.message
+        };
+      }
+
+      return Form_objectSpread({}, response.data);
+    }
+    /**
+     * Get a named route.
+     *
+     * @param  {String} name
+     * @return {Object} parameters
+     * @return {String}
+     */
+
+  }, {
+    key: "route",
+    value: function route(name) {
+      var parameters = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+      var url = name;
+
+      if (Form.routes.hasOwnProperty(name)) {
+        url = decodeURI(Form.routes[name]);
+      }
+
+      if (Form_typeof(parameters) !== 'object') {
+        parameters = {
+          id: parameters
+        };
+      }
+
+      Object.keys(parameters).forEach(function (key) {
+        url = url.replace("{".concat(key, "}"), parameters[key]);
+      });
+      return url;
+    }
+    /**
+     * Clear errors on keydown.
+     *
+     * @param {KeyboardEvent} event
+     */
+
+  }, {
+    key: "onKeydown",
+    value: function onKeydown(event) {
+      if (event.target.name) {
+        this.errors.clear(event.target.name);
+      }
+    }
+  }]);
+
+  return Form;
+}();
+
+Form_Form.routes = {};
+Form_Form.errorMessage = 'Something went wrong. Please try again.';
+Form_Form.ignore = ['busy', 'successful', 'errors', 'originalData'];
+/* harmony default export */ var src_Form = (Form_Form);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"d2817be2-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/HasError.vue?vue&type=template&id=fcc9e406&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.form.errors.has(_vm.field))?_c('div',{staticClass:"help-block invalid-feedback",domProps:{"innerHTML":_vm._s(_vm.form.errors.get(_vm.field))}}):_vm._e()}
+var staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/HasError.vue?vue&type=template&id=fcc9e406&
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/components/HasError.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+/* harmony default export */ var HasErrorvue_type_script_lang_js_ = ({
+  name: 'has-error',
+  props: {
+    form: {
+      type: Object,
+      required: true
+    },
+    field: {
+      type: String,
+      required: true
+    }
+  }
+});
+// CONCATENATED MODULE: ./src/components/HasError.vue?vue&type=script&lang=js&
+ /* harmony default export */ var components_HasErrorvue_type_script_lang_js_ = (HasErrorvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
+/* globals __VUE_SSR_CONTEXT__ */
+
+// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
+// This module is a runtime utility for cleaner component module output and will
+// be included in the final webpack user bundle.
+
+function normalizeComponent (
+  scriptExports,
+  render,
+  staticRenderFns,
+  functionalTemplate,
+  injectStyles,
+  scopeId,
+  moduleIdentifier, /* server only */
+  shadowMode /* vue-cli only */
+) {
+  // Vue.extend constructor export interop
+  var options = typeof scriptExports === 'function'
+    ? scriptExports.options
+    : scriptExports
+
+  // render functions
+  if (render) {
+    options.render = render
+    options.staticRenderFns = staticRenderFns
+    options._compiled = true
+  }
+
+  // functional template
+  if (functionalTemplate) {
+    options.functional = true
+  }
+
+  // scopedId
+  if (scopeId) {
+    options._scopeId = 'data-v-' + scopeId
+  }
+
+  var hook
+  if (moduleIdentifier) { // server build
+    hook = function (context) {
+      // 2.3 injection
+      context =
+        context || // cached call
+        (this.$vnode && this.$vnode.ssrContext) || // stateful
+        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
+      // 2.2 with runInNewContext: true
+      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+        context = __VUE_SSR_CONTEXT__
+      }
+      // inject component styles
+      if (injectStyles) {
+        injectStyles.call(this, context)
+      }
+      // register component module identifier for async chunk inferrence
+      if (context && context._registeredComponents) {
+        context._registeredComponents.add(moduleIdentifier)
+      }
+    }
+    // used by ssr in case component is cached and beforeCreate
+    // never gets called
+    options._ssrRegister = hook
+  } else if (injectStyles) {
+    hook = shadowMode
+      ? function () { injectStyles.call(this, this.$root.$options.shadowRoot) }
+      : injectStyles
+  }
+
+  if (hook) {
+    if (options.functional) {
+      // for template-only hot-reload because in that case the render fn doesn't
+      // go through the normalizer
+      options._injectStyles = hook
+      // register for functioal component in vue file
+      var originalRender = options.render
+      options.render = function renderWithStyleInjection (h, context) {
+        hook.call(context)
+        return originalRender(h, context)
+      }
+    } else {
+      // inject component registration as beforeCreate hook
+      var existing = options.beforeCreate
+      options.beforeCreate = existing
+        ? [].concat(existing, hook)
+        : [hook]
+    }
+  }
+
+  return {
+    exports: scriptExports,
+    options: options
+  }
+}
+
+// CONCATENATED MODULE: ./src/components/HasError.vue
+
+
+
+
+
+/* normalize component */
+
+var component = normalizeComponent(
+  components_HasErrorvue_type_script_lang_js_,
+  render,
+  staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+component.options.__file = "HasError.vue"
+/* harmony default export */ var HasError = (component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"d2817be2-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/AlertError.vue?vue&type=template&id=5610eddd&
+var AlertErrorvue_type_template_id_5610eddd_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.form.errors.any())?_c('div',{staticClass:"alert alert-danger alert-dismissible",attrs:{"role":"alert"}},[(_vm.dismissible)?_c('button',{staticClass:"close",attrs:{"type":"button","aria-label":"Close"},on:{"click":_vm.dismiss}},[_c('span',{attrs:{"aria-hidden":"true"}},[_vm._v("×")])]):_vm._e(),_vm._t("default",[(_vm.form.errors.has('error'))?_c('div',{domProps:{"innerHTML":_vm._s(_vm.form.errors.get('error'))}}):_c('div',{domProps:{"innerHTML":_vm._s(_vm.message)}})])],2):_vm._e()}
+var AlertErrorvue_type_template_id_5610eddd_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/AlertError.vue?vue&type=template&id=5610eddd&
+
+// CONCATENATED MODULE: ./src/components/Alert.js
+/* harmony default export */ var Alert = ({
+  props: {
+    form: {
+      type: Object,
+      required: true
+    },
+    dismissible: {
+      type: Boolean,
+      default: true
+    }
+  },
+  methods: {
+    dismiss: function dismiss() {
+      if (this.dismissible) {
+        this.form.clear();
+      }
+    }
+  }
+});
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/components/AlertError.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ var AlertErrorvue_type_script_lang_js_ = ({
+  name: 'alert-error',
+  extends: Alert,
+  props: {
+    message: {
+      type: String,
+      default: 'There were some problems with your input.'
+    }
+  }
+});
+// CONCATENATED MODULE: ./src/components/AlertError.vue?vue&type=script&lang=js&
+ /* harmony default export */ var components_AlertErrorvue_type_script_lang_js_ = (AlertErrorvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./src/components/AlertError.vue
+
+
+
+
+
+/* normalize component */
+
+var AlertError_component = normalizeComponent(
+  components_AlertErrorvue_type_script_lang_js_,
+  AlertErrorvue_type_template_id_5610eddd_render,
+  AlertErrorvue_type_template_id_5610eddd_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+AlertError_component.options.__file = "AlertError.vue"
+/* harmony default export */ var AlertError = (AlertError_component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"d2817be2-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/AlertErrors.vue?vue&type=template&id=40d77fd7&
+var AlertErrorsvue_type_template_id_40d77fd7_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.form.errors.any())?_c('div',{staticClass:"alert alert-danger alert-dismissible",attrs:{"role":"alert"}},[(_vm.dismissible)?_c('button',{staticClass:"close",attrs:{"type":"button","aria-label":"Close"},on:{"click":_vm.dismiss}},[_c('span',{attrs:{"aria-hidden":"true"}},[_vm._v("×")])]):_vm._e(),(_vm.message)?_c('div',{domProps:{"innerHTML":_vm._s(_vm.message)}}):_vm._e(),_c('ul',_vm._l((_vm.form.errors.flatten()),function(error){return _c('li',{domProps:{"innerHTML":_vm._s(error)}})}))]):_vm._e()}
+var AlertErrorsvue_type_template_id_40d77fd7_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/AlertErrors.vue?vue&type=template&id=40d77fd7&
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/components/AlertErrors.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ var AlertErrorsvue_type_script_lang_js_ = ({
+  name: 'alert-errors',
+  extends: Alert,
+  props: {
+    message: {
+      type: String,
+      default: 'There were some problems with your input.'
+    }
+  }
+});
+// CONCATENATED MODULE: ./src/components/AlertErrors.vue?vue&type=script&lang=js&
+ /* harmony default export */ var components_AlertErrorsvue_type_script_lang_js_ = (AlertErrorsvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./src/components/AlertErrors.vue
+
+
+
+
+
+/* normalize component */
+
+var AlertErrors_component = normalizeComponent(
+  components_AlertErrorsvue_type_script_lang_js_,
+  AlertErrorsvue_type_template_id_40d77fd7_render,
+  AlertErrorsvue_type_template_id_40d77fd7_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+AlertErrors_component.options.__file = "AlertErrors.vue"
+/* harmony default export */ var AlertErrors = (AlertErrors_component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"d2817be2-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/AlertSuccess.vue?vue&type=template&id=fd18e236&
+var AlertSuccessvue_type_template_id_fd18e236_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.form.successful)?_c('div',{staticClass:"alert alert-success alert-dismissible",attrs:{"role":"alert"}},[(_vm.dismissible)?_c('button',{staticClass:"close",attrs:{"type":"button","aria-label":"Close"},on:{"click":_vm.dismiss}},[_c('span',{attrs:{"aria-hidden":"true"}},[_vm._v("×")])]):_vm._e(),_vm._t("default",[_c('div',{domProps:{"innerHTML":_vm._s(_vm.message)}})])],2):_vm._e()}
+var AlertSuccessvue_type_template_id_fd18e236_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/AlertSuccess.vue?vue&type=template&id=fd18e236&
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/components/AlertSuccess.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ var AlertSuccessvue_type_script_lang_js_ = ({
+  name: 'alert-success',
+  extends: Alert,
+  props: {
+    message: {
+      type: String,
+      default: ''
+    }
+  }
+});
+// CONCATENATED MODULE: ./src/components/AlertSuccess.vue?vue&type=script&lang=js&
+ /* harmony default export */ var components_AlertSuccessvue_type_script_lang_js_ = (AlertSuccessvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./src/components/AlertSuccess.vue
+
+
+
+
+
+/* normalize component */
+
+var AlertSuccess_component = normalizeComponent(
+  components_AlertSuccessvue_type_script_lang_js_,
+  AlertSuccessvue_type_template_id_fd18e236_render,
+  AlertSuccessvue_type_template_id_fd18e236_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+AlertSuccess_component.options.__file = "AlertSuccess.vue"
+/* harmony default export */ var AlertSuccess = (AlertSuccess_component.exports);
+// CONCATENATED MODULE: ./src/index.js
+
+
+
+
+
+
+
+// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
+/* concated harmony reexport Form */__webpack_require__.d(__webpack_exports__, "Form", function() { return src_Form; });
+/* concated harmony reexport Errors */__webpack_require__.d(__webpack_exports__, "Errors", function() { return Errors_Errors; });
+/* concated harmony reexport HasError */__webpack_require__.d(__webpack_exports__, "HasError", function() { return HasError; });
+/* concated harmony reexport AlertError */__webpack_require__.d(__webpack_exports__, "AlertError", function() { return AlertError; });
+/* concated harmony reexport AlertErrors */__webpack_require__.d(__webpack_exports__, "AlertErrors", function() { return AlertErrors; });
+/* concated harmony reexport AlertSuccess */__webpack_require__.d(__webpack_exports__, "AlertSuccess", function() { return AlertSuccess; });
+
+
+/* harmony default export */ var entry_lib = __webpack_exports__["default"] = (src_Form);
+
+
+
+/***/ })
+
+/******/ });
+
+/***/ }),
+
 /***/ "./node_modules/vue-axios/dist/vue-axios.min.js":
 /*!******************************************************!*\
   !*** ./node_modules/vue-axios/dist/vue-axios.min.js ***!
@@ -39338,8 +43818,6 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("div", [
-      _vm._m(0),
-      _vm._v(" "),
       _c("div", { staticClass: "wrapper" }, [
         _c("div", { staticClass: "sidebar" }, [
           _c("ul", [
@@ -39378,12 +43856,12 @@ var render = function() {
             _vm._v(" "),
             _c("li", [_vm._v("Guru")]),
             _vm._v(" "),
-            _vm._m(1),
+            _vm._m(0),
             _vm._v(" "),
-            _vm._m(2)
+            _vm._m(1)
           ]),
           _vm._v(" "),
-          _vm._m(3)
+          _vm._m(2)
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "main_content" })
@@ -39394,19 +43872,6 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "nav",
-      {
-        staticClass: "navbar navbar-expand-lg navbar-light",
-        staticStyle: { "background-color": "#16744A" }
-      },
-      [_c("a", { staticClass: "navbar-brand", attrs: { href: "#" } })]
-    )
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -39476,11 +43941,28 @@ var render = function() {
             on: {
               submit: function($event) {
                 $event.preventDefault()
-                return _vm.addMatpel()
+                return _vm.checkForm()
+              },
+              success: function($event) {
+                return _vm.$emit("success", _vm.successmessage)
               }
             }
           },
           [
+            _vm.errors.length
+              ? _c(
+                  "div",
+                  {
+                    staticClass: "alert alert-danger",
+                    attrs: { role: "alert" }
+                  },
+                  _vm._l(_vm.errors, function(error) {
+                    return _c("p", { key: error.id }, [_vm._v(_vm._s(error))])
+                  }),
+                  0
+                )
+              : _vm._e(),
+            _vm._v(" "),
             _c("div", { staticClass: "form-group" }, [
               _c("label", [_vm._v("Kode Mata Pelajaran")]),
               _vm._v(" "),
@@ -39672,29 +44154,76 @@ var render = function() {
       _c("br"),
       _vm._v(" "),
       _c("div", { staticClass: "row" }, [
-        _vm._m(0),
+        _c("div", { staticClass: "col-md-10" }, [
+          _c("h4", [_vm._v("Daftar Mata Pelajaran")]),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "btn-group btn-group-toggle",
+              attrs: { "data-toggle": "buttons" }
+            },
+            [
+              _c("label", { staticClass: "btn btn-outline-secondary active" }, [
+                _c("input", {
+                  attrs: {
+                    type: "radio",
+                    name: "options",
+                    id: "option1",
+                    checked: ""
+                  },
+                  on: {
+                    click: function($event) {
+                      return _vm.filterkelas(7)
+                    }
+                  }
+                }),
+                _vm._v(" Kelas 7\n          ")
+              ]),
+              _vm._v(" "),
+              _c("label", { staticClass: "btn btn-outline-secondary" }, [
+                _c("input", {
+                  attrs: { type: "radio", name: "options", id: "option2" },
+                  on: {
+                    click: function($event) {
+                      return _vm.filterkelas(8)
+                    }
+                  }
+                }),
+                _vm._v(" Kelas 8\n          ")
+              ]),
+              _vm._v(" "),
+              _c("label", { staticClass: "btn btn-outline-secondary" }, [
+                _c("input", {
+                  attrs: { type: "radio", name: "options", id: "option3" },
+                  on: {
+                    click: function($event) {
+                      return _vm.filterkelas(9)
+                    }
+                  }
+                }),
+                _vm._v(" Kelas 9\n          ")
+              ])
+            ]
+          )
+        ]),
         _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "col-md-2" },
-          [
-            _c(
-              "router-link",
-              {
-                staticClass: "btn btn-primary w-100",
-                attrs: { to: "/create/matpel" }
-              },
-              [_vm._v("+ Tambah")]
-            )
-          ],
-          1
-        )
+        _c("div", { staticClass: "col-md-2" }, [
+          _c(
+            "div",
+            {
+              staticClass: "btn btn-primary w-100",
+              on: { click: _vm.createModal }
+            },
+            [_vm._v("+ Tambah")]
+          )
+        ])
       ]),
       _vm._v(" "),
       _c("br"),
       _vm._v(" "),
       _c("table", { staticClass: "table" }, [
-        _vm._m(1),
+        _vm._m(0),
         _vm._v(" "),
         _c(
           "tbody",
@@ -39708,51 +44237,314 @@ var render = function() {
                 _vm._v(_vm._s(matpel.matpel))
               ]),
               _vm._v(" "),
-              _c(
-                "td",
-                { staticStyle: { width: "20%" } },
-                [
-                  _c(
-                    "router-link",
-                    {
-                      staticClass: "btn btn-warning",
-                      attrs: { to: "/edit/matpel/" + matpel.id }
-                    },
-                    [_vm._v("Edit")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-danger",
-                      on: {
-                        click: function($event) {
-                          return _vm.deleteMatpel(matpel.id)
-                        }
+              _c("td", { staticStyle: { width: "20%" } }, [
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-warning",
+                    on: {
+                      click: function($event) {
+                        return _vm.editModal(matpel)
                       }
-                    },
-                    [_vm._v("Delete")]
-                  )
-                ],
-                1
-              )
+                    }
+                  },
+                  [_vm._v("Edit")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-danger",
+                    on: {
+                      click: function($event) {
+                        return _vm.deleteMatpel(matpel.id)
+                      }
+                    }
+                  },
+                  [_vm._v("Delete")]
+                )
+              ])
             ])
           }),
           0
         )
       ])
-    ])
+    ]),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass: "modal fade",
+        attrs: {
+          id: "createModal",
+          tabindex: "-1",
+          role: "dialog",
+          "aria-labelledby": "exampleModalLabel",
+          "aria-hidden": "true"
+        }
+      },
+      [
+        _c("div", { staticClass: "modal-dialog modal-dialog-centered" }, [
+          _c("div", { staticClass: "modal-content" }, [
+            _c("div", { staticClass: "modal-header" }, [
+              _c(
+                "h5",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: !_vm.editmode,
+                      expression: "!editmode"
+                    }
+                  ],
+                  staticClass: "modal-title",
+                  attrs: { id: "exampleModalLabel" }
+                },
+                [_vm._v("Tambah Mata Pelajaran Baru")]
+              ),
+              _vm._v(" "),
+              _c(
+                "h5",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.editmode,
+                      expression: "editmode"
+                    }
+                  ],
+                  staticClass: "modal-title",
+                  attrs: { id: "exampleModalLabel" }
+                },
+                [_vm._v("Memperbarui Mata Pelajaran Baru")]
+              ),
+              _vm._v(" "),
+              _vm._m(1)
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "modal-body" }, [
+              _c(
+                "form",
+                {
+                  on: {
+                    submit: function($event) {
+                      $event.preventDefault()
+                      _vm.editmode ? _vm.updateData() : _vm.addMatpel()
+                    }
+                  }
+                },
+                [
+                  _c(
+                    "div",
+                    { staticClass: "form-group" },
+                    [
+                      _c("label", [_vm._v("Kode Mata Pelajaran")]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: !_vm.editmode,
+                            expression: "!editmode"
+                          },
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.form.kode_matpel,
+                            expression: "form.kode_matpel"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        class: {
+                          "is-invalid": _vm.form.errors.has("kode_matpel")
+                        },
+                        attrs: { type: "textfield" },
+                        domProps: { value: _vm.form.kode_matpel },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.form,
+                              "kode_matpel",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.editmode,
+                            expression: "editmode"
+                          },
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.form.kode_matpel,
+                            expression: "form.kode_matpel"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        class: {
+                          "is-invalid": _vm.form.errors.has("kode_matpel")
+                        },
+                        attrs: { type: "textfield", readonly: "" },
+                        domProps: { value: _vm.form.kode_matpel },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.form,
+                              "kode_matpel",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("has-error", {
+                        attrs: { form: _vm.form, field: "kode_matpel" }
+                      })
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-group" }, [
+                    _c("label", [_vm._v("Nama Mata Pelajaran")]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.form.matpel,
+                          expression: "form.matpel"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: { type: "textfield", required: "" },
+                      domProps: { value: _vm.form.matpel },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.form, "matpel", $event.target.value)
+                        }
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("label", [_vm._v("Kelas")]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-group" }, [
+                    _c(
+                      "select",
+                      {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.form.kelas,
+                            expression: "form.kelas"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { name: "kelas" },
+                        on: {
+                          change: function($event) {
+                            var $$selectedVal = Array.prototype.filter
+                              .call($event.target.options, function(o) {
+                                return o.selected
+                              })
+                              .map(function(o) {
+                                var val = "_value" in o ? o._value : o.value
+                                return val
+                              })
+                            _vm.$set(
+                              _vm.form,
+                              "kelas",
+                              $event.target.multiple
+                                ? $$selectedVal
+                                : $$selectedVal[0]
+                            )
+                          }
+                        }
+                      },
+                      [
+                        _c("option", { attrs: { value: "7" } }, [_vm._v("7")]),
+                        _vm._v(" "),
+                        _c("option", { attrs: { value: "8" } }, [_vm._v("8")]),
+                        _vm._v(" "),
+                        _c("option", { attrs: { value: "9" } }, [_vm._v("9")])
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "modal-footer" }, [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-danger",
+                        attrs: { type: "button", "data-dismiss": "modal" }
+                      },
+                      [_vm._v("Close")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: !_vm.editmode,
+                            expression: "!editmode"
+                          }
+                        ],
+                        staticClass: "btn btn-primary",
+                        attrs: { type: "submit", dismiss: "modal" }
+                      },
+                      [_vm._v("Create")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.editmode,
+                            expression: "editmode"
+                          }
+                        ],
+                        staticClass: "btn btn-success",
+                        attrs: { type: "submit", dismiss: "modal" }
+                      },
+                      [_vm._v("Update")]
+                    )
+                  ])
+                ]
+              )
+            ])
+          ])
+        ])
+      ]
+    )
   ])
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-10" }, [
-      _c("h4", [_vm._v("Daftar Mata Pelajaran")])
-    ])
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -39766,6 +44558,23 @@ var staticRenderFns = [
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Action")])
       ])
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "button",
+      {
+        staticClass: "close",
+        attrs: {
+          type: "button",
+          "data-dismiss": "modal",
+          "aria-label": "Close"
+        }
+      },
+      [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+    )
   }
 ]
 render._withStripped = true
@@ -56683,17 +61492,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue_axios__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_App_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/App.vue */ "./resources/js/components/App.vue");
-/* harmony import */ var _components_siswa_TambahSiswa_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/siswa/TambahSiswa.vue */ "./resources/js/components/siswa/TambahSiswa.vue");
-/* harmony import */ var _components_siswa_SiswaDashboard_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/siswa/SiswaDashboard.vue */ "./resources/js/components/siswa/SiswaDashboard.vue");
-/* harmony import */ var _components_siswa_UpdateSiswa_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/siswa/UpdateSiswa.vue */ "./resources/js/components/siswa/UpdateSiswa.vue");
-/* harmony import */ var _components_siswa_DetailSiswa_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/siswa/DetailSiswa.vue */ "./resources/js/components/siswa/DetailSiswa.vue");
-/* harmony import */ var _components_nilai_NilaiSiswa_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/nilai/NilaiSiswa.vue */ "./resources/js/components/nilai/NilaiSiswa.vue");
-/* harmony import */ var _components_nilai_NilaiSatuSiswa_vue__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/nilai/NilaiSatuSiswa.vue */ "./resources/js/components/nilai/NilaiSatuSiswa.vue");
-/* harmony import */ var _components_nilai_EditNilaiSiswa_vue__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/nilai/EditNilaiSiswa.vue */ "./resources/js/components/nilai/EditNilaiSiswa.vue");
-/* harmony import */ var _components_matapelajaran_MataPelajaran_vue__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/matapelajaran/MataPelajaran.vue */ "./resources/js/components/matapelajaran/MataPelajaran.vue");
-/* harmony import */ var _components_matapelajaran_EditMatpel__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/matapelajaran/EditMatpel */ "./resources/js/components/matapelajaran/EditMatpel.vue");
-/* harmony import */ var _components_matapelajaran_Creatematpel__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/matapelajaran/Creatematpel */ "./resources/js/components/matapelajaran/Creatematpel.vue");
+/* harmony import */ var vform__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vform */ "./node_modules/vform/dist/vform.common.js");
+/* harmony import */ var vform__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(vform__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _components_App_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/App.vue */ "./resources/js/components/App.vue");
+/* harmony import */ var _components_siswa_TambahSiswa_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/siswa/TambahSiswa.vue */ "./resources/js/components/siswa/TambahSiswa.vue");
+/* harmony import */ var _components_siswa_SiswaDashboard_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/siswa/SiswaDashboard.vue */ "./resources/js/components/siswa/SiswaDashboard.vue");
+/* harmony import */ var _components_siswa_UpdateSiswa_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/siswa/UpdateSiswa.vue */ "./resources/js/components/siswa/UpdateSiswa.vue");
+/* harmony import */ var _components_siswa_DetailSiswa_vue__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/siswa/DetailSiswa.vue */ "./resources/js/components/siswa/DetailSiswa.vue");
+/* harmony import */ var _components_nilai_NilaiSiswa_vue__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/nilai/NilaiSiswa.vue */ "./resources/js/components/nilai/NilaiSiswa.vue");
+/* harmony import */ var _components_nilai_NilaiSatuSiswa_vue__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/nilai/NilaiSatuSiswa.vue */ "./resources/js/components/nilai/NilaiSatuSiswa.vue");
+/* harmony import */ var _components_nilai_EditNilaiSiswa_vue__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/nilai/EditNilaiSiswa.vue */ "./resources/js/components/nilai/EditNilaiSiswa.vue");
+/* harmony import */ var _components_matapelajaran_MataPelajaran_vue__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/matapelajaran/MataPelajaran.vue */ "./resources/js/components/matapelajaran/MataPelajaran.vue");
+/* harmony import */ var _components_matapelajaran_EditMatpel__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/matapelajaran/EditMatpel */ "./resources/js/components/matapelajaran/EditMatpel.vue");
+/* harmony import */ var _components_matapelajaran_Creatematpel__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/matapelajaran/Creatematpel */ "./resources/js/components/matapelajaran/Creatematpel.vue");
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -56708,6 +61521,24 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 
 
 
+
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component(vform__WEBPACK_IMPORTED_MODULE_4__["HasError"].name, vform__WEBPACK_IMPORTED_MODULE_4__["HasError"]);
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component(vform__WEBPACK_IMPORTED_MODULE_4__["AlertError"].name, vform__WEBPACK_IMPORTED_MODULE_4__["AlertError"]);
+
+var toast = sweetalert2__WEBPACK_IMPORTED_MODULE_5___default.a.mixin({
+  toast: true,
+  position: 'top-end',
+  showConfirmButton: false,
+  timer: 3000,
+  timerProgressBar: true,
+  onOpen: function onOpen(toast) {
+    toast.addEventListener('mouseenter', sweetalert2__WEBPACK_IMPORTED_MODULE_5___default.a.stopTimer);
+    toast.addEventListener('mouseleave', sweetalert2__WEBPACK_IMPORTED_MODULE_5___default.a.resumeTimer);
+  }
+});
+window.toast = toast;
+window.Swal = sweetalert2__WEBPACK_IMPORTED_MODULE_5___default.a;
+window.Form = vform__WEBPACK_IMPORTED_MODULE_4__["Form"];
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"], vue_axios__WEBPACK_IMPORTED_MODULE_2___default.a, axios__WEBPACK_IMPORTED_MODULE_3___default.a);
 
 
@@ -56721,45 +61552,38 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
 
 
 var routes = [{
-  name: 'read',
   path: '/dashboard',
-  component: _components_siswa_SiswaDashboard_vue__WEBPACK_IMPORTED_MODULE_6__["default"]
+  component: _components_siswa_SiswaDashboard_vue__WEBPACK_IMPORTED_MODULE_8__["default"]
 }, {
-  name: 'tambahsiswa',
   path: '/create',
-  component: _components_siswa_TambahSiswa_vue__WEBPACK_IMPORTED_MODULE_5__["default"]
+  component: _components_siswa_TambahSiswa_vue__WEBPACK_IMPORTED_MODULE_7__["default"]
 }, {
-  name: 'update',
   path: '/edit/:id',
-  component: _components_siswa_UpdateSiswa_vue__WEBPACK_IMPORTED_MODULE_7__["default"]
+  component: _components_siswa_UpdateSiswa_vue__WEBPACK_IMPORTED_MODULE_9__["default"]
 }, {
-  name: 'Details',
   path: '/detail/:id',
-  component: _components_siswa_DetailSiswa_vue__WEBPACK_IMPORTED_MODULE_8__["default"]
+  component: _components_siswa_DetailSiswa_vue__WEBPACK_IMPORTED_MODULE_10__["default"]
 }, {
-  name: 'nilaisiswa',
   path: '/nilaisiswa',
-  component: _components_nilai_NilaiSiswa_vue__WEBPACK_IMPORTED_MODULE_9__["default"]
+  component: _components_nilai_NilaiSiswa_vue__WEBPACK_IMPORTED_MODULE_11__["default"]
 }, {
-  name: 'nilaisatusiswa',
   path: '/nilaisiswa/:id',
-  component: _components_nilai_NilaiSatuSiswa_vue__WEBPACK_IMPORTED_MODULE_10__["default"]
+  component: _components_nilai_NilaiSatuSiswa_vue__WEBPACK_IMPORTED_MODULE_12__["default"]
 }, {
-  name: 'editnilai',
   path: '/editnilai/:nis/:semester/:kode',
-  component: _components_nilai_EditNilaiSiswa_vue__WEBPACK_IMPORTED_MODULE_11__["default"]
+  component: _components_nilai_EditNilaiSiswa_vue__WEBPACK_IMPORTED_MODULE_13__["default"]
 }, {
   name: 'matpel',
   path: '/matpel',
-  component: _components_matapelajaran_MataPelajaran_vue__WEBPACK_IMPORTED_MODULE_12__["default"]
+  component: _components_matapelajaran_MataPelajaran_vue__WEBPACK_IMPORTED_MODULE_14__["default"]
 }, {
   name: 'editmatpel',
   path: '/edit/matpel/:id',
-  component: _components_matapelajaran_EditMatpel__WEBPACK_IMPORTED_MODULE_13__["default"]
+  component: _components_matapelajaran_EditMatpel__WEBPACK_IMPORTED_MODULE_15__["default"]
 }, {
   name: 'creatematpel',
   path: '/create/matpel',
-  component: _components_matapelajaran_Creatematpel__WEBPACK_IMPORTED_MODULE_14__["default"]
+  component: _components_matapelajaran_Creatematpel__WEBPACK_IMPORTED_MODULE_16__["default"]
 }];
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   mode: 'history',
@@ -56772,7 +61596,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
 
 new vue__WEBPACK_IMPORTED_MODULE_0___default.a(vue__WEBPACK_IMPORTED_MODULE_0___default.a.util.extend({
   router: router
-}, _components_App_vue__WEBPACK_IMPORTED_MODULE_4__["default"])).$mount("#app");
+}, _components_App_vue__WEBPACK_IMPORTED_MODULE_6__["default"])).$mount("#app");
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -56850,17 +61674,19 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _App_vue_vue_type_template_id_332fccf4_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./App.vue?vue&type=template&id=332fccf4&scoped=true& */ "./resources/js/components/App.vue?vue&type=template&id=332fccf4&scoped=true&");
-/* harmony import */ var _App_vue_vue_type_style_index_0_id_332fccf4_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./App.vue?vue&type=style&index=0&id=332fccf4&scoped=true&lang=css& */ "./resources/js/components/App.vue?vue&type=style&index=0&id=332fccf4&scoped=true&lang=css&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _App_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./App.vue?vue&type=script&lang=js& */ "./resources/js/components/App.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _App_vue_vue_type_style_index_0_id_332fccf4_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./App.vue?vue&type=style&index=0&id=332fccf4&scoped=true&lang=css& */ "./resources/js/components/App.vue?vue&type=style&index=0&id=332fccf4&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  script,
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _App_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _App_vue_vue_type_template_id_332fccf4_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
   _App_vue_vue_type_template_id_332fccf4_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
@@ -56874,6 +61700,20 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 if (false) { var api; }
 component.options.__file = "resources/js/components/App.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/App.vue?vue&type=script&lang=js&":
+/*!******************************************************************!*\
+  !*** ./resources/js/components/App.vue?vue&type=script&lang=js& ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./App.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/App.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -57060,7 +61900,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _MataPelajaran_vue_vue_type_template_id_6511dc30_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MataPelajaran.vue?vue&type=template&id=6511dc30&scoped=true& */ "./resources/js/components/matapelajaran/MataPelajaran.vue?vue&type=template&id=6511dc30&scoped=true&");
 /* harmony import */ var _MataPelajaran_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MataPelajaran.vue?vue&type=script&lang=js& */ "./resources/js/components/matapelajaran/MataPelajaran.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _MataPelajaran_vue_vue_type_style_index_0_id_6511dc30_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./MataPelajaran.vue?vue&type=style&index=0&id=6511dc30&scoped=true&lang=css& */ "./resources/js/components/matapelajaran/MataPelajaran.vue?vue&type=style&index=0&id=6511dc30&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
 
 
 
@@ -57068,7 +61910,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
   _MataPelajaran_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _MataPelajaran_vue_vue_type_template_id_6511dc30_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
   _MataPelajaran_vue_vue_type_template_id_6511dc30_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
@@ -57097,6 +61939,22 @@ component.options.__file = "resources/js/components/matapelajaran/MataPelajaran.
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MataPelajaran_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./MataPelajaran.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/matapelajaran/MataPelajaran.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MataPelajaran_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/matapelajaran/MataPelajaran.vue?vue&type=style&index=0&id=6511dc30&scoped=true&lang=css&":
+/*!**************************************************************************************************************************!*\
+  !*** ./resources/js/components/matapelajaran/MataPelajaran.vue?vue&type=style&index=0&id=6511dc30&scoped=true&lang=css& ***!
+  \**************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_MataPelajaran_vue_vue_type_style_index_0_id_6511dc30_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader!../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--6-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./MataPelajaran.vue?vue&type=style&index=0&id=6511dc30&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/matapelajaran/MataPelajaran.vue?vue&type=style&index=0&id=6511dc30&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_MataPelajaran_vue_vue_type_style_index_0_id_6511dc30_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_MataPelajaran_vue_vue_type_style_index_0_id_6511dc30_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_MataPelajaran_vue_vue_type_style_index_0_id_6511dc30_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_MataPelajaran_vue_vue_type_style_index_0_id_6511dc30_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_MataPelajaran_vue_vue_type_style_index_0_id_6511dc30_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
