@@ -6,6 +6,7 @@
 
 require('./bootstrap');
 require('jquery');
+require('feather-icons');
 
 window.Vue = require('vue');
 import Vue from 'vue';
@@ -17,6 +18,17 @@ Vue.component(HasError.name, HasError)
 Vue.component(AlertError.name, AlertError)
 import Swal from 'sweetalert2'
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faUsers, faChalkboardTeacher, faBookOpen, faClipboard, faSchool } from '@fortawesome/free-solid-svg-icons'
+
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+ 
+library.add(faUsers, faChalkboardTeacher, faBookOpen, faClipboard, faSchool)
+
+ 
+Vue.component('font-awesome-icon', FontAwesomeIcon)
+ 
+Vue.config.productionTip = false
 const toast = Swal.mixin({
     toast: true,
     position: 'top-end',

@@ -5,7 +5,9 @@
       <br />
       <div class="row">
         <div class="col-md-10">
-          <h4>Daftar Mata Pelajaran</h4>
+          <h4>
+            <b>Daftar Mata Pelajaran</b>
+          </h4>
           <div class="btn-group btn-group-toggle" data-toggle="buttons">
             <label class="btn btn-outline-secondary active">
               <input type="radio" name="options" id="option1" checked @click="filterkelas(7)" /> Kelas 7

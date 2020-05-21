@@ -7,6 +7,8 @@
         <title>SIAKAD SCB</title>
         <link href="{{ mix('css/app.css') }}" type="text/css" rel="stylesheet" />
         <script src="{{ mix('js/app.js') }}" type="text/javascript" defer></script>
+        <script src="https://unpkg.com/feather-icons"></script>
+
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
         <link href="navbar-top.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">

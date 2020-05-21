@@ -8,24 +8,31 @@
         <div class="sidebar">
           <ul>
             <li class="siswa">
-              <router-link to="/dashboard">Siswa</router-link>
+              <router-link to="/dashboard">
+                             <font-awesome-icon icon="users" />
+&nbsp Siswa</router-link>
             </li>
             <li>
               <router-link to="/matpel">
-                <i class="fas fa-file"></i>Mata Pelajaran
+                                           <font-awesome-icon icon="book-open" />
+
+    &nbsp Mata Pelajaran
+
               </router-link>
             </li>
             <li>
               <router-link to="/nilaisiswa">
-                <i class="fas fa-file"></i>Nilai Siswa
+                  <font-awesome-icon icon="clipboard" />
+                 &nbsp  Nilai Siswa
               </router-link>
             </li>
-            <li>Guru</li>
             <li>
-              <i class="fas fa-user"></i>Profil Wali Kelas
-            </li>
+            <font-awesome-icon icon="chalkboard-teacher" />
+            &nbsp Data Guru</li>
             <li>
-              <i class="fas fa-address-card"></i>Data Guru
+                          <font-awesome-icon icon="school" />
+
+              &nbsp Profil Wali Kelas
             </li>
           </ul>
           <div class="social_media">
@@ -46,6 +53,7 @@
 </template>
 
 <script>
+  import feather from 'feather-icons'
 export default {};
 </script>
 
@@ -147,5 +155,12 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+li{
+  text-decoration: none;
+}
+ul{
+  text-decoration: none;
 }
 </style>
