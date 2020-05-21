@@ -2,17 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Matpel;
 use App\Nilai;
 use App\Siswa;
 use Illuminate\Http\Request;
 
 class NilaiApiController extends Controller
 {
-    public function updateNilai(Request $request, $nis, $semester, $kode)
+    public function updateNilai(Request $request, $nis, $kelas, $semester, $kode)
     {
         $siswa = Siswa::where('nis', $nis)->first();
         // $nis = $siswa->nis;
-        $nilai = Nilai::where(['nis' => $nis, 'semester' => $semester, 'kode_matpel' => $kode])->first();
+        $nilai = Nilai::where(['nis' => $nis, 'semester' => $semester, 'kode_matpel' => $kode, 'kelas' => $kelas])->first();
         // return view('nilaisiswa')->with('semester1', $semester1);
         $nilai->h1 = $request->h1;
         $nilai->h2 = $request->h2;
@@ -34,42 +35,47 @@ class NilaiApiController extends Controller
     public function shownilai($nis)
     {
         $siswa = Siswa::where('nis', $nis)->first();
-        // $nis = $siswa->nis;
-        $kelas = $siswa->kelas;
-        $semester1 = Nilai::where(['nis' => $nis,
+        $semester1 = Nilai::where(['nis' => $nis, 'kelas' => $siswa->kelas,
             'semester' => 1])->get();
-        $semester2 = Nilai::where(['nis' => $nis,
+        $semester2 = Nilai::where(['nis' => $nis, 'kelas' => $siswa->kelas,
             'semester' => 2])->get();
-        $semester3 = Nilai::where(['nis' => $nis,
-            'semester' => 3])->get();
-        $semester4 = Nilai::where(['nis' => $nis,
-            'semester' => 4])->get();
-        $semester5 = Nilai::where(['nis' => $nis,
-            'semester' => 5])->get();
-        $semester6 = Nilai::where(['nis' => $nis,
-            'semester' => 6])->get();
         // return view('nilaisiswa')->with('semester1', $semester1);
-        if ($kelas == 7) {
-            return [
-                'siswa' => $siswa,
-                'semester1' => $semester1,
-                'semester2' => $semester2,
-            ];
-        } else if ($kelas == 8) {
-            return [
-                'siswa' => $siswa,
-                'semester1' => $semester3,
-                'semester2' => $semester4,
-            ];
-        } else if ($kelas == 9) {
-            return [
-                'siswa' => $siswa,
-                'semester1' => $semester5,
-                'semester2' => $semester6,
-            ];
-        } else {
-            return 'Data Tidak Tersedia';
+        return [
+            'siswa' => $siswa,
+            'semester1' => $semester1,
+            'semester2' => $semester2,
+        ];
+
+    }
+
+    public function addNullMatpel($nis)
+    {
+        $siswa = Siswa::where('nis', $nis)->first();
+        $kelas = $siswa->kelas;
+        $matpels = Matpel::where('kelas', $kelas)->get();
+        for ($i = 1; $i <= 2; $i++) {
+            for ($j = 0; $j < count($matpels); $j++) {
+                $nilai = new Nilai([
+                    'kode_matpel' => $matpels[$j]->kode_matpel,
+                    'kelas' => $kelas,
+                    'nis' => $siswa->nis,
+                    'semester' => $i,
+                ]);
+                $nilai->save();
+
+            }
         }
+        $semester1 = Nilai::where(['nis' => $nis,
+            'semester' => 1, 'kelas' => $kelas])->get();
+        $semester2 = Nilai::where(['nis' => $nis,
+            'semester' => 2, 'kelas' => $kelas])->get();
+        return [
+            // 'what' => 'gaada',
+            'siswa' => $siswa,
+            'semester1' => $semester1,
+            'semester2' => $semester2,
+            // 'Tapi bohong hiyaaaaa'
+        ];
 
     }
 

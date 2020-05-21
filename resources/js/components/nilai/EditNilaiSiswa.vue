@@ -41,7 +41,7 @@
         <tbody>
           <tr v-for="nilai in semester1" :key="nilai.id">
             <td>{{ nilai.kode_matpel }}</td>
-            <template v-if="$route.params.semester == 1 & $route.params.kode == nilai.kode_matpel">
+            <template v-if="$route.params.semester == 1 & $route.params.kode == nilai.kode_matpel & $route.params.kelas == nilai.kelas" >
               <td>
                 <input type="textfield" class="form-control" v-model="nilai.h1" />
               </td>
@@ -133,7 +133,7 @@
         <tbody>
           <tr v-for="nilai in semester2" :key="nilai.id">
             <td>{{ nilai.kode_matpel }}</td>
-            <template v-if="$route.params.semester == 2 & $route.params.kode == nilai.kode_matpel">
+            <template v-if="$route.params.semester == 2 & $route.params.kode == nilai.kode_matpel &$route.params.kelas == nilai.kelas">
               <td>
                 <input type="textfield" class="form-control" v-model="nilai.h1" />
               </td>
@@ -235,24 +235,21 @@ export default {
     updateData() {
       let semester = 0;
       if (this.$route.params.semester == 1) {
-        let kode = this.semester1.filter(this.getData);
+        let kode = this.semester1.filter(item=>{
+          if(item.kode_matpel == this.$route.params.kode)
+          return item;
+        });
         console.log(kode[0]);
         let semester1 = kode[0];
-        if (this.siswa.kelas == 7) {
-          semester = 1;
-        } else if (this.siswa.kelas == 8) {
-          semester = 3;
-        } else if (this.siswa.kelas == 9) {
-          semester = 5;
-        }
         axios
           .put(
-            "http://localhost:8000/api/nilai/" +
-              this.$route.params.nis +
-              "/" +
-              semester +
-              "/" +
-              this.$route.params.kode,
+            // "http://localhost:8000/api/nilai/" +
+            //   this.$route.params.nis +
+            //   "/" + this.$route.params.kelas + "/" +
+            //   semester +
+            //   "/" +
+            //   this.$route.params.kode,
+            `http://localhost:8000/api/nilai/${this.$route.params.nis}/${this.$route.params.kelas}/1/${this.$route.params.kode}`,
             {
               h1: semester1.h1,
               h2: semester1.h2,
@@ -270,31 +267,25 @@ export default {
             }
           )
           .then(response => {
-            // for (const i = 0; i <= this.semester1.lenght; i++) {}
+            Swal.fire(
+  'Berhasil!',
+  'Nilai berhasil di ubah',
+  'success'
+)
             this.$router.push("/nilaisiswa/" + this.siswa.nis);
           });
       } else if (this.$route.params.semester == 2) {
         // let kode = this.semester2[kode_matpel==this.$route.params.kode_matpel]
         // console.log(kode)
         // let semester2 = this.semester2[0];
-        let kode = this.semester2.filter(this.getData);
+        let kode = this.semester2.filter(item=>{
+          if(item.kode_matpel == this.$route.params.kode)
+          return item});
         console.log(kode[0]);
         let semester2 = kode[0];
-        if (this.siswa.kelas == 7) {
-          semester = 2;
-        } else if (this.siswa.kelas == 8) {
-          semseter = 4;
-        } else if (this.siswa.kelas == 9) {
-          semester = 6;
-        }
         axios
           .put(
-            "http://localhost:8000/api/nilai/" +
-              this.$route.params.nis +
-              "/" +
-              semester +
-              "/" +
-              this.$route.params.kode,
+            `http://localhost:8000/api/nilai/${this.$route.params.nis}/${this.$route.params.kelas}/2/${this.$route.params.kode}`,
             {
               h1: semester2.h1,
               h2: semester2.h2,

@@ -18,6 +18,7 @@ class CreateNilaisTable extends Migration
             $table->string('kode_matpel');
             $table->string('nis');
             $table->string('semester');
+            $table->integer('kelas')->default(7);
             $table->float('h1')->unsigned()->nullable();
             $table->float('h2')->unsigned()->nullable();
             $table->float('h3')->unsigned()->nullable();

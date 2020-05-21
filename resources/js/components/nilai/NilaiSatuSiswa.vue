@@ -53,11 +53,12 @@
           <td>{{ nilai.hpas }}</td>
           <td>{{ nilai.hpa }}</td>
           <td>{{ nilai.predikat }}</td>
+
           <router-link
             class="btn btn-primary w-100"
-            :to="'/editnilai/'+siswa.nis+'/1/'+nilai.kode_matpel"
-          >Edit</router-link>
-        </tr>rr
+            :to="`/editnilai/${siswa.nis}/${siswa.kelas}/1/${nilai.kode_matpel}`">
+          Edit</router-link>
+        </tr>
       </tbody>
     </table>
     <br />
@@ -101,7 +102,7 @@
           <td>{{ nilai.predikat }}</td>
           <router-link
             class="btn btn-primary w-100"
-            :to="'/editnilai/'+siswa.nis+'/2/'+nilai.kode_matpel"
+            :to="`/editnilai/${siswa.nis}/${siswa.kelas}/2/${nilai.kode_matpel}`"
           >Edit</router-link>
         </tr>
       </tbody>
@@ -121,6 +122,7 @@ export default {
   },
   created() {
     this.loadData();
+    
   },
   methods: {
     loadData() {
@@ -132,7 +134,21 @@ export default {
             (this.semester1 = response.data.semester1),
             (this.semester2 = response.data.semester2),
             console.log(response.data);
-        });
+        }).then(res =>{
+          if(this.semester1 && this.semester2 ==""){
+      axios.post(`http://localhost:8000/api/siswa/${this.$route.params.id}/matpel`)
+      .then(
+        response => {
+          this.semester1 = response.data.semester1,
+          this.semester2 = response.data.semester2
+          console.log('Semester 1 adalah: ' + this.semester1)
+        }
+      )
+    }
+        }
+        );
+      
+    console.log('end ' + this.semester1);
     }
   }
 };

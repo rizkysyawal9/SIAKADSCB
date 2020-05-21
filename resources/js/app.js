@@ -6,7 +6,6 @@
 
 require('./bootstrap');
 require('jquery');
-require('feather-icons');
 
 window.Vue = require('vue');
 import Vue from 'vue';
@@ -86,7 +85,7 @@ const routes = [
         component: NilaiSatuSiswa
     },
     {
-        path: '/editnilai/:nis/:semester/:kode',
+        path: '/editnilai/:nis/:kelas/:semester/:kode',
         component: EditNilaiSiswa
     },
     {

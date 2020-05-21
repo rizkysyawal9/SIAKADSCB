@@ -53,7 +53,6 @@
 </template>
 
 <script>
-  import feather from 'feather-icons'
 export default {};
 </script>
 
@@ -82,6 +81,7 @@ body {
   position: relative;
 }
 .wrapper .sidebar {
+  top: 0;
   width: 200px;
   height: 100%;
   background: #16744a;
