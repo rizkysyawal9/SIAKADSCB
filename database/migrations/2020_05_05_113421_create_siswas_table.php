@@ -16,10 +16,17 @@ class CreateSiswasTable extends Migration
         Schema::create('siswas', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('nis')->unique();
-            $table->string('orangTua');
             $table->string('nama');
-            $table->string('kelas');
-            $table->string('alamat');
+            $table->integer('kelas')->default(7);
+            $table->string('jenis_kelamin')->default('laki-laki');
+            $table->string('tanggal_lahir')->nullable();
+            $table->string('tempat_lahir')->nullable();
+            $table->string('golongan_darah')->default('A');
+            $table->string('alamat')->nullable();
+            $table->integer('tinggi_badan')->nullable();
+            $table->integer('berat_badan')->nullable();
+            $table->string('nama_ayah')->nullable();
+            $table->string('nama_ibu')->nullable();
             $table->timestamps();
         });
     }

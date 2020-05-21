@@ -14,6 +14,7 @@
         <p>Alamat: {{ biodata.alamat }}</p>
       </div>
     </div>
+    <router-link class="btn btn-warning" :to="'/edit/'+biodata.nis">Edit</router-link>
   </div>
 </template>
 

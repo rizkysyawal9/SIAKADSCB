@@ -78,7 +78,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <form @submit.prevent="editmode ? updateData() : addMatpel()">
+            <form @submit.prevent="editmode ? updateMatpel() : addMatpel()">
               <div class="form-group">
                 <label>Kode Mata Pelajaran</label>
                 <input
@@ -165,7 +165,7 @@ export default {
         });
       console.log(this.matpels);
     },
-    updateData(id) {
+    updateMatpel(id) {
       console.log("Pressed");
       this.form
         .put("http://localhost:8000/api/matpel/" + this.form.id)

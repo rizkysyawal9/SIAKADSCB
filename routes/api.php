@@ -18,6 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+//Siswa Routes
 Route::get('/siswa', 'SiswaApiController@all');
 Route::get('/siswa/{nis}', 'SiswaApiController@show');
 Route::post('/tambah_siswa', 'SiswaApiController@store');

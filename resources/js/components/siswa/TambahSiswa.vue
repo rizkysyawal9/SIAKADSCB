@@ -8,17 +8,7 @@
         <br />
         <!-- prevent form submit untuk reload halaman, kemudian memanggil function addData() -->
         <form @submit.prevent="addData()">
-          <div class="form-group">
-            <label>Nis</label>
-            <input
-              type="textfield"
-              class="form-control"
-              placeholder="NIS"
-              v-model="form.nis"
-              required
-            />
-          </div>
-          <div class="form-group">
+          <div class="form-group" :class="{'is-invalid': form.errors.has('nama')}">
             <label>Nama</label>
             <input
               type="textfield"
@@ -27,38 +17,101 @@
               v-model="form.nama"
               required
             />
+            <div class="form-group" :class="{'is-invalid': form.errors.has('nis')}">
+              <label>Nis</label>
+              <input
+                type="textfield"
+                class="form-control"
+                placeholder="NIS"
+                v-model="form.nis"
+                required
+              />
+            </div>
+          </div>
+          <label>Kelas</label>
+          <div class="form-group" :class="{'is-invalid': form.errors.has('kelas')}">
+            <select name="kelas" v-model="form.kelas" class="form-control">
+              <option value>Silahkan pilih kelas</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+            </select>
+          </div>
+          <label>Jenis kelamin</label>
+          <div class="form-group" :class="{'is-invalid': form.errors.has('jenis_kelamin')}">
+            <select name="jenis_kelamin" v-model="form.jenis_kelamin" class="form-control">
+              <option value>Silahkan pilih jenis kelamin</option>
+              <option value="laki-laki">laki-laki</option>
+              <option value="perempuan">perempuan</option>
+            </select>
           </div>
           <div class="form-group">
-            <label>Orang Tua</label>
+            <label>Tempat lahir</label>
             <input
               type="textfield"
               class="form-control"
-              placeholder="Orang Tua"
-              v-model="form.ortu"
-              required
+              placeholder="Tempat Lahir"
+              v-model="form.tempat_lahir"
             />
           </div>
           <div class="form-group">
-            <label>Kelas</label>
+            <label>Tanggal lahir</label>
             <input
               type="textfield"
               class="form-control"
-              placeholder="Kelas"
-              v-model="form.kelas"
-              required
+              placeholder="Tanggal Lahir"
+              v-model="form.tanggal_lahir"
+            />
+          </div>
+          <label>Golongan darah</label>
+          <div class="form-group">
+            <select name="golongan_darah" v-model="form.golongan_darah" class="form-control">
+              <option value>Silahkan pilih Golongan Darah</option>
+              <option value="AB">AB</option>
+              <option value="A">A</option>
+              <option value="B">B</option>
+              <option value="O">O</option>
+            </select>
+          </div>
+          <div class="form-group" :class="{'is-invalid': form.errors.has('tinggi_badan')}">
+            <label>Tinggi badan</label>
+            <input
+              type="textfield"
+              class="form-control"
+              placeholder="dalam cm"
+              v-model="form.tinggi_badan"
+            />
+          </div>
+          <div class="form-group" :class="{'is-invalid': form.errors.has('berat_badan')}">
+            <label>Berat Badan</label>
+            <input
+              type="textfield"
+              class="form-control"
+              placeholder="dalam kg"
+              v-model="form.berat_badan"
             />
           </div>
           <div class="form-group">
-            <label>Alamat</label>
+            <label>Nama Ayah</label>
             <input
               type="textfield"
               class="form-control"
-              placeholder="Alamat"
-              v-model="form.alamat"
-              required
+              placeholder="Nama Ayah"
+              v-model="form.nama_ayah"
             />
           </div>
+          <div class="form-group">
+            <label>Nama Ibu</label>
+            <input type="textfield" class="Nama Ibu" placeholder="dalam kg" v-model="form.nama_ibu" />
+          </div>
+
           <button class="btn btn-primary">Submit</button>
+          <has-error :form="form" field="nama"></has-error>
+          <has-error :form="form" field="nis"></has-error>
+          <has-error :form="form" field="kelas"></has-error>
+          <has-error :form="form" field="jenis_kelamin"></has-error>
+          <has-error :form="form" field="berat_badan"></has-error>
+          <has-error :form="form" field="tinggi_badan"></has-error>
         </form>
       </div>
     </div>
@@ -69,30 +122,32 @@
 export default {
   data() {
     return {
-      form: {
+      form: new Form({
         // firstName: "",
         // lastName: ""
         nis: "",
         nama: "",
-        ortu: "",
         kelas: "",
-        alamat: ""
-      }
+        jenis_kelamin: "",
+        tanggal_lahir: "",
+        tempat_lahir: "",
+        golongan_darah: "",
+        alamat: "",
+        tinggi_badan: "",
+        berat_badan: "",
+        nama_ayah: "",
+        nama_ibu: ""
+      })
     };
   },
   methods: {
     addData() {
       console.log(this.form);
       // post data ke api menggunakan axios
-      axios
-        .post("http://localhost:8000/api/tambah_siswa", {
-          nama: this.form.nama,
-          nis: this.form.nis,
-          orangTua: this.form.ortu,
-          kelas: this.form.kelas,
-          alamat: this.form.alamat
-        })
+      this.form
+        .post("http://localhost:8000/api/tambah_siswa", {})
         .then(response => {
+          Swal.fire("Berhasil!", "Siswa Berhasil Ditambahkan", "success");
           // push router ke read data
           this.$router.push("/dashboard");
         });

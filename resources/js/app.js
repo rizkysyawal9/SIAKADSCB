@@ -46,8 +46,7 @@ import NilaiSiswa from './components/nilai/NilaiSiswa.vue';
 import NilaiSatuSiswa from './components/nilai/NilaiSatuSiswa.vue';
 import EditNilaiSiswa from './components/nilai/EditNilaiSiswa.vue';
 import MataPelajaran from './components/matapelajaran/MataPelajaran.vue';
-import EditMatpel from './components/matapelajaran/EditMatpel';
-import Creatematpel from './components/matapelajaran/Creatematpel';
+
 
 const routes = [
     {
@@ -83,16 +82,7 @@ const routes = [
         path: '/matpel',
         component: MataPelajaran
     },
-    {
-        name: 'editmatpel',
-        path: '/edit/matpel/:id',
-        component: EditMatpel
-    },
-    {
-        name: 'creatematpel',
-        path: '/create/matpel',
-        component: Creatematpel
-    },
+
     
 
 ]
