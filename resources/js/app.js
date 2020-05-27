@@ -19,10 +19,11 @@ import Swal from 'sweetalert2'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faUsers, faChalkboardTeacher, faBookOpen, faClipboard, faSchool } from '@fortawesome/free-solid-svg-icons'
+import { faTwitter, faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons'
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
  
-library.add(faUsers, faChalkboardTeacher, faBookOpen, faClipboard, faSchool)
+library.add(faUsers, faChalkboardTeacher, faBookOpen, faClipboard, faSchool, faTwitter, faInstagram, faFacebook)
 
  
 Vue.component('font-awesome-icon', FontAwesomeIcon)
@@ -57,6 +58,7 @@ import NilaiSiswa from './components/nilai/NilaiSiswa.vue';
 import NilaiSatuSiswa from './components/nilai/NilaiSatuSiswa.vue';
 import EditNilaiSiswa from './components/nilai/EditNilaiSiswa.vue';
 import MataPelajaran from './components/matapelajaran/MataPelajaran.vue';
+import Guru from './components/guru/Guru.vue';
 
 
 const routes = [
@@ -93,7 +95,11 @@ const routes = [
         path: '/matpel',
         component: MataPelajaran
     },
-
+    {
+        name: 'dataguru',
+        path: '/guru',
+        component: Guru
+    }
     
 
 ]

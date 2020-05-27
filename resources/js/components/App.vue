@@ -6,39 +6,49 @@
       <!-- Sidebar -->
       <div class="wrapper">
         <div class="sidebar">
+          <li>
+            <img src="/LOGO.png" alt="img" />
+          </li>
           <ul>
             <li class="siswa">
               <router-link to="/dashboard">
-                             <font-awesome-icon icon="users" />
-&nbsp Siswa</router-link>
+                <font-awesome-icon icon="users" />&nbsp Siswa
+              </router-link>
             </li>
             <li>
               <router-link to="/matpel">
-                                           <font-awesome-icon icon="book-open" />
-
-    &nbsp Mata Pelajaran
-
+                <font-awesome-icon icon="book-open" />&nbsp Mata Pelajaran
               </router-link>
             </li>
             <li>
               <router-link to="/nilaisiswa">
-                  <font-awesome-icon icon="clipboard" />
-                 &nbsp  Nilai Siswa
+                <font-awesome-icon icon="clipboard" />&nbsp Nilai Siswa
               </router-link>
             </li>
             <li>
-            <font-awesome-icon icon="chalkboard-teacher" />
-            &nbsp Data Guru</li>
+              <router-link to="/guru">
+                <font-awesome-icon icon="chalkboard-teacher" />&nbsp Data Guru
+              </router-link>
+              <!-- <font-awesome-icon icon="chalkboard-teacher" />&nbsp Data Guru -->
+            </li>
             <li>
-                          <font-awesome-icon icon="school" />
-
-              &nbsp Profil Wali Kelas
+              <font-awesome-icon icon="school" />&nbsp Profil Wali Kelas
             </li>
           </ul>
           <div class="social_media">
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-instagram"></i>
+            <!-- <font-awesome-icon icon="twitter" />
+            <font-awesome-icon icon="facebook" />
+            <font-awesome-icon icon="instagram" /> -->
+            <div class="sosmed" @click="twitter()">
+              <font-awesome-icon :icon="['fab', 'twitter']" />
+            </div>
+            <div class="sosmed" @click="facebook()">
+              <font-awesome-icon :icon="['fab', 'facebook']" />
+            </div>
+            <div class="sosmed" @click="instagram()">
+              <font-awesome-icon :icon="['fab', 'instagram']" />
+            </div>
+
           </div>
         </div>
         <div class="main_content">
@@ -53,10 +63,36 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    twitter(){
+      window.open("https://twitter.com/edu_baznas", "_blank");    
+    },
+    facebook(){
+      window.open('https://www.facebook.com/pendidikanbaznas', "_blank");
+    },
+    instagram(){
+      window.open('https://www.instagram.com/pendidikanbaznas', '_blank');
+    }
+
+  }
+
+};
+
 </script>
 
 <style scoped>
+
+a{
+  text-decoration: none;
+}
+
+img {
+  margin-left: 15px;
+  margin-bottom: 15px;
+  max-width: 150px;
+}
+
 .siswa {
   text-decoration: none;
   color: white;
@@ -102,7 +138,7 @@ body {
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 .wrapper .sidebar ul li a {
-  color: #bdb8d7;
+  color: white;
   display: block;
 }
 .wrapper .sidebar ul li a .fas {
@@ -121,7 +157,7 @@ body {
   transform: translateX(-50%);
   display: flex;
 }
-.wrapper .sidebar .social_media a {
+.wrapper .sidebar .social_media .sosmed {
   display: block;
   width: 40px;
   background: #594f8d;
@@ -140,12 +176,12 @@ body {
 .wrapper .main_content .header {
   padding: 20px;
   background: #fff;
-  color: #717171;
+  color: white;
   border-bottom: 1px solid #e0e4e8;
 }
 .wrapper .main_content .info {
   margin: 20px;
-  color: #717171;
+  color: white;
   line-height: 25px;
 }
 .wrapper .main_content .info div {
@@ -157,10 +193,10 @@ body {
   margin-right: auto;
 }
 
-li{
+li {
   text-decoration: none;
 }
-ul{
+ul {
   text-decoration: none;
 }
 </style>
