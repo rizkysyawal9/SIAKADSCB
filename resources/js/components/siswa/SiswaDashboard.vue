@@ -40,8 +40,12 @@
               <td style="width:40%">{{siswa.nama}}</td>
               <td style="width:40%">{{siswa.nis}}</td>
               <td style="width:20%">
-                <router-link class="btn btn-primary" :to="'/detail/'+siswa.nis">Details</router-link>
-                <button class="btn btn-danger" v-on:click="deleteData(siswa.nis)">Delete</button>
+                <router-link class="btn btn-primary" :to="'/detail/'+siswa.nis">
+                  <font-awesome-icon icon="info-circle" />
+                </router-link>
+                <button class="btn btn-danger" v-on:click="deleteData(siswa.nis)">
+                  <font-awesome-icon icon="trash" />
+                </button>
               </td>
             </tr>
           </tbody>

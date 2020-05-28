@@ -15274,6 +15274,15 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -15281,85 +15290,87 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       matpels: [],
       form: new Form({
         id: "",
-        kode_matpel: "",
-        matpel: "",
+        name: "",
+        email: "",
+        password: "",
+        mengajar: "",
         kelas: ""
-      })
+      }),
+      gurus: []
     };
   },
   created: function created() {
+    this.getGuru();
     this.getMatapel();
   },
   methods: {
-    filterkelas: function filterkelas(kelas) {
+    getGuru: function getGuru() {
       var _this = this;
 
-      console.log(this.matpels);
-      axios.get("http://localhost:8000/api/matpel").then(function (result) {
-        _this.matpels = result.data;
-        _this.matpels = _this.matpels.filter(function (matpel) {
-          return matpel.kelas === kelas;
-        });
-      })["catch"](function (err) {
-        alert(err);
-      });
-      console.log(this.matpels);
-    },
-    updateMatpel: function updateMatpel(id) {
-      var _this2 = this;
-
-      console.log("Pressed");
-      this.form.put("http://localhost:8000/api/matpel/" + this.form.id).then(function (res) {
+      axios.get("http://localhost:8000/api/guru").then(function (res) {
         console.log(res.data);
-        toast.fire({
-          icon: "success",
-          title: "Mata Pelajaran Berhasil Diubah"
-        });
-        $("#createModal").modal("hide");
-
-        _this2.getMatapel();
+        _this.gurus = res.data;
       })["catch"](function (err) {
         console.log(err);
       });
     },
-    editModal: function editModal(matpel) {
+    updateGuru: function updateGuru(id) {
+      var _this2 = this;
+
+      console.log("Pressed");
+      console.log(this.form.id);
+      this.form.put("http://localhost:8000/api/guru/" + this.form.id).then(function (res) {
+        console.log(res.data);
+        toast.fire({
+          icon: "success",
+          title: "Guru Berhasil Diubah"
+        });
+        $("#createModal").modal("hide");
+
+        _this2.getGuru();
+      })["catch"](function (err) {
+        console.log(err);
+      });
+    },
+    editModal: function editModal(guru) {
       this.editmode = true;
       this.form.reset();
       $("#createModal").modal("show");
-      this.form.fill(matpel);
+      this.form.fill(guru);
     },
     createModal: function createModal() {
       this.editmode = false;
       this.form.reset();
       $("#createModal").modal("show");
     },
-    addMatpel: function addMatpel() {
+    addGuru: function addGuru() {
       var _this3 = this;
 
       // post data ke api menggunakan axios
       console.log(this.form);
-      this.form.post("http://localhost:8000/api/matpel/tambah").then(function (response) {
-        _this3.matpels = [].concat(_toConsumableArray(_this3.matpels), [response.data]);
+      this.form.post("http://localhost:8000/api/guru").then(function (response) {
+        // this.matpels = [...this.matpels, response.data];
+        _this3.gurus = [].concat(_toConsumableArray(_this3.gurus), [response.data]);
         toast.fire({
           icon: "success",
-          title: "Mata Pelajaran Berhasil Ditambahkan"
+          title: "Guru Berhasil Ditambahkan"
         });
         $("#createModal").modal("hide");
       })["catch"](function (err) {
         console.log(err);
       });
     },
-    getMatapel: function getMatapel() {// axios
-      //   .get("http://localhost:8000/api/matpel")
-      //   .then(result => {
-      //     this.matpels = result.data;
-      //   })
-      //   .catch(err => {
-      //     alert(err);
-      //   });
-    },
-    deleteMatpel: function deleteMatpel(id) {
+    getMatapel: function getMatapel() {
       var _this4 = this;
+
+      axios.get("http://localhost:8000/api/matpel").then(function (result) {
+        _this4.matpels = result.data;
+      })["catch"](function (err) {
+        alert(err);
+      });
+    },
+    deleteGuru: function deleteGuru(id) {
+      var _this5 = this;
 
       Swal.fire({
         title: "Apakah anda yakin?",
@@ -15371,11 +15382,11 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         confirmButtonText: "Iya, hapuskan ini!"
       }).then(function (result) {
         if (result.value) {
-          axios["delete"]("http://localhost:8000/api/matpel/" + id).then(function (response) {
-            _this4.matpels = _this4.matpels.filter(function (matpel) {
-              return matpel.id !== id;
+          axios["delete"]("http://localhost:8000/api/guru/" + id).then(function (response) {
+            _this5.gurus = _this5.gurus.filter(function (guru) {
+              return guru.id !== id;
             });
-            Swal.fire("Deleted!", "Mata pelajaran berhasil di delete", "success")["catch"](function () {
+            Swal.fire("Deleted!", "Data Guru berhasil di delete", "success")["catch"](function () {
               Swal.fire("Failed!", "Something went Wrong", "warning");
             });
           });
@@ -15408,6 +15419,13 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToAr
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -16308,6 +16326,10 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
 //
 //
 //
@@ -21161,7 +21183,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.kelas > td[data-v-6aca1634] {\n  padding-right: 1.5em;\n}\n", ""]);
+exports.push([module.i, "\n.kelas > td[data-v-6aca1634] {\n  padding-right: 1.5em;\n}\na[data-v-6aca1634] {\n  text-decoration: none;\n  margin-right: 5px;\n  margin-left: 5px;\n}\n.delete[data-v-6aca1634] {\n  color: red;\n}\n", ""]);
 
 // exports
 
@@ -21180,7 +21202,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.kelas > td[data-v-6511dc30] {\n  padding-right: 1.5em;\n}\n", ""]);
+exports.push([module.i, "\n.kelas > td[data-v-6511dc30] {\n  padding-right: 1.5em;\n}\na[data-v-6511dc30] {\n  text-decoration: none;\n  margin-right: 5px;\n  margin-left: 5px;\n}\n.delete[data-v-6511dc30] {\n  color: red;\n}\n", ""]);
 
 // exports
 
@@ -57325,59 +57347,7 @@ var render = function() {
       _c("br"),
       _vm._v(" "),
       _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-md-10" }, [
-          _vm._m(0),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "btn-group btn-group-toggle",
-              attrs: { "data-toggle": "buttons" }
-            },
-            [
-              _c("label", { staticClass: "btn btn-outline-secondary active" }, [
-                _c("input", {
-                  attrs: {
-                    type: "radio",
-                    name: "options",
-                    id: "option1",
-                    checked: ""
-                  },
-                  on: {
-                    click: function($event) {
-                      return _vm.filterkelas(7)
-                    }
-                  }
-                }),
-                _vm._v(" Kelas 7\n          ")
-              ]),
-              _vm._v(" "),
-              _c("label", { staticClass: "btn btn-outline-secondary" }, [
-                _c("input", {
-                  attrs: { type: "radio", name: "options", id: "option2" },
-                  on: {
-                    click: function($event) {
-                      return _vm.filterkelas(8)
-                    }
-                  }
-                }),
-                _vm._v(" Kelas 8\n          ")
-              ]),
-              _vm._v(" "),
-              _c("label", { staticClass: "btn btn-outline-secondary" }, [
-                _c("input", {
-                  attrs: { type: "radio", name: "options", id: "option3" },
-                  on: {
-                    click: function($event) {
-                      return _vm.filterkelas(9)
-                    }
-                  }
-                }),
-                _vm._v(" Kelas 9\n          ")
-              ])
-            ]
-          )
-        ]),
+        _vm._m(0),
         _vm._v(" "),
         _c("div", { staticClass: "col-md-2" }, [
           _c(
@@ -57398,41 +57368,57 @@ var render = function() {
         _vm._v(" "),
         _c(
           "tbody",
-          _vm._l(_vm.matpels, function(matpel) {
-            return _c("tr", { key: matpel.id }, [
-              _c("td", { staticStyle: { width: "40%" } }, [
-                _vm._v(_vm._s(matpel.kode_matpel))
+          _vm._l(_vm.gurus, function(guru) {
+            return _c("tr", { key: guru.id }, [
+              _c("td", { staticStyle: { width: "20%" } }, [
+                _vm._v(_vm._s(guru.name))
               ]),
               _vm._v(" "),
-              _c("td", { staticStyle: { width: "40%" } }, [
-                _vm._v(_vm._s(matpel.matpel))
+              _c("td", { staticStyle: { width: "20%" } }, [
+                _vm._v(_vm._s(guru.email))
+              ]),
+              _vm._v(" "),
+              _c("td", { staticStyle: { width: "20%" } }, [
+                _vm._v(_vm._s(guru.mengajar))
+              ]),
+              _vm._v(" "),
+              _c("td", { staticStyle: { width: "20%" } }, [
+                _vm._v(_vm._s(guru.kelas))
               ]),
               _vm._v(" "),
               _c("td", { staticStyle: { width: "20%" } }, [
                 _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-warning",
-                    on: {
-                      click: function($event) {
-                        return _vm.editModal(matpel)
+                  "a",
+                  { attrs: { href: "#" } },
+                  [
+                    _c("font-awesome-icon", {
+                      staticClass: "edit",
+                      attrs: { icon: "edit" },
+                      on: {
+                        click: function($event) {
+                          return _vm.editModal(guru)
+                        }
                       }
-                    }
-                  },
-                  [_vm._v("Edit")]
+                    })
+                  ],
+                  1
                 ),
-                _vm._v(" "),
+                _vm._v("\n            /\n            "),
                 _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-danger",
-                    on: {
-                      click: function($event) {
-                        return _vm.deleteMatpel(matpel.id)
+                  "a",
+                  { attrs: { href: "#" } },
+                  [
+                    _c("font-awesome-icon", {
+                      staticClass: "delete",
+                      attrs: { icon: "trash" },
+                      on: {
+                        click: function($event) {
+                          return _vm.deleteGuru(guru)
+                        }
                       }
-                    }
-                  },
-                  [_vm._v("Delete")]
+                    })
+                  ],
+                  1
                 )
               ])
             ])
@@ -57502,7 +57488,7 @@ var render = function() {
                   on: {
                     submit: function($event) {
                       $event.preventDefault()
-                      _vm.editmode ? _vm.updateMatpel() : _vm.addMatpel()
+                      _vm.editmode ? _vm.updateGuru() : _vm.addGuru()
                     }
                   }
                 },
@@ -57516,6 +57502,42 @@ var render = function() {
                       _c("input", {
                         directives: [
                           {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.form.name,
+                            expression: "form.name"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        class: { "is-invalid": _vm.form.errors.has("name") },
+                        attrs: { type: "textfield", name: "name" },
+                        domProps: { value: _vm.form.name },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(_vm.form, "name", $event.target.value)
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("has-error", {
+                        attrs: { form: _vm.form, field: "nama" }
+                      })
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "form-group" },
+                    [
+                      _c("label", [_vm._v("Email")]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
                             name: "show",
                             rawName: "v-show",
                             value: !_vm.editmode,
@@ -57524,26 +57546,24 @@ var render = function() {
                           {
                             name: "model",
                             rawName: "v-model",
-                            value: _vm.form.kode_matpel,
-                            expression: "form.kode_matpel"
+                            value: _vm.form.email,
+                            expression: "form.email"
                           }
                         ],
                         staticClass: "form-control",
-                        class: {
-                          "is-invalid": _vm.form.errors.has("kode_matpel")
+                        class: { "is-invalid": _vm.form.errors.has("email") },
+                        attrs: {
+                          type: "textfield",
+                          name: "email",
+                          required: ""
                         },
-                        attrs: { type: "textfield" },
-                        domProps: { value: _vm.form.kode_matpel },
+                        domProps: { value: _vm.form.email },
                         on: {
                           input: function($event) {
                             if ($event.target.composing) {
                               return
                             }
-                            _vm.$set(
-                              _vm.form,
-                              "kode_matpel",
-                              $event.target.value
-                            )
+                            _vm.$set(_vm.form, "email", $event.target.value)
                           }
                         }
                       }),
@@ -57559,88 +57579,78 @@ var render = function() {
                           {
                             name: "model",
                             rawName: "v-model",
-                            value: _vm.form.kode_matpel,
-                            expression: "form.kode_matpel"
+                            value: _vm.form.email,
+                            expression: "form.email"
                           }
                         ],
                         staticClass: "form-control",
-                        class: {
-                          "is-invalid": _vm.form.errors.has("kode_matpel")
-                        },
+                        class: { "is-invalid": _vm.form.errors.has("email") },
                         attrs: { type: "textfield", readonly: "" },
-                        domProps: { value: _vm.form.kode_matpel },
+                        domProps: { value: _vm.form.email },
                         on: {
                           input: function($event) {
                             if ($event.target.composing) {
                               return
                             }
-                            _vm.$set(
-                              _vm.form,
-                              "kode_matpel",
-                              $event.target.value
-                            )
+                            _vm.$set(_vm.form, "email", $event.target.value)
                           }
                         }
                       }),
                       _vm._v(" "),
                       _c("has-error", {
-                        attrs: { form: _vm.form, field: "kode_matpel" }
+                        attrs: { form: _vm.form, field: "email" }
                       })
                     ],
                     1
                   ),
                   _vm._v(" "),
-                  _c("div", { staticClass: "form-group" }, [
-                    _c("label", [_vm._v("Email")]),
-                    _vm._v(" "),
-                    _c("input", {
+                  _c(
+                    "div",
+                    {
                       directives: [
                         {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.form.matpel,
-                          expression: "form.matpel"
+                          name: "show",
+                          rawName: "v-show",
+                          value: !_vm.editmode,
+                          expression: "!editmode"
                         }
                       ],
-                      staticClass: "form-control",
-                      attrs: { type: "textfield", required: "" },
-                      domProps: { value: _vm.form.matpel },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
+                      staticClass: "form-group"
+                    },
+                    [
+                      _c("label", [_vm._v("Password")]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.form.password,
+                            expression: "form.password"
                           }
-                          _vm.$set(_vm.form, "matpel", $event.target.value)
-                        }
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "form-group" }, [
-                    _c("label", [_vm._v("Password")]),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.form.matpel,
-                          expression: "form.matpel"
-                        }
-                      ],
-                      staticClass: "form-control",
-                      attrs: { type: "textfield", required: "" },
-                      domProps: { value: _vm.form.matpel },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
+                        ],
+                        staticClass: "form-control",
+                        class: {
+                          "is-invalid": _vm.form.errors.has("password")
+                        },
+                        attrs: { name: "password", type: "password" },
+                        domProps: { value: _vm.form.password },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(_vm.form, "password", $event.target.value)
                           }
-                          _vm.$set(_vm.form, "matpel", $event.target.value)
                         }
-                      }
-                    })
-                  ]),
+                      }),
+                      _vm._v(" "),
+                      _c("has-error", {
+                        attrs: { form: _vm.form, field: "password" }
+                      })
+                    ],
+                    1
+                  ),
                   _vm._v(" "),
                   _c("label", [_vm._v("Mengajar")]),
                   _vm._v(" "),
@@ -57652,12 +57662,12 @@ var render = function() {
                           {
                             name: "model",
                             rawName: "v-model",
-                            value: _vm.form.kelas,
-                            expression: "form.kelas"
+                            value: _vm.form.mengajar,
+                            expression: "form.mengajar"
                           }
                         ],
                         staticClass: "form-control",
-                        attrs: { name: "kelas" },
+                        attrs: { name: "matpel" },
                         on: {
                           change: function($event) {
                             var $$selectedVal = Array.prototype.filter
@@ -57670,7 +57680,7 @@ var render = function() {
                               })
                             _vm.$set(
                               _vm.form,
-                              "kelas",
+                              "mengajar",
                               $event.target.multiple
                                 ? $$selectedVal
                                 : $$selectedVal[0]
@@ -57678,13 +57688,17 @@ var render = function() {
                           }
                         }
                       },
-                      [
-                        _c("option", { attrs: { value: "7" } }, [_vm._v("7")]),
-                        _vm._v(" "),
-                        _c("option", { attrs: { value: "8" } }, [_vm._v("8")]),
-                        _vm._v(" "),
-                        _c("option", { attrs: { value: "9" } }, [_vm._v("9")])
-                      ]
+                      _vm._l(_vm.matpels, function(matpel) {
+                        return _c(
+                          "option",
+                          {
+                            key: matpel.id,
+                            domProps: { value: matpel.kode_matpel }
+                          },
+                          [_vm._v(_vm._s(matpel.kode_matpel))]
+                        )
+                      }),
+                      0
                     )
                   ]),
                   _vm._v(" "),
@@ -57792,7 +57806,9 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("h4", [_c("b", [_vm._v("Data Guru")])])
+    return _c("div", { staticClass: "col-md-10" }, [
+      _c("h4", [_c("b", [_vm._v("Data Guru")])])
+    ])
   },
   function() {
     var _vm = this
@@ -57800,13 +57816,13 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("thead", [
       _c("tr", [
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Nama Guru")]),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Nama")]),
         _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Email Guru")]),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Email")]),
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Mengajar")]),
         _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Kelas yang diajar")]),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Kelas")]),
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Action")])
       ])
@@ -57943,29 +57959,37 @@ var render = function() {
               _vm._v(" "),
               _c("td", { staticStyle: { width: "20%" } }, [
                 _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-warning",
-                    on: {
-                      click: function($event) {
-                        return _vm.editModal(matpel)
+                  "a",
+                  { attrs: { href: "#" } },
+                  [
+                    _c("font-awesome-icon", {
+                      staticClass: "edit",
+                      attrs: { icon: "edit" },
+                      on: {
+                        click: function($event) {
+                          return _vm.editModal(matpel)
+                        }
                       }
-                    }
-                  },
-                  [_vm._v("Edit")]
+                    })
+                  ],
+                  1
                 ),
-                _vm._v(" "),
+                _vm._v("\n            /\n            "),
                 _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-danger",
-                    on: {
-                      click: function($event) {
-                        return _vm.deleteMatpel(matpel.id)
+                  "a",
+                  { attrs: { href: "#" } },
+                  [
+                    _c("font-awesome-icon", {
+                      staticClass: "delete",
+                      attrs: { icon: "trash" },
+                      on: {
+                        click: function($event) {
+                          return _vm.deleteMatpel(matpel.id)
+                        }
                       }
-                    }
-                  },
-                  [_vm._v("Delete")]
+                    })
+                  ],
+                  1
                 )
               ])
             ])
@@ -59776,7 +59800,12 @@ var render = function() {
                         staticClass: "btn btn-primary",
                         attrs: { to: "/detail/" + siswa.nis }
                       },
-                      [_vm._v("Details")]
+                      [
+                        _c("font-awesome-icon", {
+                          attrs: { icon: "info-circle" }
+                        })
+                      ],
+                      1
                     ),
                     _vm._v(" "),
                     _c(
@@ -59789,7 +59818,8 @@ var render = function() {
                           }
                         }
                       },
-                      [_vm._v("Delete")]
+                      [_c("font-awesome-icon", { attrs: { icon: "trash" } })],
+                      1
                     )
                   ],
                   1
@@ -75639,7 +75669,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.component(vform__WEBPACK_IMPORTED_MOD
 
 
 
-_fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_6__["library"].add(_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__["faUsers"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__["faChalkboardTeacher"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__["faBookOpen"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__["faClipboard"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__["faSchool"], _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_8__["faTwitter"], _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_8__["faInstagram"], _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_8__["faFacebook"]);
+_fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_6__["library"].add(_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__["faUsers"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__["faChalkboardTeacher"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__["faBookOpen"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__["faClipboard"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__["faSchool"], _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_8__["faTwitter"], _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_8__["faInstagram"], _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_8__["faFacebook"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__["faTrash"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__["faEdit"], _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__["faInfoCircle"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('font-awesome-icon', _fortawesome_vue_fontawesome__WEBPACK_IMPORTED_MODULE_9__["FontAwesomeIcon"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.config.productionTip = false;
 var toast = sweetalert2__WEBPACK_IMPORTED_MODULE_5___default.a.mixin({

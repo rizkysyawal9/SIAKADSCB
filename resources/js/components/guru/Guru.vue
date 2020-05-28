@@ -8,17 +8,6 @@
           <h4>
             <b>Data Guru</b>
           </h4>
-          <div class="btn-group btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-outline-secondary active">
-              <input type="radio" name="options" id="option1" checked @click="filterkelas(7)" /> Kelas 7
-            </label>
-            <label class="btn btn-outline-secondary">
-              <input type="radio" name="options" id="option2" @click="filterkelas(8)" /> Kelas 8
-            </label>
-            <label class="btn btn-outline-secondary">
-              <input type="radio" name="options" id="option3" @click="filterkelas(9)" /> Kelas 9
-            </label>
-          </div>
         </div>
         <div class="col-md-2">
           <!-- push router ke form membuat data -->
@@ -29,10 +18,10 @@
       <table class="table">
         <thead>
           <tr>
-            <th scope="col">Nama Guru</th>
-            <th scope="col">Email Guru</th>
+            <th scope="col">Nama</th>
+            <th scope="col">Email</th>
             <th scope="col">Mengajar</th>
-            <th scope="col">Kelas yang diajar</th>
+            <th scope="col">Kelas</th>
             <th scope="col">Action</th>
           </tr>
         </thead>
@@ -41,14 +30,23 @@
             
           </div>-->
           <!-- menampilkan data ke table -->
-          <tr v-for="matpel in matpels" :key="matpel.id">
-            <td style="width:40%">{{matpel.kode_matpel}}</td>
-            <td style="width:40%">{{matpel.matpel}}</td>
+          <tr v-for="guru in gurus" :key="guru.id">
+            <td style="width:20%">{{guru.name}}</td>
+            <td style="width:20%">{{guru.email}}</td>
+            <td style="width:20%">{{guru.mengajar}}</td>
+            <td style="width:20%">{{guru.kelas}}</td>
             <td style="width:20%">
-              <button class="btn btn-warning" @click="editModal(matpel)">Edit</button>
+              <a href="#">
+                <font-awesome-icon icon="edit" @click="editModal(guru)" class="edit" />
+              </a>
+              /
+              <a href="#">
+                <font-awesome-icon icon="trash" @click="deleteGuru(guru)" class="delete" />
+              </a>
+              <!-- <button class="btn btn-warning" @click="editModal(guru)">Edit</button> -->
 
               <!-- <router-link class="btn btn-warning" :to="'/edit/matpel/'+matpel.id">Edit</router-link> -->
-              <button class="btn btn-danger" v-on:click="deleteMatpel(matpel.id)">Delete</button>
+              <!-- <button class="btn btn-danger" v-on:click="deleteGuru(guru.id)">Delete</button> -->
             </td>
           </tr>
         </tbody>
@@ -66,56 +64,67 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h5
-              class="modal-title"
-              id="exampleModalLabel"
-              v-show="!editmode"
-            >Tambah Guru Baru</h5>
-            <h5
-              class="modal-title"
-              id="exampleModalLabel"
-              v-show="editmode"
-            >Memperbarui Guru</h5>
+            <h5 class="modal-title" id="exampleModalLabel" v-show="!editmode">Tambah Guru Baru</h5>
+            <h5 class="modal-title" id="exampleModalLabel" v-show="editmode">Memperbarui Guru</h5>
 
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            <form @submit.prevent="editmode ? updateMatpel() : addMatpel()">
+            <form @submit.prevent="editmode ? updateGuru() : addGuru()">
               <div class="form-group">
                 <label>Nama Guru</label>
                 <input
+                  type="textfield"
+                  name="name"
+                  v-model="form.name"
+                  class="form-control"
+                  :class="{'is-invalid': form.errors.has('name')}"
+                />
+
+                <has-error :form="form" field="nama"></has-error>
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <input
                   v-show="!editmode"
                   type="textfield"
-                  v-model="form.kode_matpel"
+                  v-model="form.email"
+                  name="email"
+                  required
                   class="form-control"
-                  :class="{'is-invalid': form.errors.has('kode_matpel')}"
+                  :class="{'is-invalid': form.errors.has('email')}"
                 />
                 <input
                   v-show="editmode"
                   type="textfield"
-                  v-model="form.kode_matpel"
+                  v-model="form.email"
                   class="form-control"
-                  :class="{'is-invalid': form.errors.has('kode_matpel')}"
+                  :class="{'is-invalid': form.errors.has('email')}"
                   readonly
                 />
-                <has-error :form="form" field="kode_matpel"></has-error>
+                <has-error :form="form" field="email"></has-error>
               </div>
-              <div class="form-group">
-                <label>Email</label>
-                <input type="textfield" class="form-control" v-model="form.matpel" required />
-              </div>
-              <div class="form-group">
+              <div class="form-group" v-show="!editmode">
                 <label>Password</label>
-                <input type="textfield" class="form-control" v-model="form.matpel" required />
+                <input
+                  name="password"
+                  type="password"
+                  v-model="form.password"
+                  class="form-control"
+                  :class="{'is-invalid': form.errors.has('password')}"
+                />
+                <has-error :form="form" field="password"></has-error>
               </div>
               <label>Mengajar</label>
               <div class="form-group">
-                <select name="kelas" v-model="form.kelas" class="form-control">
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
+                <select name="matpel" v-model="form.mengajar" class="form-control">
+                  <option
+                    v-for="matpel in matpels"
+                    :value="matpel.kode_matpel"
+                    :key="matpel.id"
+                  >{{matpel.kode_matpel}}</option>
                 </select>
               </div>
               <label>Mengajar di kelas</label>
@@ -157,68 +166,72 @@ export default {
       matpels: [],
       form: new Form({
         id: "",
-        kode_matpel: "",
-        matpel: "",
+        name: "",
+        email: "",
+        password: "",
+        mengajar: "",
         kelas: ""
-      })
+      }),
+      gurus: []
     };
   },
   created() {
+    this.getGuru();
     this.getMatapel();
   },
 
   methods: {
-    filterkelas(kelas) {
-      console.log(this.matpels);
+    getGuru() {
       axios
-        .get("http://localhost:8000/api/matpel")
-        .then(result => {
-          this.matpels = result.data;
-          this.matpels = this.matpels.filter(matpel => matpel.kelas === kelas);
-        })
-        .catch(err => {
-          alert(err);
-        });
-      console.log(this.matpels);
-    },
-    updateMatpel(id) {
-      console.log("Pressed");
-      this.form
-        .put("http://localhost:8000/api/matpel/" + this.form.id)
+        .get("http://localhost:8000/api/guru")
         .then(res => {
           console.log(res.data);
-          toast.fire({
-            icon: "success",
-            title: "Mata Pelajaran Berhasil Diubah"
-          });
-          $("#createModal").modal("hide");
-          this.getMatapel();
+          this.gurus = res.data;
         })
         .catch(err => {
           console.log(err);
         });
     },
-    editModal(matpel) {
+    updateGuru(id) {
+      console.log("Pressed");
+      console.log(this.form.id);
+      this.form
+        .put("http://localhost:8000/api/guru/" + this.form.id)
+        .then(res => {
+          console.log(res.data);
+          toast.fire({
+            icon: "success",
+            title: "Guru Berhasil Diubah"
+          });
+          $("#createModal").modal("hide");
+          this.getGuru();
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    },
+    editModal(guru) {
       this.editmode = true;
       this.form.reset();
       $("#createModal").modal("show");
-      this.form.fill(matpel);
+      this.form.fill(guru);
     },
     createModal() {
       this.editmode = false;
       this.form.reset();
       $("#createModal").modal("show");
     },
-    addMatpel() {
+    addGuru() {
       // post data ke api menggunakan axios
       console.log(this.form);
       this.form
-        .post("http://localhost:8000/api/matpel/tambah")
+        .post("http://localhost:8000/api/guru")
         .then(response => {
-          this.matpels = [...this.matpels, response.data];
+          // this.matpels = [...this.matpels, response.data];
+          this.gurus = [...this.gurus, response.data];
           toast.fire({
             icon: "success",
-            title: "Mata Pelajaran Berhasil Ditambahkan"
+            title: "Guru Berhasil Ditambahkan"
           });
           $("#createModal").modal("hide");
         })
@@ -227,16 +240,16 @@ export default {
         });
     },
     getMatapel() {
-      // axios
-      //   .get("http://localhost:8000/api/matpel")
-      //   .then(result => {
-      //     this.matpels = result.data;
-      //   })
-      //   .catch(err => {
-      //     alert(err);
-      //   });
+      axios
+        .get("http://localhost:8000/api/matpel")
+        .then(result => {
+          this.matpels = result.data;
+        })
+        .catch(err => {
+          alert(err);
+        });
     },
-    deleteMatpel(id) {
+    deleteGuru(id) {
       Swal.fire({
         title: "Apakah anda yakin?",
         text: "Anda tidak dapat mengubah ini",
@@ -248,12 +261,12 @@ export default {
       }).then(result => {
         if (result.value) {
           axios
-            .delete("http://localhost:8000/api/matpel/" + id)
+            .delete("http://localhost:8000/api/guru/" + id)
             .then(response => {
-              this.matpels = this.matpels.filter(matpel => matpel.id !== id);
+              this.gurus = this.gurus.filter(guru => guru.id !== id);
               Swal.fire(
                 "Deleted!",
-                "Mata pelajaran berhasil di delete",
+                "Data Guru berhasil di delete",
                 "success"
               ).catch(() => {
                 Swal.fire("Failed!", "Something went Wrong", "warning");
@@ -269,5 +282,15 @@ export default {
 <style scoped>
 .kelas > td {
   padding-right: 1.5em;
+}
+
+a {
+  text-decoration: none;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.delete {
+  color: red;
 }
 </style>

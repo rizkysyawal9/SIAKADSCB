@@ -43,10 +43,17 @@
             <td style="width:40%">{{matpel.kode_matpel}}</td>
             <td style="width:40%">{{matpel.matpel}}</td>
             <td style="width:20%">
-              <button class="btn btn-warning" @click="editModal(matpel)">Edit</button>
+              <a href="#">
+                <font-awesome-icon icon="edit" @click="editModal(matpel)" class="edit" />
+              </a>
+              /
+              <a href="#">
+                <font-awesome-icon icon="trash" @click="deleteMatpel(matpel.id)" class="delete" />
+              </a>
+              <!-- <button class="btn btn-warning" @click="editModal(matpel)">Edit</button> -->
 
               <!-- <router-link class="btn btn-warning" :to="'/edit/matpel/'+matpel.id">Edit</router-link> -->
-              <button class="btn btn-danger" v-on:click="deleteMatpel(matpel.id)">Delete</button>
+              <!-- <button class="btn btn-danger" v-on:click="deleteMatpel(matpel.id)">Delete</button> -->
             </td>
           </tr>
         </tbody>
@@ -255,5 +262,15 @@ export default {
 <style scoped>
 .kelas > td {
   padding-right: 1.5em;
+}
+
+a {
+  text-decoration: none;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.delete {
+  color: red;
 }
 </style>

@@ -38,6 +38,13 @@ Route::post('/matpel/tambah', 'MatpelApiController@store');
 Route::put('/matpel/{id}', 'MatpelApiController@update');
 Route::delete('/matpel/{id}', 'MatpelApiController@destroy');
 
+//Guru Routes
+Route::get('/guru', 'GuruApiController@index');
+Route::get('/guru/{id}', 'GuruApiController@show');
+Route::post('/guru', 'GuruApiController@store');
+Route::put('/guru/{id}', 'GuruApiController@update');
+Route::delete('/guru/{id}', 'GuruApiController@destroy');
+
 // Route::get('/editsiswa/{id}', 'SiswaController@edit');
 // Route::post('/editsiswa/{id}', 'SiswaController@update');
 // Route::get('/shownilai/{id}', 'NilaiController@show');

@@ -18,12 +18,12 @@ Vue.component(AlertError.name, AlertError)
 import Swal from 'sweetalert2'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faUsers, faChalkboardTeacher, faBookOpen, faClipboard, faSchool } from '@fortawesome/free-solid-svg-icons'
+import { faUsers, faChalkboardTeacher, faBookOpen, faClipboard, faSchool, faEdit, faTrash, faInfoCircle } from '@fortawesome/free-solid-svg-icons'
 import { faTwitter, faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons'
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
  
-library.add(faUsers, faChalkboardTeacher, faBookOpen, faClipboard, faSchool, faTwitter, faInstagram, faFacebook)
+library.add(faUsers, faChalkboardTeacher, faBookOpen, faClipboard, faSchool, faTwitter, faInstagram, faFacebook, faTrash, faEdit, faInfoCircle)
 
  
 Vue.component('font-awesome-icon', FontAwesomeIcon)
