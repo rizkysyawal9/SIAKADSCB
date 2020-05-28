@@ -7,18 +7,20 @@
         <br />
         <div class="row">
           <div class="col-md-10">
-            <h4>Nilai Siswa</h4>
-          <div class="btn-group btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-outline-secondary active">
-              <input type="radio" name="options" id="option1" checked @click="filterkelas(7)" /> Kelas 7
-            </label>
-            <label class="btn btn-outline-secondary">
-              <input type="radio" name="options" id="option2" @click="filterkelas(8)" /> Kelas 8
-            </label>
-            <label class="btn btn-outline-secondary">
-              <input type="radio" name="options" id="option3" @click="filterkelas(9)" /> Kelas 9
-            </label>
-          </div>
+            <h4>
+              <b>Nilai Siswa</b>
+            </h4>
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+              <label class="btn btn-outline-secondary">
+                <input type="radio" name="options" id="option1" checked @click="filterkelas(7)" /> Kelas 7
+              </label>
+              <label class="btn btn-outline-secondary">
+                <input type="radio" name="options" id="option2" @click="filterkelas(8)" /> Kelas 8
+              </label>
+              <label class="btn btn-outline-secondary">
+                <input type="radio" name="options" id="option3" @click="filterkelas(9)" /> Kelas 9
+              </label>
+            </div>
           </div>
           <div class="col-md-2">
             <!-- push router ke form membuat data -->
@@ -56,7 +58,7 @@
 export default {
   name: "Read",
   // components: Dashboard,
-  
+
   data() {
     return {
       // variable array yang akan menampung hasil fetch dari api
@@ -67,7 +69,7 @@ export default {
     this.loadData();
   },
   methods: {
-   filterkelas(kelas) {
+    filterkelas(kelas) {
       console.log(kelas);
       axios
         .get("http://localhost:8000/api/siswa")

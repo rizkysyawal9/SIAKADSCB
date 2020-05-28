@@ -31,7 +31,7 @@ class CreateNilaisTable extends Migration
             $table->float('hpts')->unsigned()->nullable();
             $table->float('hpas')->unsigned()->nullable();
             $table->float('hpa')->unsigned()->nullable();
-            $table->float('predikat')->unsigned()->nullable();
+            $table->string('predikat')->nullable();
             $table->timestamps();
         });
     }

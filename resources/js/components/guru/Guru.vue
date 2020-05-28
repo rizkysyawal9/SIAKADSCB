@@ -43,10 +43,6 @@
               <a href="#">
                 <font-awesome-icon icon="trash" @click="deleteGuru(guru)" class="delete" />
               </a>
-              <!-- <button class="btn btn-warning" @click="editModal(guru)">Edit</button> -->
-
-              <!-- <router-link class="btn btn-warning" :to="'/edit/matpel/'+matpel.id">Edit</router-link> -->
-              <!-- <button class="btn btn-danger" v-on:click="deleteGuru(guru.id)">Delete</button> -->
             </td>
           </tr>
         </tbody>

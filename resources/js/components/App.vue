@@ -12,48 +12,42 @@
           <ul>
             <li class="siswa">
               <router-link to="/dashboard">
-                <font-awesome-icon icon="users" />&nbsp Siswa
+                <font-awesome-icon icon="users" />
+                {{''}}Siswa
               </router-link>
             </li>
             <li>
               <router-link to="/matpel">
-                <font-awesome-icon icon="book-open" />&nbsp Mata Pelajaran
+                <font-awesome-icon icon="book-open" />
+                {{' '}}Mata Pelajaran
               </router-link>
             </li>
             <li>
               <router-link to="/nilaisiswa">
-                <font-awesome-icon icon="clipboard" />&nbsp Nilai Siswa
+                <font-awesome-icon icon="clipboard" />
+                {{' '}}Nilai Siswa
               </router-link>
             </li>
             <li>
               <router-link to="/guru">
-                <font-awesome-icon icon="chalkboard-teacher" />&nbsp Data Guru
+                <font-awesome-icon icon="chalkboard-teacher" />
+                {{' '}}Data Guru
               </router-link>
-              <!-- <font-awesome-icon icon="chalkboard-teacher" />&nbsp Data Guru -->
-            </li>
-            <li>
-              <font-awesome-icon icon="school" />&nbsp Profil Wali Kelas
             </li>
           </ul>
           <div class="social_media">
-            <!-- <font-awesome-icon icon="twitter" />
-            <font-awesome-icon icon="facebook" />
-            <font-awesome-icon icon="instagram" /> -->
-            <div class="sosmed" @click="twitter()">
+            <a href="#" class="sosmed" @click="twitter()">
               <font-awesome-icon :icon="['fab', 'twitter']" />
-            </div>
-            <div class="sosmed" @click="facebook()">
+            </a>
+            <a href="#" class="sosmed" @click="facebook()">
               <font-awesome-icon :icon="['fab', 'facebook']" />
-            </div>
-            <div class="sosmed" @click="instagram()">
+            </a>
+            <a href="#" class="sosmed" @click="instagram()">
               <font-awesome-icon :icon="['fab', 'instagram']" />
-            </div>
-
+            </a>
           </div>
         </div>
-        <div class="main_content">
-          <!-- Using Templating Engine Blade Laravel for Main Content -->
-        </div>
+        <div class="main_content"></div>
       </div>
     </div>
     <div class="margin">
@@ -65,25 +59,21 @@
 <script>
 export default {
   methods: {
-    twitter(){
-      window.open("https://twitter.com/edu_baznas", "_blank");    
+    twitter() {
+      window.open("https://twitter.com/edu_baznas", "_blank");
     },
-    facebook(){
-      window.open('https://www.facebook.com/pendidikanbaznas', "_blank");
+    facebook() {
+      window.open("https://www.facebook.com/pendidikanbaznas", "_blank");
     },
-    instagram(){
-      window.open('https://www.instagram.com/pendidikanbaznas', '_blank');
+    instagram() {
+      window.open("https://www.instagram.com/pendidikanbaznas", "_blank");
     }
-
   }
-
 };
-
 </script>
 
 <style scoped>
-
-a{
+a {
   text-decoration: none;
 }
 

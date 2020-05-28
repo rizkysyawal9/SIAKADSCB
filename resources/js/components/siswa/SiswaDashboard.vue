@@ -7,9 +7,11 @@
         <br />
         <div class="row">
           <div class="col-md-10">
-            <h4>Daftar Siswa</h4>
+            <h4>
+              <b>Daftar Siswa</b>
+            </h4>
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
-              <label class="btn btn-outline-secondary active">
+              <label class="btn btn-outline-secondary">
                 <input type="radio" name="options" id="option1" checked @click="filterkelas(7)" /> Kelas 7
               </label>
               <label class="btn btn-outline-secondary">
@@ -40,12 +42,12 @@
               <td style="width:40%">{{siswa.nama}}</td>
               <td style="width:40%">{{siswa.nis}}</td>
               <td style="width:20%">
-                <router-link class="btn btn-primary" :to="'/detail/'+siswa.nis">
+                <router-link :to="'/detail/'+siswa.nis">
                   <font-awesome-icon icon="info-circle" />
-                </router-link>
-                <button class="btn btn-danger" v-on:click="deleteData(siswa.nis)">
-                  <font-awesome-icon icon="trash" />
-                </button>
+                </router-link>/
+                <a href="#">
+                  <font-awesome-icon icon="trash" @click="deleteData(siswa.nis)" class="delete" />
+                </a>
               </td>
             </tr>
           </tbody>
@@ -127,3 +129,15 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+a {
+  text-decoration: none;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.delete {
+  color: red;
+}
+</style>

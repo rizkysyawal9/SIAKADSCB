@@ -59,6 +59,7 @@ import NilaiSatuSiswa from './components/nilai/NilaiSatuSiswa.vue';
 import EditNilaiSiswa from './components/nilai/EditNilaiSiswa.vue';
 import MataPelajaran from './components/matapelajaran/MataPelajaran.vue';
 import Guru from './components/guru/Guru.vue';
+import Rapor from './components/nilai/Rapor.vue';
 
 
 const routes = [
@@ -84,7 +85,7 @@ const routes = [
     },
     {
         path: '/nilaisiswa/:id',
-        component: NilaiSatuSiswa
+        component: Rapor
     },
     {
         path: '/editnilai/:nis/:kelas/:semester/:kode',
